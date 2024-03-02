@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Categories on </title>
+    <link>https://memcpy101.github.io/categories/</link>
+    <description>Recent content in Categories on </description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>All rigths reserved by mzdaemon.</copyright>
+    <lastBuildDate>Fri, 01 Mar 2024 23:49:37 -0500</lastBuildDate><atom:link href="https://memcpy101.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>DataProtection</title>
+      <link>https://memcpy101.github.io/categories/dataprotection/</link>
+      <pubDate>Fri, 01 Mar 2024 23:49:37 -0500</pubDate>
+      
+      <guid>https://memcpy101.github.io/categories/dataprotection/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>OffensiveSecurity</title>
+      <link>https://memcpy101.github.io/categories/offensivesecurity/</link>
+      <pubDate>Fri, 01 Mar 2024 19:25:47 -0500</pubDate>
+      
+      <guid>https://memcpy101.github.io/categories/offensivesecurity/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>concepts on </title>
+    <link>https://memcpy101.github.io/tags/concepts/</link>
+    <description>Recent content in concepts on </description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>All rigths reserved by mzdaemon.</copyright>
+    <lastBuildDate>Fri, 01 Mar 2024 23:49:37 -0500</lastBuildDate><atom:link href="https://memcpy101.github.io/tags/concepts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>How to Protect Enterprise Data ?</title>
+      <link>https://memcpy101.github.io/posts/protect_enterprise_data/</link>
+      <pubDate>Fri, 01 Mar 2024 23:49:37 -0500</pubDate>
+      
+      <guid>https://memcpy101.github.io/posts/protect_enterprise_data/</guid>
+      <description>hi</description>
+    </item>
+    
+  </channel>
+</rss>
