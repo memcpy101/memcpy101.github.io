@@ -7,14 +7,14 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>All rigths reserved by mzdaemon.</copyright>
-    <lastBuildDate>Fri, 01 Mar 2024 23:49:37 -0500</lastBuildDate><atom:link href="https://memcpy101.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 02 Mar 2024 22:46:13 -0500</lastBuildDate><atom:link href="https://memcpy101.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>How to Protect Enterprise Data ?</title>
-      <link>https://memcpy101.github.io/posts/protect_enterprise_data/</link>
-      <pubDate>Fri, 01 Mar 2024 23:49:37 -0500</pubDate>
+      <title>Powershell Scanner</title>
+      <link>https://memcpy101.github.io/posts/powershellscan/</link>
+      <pubDate>Sat, 02 Mar 2024 22:46:13 -0500</pubDate>
       
-      <guid>https://memcpy101.github.io/posts/protect_enterprise_data/</guid>
-      <description>hi</description>
+      <guid>https://memcpy101.github.io/posts/powershellscan/</guid>
+      <description>While training Red Teaming or Penetration Test hacking on plataforms like Hack the Box or previous offensive security training like OSCP or OSEP.</description>
     </item>
     
     <item>
@@ -23,7 +23,7 @@
       <pubDate>Fri, 01 Mar 2024 19:25:47 -0500</pubDate>
       
       <guid>https://memcpy101.github.io/posts/exploitdev_beginner/</guid>
-      <description>Delete a file # Code Blocks # Code block with backticks # import socket import sys 1 2 3 4 5 6 7 8 9 10 &amp;lt;!</description>
+      <description>TDB # </description>
     </item>
     
   </channel>

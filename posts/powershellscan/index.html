@@ -19,14 +19,14 @@
   <meta name="theme-color" content="rgb(255,255,255)" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
   
-  <title>Buffer Overflow 101 &middot; </title>
-    <meta name="title" content="Buffer Overflow 101 &middot; " />
+  <title>Powershell Scanner &middot; </title>
+    <meta name="title" content="Powershell Scanner &middot; " />
   
-  <meta name="description" content="TDB # " />
+  <meta name="description" content="While training Red Teaming or Penetration Test hacking on plataforms like Hack the Box or previous offensive security training like OSCP or OSEP." />
   
   
   
-  <link rel="canonical" href="https://memcpy101.github.io/posts/exploitdev_beginner/" />
+  <link rel="canonical" href="https://memcpy101.github.io/posts/powershellscan/" />
   
   
   
@@ -74,16 +74,16 @@
   
   
   
-  <meta property="og:title" content="Buffer Overflow 101" />
-<meta property="og:description" content="TDB # " />
+  <meta property="og:title" content="Powershell Scanner" />
+<meta property="og:description" content="While training Red Teaming or Penetration Test hacking on plataforms like Hack the Box or previous offensive security training like OSCP or OSEP." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://memcpy101.github.io/posts/exploitdev_beginner/" /><meta property="article:section" content="posts" />
-<meta property="article:published_time" content="2024-03-01T19:25:47-05:00" />
-<meta property="article:modified_time" content="2024-03-01T19:25:47-05:00" />
+<meta property="og:url" content="https://memcpy101.github.io/posts/powershellscan/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2024-03-02T22:46:13-05:00" />
+<meta property="article:modified_time" content="2024-03-02T22:46:13-05:00" />
 
   <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Buffer Overflow 101"/>
-<meta name="twitter:description" content="TDB # "/>
+<meta name="twitter:title" content="Powershell Scanner"/>
+<meta name="twitter:description" content="While training Red Teaming or Penetration Test hacking on plataforms like Hack the Box or previous offensive security training like OSCP or OSEP."/>
 
   
   <script type="application/ld+json">
@@ -91,26 +91,26 @@
     "@context": "https://schema.org",
     "@type": "Article",
     "articleSection": "Posts",
-    "name": "Buffer Overflow 101",
-    "headline": "Buffer Overflow 101",
+    "name": "Powershell Scanner",
+    "headline": "Powershell Scanner",
     
-    "abstract": "TDB # ",
+    "abstract": "While training Red Teaming or Penetration Test hacking on plataforms like Hack the Box or previous offensive security training like OSCP or OSEP.",
     "inLanguage": "en",
-    "url" : "https:\/\/memcpy101.github.io\/posts\/exploitdev_beginner\/",
+    "url" : "https:\/\/memcpy101.github.io\/posts\/powershellscan\/",
     "author" : {
       "@type": "Person",
       "name": "mzdaemon"
     },
     "copyrightYear": "2024",
-    "dateCreated": "2024-03-01T19:25:47-05:00",
-    "datePublished": "2024-03-01T19:25:47-05:00",
+    "dateCreated": "2024-03-02T22:46:13-05:00",
+    "datePublished": "2024-03-02T22:46:13-05:00",
     
-    "dateModified": "2024-03-01T19:25:47-05:00",
+    "dateModified": "2024-03-02T22:46:13-05:00",
     
-    "keywords": ["ExploitDev"],
+    "keywords": ["Programming","Powershell"],
     
     "mainEntityOfPage": "true",
-    "wordCount": "2"
+    "wordCount": "282"
   }]
   </script>
 
@@ -425,7 +425,7 @@
     <header class="max-w-prose">
       
       <h1 class="mt-0 text-4xl font-extrabold text-neutral-900 dark:text-neutral">
-        Buffer Overflow 101
+        Powershell Scanner
       </h1>
       <div class="mt-8 mb-12 text-base text-neutral-500 dark:text-neutral-400 print:hidden">
         
@@ -460,7 +460,7 @@
   <div class="flex flex-row flex-wrap items-center">
     
     
-      <time datetime="2024-03-01 19:25:47 -0500 EST">1 March 2024</time><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">1 min</span>
+      <time datetime="2024-03-02 22:46:13 -0500 EST">2 March 2024</time><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">2 mins</span>
     
 
     
@@ -484,9 +484,15 @@
         
           
             <a
-              href="/tags/exploitdev/"
+              href="/tags/programming/"
               class="rounded-md border border-neutral-200 px-1 py-[1px] hover:border-primary-300 hover:text-primary-700 dark:border-neutral-600 dark:hover:border-primary-600 dark:hover:text-primary-400"
-              >ExploitDev</a
+              >Programming</a
+            >
+          
+            <a
+              href="/tags/powershell/"
+              class="rounded-md border border-neutral-200 px-1 py-[1px] hover:border-primary-300 hover:text-primary-700 dark:border-neutral-600 dark:hover:border-primary-600 dark:hover:text-primary-400"
+              >Powershell</a
             >
           
         
@@ -501,7 +507,21 @@
     <section class="flex flex-col max-w-full mt-0 prose dark:prose-invert lg:flex-row">
       
       <div class="min-w-0 min-h-0 max-w-prose grow">
-        <h2 id="tdb" class="relative group">TDB <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#tdb" aria-label="Anchor">#</a></span></h2>
+        <p>While training Red Teaming or Penetration Test hacking on plataforms like Hack the Box or previous offensive security training like OSCP or OSEP.</p>
+<p>One thing I noticed is during lateral movement through pivoting between the machines if I had to perform port scan enumeration on hosts located on different subnet/network utilizing proxychain+nmap or chisel+nmap, that was very painful and a nightmare.</p>
+<p>Nmap + Proxychains or Nmap + chisel  did not work very well for me and for that reason i came up with something different and that was to leverage what native powershell has to offer, but for the offensive security side of it.</p>
+<p>If you have to scan large amount of ports even twerking the settings in nmap and proxychains will not give much gains compared to powershell. Below is a small snipped of powershell code that I developed and used multiple times during my training days that helped me and saved me a lot of time.</p>
+<p>My personal opnion on powershell is an awesome tool and one should master and be used as Read Teamer or Penetration Tester.</p>
+<h3 id="powershell-scanner-code" class="relative group">Powershell Scanner Code <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#powershell-scanner-code" aria-label="Anchor">#</a></span></h3>
+<p>I used Runspace feature in powershell that allows to run multiple commands by creating new threads on existing process.
+The <em>CreateRunSpacePool</em> values 1,100 means mininum and maximum number of threads allowed to run at the same time. The AddScript is where you add the desired code to run.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-powershell" data-lang="powershell"><span class="line"><span class="cl"><span class="nv">$RunspacePool</span> <span class="p">=</span> <span class="p">[</span><span class="no">runspacefactory</span><span class="p">]::</span><span class="n">CreateRunspacePool</span><span class="p">(</span><span class="mf">1</span><span class="p">,</span><span class="mf">100</span><span class="p">)</span> 
+</span></span><span class="line"><span class="cl"><span class="nv">$RunspacePool</span><span class="p">.</span><span class="py">Open</span><span class="p">()</span> 
+</span></span><span class="line"><span class="cl"><span class="nv">$PowerShell</span> <span class="p">=</span> <span class="p">[</span><span class="no">powershell</span><span class="p">]::</span><span class="n">Create</span><span class="p">()</span> 
+</span></span><span class="line"><span class="cl"><span class="nv">$PowerShell</span><span class="p">.</span><span class="py">RunspacePool</span> <span class="p">=</span> <span class="nv">$RunspacePool</span> 
+</span></span><span class="line"><span class="cl"><span class="nv">$PowerShell</span><span class="p">.</span><span class="py">AddScript</span><span class="p">({</span><span class="mf">1</span><span class="p">.</span><span class="mf">.65535</span> <span class="p">|</span> <span class="nb">ForEach-Object</span> <span class="p">{</span> <span class="k">if</span><span class="p">((</span><span class="nb">New-Object</span> <span class="n">System</span><span class="p">.</span><span class="py">Net</span><span class="p">.</span><span class="py">Sockets</span><span class="p">.</span><span class="n">TcpClient</span><span class="p">).</span><span class="py">ConnectAsync</span><span class="p">(</span><span class="s2">&#34;YOUR_IP_HERE&#34;</span><span class="p">,</span><span class="nv">$_</span><span class="p">).</span><span class="py">wait</span><span class="p">(</span><span class="mf">100</span><span class="p">)){</span><span class="nb">write-host</span> <span class="s2">&#34;Port </span><span class="nv">$_</span><span class="s2"> is opened&#34;</span><span class="p">}}})</span> 
+</span></span><span class="line"><span class="cl"><span class="nv">$Jobs</span> <span class="p">=</span> <span class="nv">$PowerShell</span><span class="p">.</span><span class="py">BeginInvoke</span><span class="p">()</span> 
+</span></span></code></pre></div><p>If you want to go beyound you can improve the code snippet to run on multiple ips or creating a script that accept IP as an argument.</p>
 
       </div>
     </section>
@@ -592,7 +612,7 @@
       
         <a
           class="m-1 inline-block min-w-[2.4rem] rounded bg-neutral-300 p-1 text-center text-neutral-700 hover:bg-primary-500 hover:text-neutral dark:bg-neutral-700 dark:text-neutral-300 dark:hover:bg-primary-400 dark:hover:text-neutral-800"
-          href="https://twitter.com/intent/tweet/?url=https://memcpy101.github.io/posts/exploitdev_beginner/&amp;text=Buffer%20Overflow%20101"
+          href="https://twitter.com/intent/tweet/?url=https://memcpy101.github.io/posts/powershellscan/&amp;text=Powershell%20Scanner"
           title="Tweet on Twitter"
           aria-label="Tweet on Twitter"
           target="_blank"
@@ -605,7 +625,7 @@
       
         <a
           class="m-1 inline-block min-w-[2.4rem] rounded bg-neutral-300 p-1 text-center text-neutral-700 hover:bg-primary-500 hover:text-neutral dark:bg-neutral-700 dark:text-neutral-300 dark:hover:bg-primary-400 dark:hover:text-neutral-800"
-          href="https://reddit.com/submit/?url=https://memcpy101.github.io/posts/exploitdev_beginner/&amp;resubmit=true&amp;title=Buffer%20Overflow%20101"
+          href="https://reddit.com/submit/?url=https://memcpy101.github.io/posts/powershellscan/&amp;resubmit=true&amp;title=Powershell%20Scanner"
           title="Submit to Reddit"
           aria-label="Submit to Reddit"
           target="_blank"
@@ -618,7 +638,7 @@
       
         <a
           class="m-1 inline-block min-w-[2.4rem] rounded bg-neutral-300 p-1 text-center text-neutral-700 hover:bg-primary-500 hover:text-neutral dark:bg-neutral-700 dark:text-neutral-300 dark:hover:bg-primary-400 dark:hover:text-neutral-800"
-          href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https://memcpy101.github.io/posts/exploitdev_beginner/&amp;title=Buffer%20Overflow%20101"
+          href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https://memcpy101.github.io/posts/powershellscan/&amp;title=Powershell%20Scanner"
           title="Share on LinkedIn"
           aria-label="Share on LinkedIn"
           target="_blank"
@@ -641,27 +661,27 @@
       <div class="flex justify-between pt-3">
         <span>
           
-        </span>
-        <span>
-          
-            <a class="group flex text-right" href="/posts/powershellscan/">
+            <a class="group flex" href="/posts/exploitdev_beginner/">
+              <span
+                class="me-2 text-neutral-700 transition-transform group-hover:-translate-x-[2px] group-hover:text-primary-600 dark:text-neutral dark:group-hover:text-primary-400"
+                ><span class="ltr:inline rtl:hidden">&larr;</span
+                ><span class="ltr:hidden rtl:inline">&rarr;</span></span
+              >
               <span class="flex flex-col">
                 <span
                   class="mt-[0.1rem] leading-6 group-hover:underline group-hover:decoration-primary-500"
-                  >Powershell Scanner</span
+                  >Buffer Overflow 101</span
                 >
                 <span class="mt-[0.1rem] text-xs text-neutral-500 dark:text-neutral-400">
                   
-                    <time datetime="2024-03-02 22:46:13 -0500 EST">2 March 2024</time>
+                    <time datetime="2024-03-01 19:25:47 -0500 EST">1 March 2024</time>
                   
                 </span>
               </span>
-              <span
-                class="ms-2 text-neutral-700 transition-transform group-hover:-translate-x-[2px] group-hover:text-primary-600 dark:text-neutral dark:group-hover:text-primary-400"
-                ><span class="ltr:inline rtl:hidden">&rarr;</span
-                ><span class="ltr:hidden rtl:inline">&larr;</span></span
-              >
             </a>
+          
+        </span>
+        <span>
           
         </span>
       </div>
@@ -673,6 +693,17 @@
     </footer>
   </article>
 
+        
+          <div class="pointer-events-none absolute bottom-0 end-0 top-[100vh] w-12">
+            <a
+              href="#the-top"
+              class="pointer-events-auto sticky top-[calc(100vh-5.5rem)] flex h-12 w-12 items-center justify-center rounded-full bg-neutral/50 text-xl text-neutral-700 backdrop-blur hover:text-primary-600 dark:bg-neutral-800/50 dark:text-neutral dark:hover:text-primary-400"
+              aria-label="Scroll to top"
+              title="Scroll to top"
+            >
+              &uarr;
+            </a>
+          </div>
         
       </main><footer class="py-10 print:hidden">
   

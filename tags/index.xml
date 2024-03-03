@@ -7,13 +7,22 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>All rigths reserved by mzdaemon.</copyright>
-    <lastBuildDate>Fri, 01 Mar 2024 23:49:37 -0500</lastBuildDate><atom:link href="https://memcpy101.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 02 Mar 2024 22:46:13 -0500</lastBuildDate><atom:link href="https://memcpy101.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>concepts</title>
-      <link>https://memcpy101.github.io/tags/concepts/</link>
-      <pubDate>Fri, 01 Mar 2024 23:49:37 -0500</pubDate>
+      <title>Powershell</title>
+      <link>https://memcpy101.github.io/tags/powershell/</link>
+      <pubDate>Sat, 02 Mar 2024 22:46:13 -0500</pubDate>
       
-      <guid>https://memcpy101.github.io/tags/concepts/</guid>
+      <guid>https://memcpy101.github.io/tags/powershell/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Programming</title>
+      <link>https://memcpy101.github.io/tags/programming/</link>
+      <pubDate>Sat, 02 Mar 2024 22:46:13 -0500</pubDate>
+      
+      <guid>https://memcpy101.github.io/tags/programming/</guid>
       <description></description>
     </item>
     

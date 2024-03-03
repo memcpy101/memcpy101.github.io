@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>OffensiveSecurity on </title>
-    <link>https://memcpy101.github.io/categories/offensivesecurity/</link>
-    <description>Recent content in OffensiveSecurity on </description>
+    <title>Powershell on </title>
+    <link>https://memcpy101.github.io/tags/powershell/</link>
+    <description>Recent content in Powershell on </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>All rigths reserved by mzdaemon.</copyright>
-    <lastBuildDate>Sat, 02 Mar 2024 22:46:13 -0500</lastBuildDate><atom:link href="https://memcpy101.github.io/categories/offensivesecurity/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 02 Mar 2024 22:46:13 -0500</lastBuildDate><atom:link href="https://memcpy101.github.io/tags/powershell/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Powershell Scanner</title>
       <link>https://memcpy101.github.io/posts/powershellscan/</link>
@@ -15,15 +15,6 @@
       
       <guid>https://memcpy101.github.io/posts/powershellscan/</guid>
       <description>While training Red Teaming or Penetration Test hacking on plataforms like Hack the Box or previous offensive security training like OSCP or OSEP.</description>
-    </item>
-    
-    <item>
-      <title>Buffer Overflow 101</title>
-      <link>https://memcpy101.github.io/posts/exploitdev_beginner/</link>
-      <pubDate>Fri, 01 Mar 2024 19:25:47 -0500</pubDate>
-      
-      <guid>https://memcpy101.github.io/posts/exploitdev_beginner/</guid>
-      <description>TDB # </description>
     </item>
     
   </channel>
