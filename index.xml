@@ -36,12 +36,12 @@
     </item>
     
     <item>
-      <title>How Malware Works ?</title>
-      <link>https://memcpy101.github.io/posts/testing-post/</link>
+      <title>Buffer Overflow 101</title>
+      <link>https://memcpy101.github.io/posts/exploitdev_beginner/</link>
       <pubDate>Fri, 01 Mar 2024 19:25:47 -0500</pubDate>
       
-      <guid>https://memcpy101.github.io/posts/testing-post/</guid>
-      <description>This is my first blog post</description>
+      <guid>https://memcpy101.github.io/posts/exploitdev_beginner/</guid>
+      <description>Delete a file # Code Blocks # Code block with backticks # import socket import sys 1 2 3 4 5 6 7 8 9 10 &amp;lt;!</description>
     </item>
     
   </channel>
