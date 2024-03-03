@@ -220,6 +220,21 @@
                 <li class="group mb-1">
                   
                     <a
+                      href="/posts/"
+                      title="Posts"
+                      
+                      ><span
+                          class="decoration-primary-500 group-hover:underline group-hover:decoration-2 group-hover:underline-offset-2"
+                          >Notes</span
+                        >
+                      </a
+                    >
+                  
+                </li>
+              
+                <li class="group mb-1">
+                  
+                    <a
                       href="/categories/"
                       title="Categories"
                       
@@ -317,6 +332,21 @@
                   ><span
                       class="decoration-primary-500 group-hover:underline group-hover:decoration-2 group-hover:underline-offset-2"
                       >Home</span
+                    >
+                  </a
+                >
+              
+            </li>
+          
+            <li class="group mb-1 sm:mb-0 sm:me-7 sm:last:me-0">
+              
+                <a
+                  href="/posts/"
+                  title="Posts"
+                  
+                  ><span
+                      class="decoration-primary-500 group-hover:underline group-hover:decoration-2 group-hover:underline-offset-2"
+                      >Notes</span
                     >
                   </a
                 >
@@ -517,7 +547,7 @@ The <em>CreateRunSpacePool</em> values 1,100 means mininum and maximum number of
 </span></span><span class="line"><span class="cl"><span class="nv">$PowerShell</span><span class="p">.</span><span class="py">RunspacePool</span> <span class="p">=</span> <span class="nv">$RunspacePool</span> 
 </span></span><span class="line"><span class="cl"><span class="nv">$PowerShell</span><span class="p">.</span><span class="py">AddScript</span><span class="p">({</span><span class="mf">1</span><span class="p">.</span><span class="mf">.65535</span> <span class="p">|</span> <span class="nb">ForEach-Object</span> <span class="p">{</span> <span class="k">if</span><span class="p">((</span><span class="nb">New-Object</span> <span class="n">System</span><span class="p">.</span><span class="py">Net</span><span class="p">.</span><span class="py">Sockets</span><span class="p">.</span><span class="n">TcpClient</span><span class="p">).</span><span class="py">ConnectAsync</span><span class="p">(</span><span class="s2">&#34;YOUR_IP_HERE&#34;</span><span class="p">,</span><span class="nv">$_</span><span class="p">).</span><span class="py">wait</span><span class="p">(</span><span class="mf">100</span><span class="p">)){</span><span class="nb">write-host</span> <span class="s2">&#34;Port </span><span class="nv">$_</span><span class="s2"> is opened&#34;</span><span class="p">}}})</span> 
 </span></span><span class="line"><span class="cl"><span class="nv">$Jobs</span> <span class="p">=</span> <span class="nv">$PowerShell</span><span class="p">.</span><span class="py">BeginInvoke</span><span class="p">()</span> 
-</span></span></code></pre></div><p>If you want to go beyound you can improve the code snippet to run on multiple ips or creating a script that accept IP as an argument.</p>
+</span></span></code></pre></div><p>If you want to go beyond you can improve the code snippet to run on multiple ips or creating a script that accept IP as an argument.</p>
 
       </div>
     </section>
@@ -652,6 +682,25 @@ The <em>CreateRunSpacePool</em> values 1,100 means mininum and maximum number of
           
         </span>
         <span>
+          
+            <a class="group flex text-right" href="/posts/meterpreter_shell_timeout/">
+              <span class="flex flex-col">
+                <span
+                  class="mt-[0.1rem] leading-6 group-hover:underline group-hover:decoration-primary-500"
+                  >Meterpreter Session Time out</span
+                >
+                <span class="mt-[0.1rem] text-xs text-neutral-500 dark:text-neutral-400">
+                  
+                    <time datetime="2024-03-02 22:46:13 -0500 EST">2 March 2024</time>
+                  
+                </span>
+              </span>
+              <span
+                class="ms-2 text-neutral-700 transition-transform group-hover:-translate-x-[2px] group-hover:text-primary-600 dark:text-neutral dark:group-hover:text-primary-400"
+                ><span class="ltr:inline rtl:hidden">&rarr;</span
+                ><span class="ltr:hidden rtl:inline">&larr;</span></span
+              >
+            </a>
           
         </span>
       </div>
