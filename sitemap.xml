@@ -5,7 +5,16 @@
     
       <url>
             <loc>https://pentesthacks.ca/</loc>
-            <lastmod>2024-03-02T22:46:13-05:00</lastmod>
+            <lastmod>2024-03-03T19:25:47-05:00</lastmod>
+          </url>
+    
+  
+    
+  
+    
+      <url>
+            <loc>https://pentesthacks.ca/posts/postsdp/test/</loc>
+            <lastmod>2024-03-03T19:25:47-05:00</lastmod>
           </url>
     
   
@@ -14,11 +23,9 @@
     
   
     
-  
-    
       <url>
-            <loc>https://pentesthacks.ca/posts/meterpreter_shell_timeout/</loc>
-            <lastmod>2024-03-02T22:46:13-05:00</lastmod>
+            <loc>https://pentesthacks.ca/posts/postsdp/</loc>
+            <lastmod>2024-03-03T19:25:47-05:00</lastmod>
           </url>
     
   
@@ -27,19 +34,39 @@
     
       <url>
             <loc>https://pentesthacks.ca/posts/</loc>
-            <lastmod>2024-03-02T22:46:13-05:00</lastmod>
+            <lastmod>2024-03-03T19:25:47-05:00</lastmod>
           </url>
+    
+  
+    
+  
     
   
     
   
     
       <url>
-            <loc>https://pentesthacks.ca/posts/powershellscan/</loc>
+            <loc>https://pentesthacks.ca/posts/postsec/meterpreter_shell_timeout/</loc>
             <lastmod>2024-03-02T22:46:13-05:00</lastmod>
           </url>
     
   
+    
+      <url>
+            <loc>https://pentesthacks.ca/posts/postsec/</loc>
+            <lastmod>2024-03-02T22:46:13-05:00</lastmod>
+          </url>
+    
+  
+    
+  
+    
+  
+    
+      <url>
+            <loc>https://pentesthacks.ca/posts/postsec/powershellscan/</loc>
+            <lastmod>2024-03-02T22:46:13-05:00</lastmod>
+          </url>
     
   
     
@@ -60,7 +87,7 @@
   
     
       <url>
-            <loc>https://pentesthacks.ca/posts/exploitdev_beginner/</loc>
+            <loc>https://pentesthacks.ca/posts/postsec/exploitdev_beginner/</loc>
             <lastmod>2024-03-01T19:25:47-05:00</lastmod>
           </url>
     

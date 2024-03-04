@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>DataProtection on </title>
-    <link>https://pentesthacks.ca/categories/dataprotection/</link>
-    <description>Recent content in DataProtection on </description>
+    <title>Backup on </title>
+    <link>https://pentesthacks.ca/tags/backup/</link>
+    <description>Recent content in Backup on </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>All rigths reserved by mzdaemon.</copyright>
-    <lastBuildDate>Sun, 03 Mar 2024 19:25:47 -0500</lastBuildDate><atom:link href="https://pentesthacks.ca/categories/dataprotection/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 03 Mar 2024 19:25:47 -0500</lastBuildDate><atom:link href="https://pentesthacks.ca/tags/backup/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Backup Concept 101</title>
       <link>https://pentesthacks.ca/posts/postsdp/test/</link>
