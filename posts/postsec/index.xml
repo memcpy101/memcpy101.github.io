@@ -26,14 +26,5 @@
       <description>While training Red Teaming or Penetration Test hacking on plataforms like Hack the Box or previous offensive security training like OSCP or OSEP</description>
     </item>
     
-    <item>
-      <title>Buffer Overflow 101</title>
-      <link>https://pentesthacks.ca/posts/postsec/exploitdev_beginner/</link>
-      <pubDate>Fri, 01 Mar 2024 19:25:47 -0500</pubDate>
-      
-      <guid>https://pentesthacks.ca/posts/postsec/exploitdev_beginner/</guid>
-      <description>TDB # </description>
-    </item>
-    
   </channel>
 </rss>
