@@ -14,7 +14,7 @@
       <pubDate>Sat, 02 Mar 2024 22:46:13 -0500</pubDate>
       
       <guid>https://pentesthacks.ca/posts/postsec/meterpreter_shell_timeout/</guid>
-      <description>A year ago while testing a https reverse meterpreter shell after a 15 or 30 minutes my session would die.</description>
+      <description>A year ago while testing a https reverse meterpreter shell after a 15 or 30 minutes the meterpreter session would die.</description>
     </item>
     
     <item>
