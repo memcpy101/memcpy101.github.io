@@ -19,8 +19,8 @@
   <meta name="theme-color" content="rgb(255,255,255)" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
   
-  <title>Powershell Scanner &middot; </title>
-    <meta name="title" content="Powershell Scanner &middot; " />
+  <title>Powershell Port Scan &middot; </title>
+    <meta name="title" content="Powershell Port Scan &middot; " />
   
   <meta name="description" content="While training Red Teaming or Penetration Test hacking on plataforms like Hack the Box or previous offensive security training like OSCP or OSEP." />
   
@@ -74,7 +74,7 @@
   
   
   
-  <meta property="og:title" content="Powershell Scanner" />
+  <meta property="og:title" content="Powershell Port Scan" />
 <meta property="og:description" content="While training Red Teaming or Penetration Test hacking on plataforms like Hack the Box or previous offensive security training like OSCP or OSEP." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://pentesthacks.ca/posts/postsec/powershellscan/" /><meta property="article:section" content="posts" />
@@ -82,7 +82,7 @@
 <meta property="article:modified_time" content="2024-03-02T22:46:13-05:00" />
 
   <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Powershell Scanner"/>
+<meta name="twitter:title" content="Powershell Port Scan"/>
 <meta name="twitter:description" content="While training Red Teaming or Penetration Test hacking on plataforms like Hack the Box or previous offensive security training like OSCP or OSEP."/>
 
   
@@ -91,8 +91,8 @@
     "@context": "https://schema.org",
     "@type": "Article",
     "articleSection": "Posts",
-    "name": "Powershell Scanner",
-    "headline": "Powershell Scanner",
+    "name": "Powershell Port Scan",
+    "headline": "Powershell Port Scan",
     
     "abstract": "While training Red Teaming or Penetration Test hacking on plataforms like Hack the Box or previous offensive security training like OSCP or OSEP.",
     "inLanguage": "en",
@@ -110,7 +110,7 @@
     "keywords": ["Programming","Powershell"],
     
     "mainEntityOfPage": "true",
-    "wordCount": "282"
+    "wordCount": "283"
   }]
   </script>
 
@@ -469,7 +469,7 @@
     <header class="max-w-prose">
       
       <h1 class="mt-0 text-4xl font-extrabold text-neutral-900 dark:text-neutral">
-        Powershell Scanner
+        Powershell Port Scan
       </h1>
       <div class="mt-8 mb-12 text-base text-neutral-500 dark:text-neutral-400 print:hidden">
         
@@ -563,7 +563,7 @@
   <ul>
     <li>
       <ul>
-        <li><a href="#powershell-scanner-code">Powershell Scanner Code</a></li>
+        <li><a href="#powershell-port-scan-code">Powershell Port Scan Code</a></li>
       </ul>
     </li>
   </ul>
@@ -580,7 +580,7 @@
 <p>Nmap + Proxychains or Nmap + chisel  did not work very well for me and for that reason i came up with something different and that was to leverage what native powershell has to offer, but for the offensive security side of it.</p>
 <p>If you have to scan large amount of ports even twerking the settings in nmap and proxychains will not give much gains compared to powershell. Below is a small snipped of powershell code that I developed and used multiple times during my training days that helped me and saved me a lot of time.</p>
 <p>My personal opnion on powershell is an awesome tool and one should master and be used as Read Teamer or Penetration Tester.</p>
-<h3 id="powershell-scanner-code" class="relative group">Powershell Scanner Code <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#powershell-scanner-code" aria-label="Anchor">#</a></span></h3>
+<h3 id="powershell-port-scan-code" class="relative group">Powershell Port Scan Code <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#powershell-port-scan-code" aria-label="Anchor">#</a></span></h3>
 <p>I used Runspace feature in powershell that allows to run multiple commands by creating new threads on existing process.
 The <em>CreateRunSpacePool</em> values 1,100 means mininum and maximum number of threads allowed to run at the same time. The AddScript is where you add the desired code to run.</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-powershell" data-lang="powershell"><span class="line"><span class="cl"><span class="nv">$RunspacePool</span> <span class="p">=</span> <span class="p">[</span><span class="no">runspacefactory</span><span class="p">]::</span><span class="n">CreateRunspacePool</span><span class="p">(</span><span class="mf">1</span><span class="p">,</span><span class="mf">100</span><span class="p">)</span> 
@@ -639,7 +639,7 @@ The <em>CreateRunSpacePool</em> values 1,100 means mininum and maximum number of
       
         <a
           class="m-1 inline-block min-w-[2.4rem] rounded bg-neutral-300 p-1 text-center text-neutral-700 hover:bg-primary-500 hover:text-neutral dark:bg-neutral-700 dark:text-neutral-300 dark:hover:bg-primary-400 dark:hover:text-neutral-800"
-          href="https://twitter.com/intent/tweet/?url=https://pentesthacks.ca/posts/postsec/powershellscan/&amp;text=Powershell%20Scanner"
+          href="https://twitter.com/intent/tweet/?url=https://pentesthacks.ca/posts/postsec/powershellscan/&amp;text=Powershell%20Port%20Scan"
           title="Tweet on Twitter"
           aria-label="Tweet on Twitter"
           target="_blank"
@@ -652,7 +652,7 @@ The <em>CreateRunSpacePool</em> values 1,100 means mininum and maximum number of
       
         <a
           class="m-1 inline-block min-w-[2.4rem] rounded bg-neutral-300 p-1 text-center text-neutral-700 hover:bg-primary-500 hover:text-neutral dark:bg-neutral-700 dark:text-neutral-300 dark:hover:bg-primary-400 dark:hover:text-neutral-800"
-          href="https://reddit.com/submit/?url=https://pentesthacks.ca/posts/postsec/powershellscan/&amp;resubmit=true&amp;title=Powershell%20Scanner"
+          href="https://reddit.com/submit/?url=https://pentesthacks.ca/posts/postsec/powershellscan/&amp;resubmit=true&amp;title=Powershell%20Port%20Scan"
           title="Submit to Reddit"
           aria-label="Submit to Reddit"
           target="_blank"
@@ -665,7 +665,7 @@ The <em>CreateRunSpacePool</em> values 1,100 means mininum and maximum number of
       
         <a
           class="m-1 inline-block min-w-[2.4rem] rounded bg-neutral-300 p-1 text-center text-neutral-700 hover:bg-primary-500 hover:text-neutral dark:bg-neutral-700 dark:text-neutral-300 dark:hover:bg-primary-400 dark:hover:text-neutral-800"
-          href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https://pentesthacks.ca/posts/postsec/powershellscan/&amp;title=Powershell%20Scanner"
+          href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https://pentesthacks.ca/posts/postsec/powershellscan/&amp;title=Powershell%20Port%20Scan"
           title="Share on LinkedIn"
           aria-label="Share on LinkedIn"
           target="_blank"
