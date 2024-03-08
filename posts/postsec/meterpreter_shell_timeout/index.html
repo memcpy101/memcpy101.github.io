@@ -583,9 +583,13 @@
   <div class="-ms-5 border-s border-dotted border-neutral-300 py-2 ps-5 dark:border-neutral-600">
     <nav id="TableOfContents">
   <ul>
-    <li><a href="#the-command">The command</a></li>
-    <li><a href="#flag-and-meaning">Flag and meaning</a></li>
-    <li><a href="#to-view-the-results-of-newly-configured-settings-run-the-following-command">To view the results of newly configured settings run the following command</a></li>
+    <li>
+      <ul>
+        <li><a href="#the-command">The command</a></li>
+        <li><a href="#flag-and-meaning">Flag and meaning</a></li>
+        <li><a href="#to-view-the-results-of-newly-configured-settings-run-the-following-command">To view the results of newly configured settings run the following command</a></li>
+      </ul>
+    </li>
   </ul>
 </nav>
   </div>
@@ -607,16 +611,16 @@ After investigating I ensured my reverse payload was not been dectected by the a
 </ul>
 <p>You will have to experiment with the values until you reach the one that best suitable for the network environment
 I recommend to use Only if you already have attempted to change payloads and you still have issues</p>
-<h2 id="the-command" class="relative group">The command <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#the-command" aria-label="Anchor">#</a></span></h2>
+<h3 id="the-command" class="relative group">The command <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#the-command" aria-label="Anchor">#</a></span></h3>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl">    set_timeouts -x 0 -c 100000 -w 2500 -t 100000 
-</span></span></code></pre></div><h2 id="flag-and-meaning" class="relative group">Flag and meaning <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#flag-and-meaning" aria-label="Anchor">#</a></span></h2>
+</span></span></code></pre></div><h3 id="flag-and-meaning" class="relative group">Flag and meaning <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#flag-and-meaning" aria-label="Anchor">#</a></span></h3>
 <ul>
 <li>The -x stands for Expiration Timeout</li>
 <li>The -c stands for Communication Timeout</li>
 <li>The -w stands for Retry Wait Time</li>
 <li>the -t stands for Retry Total Time</li>
 </ul>
-<h2 id="to-view-the-results-of-newly-configured-settings-run-the-following-command" class="relative group">To view the results of newly configured settings run the following command <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#to-view-the-results-of-newly-configured-settings-run-the-following-command" aria-label="Anchor">#</a></span></h2>
+<h3 id="to-view-the-results-of-newly-configured-settings-run-the-following-command" class="relative group">To view the results of newly configured settings run the following command <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#to-view-the-results-of-newly-configured-settings-run-the-following-command" aria-label="Anchor">#</a></span></h3>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl">    get_timeouts
 </span></span></code></pre></div><p>Reference: <a
   href="https://docs.metasploit.com/docs/using-metasploit/advanced/meterpreter/meterpreter-timeout-control.html"
