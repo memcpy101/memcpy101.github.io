@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>WindowsInternal on </title>
+    <link>https://pentesthacks.ca/tags/windowsinternal/</link>
+    <description>Recent content in WindowsInternal on </description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>@ 2024 All rigths reserved by mzdaemon</copyright>
+    <lastBuildDate>Sat, 09 Mar 2024 16:49:54 -0500</lastBuildDate><atom:link href="https://pentesthacks.ca/tags/windowsinternal/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>The TEB Structure</title>
+      <link>https://pentesthacks.ca/posts/postsec/teb_struct/</link>
+      <pubDate>Sat, 09 Mar 2024 16:49:54 -0500</pubDate>
+      
+      <guid>https://pentesthacks.ca/posts/postsec/teb_struct/</guid>
+      <description>The TEB (Thread Environment Block) # Just as PEB contains information about the processs, the TEB has information about the thread running in the processs.</description>
+    </item>
+    
+    <item>
+      <title>The PEB Structure</title>
+      <link>https://pentesthacks.ca/posts/postsec/peb/</link>
+      <pubDate>Sat, 09 Mar 2024 16:15:03 -0500</pubDate>
+      
+      <guid>https://pentesthacks.ca/posts/postsec/peb/</guid>
+      <description>The PEB (Process Environment Block) # The PEB is a data structure that store information about the running process and can be accessed through intel x86 [FS] register at offset 0x30h.</description>
+    </item>
+    
+  </channel>
+</rss>
