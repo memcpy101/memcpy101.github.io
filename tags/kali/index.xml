@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Kali on </title>
+    <link>https://pentesthacks.ca/tags/kali/</link>
+    <description>Recent content in Kali on </description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>@ 2024 All rigths reserved by mzdaemon</copyright>
+    <lastBuildDate>Sun, 10 Mar 2024 18:48:29 -0400</lastBuildDate><atom:link href="https://pentesthacks.ca/tags/kali/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>TTY shells</title>
+      <link>https://pentesthacks.ca/posts/postsec/tty_shell/</link>
+      <pubDate>Sun, 10 Mar 2024 18:48:29 -0400</pubDate>
+      
+      <guid>https://pentesthacks.ca/posts/postsec/tty_shell/</guid>
+      <description>My notes on some of useful tty commands # Color when listing files # export TERM=xterm-256-color alias ll=&amp;#39;ls -lsahta --color=auto&amp;#39; Run: ll Get interactive shell zsh shell // new kalli version working # python3 -c &amp;#39;import pty; pty.</description>
+    </item>
+    
+  </channel>
+</rss>

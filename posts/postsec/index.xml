@@ -7,7 +7,25 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>@ 2024 All rigths reserved by mzdaemon</copyright>
-    <lastBuildDate>Sat, 09 Mar 2024 21:13:16 -0500</lastBuildDate><atom:link href="https://pentesthacks.ca/posts/postsec/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 10 Mar 2024 19:33:20 -0400</lastBuildDate><atom:link href="https://pentesthacks.ca/posts/postsec/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Find IAT using Windbg</title>
+      <link>https://pentesthacks.ca/posts/postsec/windbg_iat/</link>
+      <pubDate>Sun, 10 Mar 2024 19:33:20 -0400</pubDate>
+      
+      <guid>https://pentesthacks.ca/posts/postsec/windbg_iat/</guid>
+      <description>You can find the Import Address Table of an application and the list of imported functions by attaching Windbg to the process and following the steps below.</description>
+    </item>
+    
+    <item>
+      <title>TTY shells</title>
+      <link>https://pentesthacks.ca/posts/postsec/tty_shell/</link>
+      <pubDate>Sun, 10 Mar 2024 18:48:29 -0400</pubDate>
+      
+      <guid>https://pentesthacks.ca/posts/postsec/tty_shell/</guid>
+      <description>My notes on some of useful tty commands # Color when listing files # export TERM=xterm-256-color alias ll=&amp;#39;ls -lsahta --color=auto&amp;#39; Run: ll Get interactive shell zsh shell // new kalli version working # python3 -c &amp;#39;import pty; pty.</description>
+    </item>
+    
     <item>
       <title>Narly plugin for windbg</title>
       <link>https://pentesthacks.ca/posts/postsec/narly_windbg/</link>
