@@ -110,7 +110,7 @@
     "keywords": ["ExploitDev"],
     
     "mainEntityOfPage": "true",
-    "wordCount": "64"
+    "wordCount": "65"
   }]
   </script>
 
@@ -806,6 +806,30 @@
     </header>
     <section class="flex flex-col max-w-full mt-0 prose dark:prose-invert lg:flex-row">
       
+        <div class="order-first px-0 lg:order-last lg:max-w-xs lg:ps-8">
+          <div class="toc pe-5 print:hidden lg:sticky lg:top-10">
+            <details open class="-ms-5 mt-0 overflow-hidden rounded-lg ps-5">
+  <summary
+    class="-ms-5 block cursor-pointer bg-neutral-100 py-1 ps-5 text-lg font-semibold text-neutral-800 dark:bg-neutral-700 dark:text-neutral-100 lg:hidden"
+  >
+    Table of Contents
+  </summary>
+  <div class="-ms-5 border-s border-dotted border-neutral-300 py-2 ps-5 dark:border-neutral-600">
+    <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#how-to-use">How to use</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+  </div>
+</details>
+
+          </div>
+        </div>
+      
       <div class="min-w-0 min-h-0 max-w-prose grow">
         <p>Narly is a plugin that parses the image and identifies the binary protections mechanisms enabled such as DEP, ASLR, SafeSEH and GS.</p>
 <p>Very useful during exploit development.</p>
@@ -814,8 +838,8 @@
   
   target="_blank" rel="noreferrer noopener"
 >narly</a></p>
-<p>How to use
-Note.: after narly is compiled copy the narly.dll in windbg winext directory.</p>
+<h3 id="how-to-use" class="relative group">How to use <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#how-to-use" aria-label="Anchor">#</a></span></h3>
+<p>Note.: after narly is compiled copy the narly.dll in windbg winext directory.</p>
 <p>Example:</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl">C:\Program Files\Debugging Tools for Windows (x86)\winext
 </span></span></code></pre></div><p>Loading the pluing;</p>
