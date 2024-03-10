@@ -7,7 +7,25 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>@ 2024 All rigths reserved by mzdaemon</copyright>
-    <lastBuildDate>Sat, 09 Mar 2024 16:49:54 -0500</lastBuildDate><atom:link href="https://pentesthacks.ca/posts/postsec/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 09 Mar 2024 20:34:17 -0500</lastBuildDate><atom:link href="https://pentesthacks.ca/posts/postsec/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>The IAT (Import Address Table)</title>
+      <link>https://pentesthacks.ca/posts/postsec/iat_win/</link>
+      <pubDate>Sat, 09 Mar 2024 20:34:17 -0500</pubDate>
+      
+      <guid>https://pentesthacks.ca/posts/postsec/iat_win/</guid>
+      <description>The Import Address Table stores information about the loaded modules imported by the current running processs.</description>
+    </item>
+    
+    <item>
+      <title>The RP&#43;&#43; ROP Finder</title>
+      <link>https://pentesthacks.ca/posts/postsec/rp_gadget/</link>
+      <pubDate>Sat, 09 Mar 2024 19:46:31 -0500</pubDate>
+      
+      <guid>https://pentesthacks.ca/posts/postsec/rp_gadget/</guid>
+      <description>The rp++ is a ROP Gadget finder used by Exploit Developers to bypass DEP protection.</description>
+    </item>
+    
     <item>
       <title>The TEB Structure</title>
       <link>https://pentesthacks.ca/posts/postsec/teb_struct/</link>

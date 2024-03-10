@@ -7,7 +7,16 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>@ 2024 All rigths reserved by mzdaemon</copyright>
-    <lastBuildDate>Sat, 09 Mar 2024 16:49:54 -0500</lastBuildDate><atom:link href="https://pentesthacks.ca/tags/windowsinternal/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 09 Mar 2024 20:34:17 -0500</lastBuildDate><atom:link href="https://pentesthacks.ca/tags/windowsinternal/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>The IAT (Import Address Table)</title>
+      <link>https://pentesthacks.ca/posts/postsec/iat_win/</link>
+      <pubDate>Sat, 09 Mar 2024 20:34:17 -0500</pubDate>
+      
+      <guid>https://pentesthacks.ca/posts/postsec/iat_win/</guid>
+      <description>The Import Address Table stores information about the loaded modules imported by the current running processs.</description>
+    </item>
+    
     <item>
       <title>The TEB Structure</title>
       <link>https://pentesthacks.ca/posts/postsec/teb_struct/</link>
