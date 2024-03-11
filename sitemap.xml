@@ -5,25 +5,18 @@
     
       <url>
             <loc>https://pentesthacks.ca/</loc>
-            <lastmod>2024-03-10T19:33:20-04:00</lastmod>
+            <lastmod>2024-03-10T20:04:37-04:00</lastmod>
           </url>
     
   
     
   
-    
-  
-    
-      <url>
-            <loc>https://pentesthacks.ca/posts/postsec/windbg_iat/</loc>
-            <lastmod>2024-03-10T19:33:20-04:00</lastmod>
-          </url>
     
   
     
       <url>
             <loc>https://pentesthacks.ca/posts/postsec/</loc>
-            <lastmod>2024-03-10T19:33:20-04:00</lastmod>
+            <lastmod>2024-03-10T20:04:37-04:00</lastmod>
           </url>
     
   
@@ -32,10 +25,24 @@
     
       <url>
             <loc>https://pentesthacks.ca/posts/</loc>
-            <lastmod>2024-03-10T19:33:20-04:00</lastmod>
+            <lastmod>2024-03-10T20:04:37-04:00</lastmod>
           </url>
     
   
+    
+  
+    
+      <url>
+            <loc>https://pentesthacks.ca/posts/postsec/windbg_cdb_attach/</loc>
+            <lastmod>2024-03-10T20:04:37-04:00</lastmod>
+          </url>
+    
+  
+    
+      <url>
+            <loc>https://pentesthacks.ca/posts/postsec/windbg_iat/</loc>
+            <lastmod>2024-03-10T19:33:20-04:00</lastmod>
+          </url>
     
   
     

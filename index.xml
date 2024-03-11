@@ -7,7 +7,16 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>@ 2024 All rigths reserved by mzdaemon</copyright>
-    <lastBuildDate>Sun, 10 Mar 2024 19:33:20 -0400</lastBuildDate><atom:link href="https://pentesthacks.ca/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 10 Mar 2024 20:04:37 -0400</lastBuildDate><atom:link href="https://pentesthacks.ca/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Windbg, the cdb.exe to attach to process  </title>
+      <link>https://pentesthacks.ca/posts/postsec/windbg_cdb_attach/</link>
+      <pubDate>Sun, 10 Mar 2024 20:04:37 -0400</pubDate>
+      
+      <guid>https://pentesthacks.ca/posts/postsec/windbg_cdb_attach/</guid>
+      <description>This technique address the need to launch windbg with higher privilege to debug higher privilege process.</description>
+    </item>
+    
     <item>
       <title>Find IAT using Windbg</title>
       <link>https://pentesthacks.ca/posts/postsec/windbg_iat/</link>
