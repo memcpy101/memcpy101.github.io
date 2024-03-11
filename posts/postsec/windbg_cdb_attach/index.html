@@ -22,7 +22,7 @@
   <title>Windbg, the cdb.exe to attach to process   &middot; </title>
     <meta name="title" content="Windbg, the cdb.exe to attach to process   &middot; " />
   
-  <meta name="description" content="This technique address the need to launch windbg with higher privilege to debug higher privilege process." />
+  <meta name="description" content="This technique address the need to launch windbg with high privilege to debug processes running with system account privilege." />
   
   
   
@@ -75,7 +75,7 @@
   
   
   <meta property="og:title" content="Windbg, the cdb.exe to attach to process  " />
-<meta property="og:description" content="This technique address the need to launch windbg with higher privilege to debug higher privilege process." />
+<meta property="og:description" content="This technique address the need to launch windbg with high privilege to debug processes running with system account privilege." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://pentesthacks.ca/posts/postsec/windbg_cdb_attach/" /><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2024-03-10T20:04:37-04:00" />
@@ -83,7 +83,7 @@
 
   <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Windbg, the cdb.exe to attach to process  "/>
-<meta name="twitter:description" content="This technique address the need to launch windbg with higher privilege to debug higher privilege process."/>
+<meta name="twitter:description" content="This technique address the need to launch windbg with high privilege to debug processes running with system account privilege."/>
 
   
   <script type="application/ld+json">
@@ -94,7 +94,7 @@
     "name": "Windbg, the cdb.exe to attach to process  ",
     "headline": "Windbg, the cdb.exe to attach to process  ",
     
-    "abstract": "This technique address the need to launch windbg with higher privilege to debug higher privilege process.",
+    "abstract": "This technique address the need to launch windbg with high privilege to debug processes running with system account privilege.",
     "inLanguage": "en",
     "url" : "https:\/\/pentesthacks.ca\/posts\/postsec\/windbg_cdb_attach\/",
     "author" : {
@@ -110,7 +110,7 @@
     "keywords": ["ExploitDev"],
     
     "mainEntityOfPage": "true",
-    "wordCount": "154"
+    "wordCount": "157"
   }]
   </script>
 
@@ -831,7 +831,7 @@
         </div>
       
       <div class="min-w-0 min-h-0 max-w-prose grow">
-        <p>This technique address the need to launch windbg with higher privilege to debug higher privilege process.</p>
+        <p>This technique address the need to launch windbg with high privilege to debug processes running with system account privilege.</p>
 <p>You can run windbg as normal user because we are running via cdb and cdb is running as system privilege.</p>
 <p>Create a service for the process you want to debug,</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl">sc.exe create AppServiceDebug binpath= &#34;C:\Program Files\Windows Kits\10\Debuggers\x86\cdb.exe -server tcp:port=50000 C:\Program Files\APP\Debug\app.exe&#34; 

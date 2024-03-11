@@ -14,7 +14,7 @@
       <pubDate>Sun, 10 Mar 2024 20:04:37 -0400</pubDate>
       
       <guid>https://pentesthacks.ca/posts/postsec/windbg_cdb_attach/</guid>
-      <description>This technique address the need to launch windbg with higher privilege to debug higher privilege process.</description>
+      <description>This technique address the need to launch windbg with high privilege to debug processes running with system account privilege.</description>
     </item>
     
     <item>
