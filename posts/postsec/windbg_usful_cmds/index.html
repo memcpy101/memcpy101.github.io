@@ -110,7 +110,7 @@
     "keywords": ["ExploitDev","debugger"],
     
     "mainEntityOfPage": "true",
-    "wordCount": "1032"
+    "wordCount": "1003"
   }]
   </script>
 
@@ -836,7 +836,6 @@
         <li><a href="#display-contents-of-address">Display contents of address</a></li>
         <li><a href="#derefence-memory-using-poi">Derefence memory using poi</a></li>
         <li><a href="#dumping-structures-from-memory">Dumping Structures from Memory</a></li>
-        <li><a href="#dumping-structures-from-memory-1">Dumping Structures from Memory</a></li>
         <li><a href="#display-nested-structures-from-memory">Display nested Structures from Memory</a></li>
         <li><a href="#calculate-size-of-structure">Calculate size of structure</a></li>
         <li><a href="#writing-a-value-to-memory">Writing a value to Memory</a></li>
@@ -906,10 +905,6 @@
 </span></span></code></pre></div><h3 id="derefence-memory-using-poi" class="relative group">Derefence memory using poi <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#derefence-memory-using-poi" aria-label="Anchor">#</a></span></h3>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl">dd poi(esp) 
 </span></span></code></pre></div><h3 id="dumping-structures-from-memory" class="relative group">Dumping Structures from Memory <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#dumping-structures-from-memory" aria-label="Anchor">#</a></span></h3>
-<p>Display type the command is dt, the $teb is a pseudo register that provides address of the TEB</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl">dt ntdll!_TEB 
-</span></span><span class="line"><span class="cl">dt ntdll!_TEB @$teb ThreadLocalStoragePointer 
-</span></span></code></pre></div><h3 id="dumping-structures-from-memory-1" class="relative group">Dumping Structures from Memory <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#dumping-structures-from-memory-1" aria-label="Anchor">#</a></span></h3>
 <p>Display type the command is dt, the $teb is a pseudo register that provides address of the TEB</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl">dt ntdll!_TEB 
 </span></span><span class="line"><span class="cl">dt ntdll!_TEB @$teb ThreadLocalStoragePointer 
