@@ -110,7 +110,7 @@
     "keywords": ["ExploitDev","debugger"],
     
     "mainEntityOfPage": "true",
-    "wordCount": "1015"
+    "wordCount": "1032"
   }]
   </script>
 
@@ -855,6 +855,7 @@
         <li><a href="#data-output-format">Data Output Format</a></li>
         <li><a href="#pseudo-registers">Pseudo Registers</a></li>
         <li><a href="#check-memory-permission">Check memory permission</a></li>
+        <li><a href="#list-stack-frame">List stack frame</a></li>
       </ul>
     </li>
   </ul>
@@ -992,6 +993,12 @@ The deferred for specific modules means no symbols are loaded and .reaload /f ca
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl">!vprot esp 
 </span></span><span class="line"><span class="cl">!vprot eip 
 </span></span><span class="line"><span class="cl">!vprot 00d13000
+</span></span></code></pre></div><h3 id="list-stack-frame" class="relative group">List stack frame <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#list-stack-frame" aria-label="Anchor">#</a></span></h3>
+<p>Using the k command to list the stack frame</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl">k
+</span></span><span class="line"><span class="cl">k2
+</span></span><span class="line"><span class="cl">k3
+</span></span><span class="line"><span class="cl">k4
 </span></span></code></pre></div>
       </div>
     </section>
