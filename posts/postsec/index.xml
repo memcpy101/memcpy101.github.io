@@ -7,7 +7,16 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>@ 2024 All rigths reserved by mzdaemon</copyright>
-    <lastBuildDate>Tue, 19 Mar 2024 16:51:25 -0400</lastBuildDate><atom:link href="https://pentesthacks.ca/posts/postsec/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 19 Mar 2024 17:20:11 -0400</lastBuildDate><atom:link href="https://pentesthacks.ca/posts/postsec/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Low level computer concept</title>
+      <link>https://pentesthacks.ca/posts/postsec/lowlevel_concept/</link>
+      <pubDate>Tue, 19 Mar 2024 17:20:11 -0400</pubDate>
+      
+      <guid>https://pentesthacks.ca/posts/postsec/lowlevel_concept/</guid>
+      <description>I found an exellent post on stackoverflow explaining the differences between opcode, bytecode, mnemonic, machine code and assembly.</description>
+    </item>
+    
     <item>
       <title>How to check Mermory Permission in Windbg</title>
       <link>https://pentesthacks.ca/posts/postsec/windbg_mempermision_cmds/</link>
