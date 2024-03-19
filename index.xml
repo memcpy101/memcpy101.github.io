@@ -7,7 +7,34 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>@ 2024 All rigths reserved by mzdaemon</copyright>
-    <lastBuildDate>Sun, 10 Mar 2024 20:04:37 -0400</lastBuildDate><atom:link href="https://pentesthacks.ca/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 19 Mar 2024 16:51:25 -0400</lastBuildDate><atom:link href="https://pentesthacks.ca/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>How to check Mermory Permission in Windbg</title>
+      <link>https://pentesthacks.ca/posts/postsec/windbg_mempermision_cmds/</link>
+      <pubDate>Tue, 19 Mar 2024 16:51:25 -0400</pubDate>
+      
+      <guid>https://pentesthacks.ca/posts/postsec/windbg_mempermision_cmds/</guid>
+      <description>Using windbg we can check memory permission under Protect field.</description>
+    </item>
+    
+    <item>
+      <title>How to disable access violation/guardpage in windbg</title>
+      <link>https://pentesthacks.ca/posts/postsec/windbg_guardpage_cmds/</link>
+      <pubDate>Tue, 19 Mar 2024 16:48:15 -0400</pubDate>
+      
+      <guid>https://pentesthacks.ca/posts/postsec/windbg_guardpage_cmds/</guid>
+      <description>Command below disable access violation and guard pages in Windbg</description>
+    </item>
+    
+    <item>
+      <title>Windbg useful commands</title>
+      <link>https://pentesthacks.ca/posts/postsec/windbg_usful_cmds/</link>
+      <pubDate>Tue, 19 Mar 2024 15:58:14 -0400</pubDate>
+      
+      <guid>https://pentesthacks.ca/posts/postsec/windbg_usful_cmds/</guid>
+      <description>All windbg commands here # Link to windgb manual</description>
+    </item>
+    
     <item>
       <title>Windbg, the cdb.exe to attach to process  </title>
       <link>https://pentesthacks.ca/posts/postsec/windbg_cdb_attach/</link>
