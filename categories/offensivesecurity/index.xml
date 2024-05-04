@@ -7,7 +7,16 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>@ 2024 All rigths reserved by mzdaemon</copyright>
-    <lastBuildDate>Tue, 19 Mar 2024 17:20:11 -0400</lastBuildDate><atom:link href="https://pentesthacks.ca/categories/offensivesecurity/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 04 May 2024 16:13:14 -0400</lastBuildDate><atom:link href="https://pentesthacks.ca/categories/offensivesecurity/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Detect Bad Chars Exploit Development</title>
+      <link>https://pentesthacks.ca/posts/postsec/detect_badchars/</link>
+      <pubDate>Sat, 04 May 2024 16:13:14 -0400</pubDate>
+      
+      <guid>https://pentesthacks.ca/posts/postsec/detect_badchars/</guid>
+      <description>List of bad chars # Useful during exploit developement to detect bad chars.</description>
+    </item>
+    
     <item>
       <title>Low level computer concept</title>
       <link>https://pentesthacks.ca/posts/postsec/lowlevel_concept/</link>
