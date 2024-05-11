@@ -7,7 +7,25 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>@ 2024 All rigths reserved by mzdaemon</copyright>
-    <lastBuildDate>Sat, 11 May 2024 09:57:14 -0400</lastBuildDate><atom:link href="https://pentesthacks.ca/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 11 May 2024 14:29:14 -0400</lastBuildDate><atom:link href="https://pentesthacks.ca/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Windows Native API Book Referece</title>
+      <link>https://pentesthacks.ca/posts/postsec/windows_native_api_ref/</link>
+      <pubDate>Sat, 11 May 2024 14:29:14 -0400</pubDate>
+      
+      <guid>https://pentesthacks.ca/posts/postsec/windows_native_api_ref/</guid>
+      <description>A really good book as a reference when working with Windows Native API, the book is old, but still relevant.</description>
+    </item>
+    
+    <item>
+      <title>Windows Kernel Undocumented Structures (VERGILIUS&#39;s Project)</title>
+      <link>https://pentesthacks.ca/posts/postsec/windows-_kernel_struct/</link>
+      <pubDate>Sat, 11 May 2024 14:15:14 -0400</pubDate>
+      
+      <guid>https://pentesthacks.ca/posts/postsec/windows-_kernel_struct/</guid>
+      <description>If you need to reverse engineer the windows kernel, the vergilius&amp;rsquo;s project is handy with thousands of undocumented structure covering several windows versions.</description>
+    </item>
+    
     <item>
       <title>Win32 Api (pinvoke) &amp; Windows Structures (ReactOS)</title>
       <link>https://pentesthacks.ca/posts/postsec/wind32apis_winstructure/</link>

@@ -19,14 +19,14 @@
   <meta name="theme-color" content="rgb(255,255,255)" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
   
-  <title>Win32 Api (pinvoke) & Windows Structures (ReactOS) &middot; </title>
-    <meta name="title" content="Win32 Api (pinvoke) & Windows Structures (ReactOS) &middot; " />
+  <title>Windows Kernel Undocumented Structures (VERGILIUS&#39;s Project) &middot; </title>
+    <meta name="title" content="Windows Kernel Undocumented Structures (VERGILIUS&#39;s Project) &middot; " />
   
-  <meta name="description" content="Two references websites if you need to understand how a particular windows api (InvokeAPI) or undocument structures (ReactOS) works on Windows." />
+  <meta name="description" content="If you need to reverse engineer the windows kernel, the vergilius&rsquo;s project is handy with thousands of undocumented structure covering several windows versions." />
   
   
   
-  <link rel="canonical" href="https://pentesthacks.ca/posts/postsec/wind32apis_winstructure/" />
+  <link rel="canonical" href="https://pentesthacks.ca/posts/postsec/windows-_kernel_struct/" />
   
   
   
@@ -74,16 +74,16 @@
   
   
   
-  <meta property="og:title" content="Win32 Api (pinvoke) &amp; Windows Structures (ReactOS)" />
-<meta property="og:description" content="Two references websites if you need to understand how a particular windows api (InvokeAPI) or undocument structures (ReactOS) works on Windows." />
+  <meta property="og:title" content="Windows Kernel Undocumented Structures (VERGILIUS&#39;s Project)" />
+<meta property="og:description" content="If you need to reverse engineer the windows kernel, the vergilius&rsquo;s project is handy with thousands of undocumented structure covering several windows versions." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://pentesthacks.ca/posts/postsec/wind32apis_winstructure/" /><meta property="article:section" content="posts" />
-<meta property="article:published_time" content="2024-05-11T09:57:14-04:00" />
-<meta property="article:modified_time" content="2024-05-11T09:57:14-04:00" />
+<meta property="og:url" content="https://pentesthacks.ca/posts/postsec/windows-_kernel_struct/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2024-05-11T14:15:14-04:00" />
+<meta property="article:modified_time" content="2024-05-11T14:15:14-04:00" />
 
   <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Win32 Api (pinvoke) &amp; Windows Structures (ReactOS)"/>
-<meta name="twitter:description" content="Two references websites if you need to understand how a particular windows api (InvokeAPI) or undocument structures (ReactOS) works on Windows."/>
+<meta name="twitter:title" content="Windows Kernel Undocumented Structures (VERGILIUS&#39;s Project)"/>
+<meta name="twitter:description" content="If you need to reverse engineer the windows kernel, the vergilius&rsquo;s project is handy with thousands of undocumented structure covering several windows versions."/>
 
   
   <script type="application/ld+json">
@@ -91,26 +91,26 @@
     "@context": "https://schema.org",
     "@type": "Article",
     "articleSection": "Posts",
-    "name": "Win32 Api (pinvoke) \u0026 Windows Structures (ReactOS)",
-    "headline": "Win32 Api (pinvoke) \u0026 Windows Structures (ReactOS)",
+    "name": "Windows Kernel Undocumented Structures (VERGILIUS\u0027s Project)",
+    "headline": "Windows Kernel Undocumented Structures (VERGILIUS\u0027s Project)",
     
-    "abstract": "Two references websites if you need to understand how a particular windows api (InvokeAPI) or undocument structures (ReactOS) works on Windows.",
+    "abstract": "If you need to reverse engineer the windows kernel, the vergilius\u0026rsquo;s project is handy with thousands of undocumented structure covering several windows versions.",
     "inLanguage": "en",
-    "url" : "https:\/\/pentesthacks.ca\/posts\/postsec\/wind32apis_winstructure\/",
+    "url" : "https:\/\/pentesthacks.ca\/posts\/postsec\/windows-_kernel_struct\/",
     "author" : {
       "@type": "Person",
       "name": "mzdaemon"
     },
     "copyrightYear": "2024",
-    "dateCreated": "2024-05-11T09:57:14-04:00",
-    "datePublished": "2024-05-11T09:57:14-04:00",
+    "dateCreated": "2024-05-11T14:15:14-04:00",
+    "datePublished": "2024-05-11T14:15:14-04:00",
     
-    "dateModified": "2024-05-11T09:57:14-04:00",
+    "dateModified": "2024-05-11T14:15:14-04:00",
     
     "keywords": ["WindowsInternal","ReverseEng"],
     
     "mainEntityOfPage": "true",
-    "wordCount": "56"
+    "wordCount": "47"
   }]
   </script>
 
@@ -671,7 +671,7 @@
     <header class="max-w-prose">
       
       <h1 class="mt-0 text-4xl font-extrabold text-neutral-900 dark:text-neutral">
-        Win32 Api (pinvoke) & Windows Structures (ReactOS)
+        Windows Kernel Undocumented Structures (VERGILIUS's Project)
       </h1>
       <div class="mt-8 mb-12 text-base text-neutral-500 dark:text-neutral-400 print:hidden">
         
@@ -706,7 +706,7 @@
   <div class="flex flex-row flex-wrap items-center">
     
     
-      <time datetime="2024-05-11 09:57:14 -0400 EDT">11 May 2024</time><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">1 min</span>
+      <time datetime="2024-05-11 14:15:14 -0400 EDT">11 May 2024</time><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">1 min</span>
     
 
     
@@ -767,8 +767,7 @@
       <ul>
         <li>
           <ul>
-            <li><a href="#pinvoke">Pinvoke</a></li>
-            <li><a href="#reactos">ReactOS</a></li>
+            <li><a href="#vergiliuss-project-official-link">Vergilius&rsquo;s Project Official link</a></li>
           </ul>
         </li>
       </ul>
@@ -782,20 +781,14 @@
         </div>
       
       <div class="min-w-0 min-h-0 max-w-prose grow">
-        <p>Two references websites if you need to understand how a particular windows api (InvokeAPI) or undocument structures (ReactOS) works on Windows.</p>
-<h4 id="pinvoke" class="relative group">Pinvoke <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#pinvoke" aria-label="Anchor">#</a></span></h4>
-<p>Note: You can just google for specific api, for example: &ldquo;virtualalloc pinvoke&rdquo;</p>
+        <p>If you need to reverse engineer the windows kernel, the vergilius&rsquo;s project is handy with thousands of undocumented structure covering several windows versions.</p>
+<p>The Vergilius&rsquo;s Project covers both x32 and x64 architecture.</p>
+<h4 id="vergiliuss-project-official-link" class="relative group">Vergilius&rsquo;s Project Official link <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#vergiliuss-project-official-link" aria-label="Anchor">#</a></span></h4>
 <p>Click here <a
-  href="https://www.pinvoke.net/"
+  href="https://www.vergiliusproject.com"
   
   target="_blank" rel="noreferrer noopener"
->PInvoke Win32 Apis</a> to go to the official website</p>
-<h4 id="reactos" class="relative group">ReactOS <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#reactos" aria-label="Anchor">#</a></span></h4>
-<p>You can follow the link  <a
-  href="https://doxygen.reactos.org/"
-  
-  target="_blank" rel="noreferrer noopener"
->ReactOS Undocumented Structures</a></p>
+>Vergilius Link</a> to go to the official website</p>
 
       </div>
     </section>
@@ -863,7 +856,7 @@
       
         <a
           class="m-1 inline-block min-w-[2.4rem] rounded bg-neutral-300 p-1 text-center text-neutral-700 hover:bg-primary-500 hover:text-neutral dark:bg-neutral-700 dark:text-neutral-300 dark:hover:bg-primary-400 dark:hover:text-neutral-800"
-          href="https://twitter.com/intent/tweet/?url=https://pentesthacks.ca/posts/postsec/wind32apis_winstructure/&amp;text=Win32%20Api%20%28pinvoke%29%20&amp;%20Windows%20Structures%20%28ReactOS%29"
+          href="https://twitter.com/intent/tweet/?url=https://pentesthacks.ca/posts/postsec/windows-_kernel_struct/&amp;text=Windows%20Kernel%20Undocumented%20Structures%20%28VERGILIUS%27s%20Project%29"
           title="Tweet on Twitter"
           aria-label="Tweet on Twitter"
           target="_blank"
@@ -876,7 +869,7 @@
       
         <a
           class="m-1 inline-block min-w-[2.4rem] rounded bg-neutral-300 p-1 text-center text-neutral-700 hover:bg-primary-500 hover:text-neutral dark:bg-neutral-700 dark:text-neutral-300 dark:hover:bg-primary-400 dark:hover:text-neutral-800"
-          href="https://reddit.com/submit/?url=https://pentesthacks.ca/posts/postsec/wind32apis_winstructure/&amp;resubmit=true&amp;title=Win32%20Api%20%28pinvoke%29%20&amp;%20Windows%20Structures%20%28ReactOS%29"
+          href="https://reddit.com/submit/?url=https://pentesthacks.ca/posts/postsec/windows-_kernel_struct/&amp;resubmit=true&amp;title=Windows%20Kernel%20Undocumented%20Structures%20%28VERGILIUS%27s%20Project%29"
           title="Submit to Reddit"
           aria-label="Submit to Reddit"
           target="_blank"
@@ -889,7 +882,7 @@
       
         <a
           class="m-1 inline-block min-w-[2.4rem] rounded bg-neutral-300 p-1 text-center text-neutral-700 hover:bg-primary-500 hover:text-neutral dark:bg-neutral-700 dark:text-neutral-300 dark:hover:bg-primary-400 dark:hover:text-neutral-800"
-          href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https://pentesthacks.ca/posts/postsec/wind32apis_winstructure/&amp;title=Win32%20Api%20%28pinvoke%29%20&amp;%20Windows%20Structures%20%28ReactOS%29"
+          href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https://pentesthacks.ca/posts/postsec/windows-_kernel_struct/&amp;title=Windows%20Kernel%20Undocumented%20Structures%20%28VERGILIUS%27s%20Project%29"
           title="Share on LinkedIn"
           aria-label="Share on LinkedIn"
           target="_blank"
@@ -912,7 +905,7 @@
       <div class="flex justify-between pt-3">
         <span>
           
-            <a class="group flex" href="/posts/postsec/load_plugin_windbg/">
+            <a class="group flex" href="/posts/postsec/wind32apis_winstructure/">
               <span
                 class="me-2 text-neutral-700 transition-transform group-hover:-translate-x-[2px] group-hover:text-primary-600 dark:text-neutral dark:group-hover:text-primary-400"
                 ><span class="ltr:inline rtl:hidden">&larr;</span
@@ -921,11 +914,11 @@
               <span class="flex flex-col">
                 <span
                   class="mt-[0.1rem] leading-6 group-hover:underline group-hover:decoration-primary-500"
-                  >How to load external plugin windbg?</span
+                  >Win32 Api (pinvoke) & Windows Structures (ReactOS)</span
                 >
                 <span class="mt-[0.1rem] text-xs text-neutral-500 dark:text-neutral-400">
                   
-                    <time datetime="2024-05-11 09:12:14 -0400 EDT">11 May 2024</time>
+                    <time datetime="2024-05-11 09:57:14 -0400 EDT">11 May 2024</time>
                   
                 </span>
               </span>
@@ -934,15 +927,15 @@
         </span>
         <span>
           
-            <a class="group flex text-right" href="/posts/postsec/windows-_kernel_struct/">
+            <a class="group flex text-right" href="/posts/postsec/windows_native_api_ref/">
               <span class="flex flex-col">
                 <span
                   class="mt-[0.1rem] leading-6 group-hover:underline group-hover:decoration-primary-500"
-                  >Windows Kernel Undocumented Structures (VERGILIUS's Project)</span
+                  >Windows Native API Book Referece</span
                 >
                 <span class="mt-[0.1rem] text-xs text-neutral-500 dark:text-neutral-400">
                   
-                    <time datetime="2024-05-11 14:15:14 -0400 EDT">11 May 2024</time>
+                    <time datetime="2024-05-11 14:29:14 -0400 EDT">11 May 2024</time>
                   
                 </span>
               </span>
