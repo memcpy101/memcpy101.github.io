@@ -7,7 +7,16 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>@ 2024 All rigths reserved by mzdaemon</copyright>
-    <lastBuildDate>Sat, 04 May 2024 16:58:14 -0400</lastBuildDate><atom:link href="https://pentesthacks.ca/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 11 May 2024 09:12:14 -0400</lastBuildDate><atom:link href="https://pentesthacks.ca/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>How to load external plugin windbg?</title>
+      <link>https://pentesthacks.ca/posts/postsec/load_plugin_windbg/</link>
+      <pubDate>Sat, 11 May 2024 09:12:14 -0400</pubDate>
+      
+      <guid>https://pentesthacks.ca/posts/postsec/load_plugin_windbg/</guid>
+      <description>We can load external plugins to help during reverse engineering/exploit development.</description>
+    </item>
+    
     <item>
       <title>How to generate smallest shellcode ? (msfvenom)</title>
       <link>https://pentesthacks.ca/posts/postsec/smalled_shellcode/</link>
