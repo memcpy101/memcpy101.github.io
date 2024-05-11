@@ -7,7 +7,16 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>@ 2024 All rigths reserved by mzdaemon</copyright>
-    <lastBuildDate>Sat, 11 May 2024 09:12:14 -0400</lastBuildDate><atom:link href="https://pentesthacks.ca/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 11 May 2024 09:57:14 -0400</lastBuildDate><atom:link href="https://pentesthacks.ca/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Win32 Api (pinvoke) &amp; Windows Structures (ReactOS)</title>
+      <link>https://pentesthacks.ca/posts/postsec/wind32apis_winstructure/</link>
+      <pubDate>Sat, 11 May 2024 09:57:14 -0400</pubDate>
+      
+      <guid>https://pentesthacks.ca/posts/postsec/wind32apis_winstructure/</guid>
+      <description>Two references websites if you need to understand how a particular windows api (InvokeAPI) or undocument structures (ReactOS) works on Windows.</description>
+    </item>
+    
     <item>
       <title>How to load external plugin windbg?</title>
       <link>https://pentesthacks.ca/posts/postsec/load_plugin_windbg/</link>

@@ -5,7 +5,36 @@
     
       <url>
             <loc>https://pentesthacks.ca/</loc>
-            <lastmod>2024-05-11T09:12:14-04:00</lastmod>
+            <lastmod>2024-05-11T09:57:14-04:00</lastmod>
+          </url>
+    
+  
+    
+  
+    
+      <url>
+            <loc>https://pentesthacks.ca/posts/postsec/</loc>
+            <lastmod>2024-05-11T09:57:14-04:00</lastmod>
+          </url>
+    
+  
+    
+  
+    
+      <url>
+            <loc>https://pentesthacks.ca/posts/</loc>
+            <lastmod>2024-05-11T09:57:14-04:00</lastmod>
+          </url>
+    
+  
+    
+  
+    
+  
+    
+      <url>
+            <loc>https://pentesthacks.ca/posts/postsec/wind32apis_winstructure/</loc>
+            <lastmod>2024-05-11T09:57:14-04:00</lastmod>
           </url>
     
   
@@ -20,24 +49,6 @@
             <loc>https://pentesthacks.ca/posts/postsec/load_plugin_windbg/</loc>
             <lastmod>2024-05-11T09:12:14-04:00</lastmod>
           </url>
-    
-  
-    
-      <url>
-            <loc>https://pentesthacks.ca/posts/postsec/</loc>
-            <lastmod>2024-05-11T09:12:14-04:00</lastmod>
-          </url>
-    
-  
-    
-  
-    
-      <url>
-            <loc>https://pentesthacks.ca/posts/</loc>
-            <lastmod>2024-05-11T09:12:14-04:00</lastmod>
-          </url>
-    
-  
     
   
     
@@ -105,8 +116,6 @@
     
   
     
-  
-    
       <url>
             <loc>https://pentesthacks.ca/posts/postsec/tty_shell/</loc>
             <lastmod>2024-03-10T18:48:29-04:00</lastmod>
@@ -118,8 +127,6 @@
             <loc>https://pentesthacks.ca/posts/postsec/narly_windbg/</loc>
             <lastmod>2024-03-09T21:13:16-05:00</lastmod>
           </url>
-    
-  
     
   
     
