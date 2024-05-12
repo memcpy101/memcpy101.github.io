@@ -110,7 +110,7 @@
     "keywords": ["ExploitDev"],
     
     "mainEntityOfPage": "true",
-    "wordCount": "157"
+    "wordCount": "160"
   }]
   </script>
 
@@ -777,35 +777,10 @@
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl">sc.exe create AppServiceDebug binpath= &#34;C:\Program Files\Windows Kits\10\Debuggers\x86\cdb.exe -server tcp:port=50000 C:\Program Files\APP\Debug\app.exe&#34; 
 </span></span></code></pre></div><p>Go to windows services, you can run services.msc to open the windows services. Make sure process will run as System Account.</p>
 <p>After starting the service, you can open windbg and choose attach to remote process and enter the information below.</p>
-<p>
-
-
-
-
-  
-  
-    
-  
-  
-    <figure>
-      <img
-        class="mx-auto my-0 rounded-md"
-        
-          
-            srcset="/windbg_connect_string_hub8a2815840a4a0b57e0e69b5ee658b86_108718_330x0_resize_box_3.png 330w,/windbg_connect_string_hub8a2815840a4a0b57e0e69b5ee658b86_108718_660x0_resize_box_3.png 660w,/windbg_connect_string_hub8a2815840a4a0b57e0e69b5ee658b86_108718_1024x0_resize_box_3.png 1024w,/windbg_connect_string_hub8a2815840a4a0b57e0e69b5ee658b86_108718_1320x0_resize_box_3.png 2x"
-            src="/windbg_connect_string_hub8a2815840a4a0b57e0e69b5ee658b86_108718_660x0_resize_box_3.png"
-          
-        
-        alt="image alt text"
-        
-          loading="lazy"
-        
-      />
-      
-    </figure>
-  
-
-</p>
+<figure><img src="/image/windbg_connect_string.png" width="650" height="650"><figcaption>
+      <h4>Windbg Connect String</h4>
+    </figcaption>
+</figure>
 <p>Connection string</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl">tcp:port=50000 
 </span></span></code></pre></div><h3 id="tips" class="relative group">Tips <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#tips" aria-label="Anchor">#</a></span></h3>

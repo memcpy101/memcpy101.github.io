@@ -110,7 +110,7 @@
     "keywords": ["WindowsInternal","ReverseEng","ExploitDev"],
     
     "mainEntityOfPage": "true",
-    "wordCount": "139"
+    "wordCount": "141"
   }]
   </script>
 
@@ -763,36 +763,11 @@
 <p>The IAT is important during reverse engineering  process to identify functions been used by the application and therefore understand better the application functionality and capabilities, its possible to understand the application behaviour by reviewing the IAT  and looking for functions commonly used by malware.</p>
 <p>Exploit developer perspective the IAT is important to identiy weak/vulnerable functions used by the application, after idenfiying the vulnerable function the exploit developer will attempt to reach the vulnerable function by manipulating the network packet or file format.</p>
 <p>Below is an example of dependecy walker loaded with notepad.exe. We can see functions and modules used by notepad.exe
-We can see the notepad.exe uses kernel32 module and kernelbase as well and multiple functions from these modules.
-
-
-
-
-
-  
-  
-    
-  
-  
-    <figure>
-      <img
-        class="mx-auto my-0 rounded-md"
-        
-          
-            srcset="/depencywalker_notepad_hu2731ff7a5efa2c1d1f8a99cbb38c4c66_92974_330x0_resize_box_3.png 330w,/depencywalker_notepad_hu2731ff7a5efa2c1d1f8a99cbb38c4c66_92974_660x0_resize_box_3.png 660w,/depencywalker_notepad_hu2731ff7a5efa2c1d1f8a99cbb38c4c66_92974_1024x0_resize_box_3.png 1024w,/depencywalker_notepad_hu2731ff7a5efa2c1d1f8a99cbb38c4c66_92974_1320x0_resize_box_3.png 2x"
-            src="/depencywalker_notepad_hu2731ff7a5efa2c1d1f8a99cbb38c4c66_92974_660x0_resize_box_3.png"
-          
-        
-        alt="image alt text"
-        
-          loading="lazy"
-        
-      />
-      
-    </figure>
-  
-
-</p>
+We can see the notepad.exe uses kernel32 module and kernelbase as well and multiple functions from these modules.</p>
+<figure><img src="/image/depencywalker_notepad.png" width="700" height="700"><figcaption>
+      <h4>Dependecy Walker</h4>
+    </figcaption>
+</figure>
 <p>Thank you for reading.</p>
 
       </div>
