@@ -7,7 +7,16 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>@ 2024 All rigths reserved by mzdaemon</copyright>
-    <lastBuildDate>Sat, 11 May 2024 14:29:14 -0400</lastBuildDate><atom:link href="https://pentesthacks.ca/posts/postsec/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 12 May 2024 22:41:14 -0400</lastBuildDate><atom:link href="https://pentesthacks.ca/posts/postsec/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Ldr field in PEB</title>
+      <link>https://pentesthacks.ca/posts/postsec/ldr_struct/</link>
+      <pubDate>Sun, 12 May 2024 22:41:14 -0400</pubDate>
+      
+      <guid>https://pentesthacks.ca/posts/postsec/ldr_struct/</guid>
+      <description>The Ldr is one of the most important field in PEB, Ldr is a pointer to a PEB_LDR_DATA structure that contains information about the loaded modules for the process.</description>
+    </item>
+    
     <item>
       <title>Windows Native API Book Referece</title>
       <link>https://pentesthacks.ca/posts/postsec/windows_native_api_ref/</link>
