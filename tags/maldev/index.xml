@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Maldev on </title>
+    <link>https://pentesthacks.ca/tags/maldev/</link>
+    <description>Recent content in Maldev on </description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>@ 2024 All rigths reserved by mzdaemon</copyright>
+    <lastBuildDate>Wed, 15 May 2024 14:57:14 -0400</lastBuildDate><atom:link href="https://pentesthacks.ca/tags/maldev/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Maldev Resources (Offensive Security)</title>
+      <link>https://pentesthacks.ca/posts/postsec/maldev_rsc/</link>
+      <pubDate>Wed, 15 May 2024 14:57:14 -0400</pubDate>
+      
+      <guid>https://pentesthacks.ca/posts/postsec/maldev_rsc/</guid>
+      <description>Good resources to learn Malware Analysis/Dev</description>
+    </item>
+    
+  </channel>
+</rss>
