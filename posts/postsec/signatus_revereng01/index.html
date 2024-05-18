@@ -19,15 +19,14 @@
   <meta name="theme-color" content="rgb(255,255,255)" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
   
-  <title>Offensive Security Posts &middot; </title>
-    <meta name="title" content="Offensive Security Posts &middot; " />
+  <title>Reverse Engineering Signatus.exe (bmdyy) - Part 1 &middot; </title>
+    <meta name="title" content="Reverse Engineering Signatus.exe (bmdyy) - Part 1 &middot; " />
   
-  <meta name="description" content="" />
+  <meta name="description" content="I am currently enrolled on OSED Course, I am taking a chance to practice more my reverse engineering skills and exploit development and bmddy wrote a program called Signatus and I will do a write up of my approach on reverse engineering the program." />
   
   
   
-  <link rel="canonical" href="https://pentesthacks.ca/posts/postsec/" />
-  <link rel="alternate" type="application/rss+xml" href="/posts/postsec/index.xml" title="" />
+  <link rel="canonical" href="https://pentesthacks.ca/posts/postsec/signatus_revereng01/" />
   
   
   
@@ -75,17 +74,46 @@
   
   
   
-  <meta property="og:title" content="Offensive Security Posts" />
-<meta property="og:description" content="" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://pentesthacks.ca/posts/postsec/" />
+  <meta property="og:title" content="Reverse Engineering Signatus.exe (bmdyy) - Part 1" />
+<meta property="og:description" content="I am currently enrolled on OSED Course, I am taking a chance to practice more my reverse engineering skills and exploit development and bmddy wrote a program called Signatus and I will do a write up of my approach on reverse engineering the program." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://pentesthacks.ca/posts/postsec/signatus_revereng01/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2024-05-15T22:57:14-04:00" />
+<meta property="article:modified_time" content="2024-05-15T22:57:14-04:00" />
 
   <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Offensive Security Posts"/>
-<meta name="twitter:description" content=""/>
+<meta name="twitter:title" content="Reverse Engineering Signatus.exe (bmdyy) - Part 1"/>
+<meta name="twitter:description" content="I am currently enrolled on OSED Course, I am taking a chance to practice more my reverse engineering skills and exploit development and bmddy wrote a program called Signatus and I will do a write up of my approach on reverse engineering the program."/>
 
   
-  
+  <script type="application/ld+json">
+  [{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "articleSection": "Posts",
+    "name": "Reverse Engineering Signatus.exe (bmdyy) - Part 1",
+    "headline": "Reverse Engineering Signatus.exe (bmdyy) - Part 1",
+    
+    "abstract": "I am currently enrolled on OSED Course, I am taking a chance to practice more my reverse engineering skills and exploit development and bmddy wrote a program called Signatus and I will do a write up of my approach on reverse engineering the program.",
+    "inLanguage": "en",
+    "url" : "https:\/\/pentesthacks.ca\/posts\/postsec\/signatus_revereng01\/",
+    "author" : {
+      "@type": "Person",
+      "name": "mzdaemon"
+    },
+    "copyrightYear": "2024",
+    "dateCreated": "2024-05-15T22:57:14-04:00",
+    "datePublished": "2024-05-15T22:57:14-04:00",
+    
+    "dateModified": "2024-05-15T22:57:14-04:00",
+    
+    "keywords": ["ExploitDev","ReverseEng"],
+    
+    "mainEntityOfPage": "true",
+    "wordCount": "908"
+  }]
+  </script>
+
 
   
   <meta name="author" content="mzdaemon" />
@@ -639,47 +667,21 @@
     <div class="relative flex flex-col grow">
       <main id="main-content" class="grow">
         
-  
-  <header>
-    
-    <h1 class="mt-0 text-4xl font-extrabold text-neutral-900 dark:text-neutral">Offensive Security Posts</h1>
-  </header>
-  <section
-    class="mt-0 prose flex max-w-full flex-col dark:prose-invert lg:flex-row"
-  >
-    
-    <div class="min-w-0 min-h-0 max-w-prose grow">
+  <article>
+    <header class="max-w-prose">
       
-    </div>
-  </section>
-  
-    <section>
-      
+      <h1 class="mt-0 text-4xl font-extrabold text-neutral-900 dark:text-neutral">
+        Reverse Engineering Signatus.exe (bmdyy) - Part 1
+      </h1>
+      <div class="mt-8 mb-12 text-base text-neutral-500 dark:text-neutral-400 print:hidden">
         
-          <h2 class="mt-12 text-2xl font-bold text-neutral-700 first:mt-8 dark:text-neutral-300">
-            2024
-          </h2>
-          <hr class="border-dotted w-36 border-neutral-400" />
-          
-            <article class="mt-6 flex max-w-prose flex-row">
-  <div>
-    <h3 class="flex items-center text-xl font-semibold">
-      
-        <a
-          class="text-neutral-800 decoration-primary-500 hover:underline hover:underline-offset-2 dark:text-neutral"
-          href="/posts/postsec/teb_struct/"
-          >The TEB Structure</a
-        >
-      
-      
-      
-    </h3>
-    <div class="text-sm text-neutral-500 dark:text-neutral-400">
-      
 
 
 
 
+
+  
+  
 
 
 
@@ -704,7 +706,7 @@
   <div class="flex flex-row flex-wrap items-center">
     
     
-      <time datetime="2024-03-09 16:49:54 -0500 EST">9 March 2024</time><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">1 min</span>
+      <time datetime="2024-05-15 22:57:14 -0400 EDT">15 May 2024</time><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">5 mins</span>
     
 
     
@@ -728,9 +730,9 @@
         
           
             <a
-              href="/tags/windowsinternal/"
+              href="/tags/exploitdev/"
               class="rounded-md border border-neutral-200 px-1 py-[1px] hover:border-primary-300 hover:text-primary-700 dark:border-neutral-600 dark:hover:border-primary-600 dark:hover:text-primary-400"
-              >WindowsInternal</a
+              >ExploitDev</a
             >
           
             <a
@@ -739,347 +741,338 @@
               >ReverseEng</a
             >
           
-            <a
-              href="/tags/exploitdev/"
-              class="rounded-md border border-neutral-200 px-1 py-[1px] hover:border-primary-300 hover:text-primary-700 dark:border-neutral-600 dark:hover:border-primary-600 dark:hover:text-primary-400"
-              >ExploitDev</a
-            >
-          
         
       
     </div>
   
 
 
-    </div>
-    
-  </div>
-</article>
-
-          
-            <article class="mt-6 flex max-w-prose flex-row">
-  <div>
-    <h3 class="flex items-center text-xl font-semibold">
+      </div>
       
-        <a
-          class="text-neutral-800 decoration-primary-500 hover:underline hover:underline-offset-2 dark:text-neutral"
-          href="/posts/postsec/peb/"
-          >The PEB Structure</a
-        >
+    </header>
+    <section class="flex flex-col max-w-full mt-0 prose dark:prose-invert lg:flex-row">
       
-      
-      
-    </h3>
-    <div class="text-sm text-neutral-500 dark:text-neutral-400">
-      
-
-
-
-
-
-
-
+      <div class="min-w-0 min-h-0 max-w-prose grow">
+        <p>I am currently enrolled on OSED Course, I am taking a chance to practice more my reverse engineering skills and exploit development and <a
+  href="https://github.com/bmdyy/signatus/releases/tag/1"
   
-
+  target="_blank" rel="noreferrer noopener"
+>bmddy</a> wrote a program called Signatus and I will do a write up of my approach on reverse engineering the program.</p>
+<p>My approach was first finding entry points to feed input data where I can interact with the software and tracing the code with IDA Free (static analysis) and Windbg (Dynamic analysis). By executing the program we can see its listening on port 9999 (TCP).</p>
+<figure><img src="/image/signatus_running_port.png" width="600" height="400">
+</figure>
+<p>I like to write a small piece of python code to send a dummy packet and with the windbg debugger attached with a breakpoint on ws2_32!recv function.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl">import socket
+</span></span><span class="line"><span class="cl">import sys
+</span></span><span class="line"><span class="cl">from struct import pack
+</span></span><span class="line"><span class="cl">def main():
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    if len(sys.argv) != 2:
+</span></span><span class="line"><span class="cl">        print(&#34;Usage: %s <span class="p">&lt;</span><span class="nt">ip_address</span><span class="p">&gt;</span>\n&#34; % (sys.argv[0]))
+</span></span><span class="line"><span class="cl">        sys.exit(1)
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    server = sys.argv[1]
+</span></span><span class="line"><span class="cl">    port = 9999
+</span></span><span class="line"><span class="cl">    buf = pack(bytearray[0x41]*0x100) 
+</span></span><span class="line"><span class="cl">    s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+</span></span><span class="line"><span class="cl">    s.connect((server,port))
+</span></span><span class="line"><span class="cl">    s.send(buf)
+</span></span><span class="line"><span class="cl">    s.close()
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">if __name__ == &#39;__main__&#39;:
+</span></span><span class="line"><span class="cl">    main()
+</span></span></code></pre></div><p>How do I know the software uses ws2_32!recv function to consume the data ?<br>
+You can load Signatus.exe on IDA Free and look for the imported functions (Imports&rsquo;s tab in IDA)</p>
+<figure><img src="/image/ida_imports_ws2_32_recv.png" width="600" height="400">
+</figure>
+<p>Attaching the debugger and set a breakpoint on  WS2_32!recv (bp WS2_32!recv) and sending a dummy package with the python script above.</p>
+We can see that the program checks if data was received successfully after the WS32_32!recv function has returned by comparing the return value in eax with 0FFFFFFFFh (-1 in decimal).<p/>
+We can see the comparison below at the address: 60AE135C. We passed the check, the next check it compares the return value with hard coded value of 0x4, also showing below.</p>
+<figure><img src="/image/ws2_32_check.png" width="600" height="400">
+</figure>
+<p>Because the return value is not equal to 0x4, we do not follow the successful branch (green), we follow the (red) arrow. The next branch is the one of my interest as it contains the functionality that will deny or allow us to utilize further functionality in the software. Understanding this piece is crucial to allow us to go down the correct path for the vulnerability.</p>
+<figure><img src="/image/func_important_signatus.png" width="700" height="400">
+</figure>
+<p>There are two import point to understand the 0x60AE1399 (call ds:_time64) will get current timestamp in number of seconds elapsed since midnight (00:00:00), January 1, 1970 <a
+  href="https://learn.microsoft.com/en-us/cpp/c-runtime-library/reference/time-time32-time64?view=msvc-170"
   
-  
-    
-  
-
-  
-
-  
-
-  
-    
-  
-
-  
-
-
-  <div class="flex flex-row flex-wrap items-center">
-    
-    
-      <time datetime="2024-03-09 16:15:03 -0500 EST">9 March 2024</time><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">1 min</span>
-    
-
-    
-    
-  </div>
-
-  
-  
-    <div class="my-1 text-xs leading-relaxed text-neutral-500 dark:text-neutral-400 ">
-      
-        
-          
-            <a
-              href="/categories/offensivesecurity/"
-              class="rounded-md border border-neutral-200 px-1 py-[1px] hover:border-primary-300 hover:text-primary-700 dark:border-neutral-600 dark:hover:border-primary-600 dark:hover:text-primary-400"
-              >OffensiveSecurity</a
-            >
-          
-        
-      
-        
-          
-            <a
-              href="/tags/windowsinternal/"
-              class="rounded-md border border-neutral-200 px-1 py-[1px] hover:border-primary-300 hover:text-primary-700 dark:border-neutral-600 dark:hover:border-primary-600 dark:hover:text-primary-400"
-              >WindowsInternal</a
-            >
-          
-            <a
-              href="/tags/reverseeng/"
-              class="rounded-md border border-neutral-200 px-1 py-[1px] hover:border-primary-300 hover:text-primary-700 dark:border-neutral-600 dark:hover:border-primary-600 dark:hover:text-primary-400"
-              >ReverseEng</a
-            >
-          
-            <a
-              href="/tags/exploitdev/"
-              class="rounded-md border border-neutral-200 px-1 py-[1px] hover:border-primary-300 hover:text-primary-700 dark:border-neutral-600 dark:hover:border-primary-600 dark:hover:text-primary-400"
-              >ExploitDev</a
-            >
-          
-        
-      
-    </div>
-  
-
-
-    </div>
-    
-  </div>
-</article>
-
-          
-            <article class="mt-6 flex max-w-prose flex-row">
-  <div>
-    <h3 class="flex items-center text-xl font-semibold">
-      
-        <a
-          class="text-neutral-800 decoration-primary-500 hover:underline hover:underline-offset-2 dark:text-neutral"
-          href="/posts/postsec/powershellscan/"
-          >Powershell Port Scan</a
-        >
-      
-      
-      
-    </h3>
-    <div class="text-sm text-neutral-500 dark:text-neutral-400">
-      
-
-
-
-
-
-
-
-  
-
+  target="_blank" rel="noreferrer noopener"
+>_time64</a>. The result of _time64 will be passed as argument to a function at 0x60AE13A8 (I renamed this funtcion as: encrypt_timing_func). This function encrypt_timing_func will receive as first argument the _time64 and second argument 0x0.</p>
+<p>Looking inside the encrypt_timing_func function this piece of code will perform arithmetic against the value generated by _time64 function. We see hardcoded 0xa (ecx) and 0x0 (eax) is used as well as part of division.</p>
+<figure><img src="/image/signatus_encrypt_timing_revereng.png" width="700" height="400">
+</figure>
+<p>The value returned from the function discussed is used after the function is returned in the multiplication, left shit and xor instructions below.
+The result is stored in edx and compared with edi, the edi contains the first 4 bytes of our payload. If edx and edi match, it will take (true condition) green arrow.
+If the value in edi (first byte of our payload) doesn&rsquo;t match the program will end and listen for new packet(input).</p>
+<figure><img src="/image/returned_encrypt_timing_func.png" width="700" height="400">
+</figure>
+<p>Here we can understand that the first 4 bytes of our payload need to be equal to the value in edx which contains the value transformed through _time64 by encrypt_timing_func function (0x60AE13A8) and aritchmetic calcultion after function is returned starting at (0x60AE13AD).<br /></p>
+<p>I wrote a function that in python that will generate the correct value for the first 4 bytes of our payload.<br>
+<i style="font-size: 14px;">Recommendation.: Run your poc script in the same machine where signatus.exe is stored or you will need to sync the time between signatus.exe machine and the remote machine, any time delay the poc won&rsquo;t work.</i></p>
+<p>Below is piece of encrypt_timing_func function I wrote in python. I will continue the reverse engineering in <a
+  href="../signatus_revereng02/"
   
   
-    
-  
-
-  
-
-  
-
-  
-    
-  
-
-  
-
-
-  <div class="flex flex-row flex-wrap items-center">
-    
-    
-      <time datetime="2024-03-02 22:46:13 -0500 EST">2 March 2024</time><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">2 mins</span>
-    
-
-    
-    
-  </div>
-
-  
-  
-    <div class="my-1 text-xs leading-relaxed text-neutral-500 dark:text-neutral-400 ">
-      
-        
-          
-            <a
-              href="/categories/offensivesecurity/"
-              class="rounded-md border border-neutral-200 px-1 py-[1px] hover:border-primary-300 hover:text-primary-700 dark:border-neutral-600 dark:hover:border-primary-600 dark:hover:text-primary-400"
-              >OffensiveSecurity</a
-            >
-          
-        
-      
-        
-          
-            <a
-              href="/tags/programming/"
-              class="rounded-md border border-neutral-200 px-1 py-[1px] hover:border-primary-300 hover:text-primary-700 dark:border-neutral-600 dark:hover:border-primary-600 dark:hover:text-primary-400"
-              >Programming</a
-            >
-          
-            <a
-              href="/tags/powershell/"
-              class="rounded-md border border-neutral-200 px-1 py-[1px] hover:border-primary-300 hover:text-primary-700 dark:border-neutral-600 dark:hover:border-primary-600 dark:hover:text-primary-400"
-              >Powershell</a
-            >
-          
-        
-      
-    </div>
-  
-
-
-    </div>
-    
-  </div>
-</article>
-
-          
-            <article class="mt-6 flex max-w-prose flex-row">
-  <div>
-    <h3 class="flex items-center text-xl font-semibold">
-      
-        <a
-          class="text-neutral-800 decoration-primary-500 hover:underline hover:underline-offset-2 dark:text-neutral"
-          href="/posts/postsec/meterpreter_shell_timeout/"
-          >Meterpreter Session Time out</a
-        >
-      
-      
-      
-    </h3>
-    <div class="text-sm text-neutral-500 dark:text-neutral-400">
-      
-
-
-
-
-
-
-
-  
-
-  
-  
-    
-  
-
-  
-
-  
-
-  
-    
-  
-
-  
-
-
-  <div class="flex flex-row flex-wrap items-center">
-    
-    
-      <time datetime="2024-03-02 22:46:13 -0500 EST">2 March 2024</time><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">2 mins</span>
-    
-
-    
-    
-  </div>
-
-  
-  
-    <div class="my-1 text-xs leading-relaxed text-neutral-500 dark:text-neutral-400 ">
-      
-        
-          
-            <a
-              href="/categories/offensivesecurity/"
-              class="rounded-md border border-neutral-200 px-1 py-[1px] hover:border-primary-300 hover:text-primary-700 dark:border-neutral-600 dark:hover:border-primary-600 dark:hover:text-primary-400"
-              >OffensiveSecurity</a
-            >
-          
-        
-      
-        
-          
-            <a
-              href="/tags/metasploit/"
-              class="rounded-md border border-neutral-200 px-1 py-[1px] hover:border-primary-300 hover:text-primary-700 dark:border-neutral-600 dark:hover:border-primary-600 dark:hover:text-primary-400"
-              >MetaSploit</a
-            >
-          
-            <a
-              href="/tags/meterpreter/"
-              class="rounded-md border border-neutral-200 px-1 py-[1px] hover:border-primary-300 hover:text-primary-700 dark:border-neutral-600 dark:hover:border-primary-600 dark:hover:text-primary-400"
-              >Meterpreter</a
-            >
-          
-        
-      
-    </div>
-  
-
-
-    </div>
-    
-  </div>
-</article>
-
-          
-        
-      
+>Reverse Engineering Signatus.exe (bmdyy) - Part 2</a> where I will continue the reverse engineering to discover the memory corruption vulnerability.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl">def reverse_timing(timing):
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    ecx = 0xa # Hard coded 0xa
+</span></span><span class="line"><span class="cl">    eax = 0x0 # Hard coded 0x0
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    # xor edx, edx
+</span></span><span class="line"><span class="cl">    edx = 0
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    # div ecx
+</span></span><span class="line"><span class="cl">    edx = (eax % ecx) # Store the remainder in edx
+</span></span><span class="line"><span class="cl">    eax = int(eax / ecx) # we div, we use int because of floating number
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    # mov ebx, eax
+</span></span><span class="line"><span class="cl">    ebx = eax
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    # Timing
+</span></span><span class="line"><span class="cl">    eax = int(timing) # Timing in eax
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    # div ecx
+</span></span><span class="line"><span class="cl">    edx = (eax % ecx)  # Store the remainder in edx
+</span></span><span class="line"><span class="cl">    eax = int(eax/ecx) # we div, we use int because of floating number
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    # mov edx, ebx
+</span></span><span class="line"><span class="cl">    edx = ebx
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    # dec edi
+</span></span><span class="line"><span class="cl">    edi = 0
+</span></span><span class="line"><span class="cl">    edi = edi-1 <span class="err">&amp;</span> 0xFFFFFFFF
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    # movzx esi, al
+</span></span><span class="line"><span class="cl">    esi = eax <span class="err">&amp;</span> 0xFF
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    # mov eax, esi
+</span></span><span class="line"><span class="cl">    eax = esi
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    # imul eax, esi
+</span></span><span class="line"><span class="cl">    eax = (eax * esi)
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    # mov ecx, eax
+</span></span><span class="line"><span class="cl">    ecx = eax
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    # imul ecx, esi
+</span></span><span class="line"><span class="cl">    ecx = (eax*esi)
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    # mov edx, ecx
+</span></span><span class="line"><span class="cl">    edx = ecx
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    # imul ecx, esi
+</span></span><span class="line"><span class="cl">    ecx = (ecx*esi)
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    # and edx, 0FFFFFF00h
+</span></span><span class="line"><span class="cl">    edx = (edx <span class="err">&amp;</span> 0x0FFFFFF00)
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    # shl edx, 4
+</span></span><span class="line"><span class="cl">    edx = edx <span class="err">&lt;</span><span class="p">&lt;</span> <span class="nt">4</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="err">#</span> <span class="na">or</span> <span class="na">edx</span><span class="err">,</span> <span class="na">eax</span>
+</span></span><span class="line"><span class="cl">    <span class="na">edx </span><span class="o">=</span> <span class="s">(edx</span> <span class="err">|</span> <span class="na">eax</span><span class="err">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="err">#</span> <span class="na">and</span> <span class="na">edx</span><span class="err">,</span> <span class="na">0x0FFFFFFF0h</span>
+</span></span><span class="line"><span class="cl">    <span class="na">edx </span><span class="o">=</span> <span class="s">(edx</span> <span class="err">&amp;</span> <span class="na">0x0FFFFFFF0</span><span class="err">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="err">#</span> <span class="na">and</span> <span class="na">ecx</span><span class="err">,</span> <span class="na">0FFFFF000h</span>
+</span></span><span class="line"><span class="cl">    <span class="na">ecx </span><span class="o">=</span> <span class="s">(ecx</span> <span class="err">&amp;</span> <span class="na">0x0FFFFF000</span><span class="err">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="err">#</span> <span class="na">shl</span> <span class="na">ecx</span><span class="err">,</span> <span class="na">8</span>
+</span></span><span class="line"><span class="cl">    <span class="na">ecx </span><span class="o">=</span> <span class="s">(ecx</span> <span class="err">&lt;&lt;</span> <span class="na">8</span><span class="err">)</span> <span class="err">&amp;</span> <span class="na">0xFFFFFFFF</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="err">#</span> <span class="na">or</span> <span class="na">edx</span><span class="err">,</span> <span class="na">ecx</span>
+</span></span><span class="line"><span class="cl">    <span class="na">edx </span><span class="o">=</span> <span class="s">(edx</span> <span class="err">|</span> <span class="na">ecx</span><span class="err">)</span> <span class="err">&amp;</span> <span class="na">0xFFFFFFFF</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="err">#</span> <span class="na">shl</span> <span class="na">edx</span><span class="err">,</span> <span class="na">4</span>
+</span></span><span class="line"><span class="cl">    <span class="na">edx </span><span class="o">=</span> <span class="s">(edx</span> <span class="err">&lt;&lt;</span> <span class="na">4</span><span class="err">)</span> <span class="err">&amp;</span> <span class="na">0xFFFFFFFF</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="err">#</span> <span class="na">or</span> <span class="na">edx</span><span class="err">,</span> <span class="na">esi</span>
+</span></span><span class="line"><span class="cl">    <span class="na">edx </span><span class="o">=</span> <span class="s">(edx</span> <span class="err">|</span> <span class="na">esi</span><span class="err">)</span> <span class="err">&amp;</span> <span class="na">0xFFFFFFFF</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="err">#</span> <span class="na">xor</span> <span class="na">edx</span><span class="err">,</span> <span class="na">74829726h</span>
+</span></span><span class="line"><span class="cl">    <span class="na">edx </span><span class="o">=</span> <span class="s">edx</span> <span class="err">^</span> <span class="na">0x74829726</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="na">return</span> <span class="na">edx</span>
+</span></span></code></pre></div>
+      </div>
     </section>
+    <footer class="pt-8 max-w-prose print:hidden">
+      
+  <div class="flex">
     
+    <div class="place-self-center">
+      
+        <div class="text-[0.6rem] uppercase leading-3 text-neutral-500 dark:text-neutral-400">
+          Author
+        </div>
+        <div class="font-semibold leading-6 text-neutral-800 dark:text-neutral-300">
+          mzdaemon
+        </div>
+      
+      
+        <div class="text-sm text-neutral-700 dark:text-neutral-400">Offensive Security, Penetration Tester, Red Teaming</div>
+      
+      <div class="text-2xl sm:text-lg">
+  <div class="flex flex-wrap text-neutral-400 dark:text-neutral-500">
+    
+      
+        <a
+          class="px-1 transition-transform hover:scale-125 hover:text-primary-700 dark:hover:text-primary-400"
+          style="will-change:transform;"
+          href="https://github.com/mzdaemon"
+          target="_blank"
+          aria-label="Github"
+          rel="me noopener noreferrer"
+          ><span class="relative inline-block align-text-bottom px-1 icon"><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Uploaded to: SVG Repo, www.svgrepo.com, Transformed by: SVG Repo Mixer Tools -->
+<svg width="800px" height="800px" viewBox="0 0 20.00 20.00" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="#0a0a0a" stroke="#0a0a0a">
+<g id="SVGRepo_bgCarrier" stroke-width="0"/>
+<g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" stroke="#CCCCCC" stroke-width="0.12"/>
+<g id="SVGRepo_iconCarrier"> <title>github [#fdfcfc]</title> <desc>Created with Sketch.</desc> <defs> </defs> <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"> <g id="Dribbble-Light-Preview" transform="translate(-140.000000, -7559.000000)" fill="#fdfcfc"> <g id="icons" transform="translate(56.000000, 160.000000)"> <path d="M94,7399 C99.523,7399 104,7403.59 104,7409.253 C104,7413.782 101.138,7417.624 97.167,7418.981 C96.66,7419.082 96.48,7418.762 96.48,7418.489 C96.48,7418.151 96.492,7417.047 96.492,7415.675 C96.492,7414.719 96.172,7414.095 95.813,7413.777 C98.04,7413.523 100.38,7412.656 100.38,7408.718 C100.38,7407.598 99.992,7406.684 99.35,7405.966 C99.454,7405.707 99.797,7404.664 99.252,7403.252 C99.252,7403.252 98.414,7402.977 96.505,7404.303 C95.706,7404.076 94.85,7403.962 94,7403.958 C93.15,7403.962 92.295,7404.076 91.497,7404.303 C89.586,7402.977 88.746,7403.252 88.746,7403.252 C88.203,7404.664 88.546,7405.707 88.649,7405.966 C88.01,7406.684 87.619,7407.598 87.619,7408.718 C87.619,7412.646 89.954,7413.526 92.175,7413.785 C91.889,7414.041 91.63,7414.493 91.54,7415.156 C90.97,7415.418 89.522,7415.871 88.63,7414.304 C88.63,7414.304 88.101,7413.319 87.097,7413.247 C87.097,7413.247 86.122,7413.234 87.029,7413.87 C87.029,7413.87 87.684,7414.185 88.139,7415.37 C88.139,7415.37 88.726,7417.2 91.508,7416.58 C91.513,7417.437 91.522,7418.245 91.522,7418.489 C91.522,7418.76 91.338,7419.077 90.839,7418.982 C86.865,7417.627 84,7413.783 84,7409.253 C84,7403.59 88.478,7399 94,7399" id="github-[#fdfcfc]"> </path> </g> </g> </g> </g>
+</svg></span></a
+        >
+      
+    
+      
+        <a
+          class="px-1 transition-transform hover:scale-125 hover:text-primary-700 dark:hover:text-primary-400"
+          style="will-change:transform;"
+          href="https://twitter.com/mzdaemon"
+          target="_blank"
+          aria-label="Twitter"
+          rel="me noopener noreferrer"
+          ><span class="relative inline-block align-text-bottom px-1 icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8L200.7 275.5 26.8 48H172.4L272.9 180.9 389.2 48zM364.4 421.8h39.1L151.1 88h-42L364.4 421.8z"/></svg>
+</span></a
+        >
+      
+    
+  </div>
 
-    <ul class="flex flex-row mt-8">
-        <li>
-          <a
-            href="/posts/postsec/page/2/"
-            class="mx-1 block min-w-[1.8rem] rounded text-center hover:bg-primary-600 hover:text-neutral"
-            aria-label="Previous page"
-            rel="prev"
-          >
-            &larr;
-          </a>
-        </li>
-          <li class="mx-1 min-w-[1.8rem] text-center">
-            <a
-              href="/posts/postsec/"
-              class="block rounded hover:bg-primary-600 hover:text-neutral"
-              aria-label="First page"
-            >
-              1
-            </a>
-          </li>
-        <li class="mx-1 min-w-[1.8rem] text-center">
-            <a
-              href="/posts/postsec/page/2/"
-              class="block rounded hover:bg-primary-600 hover:text-neutral"
-              aria-label="Page 2"
-            >
-              2
-            </a>
-        </li>
-        <li class="mx-1 min-w-[1.8rem] text-center">
-            <span
-              aria-current="page"
-              aria-label="Page 3"
-              class="block font-semibold rounded bg-primary-200 text-primary-700 dark:bg-primary-400 dark:text-neutral-800"
-            >
-              3
-            </span>
-        </li>
-    </ul>
+</div>
+    </div>
+  </div>
 
+
+      
+  
+  <section class="flex flex-row flex-wrap justify-center pt-4 text-xl">
+    
+      
+        <a
+          class="m-1 inline-block min-w-[2.4rem] rounded bg-neutral-300 p-1 text-center text-neutral-700 hover:bg-primary-500 hover:text-neutral dark:bg-neutral-700 dark:text-neutral-300 dark:hover:bg-primary-400 dark:hover:text-neutral-800"
+          href="https://twitter.com/intent/tweet/?url=https://pentesthacks.ca/posts/postsec/signatus_revereng01/&amp;text=Reverse%20Engineering%20Signatus.exe%20%28bmdyy%29%20-%20Part%201"
+          title="Tweet on Twitter"
+          aria-label="Tweet on Twitter"
+          target="_blank"
+          rel="noopener noreferrer"
+          ><span class="relative inline-block align-text-bottom px-1 icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8L200.7 275.5 26.8 48H172.4L272.9 180.9 389.2 48zM364.4 421.8h39.1L151.1 88h-42L364.4 421.8z"/></svg>
+</span></a
+        >
+      
+    
+      
+        <a
+          class="m-1 inline-block min-w-[2.4rem] rounded bg-neutral-300 p-1 text-center text-neutral-700 hover:bg-primary-500 hover:text-neutral dark:bg-neutral-700 dark:text-neutral-300 dark:hover:bg-primary-400 dark:hover:text-neutral-800"
+          href="https://reddit.com/submit/?url=https://pentesthacks.ca/posts/postsec/signatus_revereng01/&amp;resubmit=true&amp;title=Reverse%20Engineering%20Signatus.exe%20%28bmdyy%29%20-%20Part%201"
+          title="Submit to Reddit"
+          aria-label="Submit to Reddit"
+          target="_blank"
+          rel="noopener noreferrer"
+          ><span class="relative inline-block align-text-bottom px-1 icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M201.5 305.5c-13.8 0-24.9-11.1-24.9-24.6 0-13.8 11.1-24.9 24.9-24.9 13.6 0 24.6 11.1 24.6 24.9 0 13.6-11.1 24.6-24.6 24.6zM504 256c0 137-111 248-248 248S8 393 8 256 119 8 256 8s248 111 248 248zm-132.3-41.2c-9.4 0-17.7 3.9-23.8 10-22.4-15.5-52.6-25.5-86.1-26.6l17.4-78.3 55.4 12.5c0 13.6 11.1 24.6 24.6 24.6 13.8 0 24.9-11.3 24.9-24.9s-11.1-24.9-24.9-24.9c-9.7 0-18 5.8-22.1 13.8l-61.2-13.6c-3-.8-6.1 1.4-6.9 4.4l-19.1 86.4c-33.2 1.4-63.1 11.3-85.5 26.8-6.1-6.4-14.7-10.2-24.1-10.2-34.9 0-46.3 46.9-14.4 62.8-1.1 5-1.7 10.2-1.7 15.5 0 52.6 59.2 95.2 132 95.2 73.1 0 132.3-42.6 132.3-95.2 0-5.3-.6-10.8-1.9-15.8 31.3-16 19.8-62.5-14.9-62.5zM302.8 331c-18.2 18.2-76.1 17.9-93.6 0-2.2-2.2-6.1-2.2-8.3 0-2.5 2.5-2.5 6.4 0 8.6 22.8 22.8 87.3 22.8 110.2 0 2.5-2.2 2.5-6.1 0-8.6-2.2-2.2-6.1-2.2-8.3 0zm7.7-75c-13.6 0-24.6 11.1-24.6 24.9 0 13.6 11.1 24.6 24.6 24.6 13.8 0 24.9-11.1 24.9-24.6 0-13.8-11-24.9-24.9-24.9z"/></svg>
+</span></a
+        >
+      
+    
+      
+        <a
+          class="m-1 inline-block min-w-[2.4rem] rounded bg-neutral-300 p-1 text-center text-neutral-700 hover:bg-primary-500 hover:text-neutral dark:bg-neutral-700 dark:text-neutral-300 dark:hover:bg-primary-400 dark:hover:text-neutral-800"
+          href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https://pentesthacks.ca/posts/postsec/signatus_revereng01/&amp;title=Reverse%20Engineering%20Signatus.exe%20%28bmdyy%29%20-%20Part%201"
+          title="Share on LinkedIn"
+          aria-label="Share on LinkedIn"
+          target="_blank"
+          rel="noopener noreferrer"
+          ><span class="relative inline-block align-text-bottom px-1 icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"/></svg>
+</span></a
+        >
+      
+    
+  </section>
+
+
+      
+  
+    
+    
+    
+    <div class="pt-8">
+      <hr class="border-dotted border-neutral-300 dark:border-neutral-600" />
+      <div class="flex justify-between pt-3">
+        <span>
+          
+            <a class="group flex" href="/posts/postsec/maldev_rsc/">
+              <span
+                class="me-2 text-neutral-700 transition-transform group-hover:-translate-x-[2px] group-hover:text-primary-600 dark:text-neutral dark:group-hover:text-primary-400"
+                ><span class="ltr:inline rtl:hidden">&larr;</span
+                ><span class="ltr:hidden rtl:inline">&rarr;</span></span
+              >
+              <span class="flex flex-col">
+                <span
+                  class="mt-[0.1rem] leading-6 group-hover:underline group-hover:decoration-primary-500"
+                  >Maldev Resources (Offensive Security)</span
+                >
+                <span class="mt-[0.1rem] text-xs text-neutral-500 dark:text-neutral-400">
+                  
+                    <time datetime="2024-05-15 14:57:14 -0400 EDT">15 May 2024</time>
+                  
+                </span>
+              </span>
+            </a>
+          
+        </span>
+        <span>
+          
+            <a class="group flex text-right" href="/posts/postsec/signatus_revereng02/">
+              <span class="flex flex-col">
+                <span
+                  class="mt-[0.1rem] leading-6 group-hover:underline group-hover:decoration-primary-500"
+                  >Reverse Engineering Signatus.exe (bmdyy) - Part 2</span
+                >
+                <span class="mt-[0.1rem] text-xs text-neutral-500 dark:text-neutral-400">
+                  
+                    <time datetime="2024-05-16 22:57:14 -0400 EDT">16 May 2024</time>
+                  
+                </span>
+              </span>
+              <span
+                class="ms-2 text-neutral-700 transition-transform group-hover:-translate-x-[2px] group-hover:text-primary-600 dark:text-neutral dark:group-hover:text-primary-400"
+                ><span class="ltr:inline rtl:hidden">&rarr;</span
+                ><span class="ltr:hidden rtl:inline">&larr;</span></span
+              >
+            </a>
+          
+        </span>
+      </div>
+    </div>
   
 
+
+      
+    </footer>
+  </article>
+
+        
+          <div class="pointer-events-none absolute bottom-0 end-0 top-[100vh] w-12">
+            <a
+              href="#the-top"
+              class="pointer-events-auto sticky top-[calc(100vh-5.5rem)] flex h-12 w-12 items-center justify-center rounded-full bg-neutral/50 text-xl text-neutral-700 backdrop-blur hover:text-primary-600 dark:bg-neutral-800/50 dark:text-neutral dark:hover:text-primary-400"
+              aria-label="Scroll to top"
+              title="Scroll to top"
+            >
+              &uarr;
+            </a>
+          </div>
         
       </main><footer class="py-10 print:hidden">
   
