@@ -110,7 +110,7 @@
     "keywords": ["ExploitDev","ReverseEng"],
     
     "mainEntityOfPage": "true",
-    "wordCount": "913"
+    "wordCount": "927"
   }]
   </script>
 
@@ -757,7 +757,11 @@
   href="https://github.com/bmdyy/signatus/releases/tag/1"
   
   target="_blank" rel="noreferrer noopener"
->bmddy</a> wrote a program called Signatus and I will do a write up of my approach on reverse engineering the program.</p>
+>bmddy</a> wrote a program called Signatus and I will do a write up of my approach on reverse engineering the program. Please check <a
+  href="../signatus_revereng02/"
+  
+  
+>Reverse Engineering Signatus.exe (bmdyy) - Part 2</a> if you already checked Part1.</p>
 <p>My approach was first finding entry points to feed input data where I can interact with the software and tracing the code with IDA Free (static analysis) and Windbg (Dynamic analysis). By executing the program we can see its listening on port 9999 (TCP).</p>
 <figure><img src="/image/signatus_running_port.png" width="600" height="400">
 </figure>
