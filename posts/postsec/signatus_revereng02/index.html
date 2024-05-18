@@ -110,7 +110,7 @@
     "keywords": ["ExploitDev","ReverseEng"],
     
     "mainEntityOfPage": "true",
-    "wordCount": "436"
+    "wordCount": "456"
   }]
   </script>
 
@@ -763,32 +763,33 @@ If you haven&rsquo;t followed the first part, click here <a
   
   
 >Reverse Engineering Signatus.exe (bmdyy) - Part 1</a></p>
-<p>The if already read this 2nd part, the full poc I developed can be looked at my github <a
+<p>If you already read this 2nd part, the full poc I developed can be looked at my github repository <a
   href="../signatus_poc/"
   
   
 >Signatus.exe (bmdyy) - Exploit Dev POC</a></p>
 <p>As discussed on part 1, we have to get a successful condition at jz instruction at 0x60AE13E5 memory address which compares the result of encrypt_timing_func + additional calculation against first 4 bytes of our payload, I already developed a function in Part-1 that will address this issue.</p>
 <p> Next we need to continue our reverse engineering analysis, a message is printed to the console saying "> correct ODT received.".<br/>
-The sofware will make a call to WS2_32!recv and receive anthe next 4 bytes in our payload. Again after the call completes its compared against the returned value stored in eax against 0x0FFFFFFFFh (-1), the WS2_32!recv returns -1 if no data is received, if received, it returns the number of bytes received and store in eax register.
+The sofware will make a call to WS2_32!recv and receive the next 4 bytes in our payload. Again after the call completes its compared against the returned value stored in eax against 0x0FFFFFFFFh (-1), the WS2_32!recv returns -1 if no data is received, if received, it returns the number of bytes received and store it in eax register.
 <p> Next branch (0x60AE142C) will compare eax with 0x4, will jump to successful branch(red color) if the value is equal, otherwise will jump to unsuccessful (green arrow) and the program will print the failed message and continue to look for new incoming data.
 <figure><img src="/image/ws2_32_recv_second_arg.png" width="700" height="400">
 </figure>
 <p>The program will take the succesful branch as we have data for the second 4 bytes. we should focus on function call 0x60AE1470 and I renamed in IDA Free to func_opcodes_analyze (0x60AE1470).<br/> The function will use the payload value at offset 0x8 in the payload as an opcode value that will be compared against multiple values and will perform an action if the opcode value matches.</p>
 <figure><img src="/image/opcode_branch_reverse01.png" width="700" height="400">
 </figure>
-<p>After reverse engineering the function I named to func_opcodes_analyze (0x60AE1470). Here is what I discovered the options we have with the opcode.</p>
+<p>After reverse engineering the function I named to func_opcodes_analyze (0x60AE1470).
+<br/>I discovered the following valid opcodes:</p>
 <p><b>Signatus available Opcodes</b></p>
 <ul>
-<li>0x1 (0x60AE1107) -&gt; Will append data to file c:\Users\Public\signatus.log</li>
-<li>0x2 (0x60AE11DB) -&gt; Will read data from the file c:\Users\Public\signatus.log</li>
-<li>0x3 (0x60AE12A9) -&gt; Will write data to file c:\Users\Public\signatus.log</li>
+<li>0x1 (0x60AE1107) -&gt; Will append payload data to the file: c:\Users\Public\signatus.log</li>
+<li>0x2 (0x60AE11DB) -&gt; Will read paylaod data from the file c:\Users\Public\signatus.log</li>
+<li>0x3 (0x60AE12A9) -&gt; Will write payload data to the file c:\Users\Public\signatus.log</li>
 </ul>
-<p>The out of bounds buffer memory corruption happens in the vfscanf function when reading data back to buffer from the file because there is no size check before reading the data from the file.</p>
+<p>The out of bounds buffer memory corruption happens in the vfscanf function when reading data back from the file to the buffer from the file, there is no size check before reading the data from the file which causes the program to write data beyond the buffer size.</p>
 <p>To trigger the vulnerablity the following has to happen:
 <ul>
 <li>Write to a file two times with large data using  0x1 opcode.</li>
-<li>Trigger a read by using 0x2 opcode instructing the program to read the file back to buffer</li>
+<li>Trigger a read operation by using 0x2 opcode instructing the program to read the data in the file back to program&rsquo;s buffer</li>
 </ul>
 <p>Following the action above we will be able to overwrite SEH (Structure Exception Handler) and control EIP. The vulnerable function is located in the memory address 0x61AE123D</p>
 <figure><img src="/image/signatus_vulfunc_vfscanf.png" width="500" height="400">
