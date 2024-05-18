@@ -110,7 +110,7 @@
     "keywords": ["ExploitDev","ReverseEng"],
     
     "mainEntityOfPage": "true",
-    "wordCount": "908"
+    "wordCount": "913"
   }]
   </script>
 
@@ -786,7 +786,7 @@ You can load Signatus.exe on IDA Free and look for the imported functions (Impor
 <figure><img src="/image/ida_imports_ws2_32_recv.png" width="600" height="400">
 </figure>
 <p>Attaching the debugger and set a breakpoint on  WS2_32!recv (bp WS2_32!recv) and sending a dummy packet with the python script above.</p>
-We can see that the program checks if data was received successfully after the WS32_32!recv function has returned by comparing the return value in eax with 0FFFFFFFFh (-1 in decimal).<p/>
+We can see that the program checks if data was received successfully after the WS32_32!recv function returned by comparing the return value in eax with 0FFFFFFFFh (-1 in decimal).<p/>
 We can see the comparison below at the address: 60AE135C. We passed the check, the next check it compares the return value with hard coded value of 0x4, also showing below.</p>
 <figure><img src="/image/ws2_32_check.png" width="600" height="400">
 </figure>
@@ -802,14 +802,14 @@ We can see the comparison below at the address: 60AE135C. We passed the check, t
 <figure><img src="/image/signatus_encrypt_timing_revereng.png" width="700" height="400">
 </figure>
 <p>The value returned from the function discussed is used after the function is returned in the multiplication, left shit and xor instructions below.
-The result is stored in edx and compared with edi, the edi contains the first 4 bytes of our payload. If edx and edi match, it will take (true condition) green arrow.
-If the value in edi (first byte of our payload) doesn&rsquo;t match the program will end and listen for new packet(input).</p>
+The result is stored in edx and compared with edi, the edi contains the first 4 bytes of our payload. If edx and edi matches, it will take (true condition) green arrow.
+If the value in edi (first 4 bytes of our payload) doesn&rsquo;t match, the program will end and continue to listen for new incoming packets (input).</p>
 <figure><img src="/image/returned_encrypt_timing_func.png" width="700" height="400">
 </figure>
-<p>Here we can understand that the first 4 bytes of our payload need to be equal to the value in edx which contains the value transformed through _time64 by encrypt_timing_func function (0x60AE13A8) and aritchmetic calcultion after function is returned starting at (0x60AE13AD).<br /></p>
-<p>I wrote a function that in python that will generate the correct value for the first 4 bytes of our payload.<br>
+<p>Here we can understand that the first 4 bytes of our payload need to be equal to the value in edx which contains the value transformed through _time64 by encrypt_timing_func function (0x60AE13A8) and extra aritchmetic calculation after function is returned starting at (0x60AE13AD).<br /></p>
+<p>I wrote a function in python that will generate the correct value for the first 4 bytes of our payload.<br>
 <i style="font-size: 14px;">Recommendation.: Run your poc script in the same machine where signatus.exe is stored or you will need to sync the time between signatus.exe machine and the remote machine, any time delay the poc won&rsquo;t work.</i></p>
-<p>Below is piece of encrypt_timing_func function I wrote in python. I will continue the reverse engineering in <a
+<p>Below is the piece of encrypt_timing_func function I wrote in python. I will continue the reverse engineering in <a
   href="../signatus_revereng02/"
   
   
