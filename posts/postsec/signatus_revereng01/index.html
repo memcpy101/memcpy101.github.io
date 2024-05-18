@@ -785,7 +785,7 @@
 You can load Signatus.exe on IDA Free and look for the imported functions (Imports&rsquo;s tab in IDA)</p>
 <figure><img src="/image/ida_imports_ws2_32_recv.png" width="600" height="400">
 </figure>
-<p>Attaching the debugger and set a breakpoint on  WS2_32!recv (bp WS2_32!recv) and sending a dummy package with the python script above.</p>
+<p>Attaching the debugger and set a breakpoint on  WS2_32!recv (bp WS2_32!recv) and sending a dummy packet with the python script above.</p>
 We can see that the program checks if data was received successfully after the WS32_32!recv function has returned by comparing the return value in eax with 0FFFFFFFFh (-1 in decimal).<p/>
 We can see the comparison below at the address: 60AE135C. We passed the check, the next check it compares the return value with hard coded value of 0x4, also showing below.</p>
 <figure><img src="/image/ws2_32_check.png" width="600" height="400">
