@@ -110,7 +110,7 @@
     "keywords": ["ExploitDev","ReverseEng"],
     
     "mainEntityOfPage": "true",
-    "wordCount": "456"
+    "wordCount": "452"
   }]
   </script>
 
@@ -782,10 +782,10 @@ The sofware will make a call to WS2_32!recv and receive the next 4 bytes in our 
 <p><b>Signatus available Opcodes</b></p>
 <ul>
 <li>0x1 (0x60AE1107) -&gt; Will append payload data to the file: c:\Users\Public\signatus.log</li>
-<li>0x2 (0x60AE11DB) -&gt; Will read paylaod data from the file c:\Users\Public\signatus.log</li>
+<li>0x2 (0x60AE11DB) -&gt; Will read payload data from the file c:\Users\Public\signatus.log</li>
 <li>0x3 (0x60AE12A9) -&gt; Will write payload data to the file c:\Users\Public\signatus.log</li>
 </ul>
-<p>The out of bounds buffer memory corruption happens in the vfscanf function when reading data back from the file to the buffer from the file, there is no size check before reading the data from the file which causes the program to write data beyond the buffer size.</p>
+<p>The out of bounds buffer memory corruption happens in the vfscanf function when reading data back from the file into the buffer, there is no size check before reading the data from the file which causes the program to write data beyond the buffer.</p>
 <p>To trigger the vulnerability the following has to happen:
 <ul>
 <li>Write to a file two times with large data using  0x1 opcode.</li>
