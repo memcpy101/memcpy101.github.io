@@ -110,7 +110,7 @@
     "keywords": ["ExploitDev","ReverseEng"],
     
     "mainEntityOfPage": "true",
-    "wordCount": "953"
+    "wordCount": "950"
   }]
   </script>
 
@@ -762,7 +762,7 @@
   
   
 >Reverse Engineering Signatus.exe (bmdyy) - Part 2</a> if you already checked Part1.</p>
-<p>The if already read 1st part and 2nd part, the full poc I developed can be looked at my github <a
+<p>If you have already read 1st part and 2nd part, the full poc I developed can be looked at my github <a
   href="../signatus_poc/"
   
   
@@ -773,7 +773,6 @@
 <p>I like to write a small piece of python code to send a dummy packet and with the windbg debugger attached with a breakpoint on ws2_32!recv function.</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl">import socket
 </span></span><span class="line"><span class="cl">import sys
-</span></span><span class="line"><span class="cl">from struct import pack
 </span></span><span class="line"><span class="cl">def main():
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">    if len(sys.argv) != 2:
@@ -782,7 +781,7 @@
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">    server = sys.argv[1]
 </span></span><span class="line"><span class="cl">    port = 9999
-</span></span><span class="line"><span class="cl">    buf = pack(bytearray[0x41]*0x100) 
+</span></span><span class="line"><span class="cl">    buf = bytearray[0x41]*0x100 
 </span></span><span class="line"><span class="cl">    s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 </span></span><span class="line"><span class="cl">    s.connect((server,port))
 </span></span><span class="line"><span class="cl">    s.send(buf)
