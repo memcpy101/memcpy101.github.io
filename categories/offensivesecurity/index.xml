@@ -7,7 +7,25 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>@ 2024 All rigths reserved by mzdaemon</copyright>
-    <lastBuildDate>Fri, 17 May 2024 22:57:14 -0400</lastBuildDate><atom:link href="https://pentesthacks.ca/categories/offensivesecurity/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 21 May 2024 23:30:13 -0500</lastBuildDate><atom:link href="https://pentesthacks.ca/categories/offensivesecurity/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>NASM Negative Jump (jump Backwards)</title>
+      <link>https://pentesthacks.ca/posts/postsec/nasm_shell_negativejmp/</link>
+      <pubDate>Tue, 21 May 2024 23:30:13 -0500</pubDate>
+      
+      <guid>https://pentesthacks.ca/posts/postsec/nasm_shell_negativejmp/</guid>
+      <description>If you need to jump backwards to reach to your shellcode, we can use nasm_shell from msf to demonstrate.</description>
+    </item>
+    
+    <item>
+      <title>NASM Short Jump</title>
+      <link>https://pentesthacks.ca/posts/postsec/nasm_shell_shortjmp/</link>
+      <pubDate>Tue, 21 May 2024 23:25:13 -0500</pubDate>
+      
+      <guid>https://pentesthacks.ca/posts/postsec/nasm_shell_shortjmp/</guid>
+      <description>During exploit development sometimes we need to perform a short jump, we can use nasm_shell from msf to demonstrate.</description>
+    </item>
+    
     <item>
       <title>Signatus.exe (bmdyy) - Exploit Dev POC</title>
       <link>https://pentesthacks.ca/posts/postsec/signatus_poc/</link>
