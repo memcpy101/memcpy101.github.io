@@ -110,7 +110,7 @@
     "keywords": ["ExploitDev","ReverseEng"],
     
     "mainEntityOfPage": "true",
-    "wordCount": "950"
+    "wordCount": "949"
   }]
   </script>
 
@@ -794,11 +794,11 @@ You can load Signatus.exe on IDA Free and look for the imported functions (Impor
 <figure><img src="/image/ida_imports_ws2_32_recv.png" width="600" height="400">
 </figure>
 <p>Attaching the debugger and set a breakpoint on  WS2_32!recv (bp WS2_32!recv) and sending a dummy packet with the python script above.</p>
-We can see that the program checks if data was received successfully after the WS32_32!recv function returned by comparing the return value in eax with 0FFFFFFFFh (-1 in decimal).<p/>
+We can see that the program checks if data was received successfully after the WS2_32!recv function returned by comparing the return value in eax with 0FFFFFFFFh (-1 in decimal).<p/>
 We can see the comparison below at the address: 60AE135C. We passed the check, the next check it compares the return value with hard coded value of 0x4, also showing below.</p>
 <figure><img src="/image/ws2_32_check.png" width="600" height="400">
 </figure>
-<p>Because the return value is not equal to 0x4, we do not follow the successful branch (green), we follow the (red) arrow. The next branch is the one of my interest as it contains the functionality that will deny or allow us to utilize further functionality in the software. Understanding this piece is crucial to allow us to go down the correct path for the vulnerability.</p>
+<p>Because the return value is equal to 0x4, we do not follow the successful branch (green), we follow the (red) arrow. The next branch is the one of my interest as it contains the functionality that will deny or allow us to utilize further functionality in the software. Understanding this piece is crucial to allow us to go down the correct path for the vulnerability.</p>
 <figure><img src="/image/func_important_signatus.png" width="700" height="400">
 </figure>
 <p>There are two import point to understand the 0x60AE1399 (call ds:_time64) will get current timestamp in number of seconds elapsed since midnight (00:00:00), January 1, 1970 <a

@@ -7,7 +7,16 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>@ 2024 All rigths reserved by mzdaemon</copyright>
-    <lastBuildDate>Tue, 21 May 2024 23:30:13 -0500</lastBuildDate><atom:link href="https://pentesthacks.ca/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 25 May 2024 17:34:14 -0400</lastBuildDate><atom:link href="https://pentesthacks.ca/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Reverse Engineering Vulnserver.exe</title>
+      <link>https://pentesthacks.ca/posts/postsec/vulnserver_revereng01/</link>
+      <pubDate>Sat, 25 May 2024 17:34:14 -0400</pubDate>
+      
+      <guid>https://pentesthacks.ca/posts/postsec/vulnserver_revereng01/</guid>
+      <description>I choose one more vulnerable application to perform reverse engineering and discover vulnerablities if you want to follow along you can download here vulnserver App .</description>
+    </item>
+    
     <item>
       <title>NASM Negative Jump (jump Backwards)</title>
       <link>https://pentesthacks.ca/posts/postsec/nasm_shell_negativejmp/</link>
