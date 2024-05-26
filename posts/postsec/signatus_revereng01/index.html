@@ -771,24 +771,24 @@
 <figure><img src="/image/signatus_running_port.png" width="600" height="400">
 </figure>
 <p>I like to write a small piece of python code to send a dummy packet and with the windbg debugger attached with a breakpoint on ws2_32!recv function.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl">import socket
-</span></span><span class="line"><span class="cl">import sys
-</span></span><span class="line"><span class="cl">def main():
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">socket</span>
+</span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">sys</span>
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">    if len(sys.argv) != 2:
-</span></span><span class="line"><span class="cl">        print(&#34;Usage: %s <span class="p">&lt;</span><span class="nt">ip_address</span><span class="p">&gt;</span>\n&#34; % (sys.argv[0]))
-</span></span><span class="line"><span class="cl">        sys.exit(1)
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">sys</span><span class="o">.</span><span class="n">argv</span><span class="p">)</span> <span class="o">!=</span> <span class="mi">2</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">        <span class="nb">print</span><span class="p">(</span><span class="s2">&#34;Usage: </span><span class="si">%s</span><span class="s2"> &lt;ip_address&gt;</span><span class="se">\n</span><span class="s2">&#34;</span> <span class="o">%</span> <span class="p">(</span><span class="n">sys</span><span class="o">.</span><span class="n">argv</span><span class="p">[</span><span class="mi">0</span><span class="p">]))</span>
+</span></span><span class="line"><span class="cl">        <span class="n">sys</span><span class="o">.</span><span class="n">exit</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">    server = sys.argv[1]
-</span></span><span class="line"><span class="cl">    port = 9999
-</span></span><span class="line"><span class="cl">    buf = bytearray[0x41]*0x100 
-</span></span><span class="line"><span class="cl">    s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-</span></span><span class="line"><span class="cl">    s.connect((server,port))
-</span></span><span class="line"><span class="cl">    s.send(buf)
-</span></span><span class="line"><span class="cl">    s.close()
+</span></span><span class="line"><span class="cl">    <span class="n">server</span> <span class="o">=</span> <span class="n">sys</span><span class="o">.</span><span class="n">argv</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">    <span class="n">port</span> <span class="o">=</span> <span class="mi">9999</span>
+</span></span><span class="line"><span class="cl">    <span class="n">buf</span> <span class="o">=</span> <span class="nb">bytearray</span><span class="p">[</span><span class="mh">0x41</span><span class="p">]</span><span class="o">*</span><span class="mh">0x100</span> 
+</span></span><span class="line"><span class="cl">    <span class="n">s</span> <span class="o">=</span> <span class="n">socket</span><span class="o">.</span><span class="n">socket</span><span class="p">(</span><span class="n">socket</span><span class="o">.</span><span class="n">AF_INET</span><span class="p">,</span> <span class="n">socket</span><span class="o">.</span><span class="n">SOCK_STREAM</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">s</span><span class="o">.</span><span class="n">connect</span><span class="p">((</span><span class="n">server</span><span class="p">,</span><span class="n">port</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">    <span class="n">s</span><span class="o">.</span><span class="n">send</span><span class="p">(</span><span class="n">buf</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">s</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">if __name__ == &#39;__main__&#39;:
-</span></span><span class="line"><span class="cl">    main()
+</span></span><span class="line"><span class="cl"><span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="n">main</span><span class="p">()</span>
 </span></span></code></pre></div><p>How do I know the software uses ws2_32!recv function to consume the data ?<br>
 You can load Signatus.exe on IDA Free and look for the imported functions (Imports&rsquo;s tab in IDA)</p>
 <figure><img src="/image/ida_imports_ws2_32_recv.png" width="600" height="400">
@@ -822,87 +822,87 @@ If the value in edi (first 4 bytes of our payload) doesn&rsquo;t match, the prog
   
   
 >Reverse Engineering Signatus.exe (bmdyy) - Part 2</a> where I will continue the reverse engineering to discover the memory corruption vulnerability.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl">def reverse_timing(timing):
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">reverse_timing</span><span class="p">(</span><span class="n">timing</span><span class="p">):</span>
 </span></span><span class="line"><span class="cl">    
-</span></span><span class="line"><span class="cl">    ecx = 0xa # Hard coded 0xa
-</span></span><span class="line"><span class="cl">    eax = 0x0 # Hard coded 0x0
+</span></span><span class="line"><span class="cl">    <span class="n">ecx</span> <span class="o">=</span> <span class="mh">0xa</span> <span class="c1"># Hard coded 0xa</span>
+</span></span><span class="line"><span class="cl">    <span class="n">eax</span> <span class="o">=</span> <span class="mh">0x0</span> <span class="c1"># Hard coded 0x0</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">    # xor edx, edx
-</span></span><span class="line"><span class="cl">    edx = 0
+</span></span><span class="line"><span class="cl">    <span class="c1"># xor edx, edx</span>
+</span></span><span class="line"><span class="cl">    <span class="n">edx</span> <span class="o">=</span> <span class="mi">0</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">    # div ecx
-</span></span><span class="line"><span class="cl">    edx = (eax % ecx) # Store the remainder in edx
-</span></span><span class="line"><span class="cl">    eax = int(eax / ecx) # we div, we use int because of floating number
+</span></span><span class="line"><span class="cl">    <span class="c1"># div ecx</span>
+</span></span><span class="line"><span class="cl">    <span class="n">edx</span> <span class="o">=</span> <span class="p">(</span><span class="n">eax</span> <span class="o">%</span> <span class="n">ecx</span><span class="p">)</span> <span class="c1"># Store the remainder in edx</span>
+</span></span><span class="line"><span class="cl">    <span class="n">eax</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">eax</span> <span class="o">/</span> <span class="n">ecx</span><span class="p">)</span> <span class="c1"># we div, we use int because of floating number</span>
 </span></span><span class="line"><span class="cl">    
-</span></span><span class="line"><span class="cl">    # mov ebx, eax
-</span></span><span class="line"><span class="cl">    ebx = eax
+</span></span><span class="line"><span class="cl">    <span class="c1"># mov ebx, eax</span>
+</span></span><span class="line"><span class="cl">    <span class="n">ebx</span> <span class="o">=</span> <span class="n">eax</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">    # Timing
-</span></span><span class="line"><span class="cl">    eax = int(timing) # Timing in eax
+</span></span><span class="line"><span class="cl">    <span class="c1"># Timing</span>
+</span></span><span class="line"><span class="cl">    <span class="n">eax</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">timing</span><span class="p">)</span> <span class="c1"># Timing in eax</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">    # div ecx
-</span></span><span class="line"><span class="cl">    edx = (eax % ecx)  # Store the remainder in edx
-</span></span><span class="line"><span class="cl">    eax = int(eax/ecx) # we div, we use int because of floating number
+</span></span><span class="line"><span class="cl">    <span class="c1"># div ecx</span>
+</span></span><span class="line"><span class="cl">    <span class="n">edx</span> <span class="o">=</span> <span class="p">(</span><span class="n">eax</span> <span class="o">%</span> <span class="n">ecx</span><span class="p">)</span>  <span class="c1"># Store the remainder in edx</span>
+</span></span><span class="line"><span class="cl">    <span class="n">eax</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">eax</span><span class="o">/</span><span class="n">ecx</span><span class="p">)</span> <span class="c1"># we div, we use int because of floating number</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">    # mov edx, ebx
-</span></span><span class="line"><span class="cl">    edx = ebx
+</span></span><span class="line"><span class="cl">    <span class="c1"># mov edx, ebx</span>
+</span></span><span class="line"><span class="cl">    <span class="n">edx</span> <span class="o">=</span> <span class="n">ebx</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">    # dec edi
-</span></span><span class="line"><span class="cl">    edi = 0
-</span></span><span class="line"><span class="cl">    edi = edi-1 <span class="err">&amp;</span> 0xFFFFFFFF
+</span></span><span class="line"><span class="cl">    <span class="c1"># dec edi</span>
+</span></span><span class="line"><span class="cl">    <span class="n">edi</span> <span class="o">=</span> <span class="mi">0</span>
+</span></span><span class="line"><span class="cl">    <span class="n">edi</span> <span class="o">=</span> <span class="n">edi</span><span class="o">-</span><span class="mi">1</span> <span class="o">&amp;</span> <span class="mh">0xFFFFFFFF</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">    # movzx esi, al
-</span></span><span class="line"><span class="cl">    esi = eax <span class="err">&amp;</span> 0xFF
+</span></span><span class="line"><span class="cl">    <span class="c1"># movzx esi, al</span>
+</span></span><span class="line"><span class="cl">    <span class="n">esi</span> <span class="o">=</span> <span class="n">eax</span> <span class="o">&amp;</span> <span class="mh">0xFF</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">    # mov eax, esi
-</span></span><span class="line"><span class="cl">    eax = esi
+</span></span><span class="line"><span class="cl">    <span class="c1"># mov eax, esi</span>
+</span></span><span class="line"><span class="cl">    <span class="n">eax</span> <span class="o">=</span> <span class="n">esi</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">    # imul eax, esi
-</span></span><span class="line"><span class="cl">    eax = (eax * esi)
+</span></span><span class="line"><span class="cl">    <span class="c1"># imul eax, esi</span>
+</span></span><span class="line"><span class="cl">    <span class="n">eax</span> <span class="o">=</span> <span class="p">(</span><span class="n">eax</span> <span class="o">*</span> <span class="n">esi</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">    # mov ecx, eax
-</span></span><span class="line"><span class="cl">    ecx = eax
+</span></span><span class="line"><span class="cl">    <span class="c1"># mov ecx, eax</span>
+</span></span><span class="line"><span class="cl">    <span class="n">ecx</span> <span class="o">=</span> <span class="n">eax</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">    # imul ecx, esi
-</span></span><span class="line"><span class="cl">    ecx = (eax*esi)
+</span></span><span class="line"><span class="cl">    <span class="c1"># imul ecx, esi</span>
+</span></span><span class="line"><span class="cl">    <span class="n">ecx</span> <span class="o">=</span> <span class="p">(</span><span class="n">eax</span><span class="o">*</span><span class="n">esi</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">    # mov edx, ecx
-</span></span><span class="line"><span class="cl">    edx = ecx
+</span></span><span class="line"><span class="cl">    <span class="c1"># mov edx, ecx</span>
+</span></span><span class="line"><span class="cl">    <span class="n">edx</span> <span class="o">=</span> <span class="n">ecx</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">    # imul ecx, esi
-</span></span><span class="line"><span class="cl">    ecx = (ecx*esi)
+</span></span><span class="line"><span class="cl">    <span class="c1"># imul ecx, esi</span>
+</span></span><span class="line"><span class="cl">    <span class="n">ecx</span> <span class="o">=</span> <span class="p">(</span><span class="n">ecx</span><span class="o">*</span><span class="n">esi</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">    # and edx, 0FFFFFF00h
-</span></span><span class="line"><span class="cl">    edx = (edx <span class="err">&amp;</span> 0x0FFFFFF00)
+</span></span><span class="line"><span class="cl">    <span class="c1"># and edx, 0FFFFFF00h</span>
+</span></span><span class="line"><span class="cl">    <span class="n">edx</span> <span class="o">=</span> <span class="p">(</span><span class="n">edx</span> <span class="o">&amp;</span> <span class="mh">0x0FFFFFF00</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">    # shl edx, 4
-</span></span><span class="line"><span class="cl">    edx = edx <span class="err">&lt;</span><span class="p">&lt;</span> <span class="nt">4</span>
+</span></span><span class="line"><span class="cl">    <span class="c1"># shl edx, 4</span>
+</span></span><span class="line"><span class="cl">    <span class="n">edx</span> <span class="o">=</span> <span class="n">edx</span> <span class="o">&lt;&lt;</span> <span class="mi">4</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">    <span class="err">#</span> <span class="na">or</span> <span class="na">edx</span><span class="err">,</span> <span class="na">eax</span>
-</span></span><span class="line"><span class="cl">    <span class="na">edx </span><span class="o">=</span> <span class="s">(edx</span> <span class="err">|</span> <span class="na">eax</span><span class="err">)</span>
+</span></span><span class="line"><span class="cl">    <span class="c1"># or edx, eax</span>
+</span></span><span class="line"><span class="cl">    <span class="n">edx</span> <span class="o">=</span> <span class="p">(</span><span class="n">edx</span> <span class="o">|</span> <span class="n">eax</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">    <span class="err">#</span> <span class="na">and</span> <span class="na">edx</span><span class="err">,</span> <span class="na">0x0FFFFFFF0h</span>
-</span></span><span class="line"><span class="cl">    <span class="na">edx </span><span class="o">=</span> <span class="s">(edx</span> <span class="err">&amp;</span> <span class="na">0x0FFFFFFF0</span><span class="err">)</span>
+</span></span><span class="line"><span class="cl">    <span class="c1"># and edx, 0x0FFFFFFF0h</span>
+</span></span><span class="line"><span class="cl">    <span class="n">edx</span> <span class="o">=</span> <span class="p">(</span><span class="n">edx</span> <span class="o">&amp;</span> <span class="mh">0x0FFFFFFF0</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">    <span class="err">#</span> <span class="na">and</span> <span class="na">ecx</span><span class="err">,</span> <span class="na">0FFFFF000h</span>
-</span></span><span class="line"><span class="cl">    <span class="na">ecx </span><span class="o">=</span> <span class="s">(ecx</span> <span class="err">&amp;</span> <span class="na">0x0FFFFF000</span><span class="err">)</span>
+</span></span><span class="line"><span class="cl">    <span class="c1"># and ecx, 0FFFFF000h</span>
+</span></span><span class="line"><span class="cl">    <span class="n">ecx</span> <span class="o">=</span> <span class="p">(</span><span class="n">ecx</span> <span class="o">&amp;</span> <span class="mh">0x0FFFFF000</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">    <span class="err">#</span> <span class="na">shl</span> <span class="na">ecx</span><span class="err">,</span> <span class="na">8</span>
-</span></span><span class="line"><span class="cl">    <span class="na">ecx </span><span class="o">=</span> <span class="s">(ecx</span> <span class="err">&lt;&lt;</span> <span class="na">8</span><span class="err">)</span> <span class="err">&amp;</span> <span class="na">0xFFFFFFFF</span>
+</span></span><span class="line"><span class="cl">    <span class="c1"># shl ecx, 8</span>
+</span></span><span class="line"><span class="cl">    <span class="n">ecx</span> <span class="o">=</span> <span class="p">(</span><span class="n">ecx</span> <span class="o">&lt;&lt;</span> <span class="mi">8</span><span class="p">)</span> <span class="o">&amp;</span> <span class="mh">0xFFFFFFFF</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">    <span class="err">#</span> <span class="na">or</span> <span class="na">edx</span><span class="err">,</span> <span class="na">ecx</span>
-</span></span><span class="line"><span class="cl">    <span class="na">edx </span><span class="o">=</span> <span class="s">(edx</span> <span class="err">|</span> <span class="na">ecx</span><span class="err">)</span> <span class="err">&amp;</span> <span class="na">0xFFFFFFFF</span>
+</span></span><span class="line"><span class="cl">    <span class="c1"># or edx, ecx</span>
+</span></span><span class="line"><span class="cl">    <span class="n">edx</span> <span class="o">=</span> <span class="p">(</span><span class="n">edx</span> <span class="o">|</span> <span class="n">ecx</span><span class="p">)</span> <span class="o">&amp;</span> <span class="mh">0xFFFFFFFF</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">    <span class="err">#</span> <span class="na">shl</span> <span class="na">edx</span><span class="err">,</span> <span class="na">4</span>
-</span></span><span class="line"><span class="cl">    <span class="na">edx </span><span class="o">=</span> <span class="s">(edx</span> <span class="err">&lt;&lt;</span> <span class="na">4</span><span class="err">)</span> <span class="err">&amp;</span> <span class="na">0xFFFFFFFF</span>
+</span></span><span class="line"><span class="cl">    <span class="c1"># shl edx, 4</span>
+</span></span><span class="line"><span class="cl">    <span class="n">edx</span> <span class="o">=</span> <span class="p">(</span><span class="n">edx</span> <span class="o">&lt;&lt;</span> <span class="mi">4</span><span class="p">)</span> <span class="o">&amp;</span> <span class="mh">0xFFFFFFFF</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">    <span class="err">#</span> <span class="na">or</span> <span class="na">edx</span><span class="err">,</span> <span class="na">esi</span>
-</span></span><span class="line"><span class="cl">    <span class="na">edx </span><span class="o">=</span> <span class="s">(edx</span> <span class="err">|</span> <span class="na">esi</span><span class="err">)</span> <span class="err">&amp;</span> <span class="na">0xFFFFFFFF</span>
+</span></span><span class="line"><span class="cl">    <span class="c1"># or edx, esi</span>
+</span></span><span class="line"><span class="cl">    <span class="n">edx</span> <span class="o">=</span> <span class="p">(</span><span class="n">edx</span> <span class="o">|</span> <span class="n">esi</span><span class="p">)</span> <span class="o">&amp;</span> <span class="mh">0xFFFFFFFF</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">    <span class="err">#</span> <span class="na">xor</span> <span class="na">edx</span><span class="err">,</span> <span class="na">74829726h</span>
-</span></span><span class="line"><span class="cl">    <span class="na">edx </span><span class="o">=</span> <span class="s">edx</span> <span class="err">^</span> <span class="na">0x74829726</span>
+</span></span><span class="line"><span class="cl">    <span class="c1"># xor edx, 74829726h</span>
+</span></span><span class="line"><span class="cl">    <span class="n">edx</span> <span class="o">=</span> <span class="n">edx</span> <span class="o">^</span> <span class="mh">0x74829726</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">    <span class="na">return</span> <span class="na">edx</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">edx</span>
 </span></span></code></pre></div>
       </div>
     </section>
