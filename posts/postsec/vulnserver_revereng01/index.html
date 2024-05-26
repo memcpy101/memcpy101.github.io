@@ -772,34 +772,34 @@
 <figure><img src="/image/vulnserver_rever01_hookrecv.png" width="700" height="400">
 </figure>
 <p>Hooking the recv function, we just need to open windbg debugger and attach to process &ldquo;vulnserver.exe&rdquo; and set a breakpoint as showing below.</p>
-<pre tabindex="0"><code class="language-hmtl" data-lang="hmtl">bp ws2_32!recv
-</code></pre><figure><img src="/image/vulnserver_rever01_windbg_recvhook.png" width="800&#34;" height="500">
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl">bp ws2_32!recv
+</span></span></code></pre></div><figure><img src="/image/vulnserver_rever01_windbg_recvhook.png" width="800&#34;" height="500">
 </figure>
 <p>Now we need to send a dummy packet, for that you can use this small piece of python code.<br/>
 You can run the code like: python poc-vulnserver.py IP<br/> Ex.: python poc-vulnserver.py 192.168.132.10</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl">import socket
-</span></span><span class="line"><span class="cl">import sys
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">socket</span>
+</span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">sys</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">def main():
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">    if len(sys.argv) != 2:
-</span></span><span class="line"><span class="cl">        print(&#34;Usage: %s <span class="p">&lt;</span><span class="nt">ip_address</span><span class="p">&gt;</span>\n&#34; % (sys.argv[0]))
-</span></span><span class="line"><span class="cl">        sys.exit(1)
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">sys</span><span class="o">.</span><span class="n">argv</span><span class="p">)</span> <span class="o">!=</span> <span class="mi">2</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">        <span class="nb">print</span><span class="p">(</span><span class="s2">&#34;Usage: </span><span class="si">%s</span><span class="s2"> &lt;ip_address&gt;</span><span class="se">\n</span><span class="s2">&#34;</span> <span class="o">%</span> <span class="p">(</span><span class="n">sys</span><span class="o">.</span><span class="n">argv</span><span class="p">[</span><span class="mi">0</span><span class="p">]))</span>
+</span></span><span class="line"><span class="cl">        <span class="n">sys</span><span class="o">.</span><span class="n">exit</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">    server = sys.argv[1]
-</span></span><span class="line"><span class="cl">    port = 9999
+</span></span><span class="line"><span class="cl">    <span class="n">server</span> <span class="o">=</span> <span class="n">sys</span><span class="o">.</span><span class="n">argv</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">    <span class="n">port</span> <span class="o">=</span> <span class="mi">9999</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">    buf = bytearray([0x41]*0x100)
-</span></span><span class="line"><span class="cl">    s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-</span></span><span class="line"><span class="cl">    s.connect((server,port))
-</span></span><span class="line"><span class="cl">    s.send(buf)
-</span></span><span class="line"><span class="cl">    resp = s.recv(1024)
-</span></span><span class="line"><span class="cl">    print(&#34;Response: &#34;,resp)
-</span></span><span class="line"><span class="cl">    s.close()
+</span></span><span class="line"><span class="cl">    <span class="n">buf</span> <span class="o">=</span> <span class="nb">bytearray</span><span class="p">([</span><span class="mh">0x41</span><span class="p">]</span><span class="o">*</span><span class="mh">0x100</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">s</span> <span class="o">=</span> <span class="n">socket</span><span class="o">.</span><span class="n">socket</span><span class="p">(</span><span class="n">socket</span><span class="o">.</span><span class="n">AF_INET</span><span class="p">,</span> <span class="n">socket</span><span class="o">.</span><span class="n">SOCK_STREAM</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">s</span><span class="o">.</span><span class="n">connect</span><span class="p">((</span><span class="n">server</span><span class="p">,</span><span class="n">port</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">    <span class="n">s</span><span class="o">.</span><span class="n">send</span><span class="p">(</span><span class="n">buf</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">resp</span> <span class="o">=</span> <span class="n">s</span><span class="o">.</span><span class="n">recv</span><span class="p">(</span><span class="mi">1024</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">print</span><span class="p">(</span><span class="s2">&#34;Response: &#34;</span><span class="p">,</span><span class="n">resp</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">s</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">if __name__ == &#39;__main__&#39;:
-</span></span><span class="line"><span class="cl">    main()
+</span></span><span class="line"><span class="cl"><span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="n">main</span><span class="p">()</span>
 </span></span></code></pre></div><p>You can  see below our breakpoint getting hit and the memory address for our buffer is at 0x006c33c8 which is empty right now after issuing the dd command to display data in a double word (4 bytes). Your memory address will probably be different.</p>
 <figure><img src="/image/vulnserver_rever01_windbg_hookrecv_bp.png" width="800&#34;" height="500">
 </figure>
