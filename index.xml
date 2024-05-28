@@ -287,14 +287,5 @@
       <description>While training Red Teaming or Penetration Test hacking on plataforms like Hack the Box or previous offensive security training like OSCP or OSEP</description>
     </item>
     
-    <item>
-      <title>About</title>
-      <link>https://pentesthacks.ca/about/</link>
-      <pubDate>Fri, 01 Mar 2024 22:15:24 -0500</pubDate>
-      
-      <guid>https://pentesthacks.ca/about/</guid>
-      <description>Welcome to my personal blog, where I document useful knowledge for me and maybe useful for others, personal research, share insights, and contribute with knowledge.</description>
-    </item>
-    
   </channel>
 </rss>
