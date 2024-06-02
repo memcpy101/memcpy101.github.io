@@ -21,6 +21,8 @@
     
   
     
+  
+    
       <url>
             <loc>https://pentesthacks.ca/posts/postsec/</loc>
             <lastmod>2024-05-25T23:50:14-04:00</lastmod>
@@ -34,6 +36,8 @@
             <loc>https://pentesthacks.ca/posts/</loc>
             <lastmod>2024-05-25T23:50:14-04:00</lastmod>
           </url>
+    
+  
     
   
     
@@ -115,8 +119,6 @@
     
   
     
-  
-    
       <url>
             <loc>https://pentesthacks.ca/posts/postsec/windows_native_api_ref/</loc>
             <lastmod>2024-05-11T14:29:14-04:00</lastmod>
@@ -165,8 +167,6 @@
             <loc>https://pentesthacks.ca/posts/postsec/lowlevel_concept/</loc>
             <lastmod>2024-03-19T17:20:11-04:00</lastmod>
           </url>
-    
-  
     
   
     

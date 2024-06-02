@@ -19,10 +19,10 @@
   <meta name="theme-color" content="rgb(255,255,255)" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
   
-  <title>Exploit Dev POC DEP Bypass vulnserver.exe &middot; </title>
-    <meta name="title" content="Exploit Dev POC DEP Bypass vulnserver.exe &middot; " />
+  <title>Demystifying DEP (Data Execution Prevention) &middot; </title>
+    <meta name="title" content="Demystifying DEP (Data Execution Prevention) &middot; " />
   
-  <meta name="description" content="Coming soon&hellip;" />
+  <meta name="description" content="We all (cybersecurity space) heard about DEP, some might don&rsquo;t know and want to understand how it works and what its purpose." />
   
   
   
@@ -74,16 +74,16 @@
   
   
   
-  <meta property="og:title" content="Exploit Dev POC DEP Bypass vulnserver.exe" />
-<meta property="og:description" content="Coming soon&hellip;" />
+  <meta property="og:title" content="Demystifying DEP (Data Execution Prevention)" />
+<meta property="og:description" content="We all (cybersecurity space) heard about DEP, some might don&rsquo;t know and want to understand how it works and what its purpose." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://pentesthacks.ca/posts/postsec/vulnserver_dep/" /><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2024-05-25T23:50:14-04:00" />
 <meta property="article:modified_time" content="2024-05-25T23:50:14-04:00" />
 
   <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Exploit Dev POC DEP Bypass vulnserver.exe"/>
-<meta name="twitter:description" content="Coming soon&hellip;"/>
+<meta name="twitter:title" content="Demystifying DEP (Data Execution Prevention)"/>
+<meta name="twitter:description" content="We all (cybersecurity space) heard about DEP, some might don&rsquo;t know and want to understand how it works and what its purpose."/>
 
   
   <script type="application/ld+json">
@@ -91,10 +91,10 @@
     "@context": "https://schema.org",
     "@type": "Article",
     "articleSection": "Posts",
-    "name": "Exploit Dev POC DEP Bypass vulnserver.exe",
-    "headline": "Exploit Dev POC DEP Bypass vulnserver.exe",
+    "name": "Demystifying DEP (Data Execution Prevention)",
+    "headline": "Demystifying DEP (Data Execution Prevention)",
     
-    "abstract": "Coming soon\u0026hellip;",
+    "abstract": "We all (cybersecurity space) heard about DEP, some might don\u0026rsquo;t know and want to understand how it works and what its purpose.",
     "inLanguage": "en",
     "url" : "https:\/\/pentesthacks.ca\/posts\/postsec\/vulnserver_dep\/",
     "author" : {
@@ -107,10 +107,10 @@
     
     "dateModified": "2024-05-25T23:50:14-04:00",
     
-    "keywords": ["ExploitDev"],
+    "keywords": ["ExploitDev","WindowsInternal","lowlevel"],
     
     "mainEntityOfPage": "true",
-    "wordCount": "2"
+    "wordCount": "976"
   }]
   </script>
 
@@ -569,7 +569,7 @@
     <header class="max-w-prose">
       
       <h1 class="mt-0 text-4xl font-extrabold text-neutral-900 dark:text-neutral">
-        Exploit Dev POC DEP Bypass vulnserver.exe
+        Demystifying DEP (Data Execution Prevention)
       </h1>
       <div class="mt-8 mb-12 text-base text-neutral-500 dark:text-neutral-400 print:hidden">
         
@@ -604,7 +604,7 @@
   <div class="flex flex-row flex-wrap items-center">
     
     
-      <time datetime="2024-05-25 23:50:14 -0400 EDT">25 May 2024</time><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">1 min</span>
+      <time datetime="2024-05-25 23:50:14 -0400 EDT">25 May 2024</time><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">5 mins</span>
     
 
     
@@ -633,6 +633,18 @@
               >ExploitDev</a
             >
           
+            <a
+              href="/tags/windowsinternal/"
+              class="rounded-md border border-neutral-200 px-1 py-[1px] hover:border-primary-300 hover:text-primary-700 dark:border-neutral-600 dark:hover:border-primary-600 dark:hover:text-primary-400"
+              >WindowsInternal</a
+            >
+          
+            <a
+              href="/tags/lowlevel/"
+              class="rounded-md border border-neutral-200 px-1 py-[1px] hover:border-primary-300 hover:text-primary-700 dark:border-neutral-600 dark:hover:border-primary-600 dark:hover:text-primary-400"
+              >lowlevel</a
+            >
+          
         
       
     </div>
@@ -644,8 +656,115 @@
     </header>
     <section class="flex flex-col max-w-full mt-0 prose dark:prose-invert lg:flex-row">
       
+        <div class="order-first px-0 lg:order-last lg:max-w-xs lg:ps-8">
+          <div class="toc pe-5 print:hidden lg:sticky lg:top-10">
+            <details open class="-ms-5 mt-0 overflow-hidden rounded-lg ps-5">
+  <summary
+    class="-ms-5 block cursor-pointer bg-neutral-100 py-1 ps-5 text-lg font-semibold text-neutral-800 dark:bg-neutral-700 dark:text-neutral-100 lg:hidden"
+  >
+    Table of Contents
+  </summary>
+  <div class="-ms-5 border-s border-dotted border-neutral-300 py-2 ps-5 dark:border-neutral-600">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#why-dep-was-created-">Why DEP was created ?</a></li>
+    <li><a href="#rop-return-oriented-programming-technique">ROP (Return Oriented Programming) Technique</a></li>
+    <li><a href="#understanding-x86">Understanding x86</a>
+      <ul>
+        <li><a href="#general-purpose-register">General-Purpose Register</a>
+          <ul>
+            <li><a href="#eax-accumulator-register">EAX (Accumulator Register)</a></li>
+            <li><a href="#ebx-base-register">EBX (Base Register)</a></li>
+            <li><a href="#ecx-counter-register">ECX (Counter Register)</a></li>
+            <li><a href="#edx-data-register">EDX (Data Register)</a></li>
+            <li><a href="#esi-source-index">ESI (Source Index)</a></li>
+            <li><a href="#edi-destination-index">EDI (Destination Index)</a></li>
+            <li><a href="#ebp-base-pointer">EBP (Base Pointer)</a></li>
+            <li><a href="#esp-stack-pointer">ESP (Stack Pointer)</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li><a href="#applying-what-we-know-about-rop-return-oriented-programming">Applying what we know about ROP (Return Oriented Programming)</a></li>
+    <li><a href="#humble-recommendation">Humble Recommendation</a></li>
+  </ul>
+</nav>
+  </div>
+</details>
+
+          </div>
+        </div>
+      
       <div class="min-w-0 min-h-0 max-w-prose grow">
-        <p>Coming soon&hellip;</p>
+        <p>We all (cybersecurity space) heard about DEP, some might don&rsquo;t know and want to understand how it works and what its purpose.
+This post is specially for new people or non-technical people that want to understand DEP.</p></p>
+<h2 id="why-dep-was-created-" class="relative group">Why DEP was created ? <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#why-dep-was-created-" aria-label="Anchor">#</a></span></h2>
+<p>DEP stands for Data Execution Prevention and was created in a response to exploits that used to execute code on the stack or heap. DEP marks these memory regions as non-executable which causes the exploits to fail.</p></p>
+<h2 id="rop-return-oriented-programming-technique" class="relative group">ROP (Return Oriented Programming) Technique <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#rop-return-oriented-programming-technique" aria-label="Anchor">#</a></span></h2>
+<p>In a response to DEP, ROP technique was created allowing to bypass DEP protection by re-using executable code that is already present in the application&rsquo;s memory, by combining the pieces of re-usable code is possible to executable arbritary code in memory by calling Win32 Apis and executing shellcode, the pieces of code is often called by security researchers as ROP Gadgets.</p></p>
+<h2 id="understanding-x86" class="relative group">Understanding x86 <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#understanding-x86" aria-label="Anchor">#</a></span></h2>
+<p>We need to understand each major registers in x86 architecture, the CPU utilizes a set of registers for performing operations. registers are small, fast storage locations within the CPI and its used to hold data temporarily during computation.</p>
+<h3 id="general-purpose-register" class="relative group">General-Purpose Register <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#general-purpose-register" aria-label="Anchor">#</a></span></h3>
+<p>It&rsquo;s important to understand the purpose of each register because when working on building the ROP Gagets, choosing the ROP Gagets combination will become easier.</p>
+<h4 id="eax-accumulator-register" class="relative group">EAX (Accumulator Register) <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#eax-accumulator-register" aria-label="Anchor">#</a></span></h4>
+<p>Primarily used for arithmetic and data manipulation operations. It can also be used for I/O port access.
+Specific Uses: Often used to hold the results of arithmetic operations like addition, subtraction, and multiplication.</p>
+<h4 id="ebx-base-register" class="relative group">EBX (Base Register) <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#ebx-base-register" aria-label="Anchor">#</a></span></h4>
+<p>Used as a base pointer for memory access, especially in older addressing modes.
+Specific Uses: Holds the base address of data in memory. Can be used as a general-purpose register in modern contexts.</p>
+<h4 id="ecx-counter-register" class="relative group">ECX (Counter Register) <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#ecx-counter-register" aria-label="Anchor">#</a></span></h4>
+<p>Primarily used as a loop counter.
+Specific Uses: Used in loop and string operations, where it typically holds the count for loop iterations or the length of a string.</p>
+<h4 id="edx-data-register" class="relative group">EDX (Data Register) <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#edx-data-register" aria-label="Anchor">#</a></span></h4>
+<p>Used for I/O operations and multiplication/division operations.
+Specific Uses: Often used to hold the high-order word in multiplication and division operations, as well as for I/O port addresses.</p>
+<h4 id="esi-source-index" class="relative group">ESI (Source Index) <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#esi-source-index" aria-label="Anchor">#</a></span></h4>
+<p>Used as a pointer for source data in string operations.
+Specific Uses: Points to the source in memory for operations like movsb, movsw, movsd (string move instructions).</p>
+<h4 id="edi-destination-index" class="relative group">EDI (Destination Index) <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#edi-destination-index" aria-label="Anchor">#</a></span></h4>
+<p>Used as a pointer for destination data in string operations.
+Specific Uses: Points to the destination in memory for operations like movsb, movsw, movsd.</p>
+<h4 id="ebp-base-pointer" class="relative group">EBP (Base Pointer) <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#ebp-base-pointer" aria-label="Anchor">#</a></span></h4>
+<p>Purpose: Used to point to the base of the stack frame.
+Specific Uses: Helps in stack frame referencing for local variables and function parameters.</p>
+<h4 id="esp-stack-pointer" class="relative group">ESP (Stack Pointer) <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#esp-stack-pointer" aria-label="Anchor">#</a></span></h4>
+<p>Points to the top of the current stack.
+Specific Uses: Keeps track of the call stack, managing function call and return addresses.</p>
+<h2 id="applying-what-we-know-about-rop-return-oriented-programming" class="relative group">Applying what we know about ROP (Return Oriented Programming) <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#applying-what-we-know-about-rop-return-oriented-programming" aria-label="Anchor">#</a></span></h2>
+<p>As mentioned above ROP is re-usable executable code to perform arbitrary execution code in memory, how that works  ? below is an example of ROP Gagets.</p></p>
+<p>The small piece of ROP Gagets below retrieves the memory address for kernel32!VirtualProtect function, <a
+  href="https://learn.microsoft.com/en-us/windows/win32/api/memoryapi/nf-memoryapi-virtualprotect"
+  
+  target="_blank" rel="noreferrer noopener"
+>VirtualProtect</a>.</p></p>
+<p>What all of them have in common ? they all end with a &ldquo;ret&rdquo; assembly instruction, in assembly the ret instruction will execute the code instruction on top of the stack. To build a ROP Gaget the instruction must end with a &ldquo;ret&rdquo; after performing the operation the &ldquo;ret&rdquo; will execute the next instruction just a like chain of instructions. </p></p>
+<p>The first instruction 0x100fcba2 (pop esi ; ret ;) which will store the address hex value: 0x100fcba2 in esi and execute the next rop gaget instruction at 0x100fa8be. The next rop gaget instruction 0x100fa8be (pop ecx ; ret;), we are now storing the 0x10406154 in ecx and the &ldquo;ret&rdquo; instruction will execute the next rop gadget instruction 0x100f864c (and ecx, esi ; pop esi ; mov eax, ecx ; pop ebx ; retn 0x0004), this operation will peform an and operation between value stored in ecx and esi, the result is the memory address of VirtualProtect imported by vulnserver.exe executable.<br/></p>
+<p>The next rop gaget instruction 0x10187f21 (mov ecx,  [ecx] ; mov eax, ecx ; ret ; ) will deference the address stored in ecx and store the value in ecx.
+We successfully accomplished our goal to retrieve through rop gaget the memory address for kernel32!VirtualProtect function.</p></p>
+<p><a
+  href="https://github.com/mzdaemon/vulnserver_dep_bypass/tree/main"
+  
+  target="_blank" rel="noreferrer noopener"
+>Here</a> you can check the full DEP bypass POC I developed for vulnserver.exe</p>
+<p><i style="font-size: 15px;">Note.: The junk for (reg32) is necessary for each pop instruction if the memory address contains several pop instrunctions without having a push instruction for each pop, you need to address that by accounting with junk values otherwise your next valid gaget will be popped into these register instead of being executed by the ret instruction.</i></p></p>
+<pre tabindex="0"><code># ROP CHAIN
+# Patching VirtualProtect
+# 0x100fcba2: pop esi ; ret ; (1 found)
+# 0xf406154:  VirtualProtect for and operation
+# 0x100fa8be: pop ecx ; ret ; 
+# 0x10406154: VirtualProtect for and operation
+# 0x100f864c: and ecx, esi ; pop esi ; mov eax, ecx ; pop ebx ; retn 0x0004 
+# 0x42424242: Junk for esi
+# 0x42424242: junk for ebx
+# 0x10187f21: mov ecx,  [ecx] ; mov eax, ecx ; ret ; 
+# 0x42424242: junk for retn 0x0004
+</code></pre><h2 id="humble-recommendation" class="relative group">Humble Recommendation <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#humble-recommendation" aria-label="Anchor">#</a></span></h2>
+<p>When developing ROP gagets something I learned through experience and understanding well the purpose of each register is that a lot can be accomplished by looking for eax, ecx, esi and esp registers, the ebp,edx,ebx,edi are important as well, but if you look for all available instructions the 4 registers I mentioned you should be able to do a lot and accomplish your goal. Most applications and modules will use these registers excessively allowing us to perform different operation/combinations and facilitating us to achieve our goal.</p></p>
+<p>Again, if you have not checked yet, check my DEP bypass POC <a
+  href="https://github.com/mzdaemon/vulnserver_dep_bypass/tree/main"
+  
+  target="_blank" rel="noreferrer noopener"
+>Here</a></p>
 
       </div>
     </section>
@@ -713,7 +832,7 @@
       
         <a
           class="m-1 inline-block min-w-[2.4rem] rounded bg-neutral-300 p-1 text-center text-neutral-700 hover:bg-primary-500 hover:text-neutral dark:bg-neutral-700 dark:text-neutral-300 dark:hover:bg-primary-400 dark:hover:text-neutral-800"
-          href="https://twitter.com/intent/tweet/?url=https://pentesthacks.ca/posts/postsec/vulnserver_dep/&amp;text=Exploit%20Dev%20POC%20DEP%20Bypass%20vulnserver.exe"
+          href="https://twitter.com/intent/tweet/?url=https://pentesthacks.ca/posts/postsec/vulnserver_dep/&amp;text=Demystifying%20DEP%20%28Data%20Execution%20Prevention%29"
           title="Tweet on Twitter"
           aria-label="Tweet on Twitter"
           target="_blank"
@@ -726,7 +845,7 @@
       
         <a
           class="m-1 inline-block min-w-[2.4rem] rounded bg-neutral-300 p-1 text-center text-neutral-700 hover:bg-primary-500 hover:text-neutral dark:bg-neutral-700 dark:text-neutral-300 dark:hover:bg-primary-400 dark:hover:text-neutral-800"
-          href="https://reddit.com/submit/?url=https://pentesthacks.ca/posts/postsec/vulnserver_dep/&amp;resubmit=true&amp;title=Exploit%20Dev%20POC%20DEP%20Bypass%20vulnserver.exe"
+          href="https://reddit.com/submit/?url=https://pentesthacks.ca/posts/postsec/vulnserver_dep/&amp;resubmit=true&amp;title=Demystifying%20DEP%20%28Data%20Execution%20Prevention%29"
           title="Submit to Reddit"
           aria-label="Submit to Reddit"
           target="_blank"
@@ -739,7 +858,7 @@
       
         <a
           class="m-1 inline-block min-w-[2.4rem] rounded bg-neutral-300 p-1 text-center text-neutral-700 hover:bg-primary-500 hover:text-neutral dark:bg-neutral-700 dark:text-neutral-300 dark:hover:bg-primary-400 dark:hover:text-neutral-800"
-          href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https://pentesthacks.ca/posts/postsec/vulnserver_dep/&amp;title=Exploit%20Dev%20POC%20DEP%20Bypass%20vulnserver.exe"
+          href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https://pentesthacks.ca/posts/postsec/vulnserver_dep/&amp;title=Demystifying%20DEP%20%28Data%20Execution%20Prevention%29"
           title="Share on LinkedIn"
           aria-label="Share on LinkedIn"
           target="_blank"
@@ -794,6 +913,17 @@
     </footer>
   </article>
 
+        
+          <div class="pointer-events-none absolute bottom-0 end-0 top-[100vh] w-12">
+            <a
+              href="#the-top"
+              class="pointer-events-auto sticky top-[calc(100vh-5.5rem)] flex h-12 w-12 items-center justify-center rounded-full bg-neutral/50 text-xl text-neutral-700 backdrop-blur hover:text-primary-600 dark:bg-neutral-800/50 dark:text-neutral dark:hover:text-primary-400"
+              aria-label="Scroll to top"
+              title="Scroll to top"
+            >
+              &uarr;
+            </a>
+          </div>
         
       </main><footer class="py-10 print:hidden">
   
