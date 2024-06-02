@@ -7,11 +7,11 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>@ 2024 All rigths reserved by mzdaemon</copyright>
-    <lastBuildDate>Sat, 25 May 2024 23:50:14 -0400</lastBuildDate><atom:link href="https://pentesthacks.ca/categories/offensivesecurity/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 01 Jun 2024 23:50:14 -0400</lastBuildDate><atom:link href="https://pentesthacks.ca/categories/offensivesecurity/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Demystifying DEP (Data Execution Prevention)</title>
       <link>https://pentesthacks.ca/posts/postsec/vulnserver_dep/</link>
-      <pubDate>Sat, 25 May 2024 23:50:14 -0400</pubDate>
+      <pubDate>Sat, 01 Jun 2024 23:50:14 -0400</pubDate>
       
       <guid>https://pentesthacks.ca/posts/postsec/vulnserver_dep/</guid>
       <description>We all (cybersecurity space) heard about DEP, some might don&amp;rsquo;t know and want to understand how it works and what its purpose.</description>
