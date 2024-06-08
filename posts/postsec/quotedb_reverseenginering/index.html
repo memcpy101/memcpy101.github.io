@@ -674,7 +674,7 @@
         <li><a href="#buffer-overflow">buffer overflow</a></li>
       </ul>
     </li>
-    <li><a href="#steps-to-developet-the-exploit">Steps to Developet the Exploit</a></li>
+    <li><a href="#steps-to-develop-the-exploit">Steps to Develop the Exploit</a></li>
   </ul>
 </nav>
   </div>
@@ -841,7 +841,7 @@ By sending the payload with %x we can leak a memory address in the stack, and it
 <p>If we feed the program with an invalid opcode, the program will call the _log_bad_request function, this function is vulnerbale to buffer overflow if we send a large enough buffer. We can observe below that the issue is the memset function allocates only 0x800 and memcpy maximum size is 0x4000, if we send larger buffer bigger than 0x800 bytes, we can overflow the buffer.</p>
 <figure><img src="/image/quotedb_bufferoverflow_memcpy_rever01.png">
 </figure>
-<h2 id="steps-to-developet-the-exploit" class="relative group">Steps to Developet the Exploit <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#steps-to-developet-the-exploit" aria-label="Anchor">#</a></span></h2>
+<h2 id="steps-to-develop-the-exploit" class="relative group">Steps to Develop the Exploit <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#steps-to-develop-the-exploit" aria-label="Anchor">#</a></span></h2>
 <p>Now that we understood the major functions like add_quote, get_quote and how to trigger the vulnerability, we need to develop an exploit that will bypass ASLR and DEP.  I already wrote a working a POC that you can follow, you can check <a
   href="https://github.com/mzdaemon/quotedb_alsr_dep_bypass"
   
