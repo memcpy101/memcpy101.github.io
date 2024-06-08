@@ -11,7 +11,6 @@
   data-default-appearance="dark"
   data-auto-appearance="true"
 ><head>
-	<meta name="generator" content="Hugo 0.111.3">
   <meta charset="utf-8" />
   
     <meta http-equiv="content-language" content="en" />
@@ -20,16 +19,14 @@
   <meta name="theme-color" content="rgb(255,255,255)" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
   
-  <title></title>
-    <meta name="title" content="" />
+  <title>Reversing Engineering quotedb.exe (bmdyy) Bypass ASLR&#43;DEP &middot; </title>
+    <meta name="title" content="Reversing Engineering quotedb.exe (bmdyy) Bypass ASLR&#43;DEP &middot; " />
   
-  <meta name="description" content="" />
+  <meta name="description" content="I&rsquo;m continuing to study for my OSED Exam, I download the quotedb." />
   
   
   
-  <link rel="canonical" href="https://pentesthacks.ca/" />
-  <link rel="alternate" type="application/rss+xml" href="/index.xml" title="" />
-  <link rel="alternate" type="application/json" href="/index.json" title="" />
+  <link rel="canonical" href="https://pentesthacks.ca/posts/postsec/quotedb_reverseenginering/" />
   
   
   
@@ -77,31 +74,44 @@
   
   
   
-  <meta property="og:title" content="" />
-<meta property="og:description" content="" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://pentesthacks.ca/" />
+  <meta property="og:title" content="Reversing Engineering quotedb.exe (bmdyy) Bypass ASLR&#43;DEP" />
+<meta property="og:description" content="I&rsquo;m continuing to study for my OSED Exam, I download the quotedb." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://pentesthacks.ca/posts/postsec/quotedb_reverseenginering/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2024-06-07T02:50:14-04:00" />
+<meta property="article:modified_time" content="2024-06-07T02:50:14-04:00" />
 
   <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content=""/>
-<meta name="twitter:description" content=""/>
+<meta name="twitter:title" content="Reversing Engineering quotedb.exe (bmdyy) Bypass ASLR&#43;DEP"/>
+<meta name="twitter:description" content="I&rsquo;m continuing to study for my OSED Exam, I download the quotedb."/>
 
   
   <script type="application/ld+json">
-  {
+  [{
     "@context": "https://schema.org",
-    "@type": "WebSite",
-    "@id": "https:\/\/pentesthacks.ca\/",
-    "name": "",
+    "@type": "Article",
+    "articleSection": "Posts",
+    "name": "Reversing Engineering quotedb.exe (bmdyy) Bypass ASLR\u002bDEP",
+    "headline": "Reversing Engineering quotedb.exe (bmdyy) Bypass ASLR\u002bDEP",
     
+    "abstract": "I\u0026rsquo;m continuing to study for my OSED Exam, I download the quotedb.",
     "inLanguage": "en",
-    "url": "https:\/\/pentesthacks.ca\/",
-    
-    "publisher" : {
+    "url" : "https:\/\/pentesthacks.ca\/posts\/postsec\/quotedb_reverseenginering\/",
+    "author" : {
       "@type": "Person",
       "name": "mzdaemon"
-    }
-  }
+    },
+    "copyrightYear": "2024",
+    "dateCreated": "2024-06-07T02:50:14-04:00",
+    "datePublished": "2024-06-07T02:50:14-04:00",
+    
+    "dateModified": "2024-06-07T02:50:14-04:00",
+    
+    "keywords": ["ExploitDev","ReverseEng"],
+    
+    "mainEntityOfPage": "true",
+    "wordCount": "1509"
+  }]
   </script>
 
 
@@ -555,35 +565,21 @@
     <div class="relative flex flex-col grow">
       <main id="main-content" class="grow">
         
-  
-  
-    <article class="max-w-full prose dark:prose-invert">
-  
-  <section></section>
-</article>
-<section>
-  
-  <h2 class="mt-8 text-2xl font-extrabold">Recent</h2>
-  
-    <article class="mt-6 flex max-w-prose flex-row">
-  <div>
-    <h3 class="flex items-center text-xl font-semibold">
+  <article>
+    <header class="max-w-prose">
       
-        <a
-          class="text-neutral-800 decoration-primary-500 hover:underline hover:underline-offset-2 dark:text-neutral"
-          href="/posts/postsec/windbg_guardpage_cmds/"
-          >How to disable access violation/guardpage in windbg</a
-        >
-      
-      
-      
-    </h3>
-    <div class="text-sm text-neutral-500 dark:text-neutral-400">
-      
+      <h1 class="mt-0 text-4xl font-extrabold text-neutral-900 dark:text-neutral">
+        Reversing Engineering quotedb.exe (bmdyy) Bypass ASLR+DEP
+      </h1>
+      <div class="mt-8 mb-12 text-base text-neutral-500 dark:text-neutral-400 print:hidden">
+        
 
 
 
 
+
+  
+  
 
 
 
@@ -608,7 +604,7 @@
   <div class="flex flex-row flex-wrap items-center">
     
     
-      <time datetime="2024-03-19 16:48:15 -0400 EDT">19 March 2024</time><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">1 min</span>
+      <time datetime="2024-06-07 02:50:14 -0400 EDT">7 June 2024</time><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">8 mins</span>
     
 
     
@@ -638,9 +634,9 @@
             >
           
             <a
-              href="/tags/debugger/"
+              href="/tags/reverseeng/"
               class="rounded-md border border-neutral-200 px-1 py-[1px] hover:border-primary-300 hover:text-primary-700 dark:border-neutral-600 dark:hover:border-primary-600 dark:hover:text-primary-400"
-              >debugger</a
+              >ReverseEng</a
             >
           
         
@@ -649,378 +645,374 @@
   
 
 
-    </div>
-    
+      </div>
+      
+    </header>
+    <section class="flex flex-col max-w-full mt-0 prose dark:prose-invert lg:flex-row">
+      
+        <div class="order-first px-0 lg:order-last lg:max-w-xs lg:ps-8">
+          <div class="toc pe-5 print:hidden lg:sticky lg:top-10">
+            <details open class="-ms-5 mt-0 overflow-hidden rounded-lg ps-5">
+  <summary
+    class="-ms-5 block cursor-pointer bg-neutral-100 py-1 ps-5 text-lg font-semibold text-neutral-800 dark:bg-neutral-700 dark:text-neutral-100 lg:hidden"
+  >
+    Table of Contents
+  </summary>
+  <div class="-ms-5 border-s border-dotted border-neutral-300 py-2 ps-5 dark:border-neutral-600">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#enumerating-the-software">Enumerating the Software</a></li>
+    <li><a href="#aslr-and-dep-enabled">ASLR and DEP Enabled</a></li>
+    <li><a href="#reverse-engineering-quotedbexe">Reverse Engineering QuoteDB.exe</a>
+      <ul>
+        <li><a href="#hooking-windbg-to-ws2_32recv">Hooking Windbg to WS2_32!recv</a></li>
+        <li><a href="#sending-a-dummy-packet">Sending a dummy packet</a></li>
+        <li><a href="#analysing-the-code-block-in-ida">Analysing the code block in IDA</a></li>
+        <li><a href="#add_quote-function">add_quote function</a></li>
+        <li><a href="#get_quote-function">get_quote function</a></li>
+        <li><a href="#get_quote-snprintf-vulnerablity">get_quote snprintf vulnerablity</a></li>
+        <li><a href="#buffer-overflow">buffer overflow</a></li>
+      </ul>
+    </li>
+    <li><a href="#steps-to-developet-the-exploit">Steps to Developet the Exploit</a></li>
+  </ul>
+</nav>
   </div>
-</article>
+</details>
 
+          </div>
+        </div>
+      
+      <div class="min-w-0 min-h-0 max-w-prose grow">
+        <p>I&rsquo;m continuing to study for my OSED Exam, I download the quotedb.exe developed by bmdyy.
+You can download here <a
+  href="https://github.com/bmdyy/quote_db/releases/tag/1.00"
   
-    <article class="mt-6 flex max-w-prose flex-row">
-  <div>
-    <h3 class="flex items-center text-xl font-semibold">
+  target="_blank" rel="noreferrer noopener"
+>QuoteDB.exe</a></p></p>
+<p>We will use windbg and IDA Free to uncover vulnerabilities and exploit, the QuoteDB.exe has been compiled with ASLR and DEP enabled. If you haven&rsquo;t seen, please check my post about DEP: <a
+  href="../vulnserver_dep/"
+  
+  
+>Demystifying DEP (Data Execution Prevention)</a>. We will also bypass ASLR by leaking the address returned to us, lets start and stop talking 👽.</p>
+<h2 id="enumerating-the-software" class="relative group">Enumerating the Software <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#enumerating-the-software" aria-label="Anchor">#</a></span></h2>
+<p>One step really important is software enumeration, we will run the application and observe all available functionality that receives input either from user or application itself through its configuration files, registry keys etc. One of the tool commonly used for software enumeration is <a
+  href="https://learn.microsoft.com/en-us/sysinternals"
+  
+  target="_blank" rel="noreferrer noopener"
+>sysinternal</a> from Microsoft where we can observe port listening, what files or registry keys the software is trying to access etc.</p></p>
+<p>After you download the QuoteDB.exe, lets run and observe the software running using TCPView one of the sysinternal tools.</p>
+Just observing the output we can learn a lot, the software adds some data to db and we don&rsquo;t know yet if its writing the data to a file or memory at this point, know they call it as &ldquo;quote&rdquo; and the software initializes the WSA and network Socket and bound to 3700 TCP port. Using TCPView we can confirm is indeed listeninig on port 3700 TCP Protocol.</p>
+<figure><img src="/image/quotedb_enum_ports.png">
+</figure>
+<h2 id="aslr-and-dep-enabled" class="relative group">ASLR and DEP Enabled <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#aslr-and-dep-enabled" aria-label="Anchor">#</a></span></h2>
+<p>We can use the narly plugin to check binary protections enabled on quotedb.exe.</br>
+We can use windbg to attach to quotedb.exe process and run the command below to load the plugin.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl">.load narly.dll
+</span></span></code></pre></div><p>We can run !nmod to check protections and we see *ASLR and *DEP are enabled on QuoteDB process. That means we will need to bypass the protections to be successful.</p>
+<pre tabindex="0"><code>0:001&gt; !nmod
+01000000 01052000 QuoteDB              /SafeSEH OFF     *ASLR *DEP C:\Users\kali\Desktop\ExpDev_Traning\QuoteDB.exe
+747c0000 74816000 mswsock              /SafeSEH ON  /GS *ASLR *DEP C:\Windows\system32\mswsock.dll
+75290000 754c8000 KERNELBASE           /SafeSEH ON  /GS *ASLR *DEP C:\Windows\System32\KERNELBASE.dll
+76ac0000 76b23000 WS2_32               /SafeSEH ON  /GS *ASLR *DEP C:\Windows\System32\WS2_32.dll
+76b30000 76bf3000 RPCRT4               /SafeSEH ON  /GS *ASLR *DEP C:\Windows\System32\RPCRT4.dll
+76e00000 76ebf000 msvcrt               /SafeSEH ON  /GS *ASLR *DEP C:\Windows\System32\msvcrt.dll
+76f50000 76fea000 KERNEL32             /SafeSEH ON  /GS *ASLR *DEP C:\Windows\System32\KERNEL32.DLL
+77060000 771ff000 ntdll                /SafeSEH ON  /GS *ASLR *DEP C:\Windows\SYSTEM32\ntdll.dll
+
+*DEP/*ASLR means that these modules are compatible with ASLR/DEP
+</code></pre><h2 id="reverse-engineering-quotedbexe" class="relative group">Reverse Engineering QuoteDB.exe <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#reverse-engineering-quotedbexe" aria-label="Anchor">#</a></span></h2>
+<p>After we have discovered the software is listening on 3700 port, we can use static and dynamic tools to understand more about the QuoteDB.exe.</p>For static anlysis we will use IDA Free and windbg for dynamic analysis. Lets decompile QuoteDB.exe with IDA Free and Sync with Windbg. </p></p>
+<p>Open the quotedb.exe on IDA Free and also open windbg and attach to the running quotedb.exe process. After you attach with windbg to QuoteDB.exe you should see similar information, on your machine might change the memory address, you need to make sure the base address for QuoteDB.exe is matched with the one in IDA Free, you can see in windbg shows QuoteDB.exe base address is 0x01000000.</p></p>
+<pre tabindex="0"><code>Symbol search path is: srv*c:\symbols*https://msdl.microsoft.com/download/symbols
+Executable search path is: 
+ModLoad: 01000000 01052000   C:\Users\kali\Desktop\ExpDev_Traning\QuoteDB.exe
+ModLoad: 77060000 771ff000   C:\Windows\SYSTEM32\ntdll.dll
+ModLoad: 76f50000 76fea000   C:\Windows\System32\KERNEL32.DLL
+ModLoad: 75290000 754c8000   C:\Windows\System32\KERNELBASE.dll
+ModLoad: 76e00000 76ebf000   C:\Windows\System32\msvcrt.dll
+ModLoad: 76ac0000 76b23000   C:\Windows\System32\WS2_32.dll
+ModLoad: 76b30000 76bf3000   C:\Windows\System32\RPCRT4.dll
+ModLoad: 747c0000 74816000   C:\Windows\system32\mswsock.dll
+(19b0.26e0): Break instruction exception - code 80000003 (first chance)
+eax=012c2000 ebx=00000000 ecx=7712b430 edx=7712b430 esi=7712b430 edi=7712b430
+eip=770f2770 esp=017ff7f8 ebp=017ff824 iopl=0         nv up ei pl zr na pe nc
+cs=001b  ss=0023  ds=0023  es=0023  fs=003b  gs=0000             efl=00000246
+ntdll!DbgBreakPoint:
+770f2770 cc              int     3
+</code></pre><p>Now we need to check in IDA Free, please go to &ldquo;Edit -&gt; Segments -&gt; Rebase Program&hellip;&rdquo; and if &ldquo;Image Base&rdquo; doesn&rsquo;t match with 0x01000000 (yours might be different), you need to update and click on Ok Button.</p>
+<figure><img src="/image/quotedb_Rebase_IDA.png">
+</figure>
+<h3 id="hooking-windbg-to-ws2_32recv" class="relative group">Hooking Windbg to WS2_32!recv <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#hooking-windbg-to-ws2_32recv" aria-label="Anchor">#</a></span></h3>
+<p>To be able to understand better the software we need to hook the software to the function that will receive the data on port 3700. How to find what function the software is using to receive the data? you can look in the IAT using IDA and see the networking function, most of the time the software will use the recv function from kernel32 or WS2_32 module, you have to determine. In our case if you look at IMPORTS tab in IDA Free and search for recv funtion, we can see its using the WS2_32 module.</p>
+<p>We just need to set a breakpoint on WS2_32!recv in windbg as showing below
+with bp command, the bp set a breakpoint, type g and hit enter to let the debugger continue the execution.</p>
+<figure><img src="/image/quotedb_hook_ws32_32_recv.png">
+</figure>
+<h3 id="sending-a-dummy-packet" class="relative group">Sending a dummy packet <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#sending-a-dummy-packet" aria-label="Anchor">#</a></span></h3>
+<p>Next step write a small python script to send a dummy data allowing us to analyse the software flow using IDA Free and Windbg to follow along.
+Below is a PoC python script I created.</p>
+You can run the script as:</p>
+<ul>
+<li>python.exe poc-quote.py &lt;IP&gt;</li>
+</ul>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-py" data-lang="py"><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">socket</span>
+</span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">sys</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">sys</span><span class="o">.</span><span class="n">argv</span><span class="p">)</span> <span class="o">!=</span> <span class="mi">2</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">        <span class="nb">print</span><span class="p">(</span><span class="s2">&#34;Usage: </span><span class="si">%s</span><span class="s2"> &lt;ip_address&gt;</span><span class="se">\n</span><span class="s2">&#34;</span> <span class="o">%</span> <span class="p">(</span><span class="n">sys</span><span class="o">.</span><span class="n">argv</span><span class="p">[</span><span class="mi">0</span><span class="p">]))</span>
+</span></span><span class="line"><span class="cl">        <span class="n">sys</span><span class="o">.</span><span class="n">exit</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="n">server</span> <span class="o">=</span> <span class="n">sys</span><span class="o">.</span><span class="n">argv</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">    <span class="n">port</span> <span class="o">=</span> <span class="mi">3700</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="n">buf</span> <span class="o">=</span> <span class="nb">bytearray</span><span class="p">([</span><span class="mh">0x41</span><span class="p">]</span><span class="o">*</span><span class="mh">0x1000</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="n">s</span> <span class="o">=</span> <span class="n">socket</span><span class="o">.</span><span class="n">socket</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="n">s</span> <span class="o">=</span> <span class="n">socket</span><span class="o">.</span><span class="n">socket</span><span class="p">(</span><span class="n">socket</span><span class="o">.</span><span class="n">AF_INET</span><span class="p">,</span> <span class="n">socket</span><span class="o">.</span><span class="n">SOCK_STREAM</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">s</span><span class="o">.</span><span class="n">connect</span><span class="p">((</span><span class="n">server</span><span class="p">,</span><span class="n">port</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">    <span class="n">s</span><span class="o">.</span><span class="n">send</span><span class="p">(</span><span class="n">buf</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">resp</span> <span class="o">=</span> <span class="n">s</span><span class="o">.</span><span class="n">recv</span><span class="p">(</span><span class="mi">1024</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">print</span><span class="p">(</span><span class="s2">&#34;Response: &#34;</span><span class="p">,</span><span class="n">resp</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="nb">print</span><span class="p">(</span><span class="s2">&#34;[+] Packet Crash Sent&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="n">sys</span><span class="o">.</span><span class="n">exit</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="n">main</span><span class="p">()</span>
+</span></span></code></pre></div><p>We can see the breakpoint is hit, and the memory address will contain our buffer at 017fbb34. We can set a read hardware breakpoint to see where our payload will be used, you can see that out payload is been stored in eax and will be saved in ebp-4034h.</p>
+<pre tabindex="0"><code>0:001&gt; bp WS2_32!recv
+0:001&gt; g
+Breakpoint 0 hit
+eax=000000c0 ebx=01ab0f78 ecx=00000000 edx=017fbb34 esi=0100173b edi=76e66bc0
+eip=76ad23a0 esp=017f7308 ebp=017ffb64 iopl=0         nv up ei pl nz ac po nc
+cs=001b  ss=0023  ds=0023  es=0023  fs=003b  gs=0000             efl=00000212
+WS2_32!recv:
+76ad23a0 8bff            mov     edi,edi
+0:001&gt; dds esp l6
+017f7308  01001790 QuoteDB+0x1790
+017f730c  000000c0
+017f7310  017fbb34
+017f7314  00004000
+017f7318  00000000
+017f731c  00000000
+0:001&gt; ba r1 017fbb34
+0:001&gt; g
+Breakpoint 1 hit
+eax=41414141 ebx=01ab0f78 ecx=1ff2004a edx=00000000 esi=0100173b edi=76e66bc0
+eip=010017e8 esp=017f730c ebp=017ffb64 iopl=0         nv up ei pl zr na pe nc
+cs=001b  ss=0023  ds=0023  es=0023  fs=003b  gs=0000             efl=00000246
+QuoteDB+0x17e8:
+010017e8 8985ccbfffff    mov     dword ptr [ebp-4034h],eax ss:0023:017fbb30=00000000
+</code></pre><h3 id="analysing-the-code-block-in-ida" class="relative group">Analysing the code block in IDA <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#analysing-the-code-block-in-ida" aria-label="Anchor">#</a></span></h3>
+<p>Now we can copy the memory address 0x010017e8 and search in IDA Free to understand the code block.
+You can use &ldquo;g&rdquo; keyboard key to jump to address using a memory address</p>
+<figure><img src="/image/quotedb_reverse0001.png">
+</figure>
+<p>I like to add comments to the assembly instructions that I have control.</br>
+The following are important instructions to understand:</p>
+<ul>
+<li>0x0100180D - Maximum buffer size is 0x4000 bytes that means we can send a maximum 0x4000 bytes for our payload.</li>
+<li>0x010017E2 - eax will contain our controlled buffer</li>
+<li>0x010017E8 - eax will copy first 4 bytes of our payload in ebp+var_4034</li>
+<li>0x01001847 - our payload ebp+var_4034 will be copied again into eax</li>
+<li>0x0100184D - eax (our 4 bytes payload) will be substracted by 0x384 bytes</li>
+<li>0x01001852 - eax will be compared with 4 if eax &lt;= 4, won&rsquo;t take the jump only if &gt; 4.</li>
+</ul>
+<p>We can learn that first 4 bytes is substracted by 0x384 and compared with 4, this block is a switch statement and based on the opcode number we provide that will take us to jump to different code blocks.</p>
+<h3 id="add_quote-function" class="relative group">add_quote function <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#add_quote-function" aria-label="Anchor">#</a></span></h3>
+<p>After spending some time reverse engineering you will notice the 902 (0x386) opcode will take us to the add_quote function. The function will add data of 0x800 bytes into memory address.</p>
+<figure><img src="/image/quotedb_add_quote_rever001.png">
+</figure>
+<h3 id="get_quote-function" class="relative group">get_quote function <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#get_quote-function" aria-label="Anchor">#</a></span></h3>
+<p>Next we see there is a function called get_quote and the opcode is 901 (0x385), the get_quote has two arguments the index that will be used to retrieve the data and the buffer memory address to write it back into a different memory address.</p>
+<figure><img src="/image/quotedb_get_quote_rever001.png">
+</figure>
+<h3 id="get_quote-snprintf-vulnerablity" class="relative group">get_quote snprintf vulnerablity <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#get_quote-snprintf-vulnerablity" aria-label="Anchor">#</a></span></h3>
+<p>If we analyse the get_quote function in IDA, we will se the _snprintf function is vulnerable to format string attack.
+By sending the payload with %x we can leak a memory address in the stack, and its sent to us via networking packet, and that&rsquo;s handy because the quotedb.exe is compiled with ASLR enabled, this will allow us to bypass ASLR.</p>
+<figure><img src="/image/quotedb_get_quote_snprintf.png">
+</figure>
+<h3 id="buffer-overflow" class="relative group">buffer overflow <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#buffer-overflow" aria-label="Anchor">#</a></span></h3>
+<p>If we feed the program with an invalid opcode, the program will call the _log_bad_request function, this function is vulnerbale to buffer overflow if we send a large enough buffer. We can observe below that the issue is the memset function allocates only 0x800 and memcpy maximum size is 0x4000, if we send larger buffer bigger than 0x800 bytes, we can overflow the buffer.</p>
+<figure><img src="/image/quotedb_bufferoverflow_memcpy_rever01.png">
+</figure>
+<h2 id="steps-to-developet-the-exploit" class="relative group">Steps to Developet the Exploit <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#steps-to-developet-the-exploit" aria-label="Anchor">#</a></span></h2>
+<p>Now that we understood the major functions like add_quote, get_quote and how to trigger the vulnerability, we need to develop an exploit that will bypass ASLR and DEP.  I already wrote a working a POC that you can follow, you can check <a
+  href="https://github.com/mzdaemon/quotedb_alsr_dep_bypass"
+  
+  target="_blank" rel="noreferrer noopener"
+>quotedb POC</a></p>
+<ul>
+<li>Send a packet to trigger add_quote via opcode 902 (0x386)</li>
+<li>Send a second packet to trigger the get_quote via opcode 901 (0x385) to leak a module to bypass ASLR</li>
+<li>send another packet to trigger buffer overflow with an invalid opcode and large buffer to overflow.</li>
+<li>We developed ROP (Returned Oriented Programming) to bypass DEP and execute our shellcode.</li>
+</ul>
+<p>I hope you enjoy and see you on next post 😄</p>
+
+      </div>
+    </section>
+    <footer class="pt-8 max-w-prose print:hidden">
+      
+  <div class="flex">
+    
+    <div class="place-self-center">
+      
+        <div class="text-[0.6rem] uppercase leading-3 text-neutral-500 dark:text-neutral-400">
+          Author
+        </div>
+        <div class="font-semibold leading-6 text-neutral-800 dark:text-neutral-300">
+          mzdaemon
+        </div>
+      
+      
+        <div class="text-sm text-neutral-700 dark:text-neutral-400">Offensive Security, Penetration Tester, Red Teaming</div>
+      
+      <div class="text-2xl sm:text-lg">
+  <div class="flex flex-wrap text-neutral-400 dark:text-neutral-500">
+    
       
         <a
-          class="text-neutral-800 decoration-primary-500 hover:underline hover:underline-offset-2 dark:text-neutral"
-          href="/posts/postsec/windbg_usful_cmds/"
-          >Windbg useful commands</a
+          class="px-1 transition-transform hover:scale-125 hover:text-primary-700 dark:hover:text-primary-400"
+          style="will-change:transform;"
+          href="https://github.com/mzdaemon"
+          target="_blank"
+          aria-label="Github"
+          rel="me noopener noreferrer"
+          ><span class="relative inline-block align-text-bottom px-1 icon"><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Uploaded to: SVG Repo, www.svgrepo.com, Transformed by: SVG Repo Mixer Tools -->
+<svg width="800px" height="800px" viewBox="0 0 20.00 20.00" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="#0a0a0a" stroke="#0a0a0a">
+<g id="SVGRepo_bgCarrier" stroke-width="0"/>
+<g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" stroke="#CCCCCC" stroke-width="0.12"/>
+<g id="SVGRepo_iconCarrier"> <title>github [#fdfcfc]</title> <desc>Created with Sketch.</desc> <defs> </defs> <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"> <g id="Dribbble-Light-Preview" transform="translate(-140.000000, -7559.000000)" fill="#fdfcfc"> <g id="icons" transform="translate(56.000000, 160.000000)"> <path d="M94,7399 C99.523,7399 104,7403.59 104,7409.253 C104,7413.782 101.138,7417.624 97.167,7418.981 C96.66,7419.082 96.48,7418.762 96.48,7418.489 C96.48,7418.151 96.492,7417.047 96.492,7415.675 C96.492,7414.719 96.172,7414.095 95.813,7413.777 C98.04,7413.523 100.38,7412.656 100.38,7408.718 C100.38,7407.598 99.992,7406.684 99.35,7405.966 C99.454,7405.707 99.797,7404.664 99.252,7403.252 C99.252,7403.252 98.414,7402.977 96.505,7404.303 C95.706,7404.076 94.85,7403.962 94,7403.958 C93.15,7403.962 92.295,7404.076 91.497,7404.303 C89.586,7402.977 88.746,7403.252 88.746,7403.252 C88.203,7404.664 88.546,7405.707 88.649,7405.966 C88.01,7406.684 87.619,7407.598 87.619,7408.718 C87.619,7412.646 89.954,7413.526 92.175,7413.785 C91.889,7414.041 91.63,7414.493 91.54,7415.156 C90.97,7415.418 89.522,7415.871 88.63,7414.304 C88.63,7414.304 88.101,7413.319 87.097,7413.247 C87.097,7413.247 86.122,7413.234 87.029,7413.87 C87.029,7413.87 87.684,7414.185 88.139,7415.37 C88.139,7415.37 88.726,7417.2 91.508,7416.58 C91.513,7417.437 91.522,7418.245 91.522,7418.489 C91.522,7418.76 91.338,7419.077 90.839,7418.982 C86.865,7417.627 84,7413.783 84,7409.253 C84,7403.59 88.478,7399 94,7399" id="github-[#fdfcfc]"> </path> </g> </g> </g> </g>
+</svg></span></a
         >
       
-      
-      
-    </h3>
-    <div class="text-sm text-neutral-500 dark:text-neutral-400">
-      
-
-
-
-
-
-
-
-  
-
-  
-  
     
-  
-
-  
-
-  
-
-  
-    
-  
-
-  
-
-
-  <div class="flex flex-row flex-wrap items-center">
-    
-    
-      <time datetime="2024-03-19 15:58:14 -0400 EDT">19 March 2024</time><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">5 mins</span>
-    
-
-    
-    
-  </div>
-
-  
-  
-    <div class="my-1 text-xs leading-relaxed text-neutral-500 dark:text-neutral-400 ">
-      
-        
-          
-            <a
-              href="/categories/offensivesecurity/"
-              class="rounded-md border border-neutral-200 px-1 py-[1px] hover:border-primary-300 hover:text-primary-700 dark:border-neutral-600 dark:hover:border-primary-600 dark:hover:text-primary-400"
-              >OffensiveSecurity</a
-            >
-          
-        
-      
-        
-          
-            <a
-              href="/tags/exploitdev/"
-              class="rounded-md border border-neutral-200 px-1 py-[1px] hover:border-primary-300 hover:text-primary-700 dark:border-neutral-600 dark:hover:border-primary-600 dark:hover:text-primary-400"
-              >ExploitDev</a
-            >
-          
-            <a
-              href="/tags/debugger/"
-              class="rounded-md border border-neutral-200 px-1 py-[1px] hover:border-primary-300 hover:text-primary-700 dark:border-neutral-600 dark:hover:border-primary-600 dark:hover:text-primary-400"
-              >debugger</a
-            >
-          
-        
-      
-    </div>
-  
-
-
-    </div>
-    
-  </div>
-</article>
-
-  
-    <article class="mt-6 flex max-w-prose flex-row">
-  <div>
-    <h3 class="flex items-center text-xl font-semibold">
       
         <a
-          class="text-neutral-800 decoration-primary-500 hover:underline hover:underline-offset-2 dark:text-neutral"
-          href="/posts/postsec/windbg_cdb_attach/"
-          >Windbg, the cdb.exe to attach to process  </a
+          class="px-1 transition-transform hover:scale-125 hover:text-primary-700 dark:hover:text-primary-400"
+          style="will-change:transform;"
+          href="https://twitter.com/mzdaemon"
+          target="_blank"
+          aria-label="Twitter"
+          rel="me noopener noreferrer"
+          ><span class="relative inline-block align-text-bottom px-1 icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8L200.7 275.5 26.8 48H172.4L272.9 180.9 389.2 48zM364.4 421.8h39.1L151.1 88h-42L364.4 421.8z"/></svg>
+</span></a
         >
       
-      
-      
-    </h3>
-    <div class="text-sm text-neutral-500 dark:text-neutral-400">
-      
-
-
-
-
-
-
-
-  
-
-  
-  
-    
-  
-
-  
-
-  
-
-  
-    
-  
-
-  
-
-
-  <div class="flex flex-row flex-wrap items-center">
-    
-    
-      <time datetime="2024-03-10 20:04:37 -0400 EDT">10 March 2024</time><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">1 min</span>
-    
-
-    
     
   </div>
 
-  
-  
-    <div class="my-1 text-xs leading-relaxed text-neutral-500 dark:text-neutral-400 ">
-      
-        
-          
-            <a
-              href="/categories/offensivesecurity/"
-              class="rounded-md border border-neutral-200 px-1 py-[1px] hover:border-primary-300 hover:text-primary-700 dark:border-neutral-600 dark:hover:border-primary-600 dark:hover:text-primary-400"
-              >OffensiveSecurity</a
-            >
-          
-        
-      
-        
-          
-            <a
-              href="/tags/exploitdev/"
-              class="rounded-md border border-neutral-200 px-1 py-[1px] hover:border-primary-300 hover:text-primary-700 dark:border-neutral-600 dark:hover:border-primary-600 dark:hover:text-primary-400"
-              >ExploitDev</a
-            >
-          
-        
-      
+</div>
     </div>
-  
-
-
-    </div>
-    
   </div>
-</article>
 
+
+      
   
-    <article class="mt-6 flex max-w-prose flex-row">
-  <div>
-    <h3 class="flex items-center text-xl font-semibold">
+  <section class="flex flex-row flex-wrap justify-center pt-4 text-xl">
+    
       
         <a
-          class="text-neutral-800 decoration-primary-500 hover:underline hover:underline-offset-2 dark:text-neutral"
-          href="/posts/postsec/windbg_iat/"
-          >Find IAT using Windbg</a
+          class="m-1 inline-block min-w-[2.4rem] rounded bg-neutral-300 p-1 text-center text-neutral-700 hover:bg-primary-500 hover:text-neutral dark:bg-neutral-700 dark:text-neutral-300 dark:hover:bg-primary-400 dark:hover:text-neutral-800"
+          href="https://twitter.com/intent/tweet/?url=https://pentesthacks.ca/posts/postsec/quotedb_reverseenginering/&amp;text=Reversing%20Engineering%20quotedb.exe%20%28bmdyy%29%20Bypass%20ASLR&#43;DEP"
+          title="Tweet on Twitter"
+          aria-label="Tweet on Twitter"
+          target="_blank"
+          rel="noopener noreferrer"
+          ><span class="relative inline-block align-text-bottom px-1 icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8L200.7 275.5 26.8 48H172.4L272.9 180.9 389.2 48zM364.4 421.8h39.1L151.1 88h-42L364.4 421.8z"/></svg>
+</span></a
         >
       
-      
-      
-    </h3>
-    <div class="text-sm text-neutral-500 dark:text-neutral-400">
-      
-
-
-
-
-
-
-
-  
-
-  
-  
     
-  
-
-  
-
-  
-
-  
-    
-  
-
-  
-
-
-  <div class="flex flex-row flex-wrap items-center">
-    
-    
-      <time datetime="2024-03-10 19:33:20 -0400 EDT">10 March 2024</time><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">1 min</span>
-    
-
-    
-    
-  </div>
-
-  
-  
-    <div class="my-1 text-xs leading-relaxed text-neutral-500 dark:text-neutral-400 ">
-      
-        
-          
-            <a
-              href="/categories/offensivesecurity/"
-              class="rounded-md border border-neutral-200 px-1 py-[1px] hover:border-primary-300 hover:text-primary-700 dark:border-neutral-600 dark:hover:border-primary-600 dark:hover:text-primary-400"
-              >OffensiveSecurity</a
-            >
-          
-        
-      
-        
-          
-            <a
-              href="/tags/exploitdev/"
-              class="rounded-md border border-neutral-200 px-1 py-[1px] hover:border-primary-300 hover:text-primary-700 dark:border-neutral-600 dark:hover:border-primary-600 dark:hover:text-primary-400"
-              >ExploitDev</a
-            >
-          
-            <a
-              href="/tags/windowsinternal/"
-              class="rounded-md border border-neutral-200 px-1 py-[1px] hover:border-primary-300 hover:text-primary-700 dark:border-neutral-600 dark:hover:border-primary-600 dark:hover:text-primary-400"
-              >WindowsInternal</a
-            >
-          
-            <a
-              href="/tags/debugger/"
-              class="rounded-md border border-neutral-200 px-1 py-[1px] hover:border-primary-300 hover:text-primary-700 dark:border-neutral-600 dark:hover:border-primary-600 dark:hover:text-primary-400"
-              >debugger</a
-            >
-          
-        
-      
-    </div>
-  
-
-
-    </div>
-    
-  </div>
-</article>
-
-  
-    <article class="mt-6 flex max-w-prose flex-row">
-  <div>
-    <h3 class="flex items-center text-xl font-semibold">
       
         <a
-          class="text-neutral-800 decoration-primary-500 hover:underline hover:underline-offset-2 dark:text-neutral"
-          href="/posts/postsec/tty_shell/"
-          >TTY shells</a
+          class="m-1 inline-block min-w-[2.4rem] rounded bg-neutral-300 p-1 text-center text-neutral-700 hover:bg-primary-500 hover:text-neutral dark:bg-neutral-700 dark:text-neutral-300 dark:hover:bg-primary-400 dark:hover:text-neutral-800"
+          href="https://reddit.com/submit/?url=https://pentesthacks.ca/posts/postsec/quotedb_reverseenginering/&amp;resubmit=true&amp;title=Reversing%20Engineering%20quotedb.exe%20%28bmdyy%29%20Bypass%20ASLR&#43;DEP"
+          title="Submit to Reddit"
+          aria-label="Submit to Reddit"
+          target="_blank"
+          rel="noopener noreferrer"
+          ><span class="relative inline-block align-text-bottom px-1 icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M201.5 305.5c-13.8 0-24.9-11.1-24.9-24.6 0-13.8 11.1-24.9 24.9-24.9 13.6 0 24.6 11.1 24.6 24.9 0 13.6-11.1 24.6-24.6 24.6zM504 256c0 137-111 248-248 248S8 393 8 256 119 8 256 8s248 111 248 248zm-132.3-41.2c-9.4 0-17.7 3.9-23.8 10-22.4-15.5-52.6-25.5-86.1-26.6l17.4-78.3 55.4 12.5c0 13.6 11.1 24.6 24.6 24.6 13.8 0 24.9-11.3 24.9-24.9s-11.1-24.9-24.9-24.9c-9.7 0-18 5.8-22.1 13.8l-61.2-13.6c-3-.8-6.1 1.4-6.9 4.4l-19.1 86.4c-33.2 1.4-63.1 11.3-85.5 26.8-6.1-6.4-14.7-10.2-24.1-10.2-34.9 0-46.3 46.9-14.4 62.8-1.1 5-1.7 10.2-1.7 15.5 0 52.6 59.2 95.2 132 95.2 73.1 0 132.3-42.6 132.3-95.2 0-5.3-.6-10.8-1.9-15.8 31.3-16 19.8-62.5-14.9-62.5zM302.8 331c-18.2 18.2-76.1 17.9-93.6 0-2.2-2.2-6.1-2.2-8.3 0-2.5 2.5-2.5 6.4 0 8.6 22.8 22.8 87.3 22.8 110.2 0 2.5-2.2 2.5-6.1 0-8.6-2.2-2.2-6.1-2.2-8.3 0zm7.7-75c-13.6 0-24.6 11.1-24.6 24.9 0 13.6 11.1 24.6 24.6 24.6 13.8 0 24.9-11.1 24.9-24.6 0-13.8-11-24.9-24.9-24.9z"/></svg>
+</span></a
         >
       
+    
       
+        <a
+          class="m-1 inline-block min-w-[2.4rem] rounded bg-neutral-300 p-1 text-center text-neutral-700 hover:bg-primary-500 hover:text-neutral dark:bg-neutral-700 dark:text-neutral-300 dark:hover:bg-primary-400 dark:hover:text-neutral-800"
+          href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https://pentesthacks.ca/posts/postsec/quotedb_reverseenginering/&amp;title=Reversing%20Engineering%20quotedb.exe%20%28bmdyy%29%20Bypass%20ASLR&#43;DEP"
+          title="Share on LinkedIn"
+          aria-label="Share on LinkedIn"
+          target="_blank"
+          rel="noopener noreferrer"
+          ><span class="relative inline-block align-text-bottom px-1 icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"/></svg>
+</span></a
+        >
       
-    </h3>
-    <div class="text-sm text-neutral-500 dark:text-neutral-400">
+    
+  </section>
+
+
       
-
-
-
-
-
-
-
-  
-
-  
   
     
-  
-
-  
-
-  
-
-  
-    
-  
-
-  
-
-
-  <div class="flex flex-row flex-wrap items-center">
     
     
-      <time datetime="2024-03-10 18:48:29 -0400 EDT">10 March 2024</time><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">2 mins</span>
-    
-
-    
-    
-  </div>
-
-  
-  
-    <div class="my-1 text-xs leading-relaxed text-neutral-500 dark:text-neutral-400 ">
-      
-        
+    <div class="pt-8">
+      <hr class="border-dotted border-neutral-300 dark:border-neutral-600" />
+      <div class="flex justify-between pt-3">
+        <span>
           
-            <a
-              href="/categories/offensivesecurity/"
-              class="rounded-md border border-neutral-200 px-1 py-[1px] hover:border-primary-300 hover:text-primary-700 dark:border-neutral-600 dark:hover:border-primary-600 dark:hover:text-primary-400"
-              >OffensiveSecurity</a
-            >
+            <a class="group flex" href="/posts/postsec/vulnserver_dep/">
+              <span
+                class="me-2 text-neutral-700 transition-transform group-hover:-translate-x-[2px] group-hover:text-primary-600 dark:text-neutral dark:group-hover:text-primary-400"
+                ><span class="ltr:inline rtl:hidden">&larr;</span
+                ><span class="ltr:hidden rtl:inline">&rarr;</span></span
+              >
+              <span class="flex flex-col">
+                <span
+                  class="mt-[0.1rem] leading-6 group-hover:underline group-hover:decoration-primary-500"
+                  >Demystifying DEP (Data Execution Prevention)</span
+                >
+                <span class="mt-[0.1rem] text-xs text-neutral-500 dark:text-neutral-400">
+                  
+                    <time datetime="2024-06-01 23:50:14 -0400 EDT">1 June 2024</time>
+                  
+                </span>
+              </span>
+            </a>
           
-        
-      
-        
+        </span>
+        <span>
           
-            <a
-              href="/tags/kali/"
-              class="rounded-md border border-neutral-200 px-1 py-[1px] hover:border-primary-300 hover:text-primary-700 dark:border-neutral-600 dark:hover:border-primary-600 dark:hover:text-primary-400"
-              >Kali</a
-            >
-          
-            <a
-              href="/tags/linux/"
-              class="rounded-md border border-neutral-200 px-1 py-[1px] hover:border-primary-300 hover:text-primary-700 dark:border-neutral-600 dark:hover:border-primary-600 dark:hover:text-primary-400"
-              >Linux</a
-            >
-          
-        
-      
+        </span>
+      </div>
     </div>
   
 
 
-    </div>
-    
-  </div>
-</article>
+      
+    </footer>
+  </article>
 
-  
-
-
-</section>
-
-  
-
+        
+          <div class="pointer-events-none absolute bottom-0 end-0 top-[100vh] w-12">
+            <a
+              href="#the-top"
+              class="pointer-events-auto sticky top-[calc(100vh-5.5rem)] flex h-12 w-12 items-center justify-center rounded-full bg-neutral/50 text-xl text-neutral-700 backdrop-blur hover:text-primary-600 dark:bg-neutral-800/50 dark:text-neutral dark:hover:text-primary-400"
+              aria-label="Scroll to top"
+              title="Scroll to top"
+            >
+              &uarr;
+            </a>
+          </div>
         
       </main><footer class="py-10 print:hidden">
   
