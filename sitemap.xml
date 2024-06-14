@@ -5,7 +5,7 @@
     
       <url>
             <loc>https://pentesthacks.ca/</loc>
-            <lastmod>2024-06-07T02:50:14-04:00</lastmod>
+            <lastmod>2024-06-13T09:57:14-04:00</lastmod>
           </url>
     
   
@@ -15,8 +15,15 @@
   
     
       <url>
+            <loc>https://pentesthacks.ca/posts/postsec/goodstuff_offensiveknowledge/</loc>
+            <lastmod>2024-06-13T09:57:14-04:00</lastmod>
+          </url>
+    
+  
+    
+      <url>
             <loc>https://pentesthacks.ca/posts/postsec/</loc>
-            <lastmod>2024-06-07T02:50:14-04:00</lastmod>
+            <lastmod>2024-06-13T09:57:14-04:00</lastmod>
           </url>
     
   
@@ -25,8 +32,14 @@
     
       <url>
             <loc>https://pentesthacks.ca/posts/</loc>
-            <lastmod>2024-06-07T02:50:14-04:00</lastmod>
+            <lastmod>2024-06-13T09:57:14-04:00</lastmod>
           </url>
+    
+  
+    
+  
+    
+  
     
   
     
@@ -39,14 +52,10 @@
     
   
     
-  
-    
       <url>
             <loc>https://pentesthacks.ca/posts/postsec/vulnserver_dep/</loc>
             <lastmod>2024-06-01T23:50:14-04:00</lastmod>
           </url>
-    
-  
     
   
     
