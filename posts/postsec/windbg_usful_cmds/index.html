@@ -110,7 +110,7 @@
     "keywords": ["ExploitDev","debugger"],
     
     "mainEntityOfPage": "true",
-    "wordCount": "1003"
+    "wordCount": "1032"
   }]
   </script>
 
@@ -675,6 +675,7 @@
         <li><a href="#derefence-memory-using-poi">Derefence memory using poi</a></li>
         <li><a href="#dumping-structures-from-memory">Dumping Structures from Memory</a></li>
         <li><a href="#display-nested-structures-from-memory">Display nested Structures from Memory</a></li>
+        <li><a href="#display-exeption-registration-record">Display Exeption Registration Record</a></li>
         <li><a href="#calculate-size-of-structure">Calculate size of structure</a></li>
         <li><a href="#writing-a-value-to-memory">Writing a value to Memory</a></li>
         <li><a href="#searching-the-memory-space">Searching the memory space</a></li>
@@ -749,6 +750,10 @@
 </span></span></code></pre></div><h3 id="display-nested-structures-from-memory" class="relative group">Display nested Structures from Memory <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#display-nested-structures-from-memory" aria-label="Anchor">#</a></span></h3>
 <p>The -r will display nested structures, the $teb is the pseudo register that provides the address of the TEB</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl">dt -r ntdll!_TEB @$teb
+</span></span></code></pre></div><h3 id="display-exeption-registration-record" class="relative group">Display Exeption Registration Record <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#display-exeption-registration-record" aria-label="Anchor">#</a></span></h3>
+<p>The !teb get the ExceptionList value and use with the dt command as showing below. Another option is !exchain command</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl">!teb
+</span></span><span class="line"><span class="cl">dt _EXCEPTION_REGISTRATION_RECORD 0014f4a4
 </span></span></code></pre></div><h3 id="calculate-size-of-structure" class="relative group">Calculate size of structure <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#calculate-size-of-structure" aria-label="Anchor">#</a></span></h3>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl">?? sizeof(ntdll!_TEB)
 </span></span></code></pre></div><h3 id="writing-a-value-to-memory" class="relative group">Writing a value to Memory <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#writing-a-value-to-memory" aria-label="Anchor">#</a></span></h3>
