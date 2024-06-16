@@ -7,7 +7,25 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>@ 2024 All rigths reserved by mzdaemon</copyright>
-    <lastBuildDate>Fri, 14 Jun 2024 09:57:14 -0400</lastBuildDate><atom:link href="https://pentesthacks.ca/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 15 Jun 2024 10:57:14 -0400</lastBuildDate><atom:link href="https://pentesthacks.ca/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Check DllCharacteristics values with Windbg</title>
+      <link>https://pentesthacks.ca/posts/postsec/windbg_dllcharacteristics/</link>
+      <pubDate>Sat, 15 Jun 2024 10:57:14 -0400</pubDate>
+      
+      <guid>https://pentesthacks.ca/posts/postsec/windbg_dllcharacteristics/</guid>
+      <description>Below the steps to find if the module has any mitigation enabled such as SafeSEH, ASLR or NXCompat.</description>
+    </item>
+    
+    <item>
+      <title>Info Leak using Win32 Apis for Exploit Dev</title>
+      <link>https://pentesthacks.ca/posts/postsec/win32_infoleak_expdev/</link>
+      <pubDate>Sat, 15 Jun 2024 09:57:14 -0400</pubDate>
+      
+      <guid>https://pentesthacks.ca/posts/postsec/win32_infoleak_expdev/</guid>
+      <description>Win32 Apis that could result in information leak useful to investigate during exploit development.</description>
+    </item>
+    
     <item>
       <title>Searching for ROP Gadgets with powershelll</title>
       <link>https://pentesthacks.ca/posts/postsec/searching_assembly_gagets_powershell/</link>
