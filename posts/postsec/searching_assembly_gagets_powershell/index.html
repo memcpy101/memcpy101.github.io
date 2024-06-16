@@ -110,7 +110,7 @@
     "keywords": ["ExploitDev"],
     
     "mainEntityOfPage": "true",
-    "wordCount": "149"
+    "wordCount": "191"
   }]
   </script>
 
@@ -657,7 +657,8 @@
   <ul>
     <li>
       <ul>
-        <li><a href="#example">Example</a></li>
+        <li><a href="#example-1">Example 1</a></li>
+        <li><a href="#example-2">Example 2</a></li>
         <li><a href="#booksbr">Books</br></a></li>
       </ul>
     </li>
@@ -674,8 +675,11 @@
 The problem with python if you are using windows, you have to install the python interpreter and with powershell it comes out of the box.</p>
 <p>When developing ROP Gadgets, I like to use powershell to look for what I need.</p>
 <p>The Get-Content read a file, the shortcut command is gc, you can pipe to select-string which will search for your desirable pattern along with the -AllMatches parameter. The select-string supports Regex out of the box.</p>
-<h3 id="example" class="relative group">Example <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#example" aria-label="Anchor">#</a></span></h3>
+<h3 id="example-1" class="relative group">Example 1 <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#example-1" aria-label="Anchor">#</a></span></h3>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-powershell" data-lang="powershell"><span class="line"><span class="cl"><span class="nb">Get-Content</span> <span class="p">.\</span><span class="n">file</span><span class="p">.</span><span class="py">txt</span> <span class="p">|</span> <span class="nb">Select-String</span> <span class="s2">&#34;.*sub esp.*ret&#34;</span> <span class="n">-AllMatches</span>
+</span></span></code></pre></div><p>The second example we will look for &ldquo;add esp, 0x*****&rdquo; Gadgets that contains numbers 5 to 10, we for loop through and search for it.</p>
+<h3 id="example-2" class="relative group">Example 2 <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#example-2" aria-label="Anchor">#</a></span></h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-powershell" data-lang="powershell"><span class="line"><span class="cl"><span class="mf">5</span><span class="p">.</span><span class="mf">.10</span> <span class="p">|</span> <span class="p">%</span> <span class="p">{</span> <span class="nb">Get-Content</span> <span class="p">.\</span><span class="n">PowerManagementCtrl_Rop</span><span class="p">.</span><span class="py">txt</span> <span class="p">|</span> <span class="nb">Select-String</span>  <span class="s2">&#34;.*add esp, 0x.*</span><span class="nv">$_</span><span class="s2">.*ret&#34;</span> <span class="n">-AllMatches</span> <span class="p">}</span>
 </span></span></code></pre></div><p>There are two powershell books that changed my life and I recommend buying, if you are interested</p>
 <h3 id="booksbr" class="relative group">Books</br> <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#booksbr" aria-label="Anchor">#</a></span></h3>
 <ul>
