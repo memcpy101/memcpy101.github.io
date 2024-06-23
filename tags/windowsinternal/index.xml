@@ -70,14 +70,14 @@
       <link>https://pentesthacks.ca/posts/postsec/teb_struct/</link>
       <pubDate>Sat, 09 Mar 2024 16:49:54 -0500</pubDate>
       <guid>https://pentesthacks.ca/posts/postsec/teb_struct/</guid>
-      <description>The TEB (Thread Environment Block) # Just as PEB contains information about the processs, the TEB has information about the thread running in the processs.</description>
+      <description>The TEB (Thread Environment Block) #Just as PEB contains information about the processs, the TEB has information about the thread running in the processs.</description>
     </item>
     <item>
       <title>The PEB Structure</title>
       <link>https://pentesthacks.ca/posts/postsec/peb/</link>
       <pubDate>Sat, 09 Mar 2024 16:15:03 -0500</pubDate>
       <guid>https://pentesthacks.ca/posts/postsec/peb/</guid>
-      <description>The PEB (Process Environment Block) # The PEB is a data structure that store information about the running process and can be accessed through intel x86 [FS] register at offset 0x30h.</description>
+      <description>The PEB (Process Environment Block) #The PEB is a data structure that store information about the running process and can be accessed through intel x86 [FS] register at offset 0x30h.</description>
     </item>
   </channel>
 </rss>

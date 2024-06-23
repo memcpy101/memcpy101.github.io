@@ -10,7 +10,7 @@
     <lastBuildDate>Sat, 22 Jun 2024 10:57:14 -0400</lastBuildDate>
     <atom:link href="https://pentesthacks.ca/posts/postsec/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Python Script Create String to put into Stack</title>
+      <title>Python Script Generate ASCII String to push into Stack</title>
       <link>https://pentesthacks.ca/posts/postsec/shellcode_put_string_stack/</link>
       <pubDate>Sat, 22 Jun 2024 10:57:14 -0400</pubDate>
       <guid>https://pentesthacks.ca/posts/postsec/shellcode_put_string_stack/</guid>
@@ -168,7 +168,7 @@
       <link>https://pentesthacks.ca/posts/postsec/detect_badchars/</link>
       <pubDate>Sat, 04 May 2024 16:13:14 -0400</pubDate>
       <guid>https://pentesthacks.ca/posts/postsec/detect_badchars/</guid>
-      <description>List of bad chars # Useful during exploit developement to detect bad chars.</description>
+      <description>List of bad chars #Useful during exploit developement to detect bad chars.</description>
     </item>
     <item>
       <title>Low level computer concept</title>
@@ -196,7 +196,7 @@
       <link>https://pentesthacks.ca/posts/postsec/windbg_usful_cmds/</link>
       <pubDate>Tue, 19 Mar 2024 15:58:14 -0400</pubDate>
       <guid>https://pentesthacks.ca/posts/postsec/windbg_usful_cmds/</guid>
-      <description>All windbg commands here # Link to windgb manual</description>
+      <description>All windbg commands here #Link to windgb manual</description>
     </item>
     <item>
       <title>Windbg, the cdb.exe to attach to process  </title>
@@ -217,7 +217,7 @@
       <link>https://pentesthacks.ca/posts/postsec/tty_shell/</link>
       <pubDate>Sun, 10 Mar 2024 18:48:29 -0400</pubDate>
       <guid>https://pentesthacks.ca/posts/postsec/tty_shell/</guid>
-      <description>My notes on some of useful tty commands # Color when listing files # export TERM=xterm-256-color alias ll=&amp;#39;ls -lsahta --color=auto&amp;#39; Run: ll Get interactive shell zsh shell // new kalli version working # python3 -c &amp;#39;import pty; pty.</description>
+      <description>My notes on some of useful tty commands #Color when listing files #export TERM=xterm-256-color alias ll=&amp;#39;ls -lsahta --color=auto&amp;#39; Run: ll Get interactive shell zsh shell // new kalli version working #python3 -c &amp;#39;import pty; pty.</description>
     </item>
     <item>
       <title>Narly plugin for windbg</title>
@@ -245,14 +245,14 @@
       <link>https://pentesthacks.ca/posts/postsec/teb_struct/</link>
       <pubDate>Sat, 09 Mar 2024 16:49:54 -0500</pubDate>
       <guid>https://pentesthacks.ca/posts/postsec/teb_struct/</guid>
-      <description>The TEB (Thread Environment Block) # Just as PEB contains information about the processs, the TEB has information about the thread running in the processs.</description>
+      <description>The TEB (Thread Environment Block) #Just as PEB contains information about the processs, the TEB has information about the thread running in the processs.</description>
     </item>
     <item>
       <title>The PEB Structure</title>
       <link>https://pentesthacks.ca/posts/postsec/peb/</link>
       <pubDate>Sat, 09 Mar 2024 16:15:03 -0500</pubDate>
       <guid>https://pentesthacks.ca/posts/postsec/peb/</guid>
-      <description>The PEB (Process Environment Block) # The PEB is a data structure that store information about the running process and can be accessed through intel x86 [FS] register at offset 0x30h.</description>
+      <description>The PEB (Process Environment Block) #The PEB is a data structure that store information about the running process and can be accessed through intel x86 [FS] register at offset 0x30h.</description>
     </item>
     <item>
       <title>Meterpreter Session Time out</title>

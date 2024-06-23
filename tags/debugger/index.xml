@@ -35,7 +35,7 @@
       <link>https://pentesthacks.ca/posts/postsec/detect_badchars/</link>
       <pubDate>Sat, 04 May 2024 16:13:14 -0400</pubDate>
       <guid>https://pentesthacks.ca/posts/postsec/detect_badchars/</guid>
-      <description>List of bad chars # Useful during exploit developement to detect bad chars.</description>
+      <description>List of bad chars #Useful during exploit developement to detect bad chars.</description>
     </item>
     <item>
       <title>How to check Memory Permission in Windbg</title>
@@ -56,7 +56,7 @@
       <link>https://pentesthacks.ca/posts/postsec/windbg_usful_cmds/</link>
       <pubDate>Tue, 19 Mar 2024 15:58:14 -0400</pubDate>
       <guid>https://pentesthacks.ca/posts/postsec/windbg_usful_cmds/</guid>
-      <description>All windbg commands here # Link to windgb manual</description>
+      <description>All windbg commands here #Link to windgb manual</description>
     </item>
     <item>
       <title>Find IAT using Windbg</title>

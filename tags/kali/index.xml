@@ -14,7 +14,7 @@
       <link>https://pentesthacks.ca/posts/postsec/tty_shell/</link>
       <pubDate>Sun, 10 Mar 2024 18:48:29 -0400</pubDate>
       <guid>https://pentesthacks.ca/posts/postsec/tty_shell/</guid>
-      <description>My notes on some of useful tty commands # Color when listing files # export TERM=xterm-256-color alias ll=&amp;#39;ls -lsahta --color=auto&amp;#39; Run: ll Get interactive shell zsh shell // new kalli version working # python3 -c &amp;#39;import pty; pty.</description>
+      <description>My notes on some of useful tty commands #Color when listing files #export TERM=xterm-256-color alias ll=&amp;#39;ls -lsahta --color=auto&amp;#39; Run: ll Get interactive shell zsh shell // new kalli version working #python3 -c &amp;#39;import pty; pty.</description>
     </item>
   </channel>
 </rss>
