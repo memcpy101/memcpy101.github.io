@@ -7,8 +7,15 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>@ 2024 All rigths reserved by mzdaemon</copyright>
-    <lastBuildDate>Sat, 15 Jun 2024 10:57:14 -0400</lastBuildDate>
+    <lastBuildDate>Sat, 22 Jun 2024 10:57:14 -0400</lastBuildDate>
     <atom:link href="https://pentesthacks.ca/categories/offensivesecurity/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Python Script Create String to put into Stack</title>
+      <link>https://pentesthacks.ca/posts/postsec/shellcode_put_string_stack/</link>
+      <pubDate>Sat, 22 Jun 2024 10:57:14 -0400</pubDate>
+      <guid>https://pentesthacks.ca/posts/postsec/shellcode_put_string_stack/</guid>
+      <description>Python script I created that facilicates when pushing string onto stack :smile:.</description>
+    </item>
     <item>
       <title>Check DllCharacteristics values with Windbg</title>
       <link>https://pentesthacks.ca/posts/postsec/windbg_dllcharacteristics/</link>
