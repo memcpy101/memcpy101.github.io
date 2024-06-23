@@ -133,7 +133,7 @@
     "keywords": ["ExploitDev"],
     
     "mainEntityOfPage": "true",
-    "wordCount": "70"
+    "wordCount": "32"
   }
   </script>
 
@@ -667,7 +667,6 @@
     <li>
       <ul>
         <li><a href="#how-to-use-">How to use ?</a></li>
-        <li><a href="#script-code">Script Code</a></li>
       </ul>
     </li>
   </ul>
@@ -680,35 +679,11 @@
       
       <div class="min-h-0 min-w-0 max-w-prose grow">
         <p>Python script I created that facilicates when pushing string onto stack 😄.</br></p>
-<h3 id="how-to-use-" class="relative group">How to use ? <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#how-to-use-" aria-label="Anchor">#</a></span></h3><pre tabindex="0"><code>python .\shellcode_print_string.py cmd.exe
+<p>You can download the script here on my <a href="https://github.com/mzdaemon/gen-ascii.git" target="_blank" rel="noreferrer">Github Gen-Ascii.py Script</a></p>
+<h3 id="how-to-use-" class="relative group">How to use ? <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#how-to-use-" aria-label="Anchor">#</a></span></h3><pre tabindex="0"><code>python .\Gen-Ascii.py cmd.exe
 0x657865
 0x2e646d63
-</code></pre><h3 id="script-code" class="relative group">Script Code <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#script-code" aria-label="Anchor">#</a></span></h3><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-py" data-lang="py"><span class="line"><span class="cl"><span class="ch">#!/usr/bin/env python3</span>
-</span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">sys</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">    <span class="k">try</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">        <span class="n">string</span> <span class="o">=</span> <span class="n">sys</span><span class="o">.</span><span class="n">argv</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
-</span></span><span class="line"><span class="cl">    <span class="k">except</span> <span class="ne">IndexError</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">        <span class="nb">print</span><span class="p">(</span><span class="s2">&#34;Usage: </span><span class="si">%s</span><span class="s2"> &lt;string_convert&gt;&#34;</span> <span class="o">%</span> <span class="n">sys</span><span class="o">.</span><span class="n">argv</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
-</span></span><span class="line"><span class="cl">        <span class="n">sys</span><span class="o">.</span><span class="n">exit</span><span class="p">()</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">    <span class="n">result</span> <span class="o">=</span> <span class="p">[]</span>
-</span></span><span class="line"><span class="cl">    <span class="n">ascii_strings</span> <span class="o">=</span> <span class="p">[</span><span class="nb">ord</span><span class="p">(</span><span class="n">c</span><span class="p">)</span> <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">string</span><span class="p">]</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="nb">len</span><span class="p">(</span><span class="n">ascii_strings</span><span class="p">),</span><span class="mi">4</span><span class="p">):</span>
-</span></span><span class="line"><span class="cl">        <span class="n">result</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">ascii_strings</span><span class="p">[</span><span class="n">i</span><span class="p">:</span><span class="n">i</span><span class="o">+</span><span class="mi">4</span><span class="p">])</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">    <span class="k">for</span> <span class="n">data</span>  <span class="ow">in</span> <span class="nb">reversed</span><span class="p">(</span><span class="n">result</span><span class="p">):</span>
-</span></span><span class="line"><span class="cl">        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;0x&#39;</span><span class="p">,</span><span class="n">end</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">        <span class="k">for</span> <span class="n">b</span> <span class="ow">in</span> <span class="nb">reversed</span><span class="p">(</span><span class="n">data</span><span class="p">):</span>
-</span></span><span class="line"><span class="cl">            <span class="nb">print</span><span class="p">(</span><span class="s2">&#34;</span><span class="si">{0:02x}</span><span class="s2">&#34;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">b</span><span class="p">),</span><span class="n">end</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">        <span class="nb">print</span><span class="p">(</span><span class="s2">&#34;&#34;</span><span class="p">,</span><span class="n">end</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">        <span class="nb">print</span><span class="p">()</span>
-</span></span><span class="line"><span class="cl">    
-</span></span></code></pre></div>
+</code></pre>
       </div>
     </section>
     <footer class="max-w-prose pt-8 print:hidden">
