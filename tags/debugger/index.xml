@@ -7,87 +7,70 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>@ 2024 All rigths reserved by mzdaemon</copyright>
-    <lastBuildDate>Sun, 12 May 2024 22:41:14 -0400</lastBuildDate><atom:link href="https://pentesthacks.ca/tags/debugger/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 12 May 2024 22:41:14 -0400</lastBuildDate>
+    <atom:link href="https://pentesthacks.ca/tags/debugger/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Ldr field in PEB</title>
       <link>https://pentesthacks.ca/posts/postsec/ldr_struct/</link>
       <pubDate>Sun, 12 May 2024 22:41:14 -0400</pubDate>
-      
       <guid>https://pentesthacks.ca/posts/postsec/ldr_struct/</guid>
       <description>The Ldr is one of the most important field in PEB, Ldr is a pointer to a PEB_LDR_DATA structure that contains information about the loaded modules for the process.</description>
     </item>
-    
     <item>
       <title>How to load external plugin windbg?</title>
       <link>https://pentesthacks.ca/posts/postsec/load_plugin_windbg/</link>
       <pubDate>Sat, 11 May 2024 09:12:14 -0400</pubDate>
-      
       <guid>https://pentesthacks.ca/posts/postsec/load_plugin_windbg/</guid>
       <description>We can load external plugins to help during reverse engineering/exploit development.</description>
     </item>
-    
     <item>
       <title>How to generate smallest shellcode ? (msfvenom)</title>
       <link>https://pentesthacks.ca/posts/postsec/smalled_shellcode/</link>
       <pubDate>Sat, 04 May 2024 16:58:14 -0400</pubDate>
-      
       <guid>https://pentesthacks.ca/posts/postsec/smalled_shellcode/</guid>
       <description>During exploit development sometimes we have a smaller buffer or part of buffer mangle the shellcode even when removing the bad characters.</description>
     </item>
-    
     <item>
       <title>Detect Bad Chars Exploit Development</title>
       <link>https://pentesthacks.ca/posts/postsec/detect_badchars/</link>
       <pubDate>Sat, 04 May 2024 16:13:14 -0400</pubDate>
-      
       <guid>https://pentesthacks.ca/posts/postsec/detect_badchars/</guid>
       <description>List of bad chars # Useful during exploit developement to detect bad chars.</description>
     </item>
-    
     <item>
       <title>How to check Memory Permission in Windbg</title>
       <link>https://pentesthacks.ca/posts/postsec/windbg_mempermision_cmds/</link>
       <pubDate>Tue, 19 Mar 2024 16:51:25 -0400</pubDate>
-      
       <guid>https://pentesthacks.ca/posts/postsec/windbg_mempermision_cmds/</guid>
       <description>Using windbg we can check memory permission under Protect field.</description>
     </item>
-    
     <item>
       <title>How to disable access violation/guardpage in windbg</title>
       <link>https://pentesthacks.ca/posts/postsec/windbg_guardpage_cmds/</link>
       <pubDate>Tue, 19 Mar 2024 16:48:15 -0400</pubDate>
-      
       <guid>https://pentesthacks.ca/posts/postsec/windbg_guardpage_cmds/</guid>
       <description>Command below disable access violation and guard pages in Windbg</description>
     </item>
-    
     <item>
       <title>Windbg useful commands</title>
       <link>https://pentesthacks.ca/posts/postsec/windbg_usful_cmds/</link>
       <pubDate>Tue, 19 Mar 2024 15:58:14 -0400</pubDate>
-      
       <guid>https://pentesthacks.ca/posts/postsec/windbg_usful_cmds/</guid>
       <description>All windbg commands here # Link to windgb manual</description>
     </item>
-    
     <item>
       <title>Find IAT using Windbg</title>
       <link>https://pentesthacks.ca/posts/postsec/windbg_iat/</link>
       <pubDate>Sun, 10 Mar 2024 19:33:20 -0400</pubDate>
-      
       <guid>https://pentesthacks.ca/posts/postsec/windbg_iat/</guid>
       <description>You can find the Import Address Table of an application and the list of imported functions by attaching Windbg to the process and following the steps below.</description>
     </item>
-    
     <item>
       <title>Narly plugin for windbg</title>
       <link>https://pentesthacks.ca/posts/postsec/narly_windbg/</link>
       <pubDate>Sat, 09 Mar 2024 21:13:16 -0500</pubDate>
-      
       <guid>https://pentesthacks.ca/posts/postsec/narly_windbg/</guid>
       <description>Narly is a plugin that parses the image and identifies the binary protections mechanisms enabled such as DEP, ASLR, SafeSEH and GS.</description>
     </item>
-    
   </channel>
 </rss>

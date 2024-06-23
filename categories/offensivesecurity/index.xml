@@ -7,330 +7,259 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>@ 2024 All rigths reserved by mzdaemon</copyright>
-    <lastBuildDate>Sat, 15 Jun 2024 10:57:14 -0400</lastBuildDate><atom:link href="https://pentesthacks.ca/categories/offensivesecurity/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 15 Jun 2024 10:57:14 -0400</lastBuildDate>
+    <atom:link href="https://pentesthacks.ca/categories/offensivesecurity/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Check DllCharacteristics values with Windbg</title>
       <link>https://pentesthacks.ca/posts/postsec/windbg_dllcharacteristics/</link>
       <pubDate>Sat, 15 Jun 2024 10:57:14 -0400</pubDate>
-      
       <guid>https://pentesthacks.ca/posts/postsec/windbg_dllcharacteristics/</guid>
       <description>Below the steps to find if the module has any mitigation enabled such as SafeSEH, ASLR or NXCompat.</description>
     </item>
-    
     <item>
       <title>Info Leak using Win32 Apis for Exploit Dev</title>
       <link>https://pentesthacks.ca/posts/postsec/win32_infoleak_expdev/</link>
       <pubDate>Sat, 15 Jun 2024 09:57:14 -0400</pubDate>
-      
       <guid>https://pentesthacks.ca/posts/postsec/win32_infoleak_expdev/</guid>
       <description>Win32 Apis that could result in information leak useful to investigate during exploit development.</description>
     </item>
-    
     <item>
       <title>Searching for ROP Gadgets with powershelll</title>
       <link>https://pentesthacks.ca/posts/postsec/searching_assembly_gagets_powershell/</link>
       <pubDate>Fri, 14 Jun 2024 09:57:14 -0400</pubDate>
-      
       <guid>https://pentesthacks.ca/posts/postsec/searching_assembly_gagets_powershell/</guid>
       <description>A few years ago I decided to use powershell more and more instead of tasking most of my work in python.</description>
     </item>
-    
     <item>
       <title>Good Stuff Offensive Security Resources</title>
       <link>https://pentesthacks.ca/posts/postsec/goodstuff_offensiveknowledge/</link>
       <pubDate>Thu, 13 Jun 2024 09:57:14 -0400</pubDate>
-      
       <guid>https://pentesthacks.ca/posts/postsec/goodstuff_offensiveknowledge/</guid>
       <description>By Browsing the internet I found a really good github with plentful resources to study :smile:</description>
     </item>
-    
     <item>
       <title>Reversing Engineering quotedb.exe (bmdyy) Bypass ASLR&#43;DEP</title>
       <link>https://pentesthacks.ca/posts/postsec/quotedb_reverseenginering/</link>
       <pubDate>Fri, 07 Jun 2024 02:50:14 -0400</pubDate>
-      
       <guid>https://pentesthacks.ca/posts/postsec/quotedb_reverseenginering/</guid>
       <description>I&amp;rsquo;m continuing to study for my OSED Exam, I downloaded the quotedb.</description>
     </item>
-    
     <item>
       <title>Demystifying DEP (Data Execution Prevention)</title>
       <link>https://pentesthacks.ca/posts/postsec/vulnserver_dep/</link>
       <pubDate>Sat, 01 Jun 2024 23:50:14 -0400</pubDate>
-      
       <guid>https://pentesthacks.ca/posts/postsec/vulnserver_dep/</guid>
       <description>We all (cybersecurity space) heard about DEP, some might don&amp;rsquo;t know and want to understand how it works and what its purpose.</description>
     </item>
-    
     <item>
       <title>Exploit Dev POC vulnserver.exe</title>
       <link>https://pentesthacks.ca/posts/postsec/vulnserver_poc/</link>
       <pubDate>Sat, 25 May 2024 23:34:14 -0400</pubDate>
-      
       <guid>https://pentesthacks.ca/posts/postsec/vulnserver_poc/</guid>
       <description>You can access my poc on vulnserver.</description>
     </item>
-    
     <item>
       <title>EggHunter Explained</title>
       <link>https://pentesthacks.ca/posts/postsec/egghunter_explained/</link>
       <pubDate>Sat, 25 May 2024 22:34:14 -0400</pubDate>
-      
       <guid>https://pentesthacks.ca/posts/postsec/egghunter_explained/</guid>
       <description>What is egghunter ?</description>
     </item>
-    
     <item>
       <title>Reverse Engineering Vulnserver.exe</title>
       <link>https://pentesthacks.ca/posts/postsec/vulnserver_revereng01/</link>
       <pubDate>Sat, 25 May 2024 17:34:14 -0400</pubDate>
-      
       <guid>https://pentesthacks.ca/posts/postsec/vulnserver_revereng01/</guid>
       <description>I choose one more vulnerable application to perform reverse engineering and discover vulnerablities if you want to follow along you can download here vulnserver App .</description>
     </item>
-    
     <item>
       <title>NASM Negative Jump (jump Backwards)</title>
       <link>https://pentesthacks.ca/posts/postsec/nasm_shell_negativejmp/</link>
       <pubDate>Tue, 21 May 2024 23:30:13 -0500</pubDate>
-      
       <guid>https://pentesthacks.ca/posts/postsec/nasm_shell_negativejmp/</guid>
       <description>If you need to jump backwards to reach to your shellcode, we can use nasm_shell from msf to demonstrate.</description>
     </item>
-    
     <item>
       <title>NASM Short Jump</title>
       <link>https://pentesthacks.ca/posts/postsec/nasm_shell_shortjmp/</link>
       <pubDate>Tue, 21 May 2024 23:25:13 -0500</pubDate>
-      
       <guid>https://pentesthacks.ca/posts/postsec/nasm_shell_shortjmp/</guid>
       <description>During exploit development sometimes we need to perform a short jump, we can use nasm_shell from msf to demonstrate.</description>
     </item>
-    
     <item>
       <title>Signatus.exe (bmdyy) - Exploit Dev POC</title>
       <link>https://pentesthacks.ca/posts/postsec/signatus_poc/</link>
       <pubDate>Fri, 17 May 2024 22:57:14 -0400</pubDate>
-      
       <guid>https://pentesthacks.ca/posts/postsec/signatus_poc/</guid>
       <description>You can access my poc on signatus.</description>
     </item>
-    
     <item>
       <title>Reverse Engineering Signatus.exe (bmdyy) - Part 2</title>
       <link>https://pentesthacks.ca/posts/postsec/signatus_revereng02/</link>
       <pubDate>Thu, 16 May 2024 22:57:14 -0400</pubDate>
-      
       <guid>https://pentesthacks.ca/posts/postsec/signatus_revereng02/</guid>
       <description>Continuing the second part of my reverse engineering the signatus.</description>
     </item>
-    
     <item>
       <title>Reverse Engineering Signatus.exe (bmdyy) - Part 1</title>
       <link>https://pentesthacks.ca/posts/postsec/signatus_revereng01/</link>
       <pubDate>Wed, 15 May 2024 22:57:14 -0400</pubDate>
-      
       <guid>https://pentesthacks.ca/posts/postsec/signatus_revereng01/</guid>
       <description>I am currently enrolled on OSED Course, I am taking a chance to practice more my reverse engineering skills and exploit development and bmddy wrote a program called Signatus and I will do a write up of my approach on reverse engineering the program.</description>
     </item>
-    
     <item>
       <title>Maldev Resources (Offensive Security)</title>
       <link>https://pentesthacks.ca/posts/postsec/maldev_rsc/</link>
       <pubDate>Wed, 15 May 2024 14:57:14 -0400</pubDate>
-      
       <guid>https://pentesthacks.ca/posts/postsec/maldev_rsc/</guid>
       <description>Good resources to learn Malware Analysis/Dev</description>
     </item>
-    
     <item>
       <title>Ldr field in PEB</title>
       <link>https://pentesthacks.ca/posts/postsec/ldr_struct/</link>
       <pubDate>Sun, 12 May 2024 22:41:14 -0400</pubDate>
-      
       <guid>https://pentesthacks.ca/posts/postsec/ldr_struct/</guid>
       <description>The Ldr is one of the most important field in PEB, Ldr is a pointer to a PEB_LDR_DATA structure that contains information about the loaded modules for the process.</description>
     </item>
-    
     <item>
       <title>Windows Native API Book Referece</title>
       <link>https://pentesthacks.ca/posts/postsec/windows_native_api_ref/</link>
       <pubDate>Sat, 11 May 2024 14:29:14 -0400</pubDate>
-      
       <guid>https://pentesthacks.ca/posts/postsec/windows_native_api_ref/</guid>
       <description>A really good book as a reference when working with Windows Native API, the book is old, but still relevant.</description>
     </item>
-    
     <item>
       <title>Windows Kernel Undocumented Structures (VERGILIUS&#39;s Project)</title>
       <link>https://pentesthacks.ca/posts/postsec/windows-_kernel_struct/</link>
       <pubDate>Sat, 11 May 2024 14:15:14 -0400</pubDate>
-      
       <guid>https://pentesthacks.ca/posts/postsec/windows-_kernel_struct/</guid>
       <description>If you need to reverse engineer the windows kernel, the vergilius&amp;rsquo;s project is handy with thousands of undocumented structure covering several windows versions.</description>
     </item>
-    
     <item>
       <title>Win32 Api (pinvoke) &amp; Windows Structures (ReactOS) &amp; Undocumented NT Internals</title>
       <link>https://pentesthacks.ca/posts/postsec/wind32apis_winstructure/</link>
       <pubDate>Sat, 11 May 2024 09:57:14 -0400</pubDate>
-      
       <guid>https://pentesthacks.ca/posts/postsec/wind32apis_winstructure/</guid>
       <description>Two references websites if you need to understand how a particular windows api (InvokeAPI) or undocument structures (ReactOS) works on Windows.</description>
     </item>
-    
     <item>
       <title>How to load external plugin windbg?</title>
       <link>https://pentesthacks.ca/posts/postsec/load_plugin_windbg/</link>
       <pubDate>Sat, 11 May 2024 09:12:14 -0400</pubDate>
-      
       <guid>https://pentesthacks.ca/posts/postsec/load_plugin_windbg/</guid>
       <description>We can load external plugins to help during reverse engineering/exploit development.</description>
     </item>
-    
     <item>
       <title>How to generate smallest shellcode ? (msfvenom)</title>
       <link>https://pentesthacks.ca/posts/postsec/smalled_shellcode/</link>
       <pubDate>Sat, 04 May 2024 16:58:14 -0400</pubDate>
-      
       <guid>https://pentesthacks.ca/posts/postsec/smalled_shellcode/</guid>
       <description>During exploit development sometimes we have a smaller buffer or part of buffer mangle the shellcode even when removing the bad characters.</description>
     </item>
-    
     <item>
       <title>Detect Bad Chars Exploit Development</title>
       <link>https://pentesthacks.ca/posts/postsec/detect_badchars/</link>
       <pubDate>Sat, 04 May 2024 16:13:14 -0400</pubDate>
-      
       <guid>https://pentesthacks.ca/posts/postsec/detect_badchars/</guid>
       <description>List of bad chars # Useful during exploit developement to detect bad chars.</description>
     </item>
-    
     <item>
       <title>Low level computer concept</title>
       <link>https://pentesthacks.ca/posts/postsec/lowlevel_concept/</link>
       <pubDate>Tue, 19 Mar 2024 17:20:11 -0400</pubDate>
-      
       <guid>https://pentesthacks.ca/posts/postsec/lowlevel_concept/</guid>
       <description>I found an exellent post on stackoverflow explaining the differences between opcode, bytecode, mnemonic, machine code and assembly.</description>
     </item>
-    
     <item>
       <title>How to check Memory Permission in Windbg</title>
       <link>https://pentesthacks.ca/posts/postsec/windbg_mempermision_cmds/</link>
       <pubDate>Tue, 19 Mar 2024 16:51:25 -0400</pubDate>
-      
       <guid>https://pentesthacks.ca/posts/postsec/windbg_mempermision_cmds/</guid>
       <description>Using windbg we can check memory permission under Protect field.</description>
     </item>
-    
     <item>
       <title>How to disable access violation/guardpage in windbg</title>
       <link>https://pentesthacks.ca/posts/postsec/windbg_guardpage_cmds/</link>
       <pubDate>Tue, 19 Mar 2024 16:48:15 -0400</pubDate>
-      
       <guid>https://pentesthacks.ca/posts/postsec/windbg_guardpage_cmds/</guid>
       <description>Command below disable access violation and guard pages in Windbg</description>
     </item>
-    
     <item>
       <title>Windbg useful commands</title>
       <link>https://pentesthacks.ca/posts/postsec/windbg_usful_cmds/</link>
       <pubDate>Tue, 19 Mar 2024 15:58:14 -0400</pubDate>
-      
       <guid>https://pentesthacks.ca/posts/postsec/windbg_usful_cmds/</guid>
       <description>All windbg commands here # Link to windgb manual</description>
     </item>
-    
     <item>
       <title>Windbg, the cdb.exe to attach to process  </title>
       <link>https://pentesthacks.ca/posts/postsec/windbg_cdb_attach/</link>
       <pubDate>Sun, 10 Mar 2024 20:04:37 -0400</pubDate>
-      
       <guid>https://pentesthacks.ca/posts/postsec/windbg_cdb_attach/</guid>
       <description>This technique address the need to launch windbg with high privilege to debug processes running with system account privilege.</description>
     </item>
-    
     <item>
       <title>Find IAT using Windbg</title>
       <link>https://pentesthacks.ca/posts/postsec/windbg_iat/</link>
       <pubDate>Sun, 10 Mar 2024 19:33:20 -0400</pubDate>
-      
       <guid>https://pentesthacks.ca/posts/postsec/windbg_iat/</guid>
       <description>You can find the Import Address Table of an application and the list of imported functions by attaching Windbg to the process and following the steps below.</description>
     </item>
-    
     <item>
       <title>TTY shells</title>
       <link>https://pentesthacks.ca/posts/postsec/tty_shell/</link>
       <pubDate>Sun, 10 Mar 2024 18:48:29 -0400</pubDate>
-      
       <guid>https://pentesthacks.ca/posts/postsec/tty_shell/</guid>
       <description>My notes on some of useful tty commands # Color when listing files # export TERM=xterm-256-color alias ll=&amp;#39;ls -lsahta --color=auto&amp;#39; Run: ll Get interactive shell zsh shell // new kalli version working # python3 -c &amp;#39;import pty; pty.</description>
     </item>
-    
     <item>
       <title>Narly plugin for windbg</title>
       <link>https://pentesthacks.ca/posts/postsec/narly_windbg/</link>
       <pubDate>Sat, 09 Mar 2024 21:13:16 -0500</pubDate>
-      
       <guid>https://pentesthacks.ca/posts/postsec/narly_windbg/</guid>
       <description>Narly is a plugin that parses the image and identifies the binary protections mechanisms enabled such as DEP, ASLR, SafeSEH and GS.</description>
     </item>
-    
     <item>
       <title>The IAT (Import Address Table)</title>
       <link>https://pentesthacks.ca/posts/postsec/iat_win/</link>
       <pubDate>Sat, 09 Mar 2024 20:34:17 -0500</pubDate>
-      
       <guid>https://pentesthacks.ca/posts/postsec/iat_win/</guid>
       <description>The Import Address Table stores information about the loaded modules imported by the current running processs.</description>
     </item>
-    
     <item>
       <title>The RP&#43;&#43; ROP Finder</title>
       <link>https://pentesthacks.ca/posts/postsec/rp_gadget/</link>
       <pubDate>Sat, 09 Mar 2024 19:46:31 -0500</pubDate>
-      
       <guid>https://pentesthacks.ca/posts/postsec/rp_gadget/</guid>
       <description>The rp++ is a ROP Gadget finder used by Exploit Developers to bypass DEP protection.</description>
     </item>
-    
     <item>
       <title>The TEB Structure</title>
       <link>https://pentesthacks.ca/posts/postsec/teb_struct/</link>
       <pubDate>Sat, 09 Mar 2024 16:49:54 -0500</pubDate>
-      
       <guid>https://pentesthacks.ca/posts/postsec/teb_struct/</guid>
       <description>The TEB (Thread Environment Block) # Just as PEB contains information about the processs, the TEB has information about the thread running in the processs.</description>
     </item>
-    
     <item>
       <title>The PEB Structure</title>
       <link>https://pentesthacks.ca/posts/postsec/peb/</link>
       <pubDate>Sat, 09 Mar 2024 16:15:03 -0500</pubDate>
-      
       <guid>https://pentesthacks.ca/posts/postsec/peb/</guid>
       <description>The PEB (Process Environment Block) # The PEB is a data structure that store information about the running process and can be accessed through intel x86 [FS] register at offset 0x30h.</description>
     </item>
-    
     <item>
       <title>Meterpreter Session Time out</title>
       <link>https://pentesthacks.ca/posts/postsec/meterpreter_shell_timeout/</link>
       <pubDate>Sat, 02 Mar 2024 22:46:13 -0500</pubDate>
-      
       <guid>https://pentesthacks.ca/posts/postsec/meterpreter_shell_timeout/</guid>
       <description>A year ago while testing a https reverse meterpreter shell after a 15 or 30 minutes the meterpreter session would die.</description>
     </item>
-    
     <item>
       <title>Powershell Port Scan</title>
       <link>https://pentesthacks.ca/posts/postsec/powershellscan/</link>
       <pubDate>Sat, 02 Mar 2024 22:46:13 -0500</pubDate>
-      
       <guid>https://pentesthacks.ca/posts/postsec/powershellscan/</guid>
       <description>While training Red Teaming or Penetration Test hacking on plataforms like Hack the Box or previous offensive security training like OSCP or OSEP</description>
     </item>
-    
   </channel>
 </rss>
