@@ -17,6 +17,13 @@
       <description>During my exploit developement training I observed through a few POC I developed to bypass DEP that some assembly instructions are used quite often during DEP bypass, I decided to create powershell to automate the search.</description>
     </item>
     <item>
+      <title>Searching for ROP Gadgets with powershelll</title>
+      <link>https://pentesthacks.ca/posts/postsec/searching_assembly_gagets_powershell/</link>
+      <pubDate>Fri, 14 Jun 2024 09:57:14 -0400</pubDate>
+      <guid>https://pentesthacks.ca/posts/postsec/searching_assembly_gagets_powershell/</guid>
+      <description>A few years ago I decided to use powershell more and more instead of tasking most of my work in python.</description>
+    </item>
+    <item>
       <title>Powershell Port Scan</title>
       <link>https://pentesthacks.ca/posts/postsec/powershellscan/</link>
       <pubDate>Sat, 02 Mar 2024 22:46:13 -0500</pubDate>
