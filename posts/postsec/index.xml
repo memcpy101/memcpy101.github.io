@@ -7,8 +7,15 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>@ 2024 All rigths reserved by mzdaemon</copyright>
-    <lastBuildDate>Sat, 22 Jun 2024 10:57:14 -0400</lastBuildDate>
+    <lastBuildDate>Sun, 30 Jun 2024 10:57:14 -0400</lastBuildDate>
     <atom:link href="https://pentesthacks.ca/posts/postsec/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Powershell ROP Searcher wrapper rp&#43;&#43;</title>
+      <link>https://pentesthacks.ca/posts/postsec/powershelll_rop_searcher/</link>
+      <pubDate>Sun, 30 Jun 2024 10:57:14 -0400</pubDate>
+      <guid>https://pentesthacks.ca/posts/postsec/powershelll_rop_searcher/</guid>
+      <description>During my exploit developement training I observed through a few POC I developed to bypass DEP that some assembly instructions are used quite often during DEP bypass, I decided to create powershell to automate the search.</description>
+    </item>
     <item>
       <title>Python Script Generate ASCII String to push into Stack</title>
       <link>https://pentesthacks.ca/posts/postsec/shellcode_put_string_stack/</link>

@@ -5,7 +5,7 @@
     
       <url>
             <loc>https://pentesthacks.ca/</loc>
-            <lastmod>2024-06-22T10:57:14-04:00</lastmod>
+            <lastmod>2024-06-30T10:57:14-04:00</lastmod>
           </url>
     
   
@@ -16,7 +16,7 @@
     
       <url>
             <loc>https://pentesthacks.ca/posts/postsec/</loc>
-            <lastmod>2024-06-22T10:57:14-04:00</lastmod>
+            <lastmod>2024-06-30T10:57:14-04:00</lastmod>
           </url>
     
   
@@ -25,8 +25,19 @@
     
       <url>
             <loc>https://pentesthacks.ca/posts/</loc>
-            <lastmod>2024-06-22T10:57:14-04:00</lastmod>
+            <lastmod>2024-06-30T10:57:14-04:00</lastmod>
           </url>
+    
+  
+    
+  
+    
+      <url>
+            <loc>https://pentesthacks.ca/posts/postsec/powershelll_rop_searcher/</loc>
+            <lastmod>2024-06-30T10:57:14-04:00</lastmod>
+          </url>
+    
+  
     
   
     
@@ -34,8 +45,6 @@
             <loc>https://pentesthacks.ca/posts/postsec/shellcode_put_string_stack/</loc>
             <lastmod>2024-06-22T10:57:14-04:00</lastmod>
           </url>
-    
-  
     
   
     
@@ -303,8 +312,6 @@
             <loc>https://pentesthacks.ca/posts/postsec/meterpreter_shell_timeout/</loc>
             <lastmod>2024-03-02T22:46:13-05:00</lastmod>
           </url>
-    
-  
     
   
     
