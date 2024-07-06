@@ -7,8 +7,15 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>@ 2024 All rigths reserved by mzdaemon</copyright>
-    <lastBuildDate>Fri, 05 Jul 2024 12:57:14 -0400</lastBuildDate>
+    <lastBuildDate>Fri, 05 Jul 2024 13:57:14 -0400</lastBuildDate>
     <atom:link href="https://pentesthacks.ca/posts/postsec/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Windows PE NumberofNames &amp; AddressOfNames (windbg)</title>
+      <link>https://pentesthacks.ca/posts/postsec/windowspeaddressofnames/</link>
+      <pubDate>Fri, 05 Jul 2024 13:57:14 -0400</pubDate>
+      <guid>https://pentesthacks.ca/posts/postsec/windowspeaddressofnames/</guid>
+      <description>Steps to get NumberofNames &amp;amp; AddressOfNames RVA and VMA using windbg debugger.</description>
+    </item>
     <item>
       <title>Windows PE Export Directory Table (windbg)</title>
       <link>https://pentesthacks.ca/posts/postsec/pe_data_directory/</link>

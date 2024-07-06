@@ -133,7 +133,7 @@
     "keywords": ["ExploitDev","debugger"],
     
     "mainEntityOfPage": "true",
-    "wordCount": "327"
+    "wordCount": "342"
   }
   </script>
 
@@ -703,7 +703,11 @@ if (!doNotTrack) {
       
       <div class="min-h-0 min-w-0 max-w-prose grow">
         <p>Step by step how to inspect the PE structure files using windbg debugger. The most import field is e_elfanew at offset 0x3c.
-It give access to the IMAGE NT HEADERS</p>
+It give access to the IMAGE NT HEADERS. If you want to know how to extract 
+      
+    <a href="/posts/postsec/pe_data_directory/">Export Directory Table</a> or 
+      
+    <a href="/posts/postsec/windowspeaddressofnames/">AddressOfNames and NumberofNames</a></p>
 <h4 id="base-address-of-kernel32" class="relative group">BASE ADDRESS OF KERNEL32 <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#base-address-of-kernel32" aria-label="Anchor">#</a></span></h4><pre tabindex="0"><code>0:003&gt; lm m kernel32
 Browse full module list
 start    end        module name

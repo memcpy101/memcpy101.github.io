@@ -133,7 +133,7 @@
     "keywords": ["ExploitDev","debugger"],
     
     "mainEntityOfPage": "true",
-    "wordCount": "282"
+    "wordCount": "292"
   }
   </script>
 
@@ -704,7 +704,9 @@ if (!doNotTrack) {
         <p>Steps to inspect IMAGE DATA DIRECTORY (EXPORT Directory TABLE) structure using windbg debugger. Before we need to find the value of e_elfanew (0x3c) and offset to IMAGE OPTIONAL HEADERS (0x18). You can check the previous post 
       
     <a href="/posts/postsec/pe_file_structure/">pe_file_structure</a>
-It give access to the IMAGE NT HEADERS</p>
+It give access to the IMAGE NT HEADERS. If you want to know more about 
+      
+    <a href="/posts/postsec/windowspeaddressofnames/">AddressOfNames and NumberofNames</a></p>
 <h4 id="image-optional-header" class="relative group">IMAGE OPTIONAL HEADER <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#image-optional-header" aria-label="Anchor">#</a></span></h4><p>Here we can dump the IMAGE OPTIONAL HEADER at offset 0x18.
 Here the field _IMAGE_DATA_DIRECTORY.</p>
 <pre tabindex="0"><code>0:003&gt; dt ntdll!_IMAGE_OPTIONAL_HEADER 756f0000 + 0xe8 + 0x18
@@ -887,6 +889,25 @@ Evaluate expression: 1970702512 = 757688b0
           
         </span>
         <span>
+          
+            <a class="group flex text-right" href="/posts/postsec/windowspeaddressofnames/">
+              <span class="flex flex-col">
+                <span
+                  class="mt-[0.1rem] leading-6 group-hover:underline group-hover:decoration-primary-500"
+                  >Windows PE NumberofNames & AddressOfNames (windbg)</span
+                >
+                <span class="mt-[0.1rem] text-xs text-neutral-500 dark:text-neutral-400">
+                  
+                    <time datetime="2024-07-05 13:57:14 -0400 EDT">5 July 2024</time>
+                  
+                </span>
+              </span>
+              <span
+                class="ms-2 text-neutral-700 transition-transform group-hover:-translate-x-[-2px] group-hover:text-primary-600 dark:text-neutral dark:group-hover:text-primary-400"
+                ><span class="ltr:inline rtl:hidden">&rarr;</span
+                ><span class="ltr:hidden rtl:inline">&larr;</span></span
+              >
+            </a>
           
         </span>
       </div>
