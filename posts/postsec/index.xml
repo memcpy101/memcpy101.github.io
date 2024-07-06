@@ -7,8 +7,22 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>@ 2024 All rigths reserved by mzdaemon</copyright>
-    <lastBuildDate>Sun, 30 Jun 2024 10:57:14 -0400</lastBuildDate>
+    <lastBuildDate>Fri, 05 Jul 2024 12:57:14 -0400</lastBuildDate>
     <atom:link href="https://pentesthacks.ca/posts/postsec/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Windows PE Export Directory Table (windbg)</title>
+      <link>https://pentesthacks.ca/posts/postsec/pe_data_directory/</link>
+      <pubDate>Fri, 05 Jul 2024 12:57:14 -0400</pubDate>
+      <guid>https://pentesthacks.ca/posts/postsec/pe_data_directory/</guid>
+      <description>Steps to inspect IMAGE DATA DIRECTORY (EXPORT Directory TABLE) structure using windbg debugger.</description>
+    </item>
+    <item>
+      <title>Windows PE File structure (windbg)</title>
+      <link>https://pentesthacks.ca/posts/postsec/pe_file_structure/</link>
+      <pubDate>Fri, 05 Jul 2024 10:57:14 -0400</pubDate>
+      <guid>https://pentesthacks.ca/posts/postsec/pe_file_structure/</guid>
+      <description>Step by step how to inspect the PE structure files using windbg debugger.</description>
+    </item>
     <item>
       <title>Powershell ROP Searcher wrapper rp&#43;&#43;</title>
       <link>https://pentesthacks.ca/posts/postsec/powershelll_rop_searcher/</link>
