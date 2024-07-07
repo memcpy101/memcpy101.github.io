@@ -17,8 +17,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="theme-color" content="#FFFFFF" />
   
-  <title>Windows PE NumberofNames & AddressOfNames (windbg) &middot; </title>
-    <meta name="title" content="Windows PE NumberofNames & AddressOfNames (windbg) &middot; " />
+  <title>Windows PE NumberofNames, AddressOfNames,AddressOfFunctions & AddressOfNameOrdinals (windbg) &middot; </title>
+    <meta name="title" content="Windows PE NumberofNames, AddressOfNames,AddressOfFunctions & AddressOfNameOrdinals (windbg) &middot; " />
   
   
   
@@ -75,7 +75,7 @@
     name="description"
     content="
       
-        Steps to get NumberofNames &amp; AddressOfNames RVA and VMA using windbg debugger.
+        A quick step by step tutorial to resolve function address through important fields in IMAGE EXPORT DIRECTORY.
       
     "
   />
@@ -97,16 +97,16 @@
   
   
   
-  <meta property="og:title" content="Windows PE NumberofNames &amp; AddressOfNames (windbg)" />
-<meta property="og:description" content="Steps to get NumberofNames &amp; AddressOfNames RVA and VMA using windbg debugger." />
+  <meta property="og:title" content="Windows PE NumberofNames, AddressOfNames,AddressOfFunctions &amp; AddressOfNameOrdinals (windbg)" />
+<meta property="og:description" content="A quick step by step tutorial to resolve function address through important fields in IMAGE EXPORT DIRECTORY." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://pentesthacks.ca/posts/postsec/windowspeaddressofnames/" /><meta property="article:section" content="posts" />
-<meta property="article:published_time" content="2024-07-05T13:57:14-04:00" />
-<meta property="article:modified_time" content="2024-07-05T13:57:14-04:00" />
+<meta property="article:published_time" content="2024-07-07T13:57:14-04:00" />
+<meta property="article:modified_time" content="2024-07-07T13:57:14-04:00" />
 
 
-  <meta name="twitter:card" content="summary"/><meta name="twitter:title" content="Windows PE NumberofNames &amp; AddressOfNames (windbg)"/>
-<meta name="twitter:description" content="Steps to get NumberofNames &amp; AddressOfNames RVA and VMA using windbg debugger."/>
+  <meta name="twitter:card" content="summary"/><meta name="twitter:title" content="Windows PE NumberofNames, AddressOfNames,AddressOfFunctions &amp; AddressOfNameOrdinals (windbg)"/>
+<meta name="twitter:description" content="A quick step by step tutorial to resolve function address through important fields in IMAGE EXPORT DIRECTORY."/>
 
   
   <script type="application/ld+json">
@@ -114,10 +114,10 @@
     "@context": "https://schema.org",
     "@type": "Article",
     "articleSection": "Posts",
-    "name": "Windows PE NumberofNames \u0026 AddressOfNames (windbg)",
-    "headline": "Windows PE NumberofNames \u0026 AddressOfNames (windbg)",
+    "name": "Windows PE NumberofNames, AddressOfNames,AddressOfFunctions \u0026 AddressOfNameOrdinals (windbg)",
+    "headline": "Windows PE NumberofNames, AddressOfNames,AddressOfFunctions \u0026 AddressOfNameOrdinals (windbg)",
     
-    "abstract": "Steps to get NumberofNames \u0026amp; AddressOfNames RVA and VMA using windbg debugger.",
+    "abstract": "A quick step by step tutorial to resolve function address through important fields in IMAGE EXPORT DIRECTORY.",
     "inLanguage": "en",
     "url" : "https:\/\/pentesthacks.ca\/posts\/postsec\/windowspeaddressofnames\/",
     "author" : {
@@ -125,15 +125,15 @@
       "name": "mzdaemon"
     },
     "copyrightYear": "2024",
-    "dateCreated": "2024-07-05T13:57:14-04:00",
-    "datePublished": "2024-07-05T13:57:14-04:00",
+    "dateCreated": "2024-07-07T13:57:14-04:00",
+    "datePublished": "2024-07-07T13:57:14-04:00",
     
-    "dateModified": "2024-07-05T13:57:14-04:00",
+    "dateModified": "2024-07-07T13:57:14-04:00",
     
     "keywords": ["ExploitDev","debugger"],
     
     "mainEntityOfPage": "true",
-    "wordCount": "83"
+    "wordCount": "825"
   }
   </script>
 
@@ -587,7 +587,7 @@ if (!doNotTrack) {
     <header class="max-w-prose">
       
       <h1 class="mb-8 mt-0 text-4xl font-extrabold text-neutral-900 dark:text-neutral">
-        Windows PE NumberofNames & AddressOfNames (windbg)
+        Windows PE NumberofNames, AddressOfNames,AddressOfFunctions & AddressOfNameOrdinals (windbg)
       </h1>
       
         <div class="mb-10 text-base text-neutral-500 dark:text-neutral-400 print:hidden">
@@ -623,7 +623,7 @@ if (!doNotTrack) {
   <div class="flex flex-row flex-wrap items-center">
     
     
-      <time datetime="2024-07-05 13:57:14 -0400 EDT">5 July 2024</time><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">1 min</span>
+      <time datetime="2024-07-07 13:57:14 -0400 EDT">7 July 2024</time><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">4 mins</span>
     
 
     
@@ -685,10 +685,23 @@ if (!doNotTrack) {
       <ul>
         <li>
           <ul>
-            <li><a href="#numberofnames">NumberOfNames</a></li>
-            <li><a href="#addressofnames-rva">AddressOfNames RVA</a></li>
+            <li><a href="#image-export-directory-structure">IMAGE EXPORT DIRECTORY STRUCTURE</a></li>
+            <li><a href="#find-export-directory-table">FIND EXPORT DIRECTORY TABLE</a></li>
+            <li><a href="#export-directory-table-structure">Export Directory Table Structure</a></li>
+            <li><a href="#numberofnames">NUMBEROFNAMES</a></li>
+            <li><a href="#addressofnames-array-rva">ADDRESSOFNAMES (Array) RVA</a></li>
+            <li><a href="#addressoffunctions-array-rva">ADDRESSOFFUNCTIONS (Array) RVA</a></li>
+            <li><a href="#addressofnameordinals-array-rva">AddressOfNameOrdinals (Array) RVA</a></li>
           </ul>
         </li>
+      </ul>
+    </li>
+    <li><a href="#steps-to-find-address-of-function">Steps to find address of function</a>
+      <ul>
+        <li><a href="#finding-the-symbol-position-in-namesoffunction">Finding the symbol position in NamesOfFunction</a></li>
+        <li><a href="#find-the-index-number-in-addressofnameordinals">Find the index number in AddressOfNameOrdinals</a></li>
+        <li><a href="#looking-for-desired-function-rva-in-addressoffunctions">Looking for desired function RVA in AddressOfFunctions</a></li>
+        <li><a href="#resolving-rva-of-accesscheckbytype">Resolving RVA of AccessCheckByType</a></li>
       </ul>
     </li>
   </ul>
@@ -700,17 +713,108 @@ if (!doNotTrack) {
         </div>
       
       <div class="min-h-0 min-w-0 max-w-prose grow">
-        <p>Steps to get NumberofNames &amp; AddressOfNames RVA and VMA using windbg debugger. Before we need to find the value of e_elfanew (0x3c) and offset to IMAGE OPTIONAL HEADERS (0x18) and Export Directory Table. You can check the previous post 
+        <p>A quick step by step tutorial to resolve function address through important fields in IMAGE EXPORT DIRECTORY.
+The following attributes of the structure are very important the NumberofNames, AddressOfNames, NumberOfFuntions, AddressOfFunctions, AddressOfNameOrdinals.</p>
+<p>By finding the symbol position in AddressOfNames we can find the index number of FunctionsAddress in AddressOfNameOrdinals and this structure is a 2 bytes. With the 2 bytes index number we can then find the function address RVA in AddressOfFunction.</p>
+<p>I will walk through with the windbg, but before we need to find the value of e_elfanew (0x3c) and offset to IMAGE OPTIONAL HEADERS (0x18) and Export Directory Table. You can check the previous post 
       
     <a href="/posts/postsec/pe_file_structure/">Windows PE File structure (windbg)</a> and 
       
-    <a href="/posts/postsec/pe_data_directory/">Export Directory Table</a>
-It give access to the IMAGE NT HEADERS</p>
-<h4 id="numberofnames" class="relative group">NumberOfNames <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#numberofnames" aria-label="Anchor">#</a></span></h4><pre tabindex="0"><code>0:003&gt; dd 757688b0 + 0x18 l1
-757688c8  00000647
-</code></pre><h4 id="addressofnames-rva" class="relative group">AddressOfNames RVA <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#addressofnames-rva" aria-label="Anchor">#</a></span></h4><p>Here we can dump the IMAGE OPTIONAL HEADER at offset 0x18.
-Here the field _IMAGE_DATA_DIRECTORY.</p>
-<pre tabindex="0"><code>TDB
+    <a href="/posts/postsec/pe_data_directory/">Export Directory Table</a></p>
+<p>Unnfortunately the windbg does not come with symbols for IMAGE EXPORT DIRECTORY, but we can see the structure as showing below:</p>
+<p>References: <a href="https://doxygen.reactos.org/d5/db1/dll_2win32_2dbghelp_2compat_8h_source.html#l00145" target="_blank" rel="noreferrer">doxygen reactos</a> &amp; <a href="https://fumalwareanalysis.blogspot.com/2011/12/malware-analysis-tutorial-8-pe-header.html" target="_blank" rel="noreferrer">Dr. Fu&rsquo;s Security Blog</a></p>
+<h4 id="image-export-directory-structure" class="relative group">IMAGE EXPORT DIRECTORY STRUCTURE <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#image-export-directory-structure" aria-label="Anchor">#</a></span></h4><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="line"><span class="cl"><span class="nx">typedef</span> <span class="kd">struct</span> <span class="nx">_IMAGE_EXPORT_DIRECTORY</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">DWORD</span> <span class="nx">Characteristics</span><span class="p">;</span> <span class="c1">//offset 0x0
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="nx">DWORD</span> <span class="nx">TimeDateStamp</span><span class="p">;</span> <span class="c1">//offset 0x4
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="nx">WORD</span> <span class="nx">MajorVersion</span><span class="p">;</span>  <span class="c1">//offset 0x8
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="nx">WORD</span> <span class="nx">MinorVersion</span><span class="p">;</span> <span class="c1">//offset 0xa
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="nx">DWORD</span> <span class="nx">Name</span><span class="p">;</span> <span class="c1">//offset 0xc
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="nx">DWORD</span> <span class="nx">Base</span><span class="p">;</span> <span class="c1">//offset 0x10
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="nx">DWORD</span> <span class="nx">NumberOfFunctions</span><span class="p">;</span>  <span class="c1">//offset 0x14
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="nx">DWORD</span> <span class="nx">NumberOfNames</span><span class="p">;</span>  <span class="c1">//offset 0x18
+</span></span></span><span class="line hl"><span class="cl"><span class="c1"></span>  <span class="nx">DWORD</span> <span class="nx">AddressOfFunctions</span><span class="p">;</span> <span class="c1">//offset 0x1c
+</span></span></span><span class="line hl"><span class="cl"><span class="c1"></span>  <span class="nx">DWORD</span> <span class="nx">AddressOfNames</span><span class="p">;</span> <span class="c1">//offset 0x20
+</span></span></span><span class="line hl"><span class="cl"><span class="c1"></span>  <span class="nx">DWORD</span> <span class="nx">AddressOfNameOrdinals</span><span class="p">;</span> <span class="c1">//offset 0x24
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span> <span class="p">}</span></span></span></code></pre></div>
+<p>FYI, you can find Export Directory Table with  command below: !dh kernelbase -f then get the VMA with ? kernelbase+1EAAA0.</p>
+<h4 id="find-export-directory-table" class="relative group">FIND EXPORT DIRECTORY TABLE <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#find-export-directory-table" aria-label="Anchor">#</a></span></h4><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="line"><span class="cl"><span class="mi">0</span><span class="p">:</span><span class="mo">003</span><span class="p">&gt;</span> <span class="p">!</span><span class="nx">dh</span> <span class="nx">kernelbase</span> <span class="o">-</span><span class="nx">f</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nx">File</span> <span class="nx">Type</span><span class="p">:</span> <span class="nx">DLL</span>
+</span></span><span class="line"><span class="cl"><span class="nx">FILE</span> <span class="nx">HEADER</span> <span class="nx">VALUES</span>
+</span></span><span class="line"><span class="cl">     <span class="mi">14</span><span class="nx">C</span> <span class="nf">machine</span> <span class="p">(</span><span class="nx">i386</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">       <span class="mi">6</span> <span class="nx">number</span> <span class="nx">of</span> <span class="nx">sections</span>
+</span></span><span class="line"><span class="cl"><span class="o">...</span><span class="nx">snipped</span><span class="o">...</span>
+</span></span><span class="line"><span class="cl">            <span class="nx">Guard</span>
+</span></span><span class="line hl"><span class="cl">  <span class="mi">1</span><span class="nx">EAAA0</span> <span class="p">[</span>    <span class="nx">EF52</span><span class="p">]</span> <span class="nx">address</span> <span class="p">[</span><span class="nx">size</span><span class="p">]</span> <span class="nx">of</span> <span class="nx">Export</span> <span class="nx">Directory</span>
+</span></span><span class="line"><span class="cl">  <span class="mi">1</span><span class="nx">FEB2C</span> <span class="p">[</span>      <span class="mi">64</span><span class="p">]</span> <span class="nx">address</span> <span class="p">[</span><span class="nx">size</span><span class="p">]</span> <span class="nx">of</span> <span class="nx">Import</span> <span class="nx">Directory</span>
+</span></span><span class="line"><span class="cl">  <span class="mi">205000</span> <span class="p">[</span>     <span class="mi">548</span><span class="p">]</span> <span class="nx">address</span> <span class="p">[</span><span class="nx">size</span><span class="p">]</span> <span class="nx">of</span> <span class="nx">Resource</span> <span class="nx">Directory</span>
+</span></span><span class="line"><span class="cl">       <span class="mi">0</span> <span class="p">[</span>       <span class="mi">0</span><span class="p">]</span> <span class="nx">address</span> <span class="p">[</span><span class="nx">size</span><span class="p">]</span> <span class="nx">of</span> <span class="nx">Exception</span> <span class="nx">Directory</span>
+</span></span><span class="line"><span class="cl">  <span class="mi">231600</span> <span class="p">[</span>    <span class="mf">75E0</span><span class="p">]</span> <span class="nx">address</span> <span class="p">[</span><span class="nx">size</span><span class="p">]</span> <span class="nx">of</span> <span class="nx">Security</span> <span class="nx">Directory</span>
+</span></span><span class="line"><span class="cl"><span class="o">...</span><span class="nx">snipped</span><span class="o">...</span></span></span></code></pre></div>
+<p>We will use kernelbase module as an example, after finding the Export Directory VMA.</br>We can dump all the attributes values of Export Directory Table structure as showing below:</p>
+<h4 id="export-directory-table-structure" class="relative group">Export Directory Table Structure <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#export-directory-table-structure" aria-label="Anchor">#</a></span></h4><pre tabindex="0"><code>0:003&gt; dd  (KERNELBASE+1EAAA0)
+7566aaa0  00000000 2c1f03ea 00000000 001ef578
+7566aab0  00000001 00000778 00000778 001eaac8
+7566aac0  001ec8a8 001ee688 001c4b60 00130260
+</code></pre><h4 id="numberofnames" class="relative group">NUMBEROFNAMES <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#numberofnames" aria-label="Anchor">#</a></span></h4><pre tabindex="0"><code>0:003&gt; dd  (KERNELBASE+1EAAA0)+0x18 l1
+7559aab8  00000778
+</code></pre><h4 id="addressofnames-array-rva" class="relative group">ADDRESSOFNAMES (Array) RVA <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#addressofnames-array-rva" aria-label="Anchor">#</a></span></h4><p>Here we can dump the AddressOfNames array at offset 0x20.</p>
+<pre tabindex="0"><code>0:003&gt; dd  (KERNELBASE+1EAAA0)+0x20 l1
+7566aac0  001ec8a8
+</code></pre><h4 id="addressoffunctions-array-rva" class="relative group">ADDRESSOFFUNCTIONS (Array) RVA <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#addressoffunctions-array-rva" aria-label="Anchor">#</a></span></h4><p>Here we can dump the AddressOfFunctions array at offset 0x1c.</p>
+<pre tabindex="0"><code>0:003&gt; dd  (KERNELBASE+1EAAA0)+0x1c l1
+7566aabc  001eaac8
+</code></pre><h4 id="addressofnameordinals-array-rva" class="relative group">AddressOfNameOrdinals (Array) RVA <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#addressofnameordinals-array-rva" aria-label="Anchor">#</a></span></h4><pre tabindex="0"><code>0:003&gt; dd  (KERNELBASE+1EAAA0)+0x24 l1
+7566aac4  001ee688
+</code></pre><h2 id="steps-to-find-address-of-function" class="relative group">Steps to find address of function <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#steps-to-find-address-of-function" aria-label="Anchor">#</a></span></h2><h3 id="finding-the-symbol-position-in-namesoffunction" class="relative group">Finding the symbol position in NamesOfFunction <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#finding-the-symbol-position-in-namesoffunction" aria-label="Anchor">#</a></span></h3><p>Lets say we are interested to find the function address for AccessCheckByType which is located as third position with RVA value in the NamesOfFunction array: 001ef64b which the symbol is translated to &ldquo;AccessCheckByType&rdquo;.
+Remember that the NamesOfFunction RVA is 001ec8a8 found earlier.</p>
+<pre tabindex="0"><code>0:003&gt; dd  (KERNELBASE+001ec8a8)
+7566c8a8  001ef625 001ef631 001ef64b 001ef65d
+7566c8b8  001ef67d 001ef699 001ef6cb 001ef6f5
+7566c8c8  001ef72e 001ef761 001ef772 001ef781
+7566c8d8  001ef795 001ef7ab 001ef7c5 001ef7d8
+7566c8e8  001ef7ed 001ef806 001ef80d 001ef81f
+7566c8f8  001ef833 001ef84b 001ef85c 001ef86d
+7566c908  001ef890 001ef8a0 001ef8b3 001ef8c3
+7566c918  001ef8da 001ef8e7 001ef8ff 001ef91a
+0:003&gt; da kernelbase+001ef64b
+7566f64b  &#34;AccessCheckByType&#34;
+</code></pre><h3 id="find-the-index-number-in-addressofnameordinals" class="relative group">Find the index number in AddressOfNameOrdinals <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#find-the-index-number-in-addressofnameordinals" aria-label="Anchor">#</a></span></h3><p>To find that we know the RVA for AddressOfNameOrdinals is 001ee688 found earlier, with kernelbase base address we know the VMA and dump the values.</p>
+<p>Something to notice is that this structure is 2 bytes and not 4 bytes, the first position value is 0007, the second value is 0006 and so on due to how CPU architecture presents data to memory (little endian) the highest order is presented in memory, network we know uses big endian.</p>
+<p>As seen above the symbol &ldquo;AccessCheckByType&rdquo; is the third position in NamesOfFunction, we need to find the third position value in AddressofNameOrdinals.
+The index value is 0009, now we can go to next step to find that in AddressOfFunctions</p>
+<pre tabindex="0"><code>0:003&gt; dd kernelbase+001ee688
+7566e688  00070006 00090008 000b000a 000d000c
+7566e698  000f000e 00110010 00130012 00150014
+7566e6a8  00170016 00190018 001b001a 001d001c
+7566e6b8  001f001e 00210020 00230022 00250024
+7566e6c8  00270026 00290028 002b002a 002d002c
+7566e6d8  002f002e 00310030 00330032 00350034
+7566e6e8  00370036 00390038 003b003a 003d003c
+7566e6f8  003f003e 00410040 00430042 00450044
+</code></pre><h3 id="looking-for-desired-function-rva-in-addressoffunctions" class="relative group">Looking for desired function RVA in AddressOfFunctions <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#looking-for-desired-function-rva-in-addressoffunctions" aria-label="Anchor">#</a></span></h3><p>The RVA for AddressofFunctions discovered earlier is 001eaac8, we can dump the RVA of the functions.
+The index position we are interested is 0x9 (discovered earlier). Here is the RVA (0x00148b50) of function address for AccessCheckByType symbol.</p>
+<pre tabindex="0"><code>0:003&gt; dd kernelbase+001eaac8
+7566aac8  001c4b60 00130260 00100ff0 001ef5dd
+7566aad8  001601b0 0014c6f0 0010f650 0014f380
+7566aae8  00148b50 001d8cf0 001d8da0 001d8e10
+7566aaf8  001d8ed0 001ef70d 001ef743 0015ffb0
+7566ab08  0014eba0 0014ff70 001566b0 001d8f90
+7566ab18  00161920 001d8fe0 001d9030 00150c10
+7566ab28  001d9080 001d90c0 001d9110 001d55a0
+7566ab38  001d56d0 00174eb0 001678a0 001c60c0
+</code></pre><h3 id="resolving-rva-of-accesscheckbytype" class="relative group">Resolving RVA of AccessCheckByType <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#resolving-rva-of-accesscheckbytype" aria-label="Anchor">#</a></span></h3><p>We can see that we successfully resolved the function address for AccessCheckByType symbol in kernelbase module.
+Just combining the RVA of AccessCheckByType with Base Address of KernelBase. The u command resolves the address displaying the symbol along with the assembly instructions.</p>
+<pre tabindex="0"><code>0:003&gt; u kernelbase+0x00148b50
+KERNELBASE!AccessCheckByType:
+755c8b50 8bff            mov     edi,edi
+755c8b52 55              push    ebp
+755c8b53 8bec            mov     ebp,esp
+755c8b55 51              push    ecx
+755c8b56 8d45fc          lea     eax,[ebp-4]
+755c8b59 50              push    eax
+755c8b5a ff752c          push    dword ptr [ebp+2Ch]
+755c8b5d ff7528          push    dword ptr [ebp+28h]
 </code></pre>
       </div>
     </section>
@@ -780,7 +884,7 @@ Here the field _IMAGE_DATA_DIRECTORY.</p>
       
         <a
           class="m-1 inline-block min-w-[2.4rem] rounded bg-neutral-300 p-1 text-center text-neutral-700 hover:bg-primary-500 hover:text-neutral dark:bg-neutral-700 dark:text-neutral-300 dark:hover:bg-primary-400 dark:hover:text-neutral-800"
-          href="https://twitter.com/intent/tweet/?url=https://pentesthacks.ca/posts/postsec/windowspeaddressofnames/&amp;text=Windows%20PE%20NumberofNames%20&amp;%20AddressOfNames%20%28windbg%29"
+          href="https://twitter.com/intent/tweet/?url=https://pentesthacks.ca/posts/postsec/windowspeaddressofnames/&amp;text=Windows%20PE%20NumberofNames,%20AddressOfNames,AddressOfFunctions%20&amp;%20AddressOfNameOrdinals%20%28windbg%29"
           title="Tweet on Twitter"
           aria-label="Tweet on Twitter"
           target="_blank"
@@ -793,7 +897,7 @@ Here the field _IMAGE_DATA_DIRECTORY.</p>
       
         <a
           class="m-1 inline-block min-w-[2.4rem] rounded bg-neutral-300 p-1 text-center text-neutral-700 hover:bg-primary-500 hover:text-neutral dark:bg-neutral-700 dark:text-neutral-300 dark:hover:bg-primary-400 dark:hover:text-neutral-800"
-          href="https://reddit.com/submit/?url=https://pentesthacks.ca/posts/postsec/windowspeaddressofnames/&amp;resubmit=true&amp;title=Windows%20PE%20NumberofNames%20&amp;%20AddressOfNames%20%28windbg%29"
+          href="https://reddit.com/submit/?url=https://pentesthacks.ca/posts/postsec/windowspeaddressofnames/&amp;resubmit=true&amp;title=Windows%20PE%20NumberofNames,%20AddressOfNames,AddressOfFunctions%20&amp;%20AddressOfNameOrdinals%20%28windbg%29"
           title="Submit to Reddit"
           aria-label="Submit to Reddit"
           target="_blank"
@@ -806,7 +910,7 @@ Here the field _IMAGE_DATA_DIRECTORY.</p>
       
         <a
           class="m-1 inline-block min-w-[2.4rem] rounded bg-neutral-300 p-1 text-center text-neutral-700 hover:bg-primary-500 hover:text-neutral dark:bg-neutral-700 dark:text-neutral-300 dark:hover:bg-primary-400 dark:hover:text-neutral-800"
-          href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https://pentesthacks.ca/posts/postsec/windowspeaddressofnames/&amp;title=Windows%20PE%20NumberofNames%20&amp;%20AddressOfNames%20%28windbg%29"
+          href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https://pentesthacks.ca/posts/postsec/windowspeaddressofnames/&amp;title=Windows%20PE%20NumberofNames,%20AddressOfNames,AddressOfFunctions%20&amp;%20AddressOfNameOrdinals%20%28windbg%29"
           title="Share on LinkedIn"
           aria-label="Share on LinkedIn"
           target="_blank"
@@ -861,6 +965,17 @@ Here the field _IMAGE_DATA_DIRECTORY.</p>
     </footer>
   </article>
 
+        
+          <div class="pointer-events-none absolute bottom-0 end-0 top-[100vh] w-12">
+            <a
+              href="#the-top"
+              class="pointer-events-auto sticky top-[calc(100vh-5.5rem)] flex h-12 w-12 items-center justify-center rounded-full bg-neutral/50 text-xl text-neutral-700 backdrop-blur hover:text-primary-600 dark:bg-neutral-800/50 dark:text-neutral dark:hover:text-primary-400"
+              aria-label="Scroll to top"
+              title="Scroll to top"
+            >
+              &uarr;
+            </a>
+          </div>
         
       </main><footer class="py-10 print:hidden">
   
