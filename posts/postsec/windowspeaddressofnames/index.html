@@ -691,7 +691,7 @@ if (!doNotTrack) {
             <li><a href="#numberofnames">NUMBEROFNAMES</a></li>
             <li><a href="#addressofnames-array-rva">ADDRESSOFNAMES (Array) RVA</a></li>
             <li><a href="#addressoffunctions-array-rva">ADDRESSOFFUNCTIONS (Array) RVA</a></li>
-            <li><a href="#addressofnameordinals-array-rva">AddressOfNameOrdinals (Array) RVA</a></li>
+            <li><a href="#addressofnameordinals-array-rva">ADDRESSOFNAMEORDINALS (Array) RVA</a></li>
           </ul>
         </li>
       </ul>
@@ -764,7 +764,7 @@ The following attributes of the structure are very important the NumberofNames, 
 </code></pre><h4 id="addressoffunctions-array-rva" class="relative group">ADDRESSOFFUNCTIONS (Array) RVA <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#addressoffunctions-array-rva" aria-label="Anchor">#</a></span></h4><p>Here we can dump the AddressOfFunctions array at offset 0x1c.</p>
 <pre tabindex="0"><code>0:003&gt; dd  (KERNELBASE+1EAAA0)+0x1c l1
 7566aabc  001eaac8
-</code></pre><h4 id="addressofnameordinals-array-rva" class="relative group">AddressOfNameOrdinals (Array) RVA <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#addressofnameordinals-array-rva" aria-label="Anchor">#</a></span></h4><pre tabindex="0"><code>0:003&gt; dd  (KERNELBASE+1EAAA0)+0x24 l1
+</code></pre><h4 id="addressofnameordinals-array-rva" class="relative group">ADDRESSOFNAMEORDINALS (Array) RVA <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#addressofnameordinals-array-rva" aria-label="Anchor">#</a></span></h4><pre tabindex="0"><code>0:003&gt; dd  (KERNELBASE+1EAAA0)+0x24 l1
 7566aac4  001ee688
 </code></pre><h2 id="steps-to-find-address-of-function" class="relative group">Steps to find address of function <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#steps-to-find-address-of-function" aria-label="Anchor">#</a></span></h2><h3 id="finding-the-symbol-position-in-namesoffunction" class="relative group">Finding the symbol position in NamesOfFunction <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#finding-the-symbol-position-in-namesoffunction" aria-label="Anchor">#</a></span></h3><p>Lets say we are interested to find the function address for AccessCheckByType which is located as third position with RVA value in the NamesOfFunction array: 001ef64b which the symbol is translated to &ldquo;AccessCheckByType&rdquo;.
 Remember that the NamesOfFunction RVA is 001ec8a8 found earlier.</p>
