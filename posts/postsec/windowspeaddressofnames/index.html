@@ -687,7 +687,7 @@ if (!doNotTrack) {
           <ul>
             <li><a href="#image-export-directory-structure">IMAGE EXPORT DIRECTORY STRUCTURE</a></li>
             <li><a href="#find-export-directory-table">FIND EXPORT DIRECTORY TABLE</a></li>
-            <li><a href="#export-directory-table-structure">Export Directory Table Structure</a></li>
+            <li><a href="#export-directory-table-structure">EXPORT DIRECTORY TABLE Structure</a></li>
             <li><a href="#numberofnames">NUMBEROFNAMES</a></li>
             <li><a href="#addressofnames-array-rva">ADDRESSOFNAMES (Array) RVA</a></li>
             <li><a href="#addressoffunctions-array-rva">ADDRESSOFFUNCTIONS (Array) RVA</a></li>
@@ -752,7 +752,7 @@ The following attributes of the structure are very important the NumberofNames, 
 </span></span><span class="line"><span class="cl">  <span class="mi">231600</span> <span class="p">[</span>    <span class="mf">75E0</span><span class="p">]</span> <span class="nx">address</span> <span class="p">[</span><span class="nx">size</span><span class="p">]</span> <span class="nx">of</span> <span class="nx">Security</span> <span class="nx">Directory</span>
 </span></span><span class="line"><span class="cl"><span class="o">...</span><span class="nx">snipped</span><span class="o">...</span></span></span></code></pre></div>
 <p>We will use kernelbase module as an example, after finding the Export Directory VMA.</br>We can dump all the attributes values of Export Directory Table structure as showing below:</p>
-<h4 id="export-directory-table-structure" class="relative group">Export Directory Table Structure <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#export-directory-table-structure" aria-label="Anchor">#</a></span></h4><pre tabindex="0"><code>0:003&gt; dd  (KERNELBASE+1EAAA0)
+<h4 id="export-directory-table-structure" class="relative group">EXPORT DIRECTORY TABLE Structure <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#export-directory-table-structure" aria-label="Anchor">#</a></span></h4><pre tabindex="0"><code>0:003&gt; dd  (KERNELBASE+1EAAA0)
 7566aaa0  00000000 2c1f03ea 00000000 001ef578
 7566aab0  00000001 00000778 00000778 001eaac8
 7566aac0  001ec8a8 001ee688 001c4b60 00130260
