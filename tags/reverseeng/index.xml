@@ -7,8 +7,15 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>@ 2024 All rigths reserved by mzdaemon</copyright>
-    <lastBuildDate>Sat, 20 Jul 2024 00:01:14 -0400</lastBuildDate>
+    <lastBuildDate>Mon, 22 Jul 2024 00:01:14 -0400</lastBuildDate>
     <atom:link href="https://pentesthacks.ca/tags/reverseeng/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Python Code Start Process in Suspended Mode</title>
+      <link>https://pentesthacks.ca/posts/postsec/template_start_proc_suspended_debug/</link>
+      <pubDate>Mon, 22 Jul 2024 00:01:14 -0400</pubDate>
+      <guid>https://pentesthacks.ca/posts/postsec/template_start_proc_suspended_debug/</guid>
+      <description>I was working on a format string vulnerability challenge where the process would terminate quickly and was difficult to attach windbg for debugging.</description>
+    </item>
     <item>
       <title>Format String Vulnerability</title>
       <link>https://pentesthacks.ca/posts/postsec/fmt_string_challenge/</link>
