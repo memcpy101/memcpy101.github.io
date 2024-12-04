@@ -133,7 +133,7 @@
     "keywords": ["ExploitDev","ReverseEng","debugger"],
     
     "mainEntityOfPage": "true",
-    "wordCount": "271"
+    "wordCount": "280"
   }
   </script>
 
@@ -708,6 +708,7 @@ if (!doNotTrack) {
       
       <div class="min-h-0 min-w-0 max-w-prose grow">
         <p>I was working on a format string vulnerability challenge where the process would terminate quickly and was difficult to attach windbg for debugging. I wrote a small piece of code that will start the binary in suspended mode with arguments if required and attach the windbg
+You can resume the process using Process Hacker program.
 You can resume the process using Process Hacker program.</p>
 <p>Note.: The windbg_path variable you need to adjust according to your system.</p>
 <h3 id="steps-to-follow" class="relative group">Steps to follow <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#steps-to-follow" aria-label="Anchor">#</a></span></h3><h4 id="install-pywin32" class="relative group">install pywin32 <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#install-pywin32" aria-label="Anchor">#</a></span></h4><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">python</span> <span class="o">-</span><span class="n">m</span> <span class="n">pip</span> <span class="n">install</span> <span class="n">pywin32</span>
@@ -923,6 +924,25 @@ You can resume the process using Process Hacker program.</p>
           
         </span>
         <span>
+          
+            <a class="group flex text-right" href="/posts/postsec/maldev_review/">
+              <span class="flex flex-col">
+                <span
+                  class="mt-[0.1rem] leading-6 group-hover:underline group-hover:decoration-primary-500"
+                  >My personal thoughts about Maldev Academy Course</span
+                >
+                <span class="mt-[0.1rem] text-xs text-neutral-500 dark:text-neutral-400">
+                  
+                    <time datetime="2024-12-03 00:01:14 -0400 -0400">3 December 2024</time>
+                  
+                </span>
+              </span>
+              <span
+                class="ms-2 text-neutral-700 transition-transform group-hover:-translate-x-[-2px] group-hover:text-primary-600 dark:text-neutral dark:group-hover:text-primary-400"
+                ><span class="ltr:inline rtl:hidden">&rarr;</span
+                ><span class="ltr:hidden rtl:inline">&larr;</span></span
+              >
+            </a>
           
         </span>
       </div>

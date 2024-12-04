@@ -7,8 +7,15 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>@ 2024 All rigths reserved by mzdaemon</copyright>
-    <lastBuildDate>Mon, 22 Jul 2024 00:01:14 -0400</lastBuildDate>
+    <lastBuildDate>Tue, 03 Dec 2024 00:01:14 -0400</lastBuildDate>
     <atom:link href="https://pentesthacks.ca/posts/postsec/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>My personal thoughts about Maldev Academy Course</title>
+      <link>https://pentesthacks.ca/posts/postsec/maldev_review/</link>
+      <pubDate>Tue, 03 Dec 2024 00:01:14 -0400</pubDate>
+      <guid>https://pentesthacks.ca/posts/postsec/maldev_review/</guid>
+      <description>I haven’t written on my blog for a while, but it has been for a good cause balancing my regular work and focusing on the Malware Development course.</description>
+    </item>
     <item>
       <title>Python Code Start Process in Suspended Mode</title>
       <link>https://pentesthacks.ca/posts/postsec/template_start_proc_suspended_debug/</link>

@@ -5,7 +5,7 @@
     
       <url>
             <loc>https://pentesthacks.ca/</loc>
-            <lastmod>2024-07-22T00:01:14-04:00</lastmod>
+            <lastmod>2024-12-03T00:01:14-04:00</lastmod>
           </url>
     
   
@@ -17,8 +17,15 @@
   
     
       <url>
+            <loc>https://pentesthacks.ca/posts/postsec/maldev_review/</loc>
+            <lastmod>2024-12-03T00:01:14-04:00</lastmod>
+          </url>
+    
+  
+    
+      <url>
             <loc>https://pentesthacks.ca/posts/postsec/</loc>
-            <lastmod>2024-07-22T00:01:14-04:00</lastmod>
+            <lastmod>2024-12-03T00:01:14-04:00</lastmod>
           </url>
     
   
@@ -27,8 +34,14 @@
     
       <url>
             <loc>https://pentesthacks.ca/posts/</loc>
-            <lastmod>2024-07-22T00:01:14-04:00</lastmod>
+            <lastmod>2024-12-03T00:01:14-04:00</lastmod>
           </url>
+    
+  
+    
+  
+    
+  
     
   
     
@@ -36,10 +49,6 @@
             <loc>https://pentesthacks.ca/posts/postsec/template_start_proc_suspended_debug/</loc>
             <lastmod>2024-07-22T00:01:14-04:00</lastmod>
           </url>
-    
-  
-    
-  
     
   
     
@@ -195,8 +204,6 @@
             <loc>https://pentesthacks.ca/posts/postsec/signatus_revereng01/</loc>
             <lastmod>2024-05-15T22:57:14-04:00</lastmod>
           </url>
-    
-  
     
   
     
