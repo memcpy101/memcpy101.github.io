@@ -7,12 +7,12 @@
     <generator>Hugo</generator>
     <language>en</language>
     <copyright>@ 2025 All rigths reserved by mzdaemon</copyright>
-    <lastBuildDate>Fri, 25 Apr 2025 21:30:14 -0400</lastBuildDate>
+    <lastBuildDate>Sat, 26 Apr 2025 09:30:14 -0400</lastBuildDate>
     <atom:link href="https://pentesthacks.ca/posts/postsec/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Malware Reverse Engineering and Why It’s Essential: My Experience with IMBT from InvokeRE</title>
       <link>https://pentesthacks.ca/posts/postsec/imbt_malware_re/</link>
-      <pubDate>Fri, 25 Apr 2025 21:30:14 -0400</pubDate>
+      <pubDate>Sat, 26 Apr 2025 09:30:14 -0400</pubDate>
       <guid>https://pentesthacks.ca/posts/postsec/imbt_malware_re/</guid>
       <description>Hi everyone, I am continuing my jorney and I completed the Introduction to Malware Binary Triage course from InvokeRE in February IDA Edition and March the Binary Ninja Edition.</description>
     </item>
