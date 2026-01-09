@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Categories on </title>
-    <link>https://pentesthacks.ca/categories/</link>
+    <link>http://localhost:1313/categories/</link>
     <description>Recent content in Categories on </description>
     <generator>Hugo</generator>
     <language>en</language>
-    <copyright>@ 2025 All rigths reserved by mzdaemon</copyright>
+    <copyright>@ 2026 All rigths reserved by mzdaemon</copyright>
     <lastBuildDate>Sat, 26 Apr 2025 09:30:14 -0400</lastBuildDate>
-    <atom:link href="https://pentesthacks.ca/categories/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/categories/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>OffensiveSecurity</title>
-      <link>https://pentesthacks.ca/categories/offensivesecurity/</link>
+      <link>http://localhost:1313/categories/offensivesecurity/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://pentesthacks.ca/categories/offensivesecurity/</guid>
+      <guid>http://localhost:1313/categories/offensivesecurity/</guid>
       <description></description>
     </item>
   </channel>

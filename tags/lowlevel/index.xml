@@ -2,25 +2,25 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Lowlevel on </title>
-    <link>https://pentesthacks.ca/tags/lowlevel/</link>
+    <link>http://localhost:1313/tags/lowlevel/</link>
     <description>Recent content in Lowlevel on </description>
     <generator>Hugo</generator>
     <language>en</language>
-    <copyright>@ 2025 All rigths reserved by mzdaemon</copyright>
+    <copyright>@ 2026 All rigths reserved by mzdaemon</copyright>
     <lastBuildDate>Sat, 01 Jun 2024 23:50:14 -0400</lastBuildDate>
-    <atom:link href="https://pentesthacks.ca/tags/lowlevel/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/lowlevel/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Demystifying DEP (Data Execution Prevention)</title>
-      <link>https://pentesthacks.ca/posts/postsec/vulnserver_dep/</link>
+      <link>http://localhost:1313/posts/postsec/vulnserver_dep/</link>
       <pubDate>Sat, 01 Jun 2024 23:50:14 -0400</pubDate>
-      <guid>https://pentesthacks.ca/posts/postsec/vulnserver_dep/</guid>
+      <guid>http://localhost:1313/posts/postsec/vulnserver_dep/</guid>
       <description>We all (cybersecurity space) heard about DEP, some might don&amp;rsquo;t know and want to understand how it works and what its purpose.</description>
     </item>
     <item>
       <title>Low level computer concept</title>
-      <link>https://pentesthacks.ca/posts/postsec/lowlevel_concept/</link>
+      <link>http://localhost:1313/posts/postsec/lowlevel_concept/</link>
       <pubDate>Tue, 19 Mar 2024 17:20:11 -0400</pubDate>
-      <guid>https://pentesthacks.ca/posts/postsec/lowlevel_concept/</guid>
+      <guid>http://localhost:1313/posts/postsec/lowlevel_concept/</guid>
       <description>I found an exellent post on stackoverflow explaining the differences between opcode, bytecode, mnemonic, machine code and assembly.</description>
     </item>
   </channel>

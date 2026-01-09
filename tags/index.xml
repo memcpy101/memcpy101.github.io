@@ -2,116 +2,116 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on </title>
-    <link>https://pentesthacks.ca/tags/</link>
+    <link>http://localhost:1313/tags/</link>
     <description>Recent content in Tags on </description>
     <generator>Hugo</generator>
     <language>en</language>
-    <copyright>@ 2025 All rigths reserved by mzdaemon</copyright>
+    <copyright>@ 2026 All rigths reserved by mzdaemon</copyright>
     <lastBuildDate>Sat, 26 Apr 2025 09:30:14 -0400</lastBuildDate>
-    <atom:link href="https://pentesthacks.ca/tags/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Malware</title>
-      <link>https://pentesthacks.ca/tags/malware/</link>
+      <link>http://localhost:1313/tags/malware/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://pentesthacks.ca/tags/malware/</guid>
+      <guid>http://localhost:1313/tags/malware/</guid>
       <description></description>
     </item>
     <item>
       <title>ReverseEng</title>
-      <link>https://pentesthacks.ca/tags/reverseeng/</link>
+      <link>http://localhost:1313/tags/reverseeng/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://pentesthacks.ca/tags/reverseeng/</guid>
+      <guid>http://localhost:1313/tags/reverseeng/</guid>
       <description></description>
     </item>
     <item>
       <title>Debugger</title>
-      <link>https://pentesthacks.ca/tags/debugger/</link>
+      <link>http://localhost:1313/tags/debugger/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://pentesthacks.ca/tags/debugger/</guid>
+      <guid>http://localhost:1313/tags/debugger/</guid>
       <description></description>
     </item>
     <item>
       <title>Maldev</title>
-      <link>https://pentesthacks.ca/tags/maldev/</link>
+      <link>http://localhost:1313/tags/maldev/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://pentesthacks.ca/tags/maldev/</guid>
+      <guid>http://localhost:1313/tags/maldev/</guid>
       <description></description>
     </item>
     <item>
       <title>ExploitDev</title>
-      <link>https://pentesthacks.ca/tags/exploitdev/</link>
+      <link>http://localhost:1313/tags/exploitdev/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://pentesthacks.ca/tags/exploitdev/</guid>
+      <guid>http://localhost:1313/tags/exploitdev/</guid>
       <description></description>
     </item>
     <item>
       <title>Powershell</title>
-      <link>https://pentesthacks.ca/tags/powershell/</link>
+      <link>http://localhost:1313/tags/powershell/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://pentesthacks.ca/tags/powershell/</guid>
+      <guid>http://localhost:1313/tags/powershell/</guid>
       <description></description>
     </item>
     <item>
       <title>RedTeam</title>
-      <link>https://pentesthacks.ca/tags/redteam/</link>
+      <link>http://localhost:1313/tags/redteam/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://pentesthacks.ca/tags/redteam/</guid>
+      <guid>http://localhost:1313/tags/redteam/</guid>
       <description></description>
     </item>
     <item>
       <title>WindowsInternal</title>
-      <link>https://pentesthacks.ca/tags/windowsinternal/</link>
+      <link>http://localhost:1313/tags/windowsinternal/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://pentesthacks.ca/tags/windowsinternal/</guid>
+      <guid>http://localhost:1313/tags/windowsinternal/</guid>
       <description></description>
     </item>
     <item>
       <title>Lowlevel</title>
-      <link>https://pentesthacks.ca/tags/lowlevel/</link>
+      <link>http://localhost:1313/tags/lowlevel/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://pentesthacks.ca/tags/lowlevel/</guid>
+      <guid>http://localhost:1313/tags/lowlevel/</guid>
       <description></description>
     </item>
     <item>
       <title>Concept</title>
-      <link>https://pentesthacks.ca/tags/concept/</link>
+      <link>http://localhost:1313/tags/concept/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://pentesthacks.ca/tags/concept/</guid>
+      <guid>http://localhost:1313/tags/concept/</guid>
       <description></description>
     </item>
     <item>
       <title>Kali</title>
-      <link>https://pentesthacks.ca/tags/kali/</link>
+      <link>http://localhost:1313/tags/kali/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://pentesthacks.ca/tags/kali/</guid>
+      <guid>http://localhost:1313/tags/kali/</guid>
       <description></description>
     </item>
     <item>
       <title>Linux</title>
-      <link>https://pentesthacks.ca/tags/linux/</link>
+      <link>http://localhost:1313/tags/linux/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://pentesthacks.ca/tags/linux/</guid>
+      <guid>http://localhost:1313/tags/linux/</guid>
       <description></description>
     </item>
     <item>
       <title>MetaSploit</title>
-      <link>https://pentesthacks.ca/tags/metasploit/</link>
+      <link>http://localhost:1313/tags/metasploit/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://pentesthacks.ca/tags/metasploit/</guid>
+      <guid>http://localhost:1313/tags/metasploit/</guid>
       <description></description>
     </item>
     <item>
       <title>Meterpreter</title>
-      <link>https://pentesthacks.ca/tags/meterpreter/</link>
+      <link>http://localhost:1313/tags/meterpreter/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://pentesthacks.ca/tags/meterpreter/</guid>
+      <guid>http://localhost:1313/tags/meterpreter/</guid>
       <description></description>
     </item>
     <item>
       <title>Programming</title>
-      <link>https://pentesthacks.ca/tags/programming/</link>
+      <link>http://localhost:1313/tags/programming/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://pentesthacks.ca/tags/programming/</guid>
+      <guid>http://localhost:1313/tags/programming/</guid>
       <description></description>
     </item>
   </channel>

@@ -2,81 +2,81 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>WindowsInternal on </title>
-    <link>https://pentesthacks.ca/tags/windowsinternal/</link>
+    <link>http://localhost:1313/tags/windowsinternal/</link>
     <description>Recent content in WindowsInternal on </description>
     <generator>Hugo</generator>
     <language>en</language>
-    <copyright>@ 2025 All rigths reserved by mzdaemon</copyright>
+    <copyright>@ 2026 All rigths reserved by mzdaemon</copyright>
     <lastBuildDate>Thu, 13 Jun 2024 09:57:14 -0400</lastBuildDate>
-    <atom:link href="https://pentesthacks.ca/tags/windowsinternal/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/windowsinternal/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Good Stuff Offensive Security Resources</title>
-      <link>https://pentesthacks.ca/posts/postsec/goodstuff_offensiveknowledge/</link>
+      <link>http://localhost:1313/posts/postsec/goodstuff_offensiveknowledge/</link>
       <pubDate>Thu, 13 Jun 2024 09:57:14 -0400</pubDate>
-      <guid>https://pentesthacks.ca/posts/postsec/goodstuff_offensiveknowledge/</guid>
+      <guid>http://localhost:1313/posts/postsec/goodstuff_offensiveknowledge/</guid>
       <description>By Browsing the internet I found a really good github with plentful resources to study :smile:</description>
     </item>
     <item>
       <title>Demystifying DEP (Data Execution Prevention)</title>
-      <link>https://pentesthacks.ca/posts/postsec/vulnserver_dep/</link>
+      <link>http://localhost:1313/posts/postsec/vulnserver_dep/</link>
       <pubDate>Sat, 01 Jun 2024 23:50:14 -0400</pubDate>
-      <guid>https://pentesthacks.ca/posts/postsec/vulnserver_dep/</guid>
+      <guid>http://localhost:1313/posts/postsec/vulnserver_dep/</guid>
       <description>We all (cybersecurity space) heard about DEP, some might don&amp;rsquo;t know and want to understand how it works and what its purpose.</description>
     </item>
     <item>
       <title>Ldr field in PEB</title>
-      <link>https://pentesthacks.ca/posts/postsec/ldr_struct/</link>
+      <link>http://localhost:1313/posts/postsec/ldr_struct/</link>
       <pubDate>Sun, 12 May 2024 22:41:14 -0400</pubDate>
-      <guid>https://pentesthacks.ca/posts/postsec/ldr_struct/</guid>
+      <guid>http://localhost:1313/posts/postsec/ldr_struct/</guid>
       <description>The Ldr is one of the most important field in PEB, Ldr is a pointer to a PEB_LDR_DATA structure that contains information about the loaded modules for the process.</description>
     </item>
     <item>
       <title>Windows Native API Book Referece</title>
-      <link>https://pentesthacks.ca/posts/postsec/windows_native_api_ref/</link>
+      <link>http://localhost:1313/posts/postsec/windows_native_api_ref/</link>
       <pubDate>Sat, 11 May 2024 14:29:14 -0400</pubDate>
-      <guid>https://pentesthacks.ca/posts/postsec/windows_native_api_ref/</guid>
+      <guid>http://localhost:1313/posts/postsec/windows_native_api_ref/</guid>
       <description>A really good book as a reference when working with Windows Native API, the book is old, but still relevant.</description>
     </item>
     <item>
       <title>Windows Kernel Undocumented Structures (VERGILIUS&#39;s Project)</title>
-      <link>https://pentesthacks.ca/posts/postsec/windows-_kernel_struct/</link>
+      <link>http://localhost:1313/posts/postsec/windows-_kernel_struct/</link>
       <pubDate>Sat, 11 May 2024 14:15:14 -0400</pubDate>
-      <guid>https://pentesthacks.ca/posts/postsec/windows-_kernel_struct/</guid>
+      <guid>http://localhost:1313/posts/postsec/windows-_kernel_struct/</guid>
       <description>If you need to reverse engineer the windows kernel, the vergilius&amp;rsquo;s project is handy with thousands of undocumented structure covering several windows versions.</description>
     </item>
     <item>
       <title>Win32 Api (pinvoke) &amp; Windows Structures (ReactOS) &amp; Undocumented NT Internals</title>
-      <link>https://pentesthacks.ca/posts/postsec/wind32apis_winstructure/</link>
+      <link>http://localhost:1313/posts/postsec/wind32apis_winstructure/</link>
       <pubDate>Sat, 11 May 2024 09:57:14 -0400</pubDate>
-      <guid>https://pentesthacks.ca/posts/postsec/wind32apis_winstructure/</guid>
+      <guid>http://localhost:1313/posts/postsec/wind32apis_winstructure/</guid>
       <description>Two references websites if you need to understand how a particular windows api (InvokeAPI) or undocument structures (ReactOS) works on Windows.</description>
     </item>
     <item>
       <title>Find IAT using Windbg</title>
-      <link>https://pentesthacks.ca/posts/postsec/windbg_iat/</link>
+      <link>http://localhost:1313/posts/postsec/windbg_iat/</link>
       <pubDate>Sun, 10 Mar 2024 19:33:20 -0400</pubDate>
-      <guid>https://pentesthacks.ca/posts/postsec/windbg_iat/</guid>
+      <guid>http://localhost:1313/posts/postsec/windbg_iat/</guid>
       <description>You can find the Import Address Table of an application and the list of imported functions by attaching Windbg to the process and following the steps below.</description>
     </item>
     <item>
       <title>The IAT (Import Address Table)</title>
-      <link>https://pentesthacks.ca/posts/postsec/iat_win/</link>
+      <link>http://localhost:1313/posts/postsec/iat_win/</link>
       <pubDate>Sat, 09 Mar 2024 20:34:17 -0500</pubDate>
-      <guid>https://pentesthacks.ca/posts/postsec/iat_win/</guid>
+      <guid>http://localhost:1313/posts/postsec/iat_win/</guid>
       <description>The Import Address Table stores information about the loaded modules imported by the current running processs.</description>
     </item>
     <item>
       <title>The TEB Structure</title>
-      <link>https://pentesthacks.ca/posts/postsec/teb_struct/</link>
+      <link>http://localhost:1313/posts/postsec/teb_struct/</link>
       <pubDate>Sat, 09 Mar 2024 16:49:54 -0500</pubDate>
-      <guid>https://pentesthacks.ca/posts/postsec/teb_struct/</guid>
+      <guid>http://localhost:1313/posts/postsec/teb_struct/</guid>
       <description>The TEB (Thread Environment Block) #Just as PEB contains information about the processs, the TEB has information about the thread running in the processs.</description>
     </item>
     <item>
       <title>The PEB Structure</title>
-      <link>https://pentesthacks.ca/posts/postsec/peb/</link>
+      <link>http://localhost:1313/posts/postsec/peb/</link>
       <pubDate>Sat, 09 Mar 2024 16:15:03 -0500</pubDate>
-      <guid>https://pentesthacks.ca/posts/postsec/peb/</guid>
+      <guid>http://localhost:1313/posts/postsec/peb/</guid>
       <description>The PEB (Process Environment Block) #The PEB is a data structure that store information about the running process and can be accessed through intel x86 [FS] register at offset 0x30h.</description>
     </item>
   </channel>

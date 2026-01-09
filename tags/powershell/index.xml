@@ -2,32 +2,32 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Powershell on </title>
-    <link>https://pentesthacks.ca/tags/powershell/</link>
+    <link>http://localhost:1313/tags/powershell/</link>
     <description>Recent content in Powershell on </description>
     <generator>Hugo</generator>
     <language>en</language>
-    <copyright>@ 2025 All rigths reserved by mzdaemon</copyright>
+    <copyright>@ 2026 All rigths reserved by mzdaemon</copyright>
     <lastBuildDate>Sun, 30 Jun 2024 10:57:14 -0400</lastBuildDate>
-    <atom:link href="https://pentesthacks.ca/tags/powershell/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/powershell/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Powershell ROP Searcher wrapper rp&#43;&#43;</title>
-      <link>https://pentesthacks.ca/posts/postsec/powershelll_rop_searcher/</link>
+      <link>http://localhost:1313/posts/postsec/powershelll_rop_searcher/</link>
       <pubDate>Sun, 30 Jun 2024 10:57:14 -0400</pubDate>
-      <guid>https://pentesthacks.ca/posts/postsec/powershelll_rop_searcher/</guid>
+      <guid>http://localhost:1313/posts/postsec/powershelll_rop_searcher/</guid>
       <description>During my exploit developement training I observed through a few POC I developed to bypass DEP that some assembly instructions are used quite often during DEP bypass, I decided to create powershell to automate the search.</description>
     </item>
     <item>
       <title>Searching for ROP Gadgets with powershelll</title>
-      <link>https://pentesthacks.ca/posts/postsec/searching_assembly_gagets_powershell/</link>
+      <link>http://localhost:1313/posts/postsec/searching_assembly_gagets_powershell/</link>
       <pubDate>Fri, 14 Jun 2024 09:57:14 -0400</pubDate>
-      <guid>https://pentesthacks.ca/posts/postsec/searching_assembly_gagets_powershell/</guid>
+      <guid>http://localhost:1313/posts/postsec/searching_assembly_gagets_powershell/</guid>
       <description>A few years ago I decided to use powershell more and more instead of tasking most of my work in python.</description>
     </item>
     <item>
       <title>Powershell Port Scan</title>
-      <link>https://pentesthacks.ca/posts/postsec/powershellscan/</link>
+      <link>http://localhost:1313/posts/postsec/powershellscan/</link>
       <pubDate>Sat, 02 Mar 2024 22:46:13 -0500</pubDate>
-      <guid>https://pentesthacks.ca/posts/postsec/powershellscan/</guid>
+      <guid>http://localhost:1313/posts/postsec/powershellscan/</guid>
       <description>While training Red Teaming or Penetration Test hacking on plataforms like Hack the Box or previous offensive security training like OSCP or OSEP</description>
     </item>
   </channel>

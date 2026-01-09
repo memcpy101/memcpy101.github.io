@@ -4,7 +4,7 @@
   
     
       <url>
-            <loc>https://pentesthacks.ca/</loc>
+            <loc>http://localhost:1313/</loc>
             <lastmod>2025-04-26T09:30:14-04:00</lastmod>
           </url>
     
@@ -15,23 +15,14 @@
   
     
       <url>
-            <loc>https://pentesthacks.ca/posts/postsec/imbt_malware_re/</loc>
+            <loc>http://localhost:1313/posts/postsec/imbt_malware_re/</loc>
             <lastmod>2025-04-26T09:30:14-04:00</lastmod>
           </url>
     
   
     
       <url>
-            <loc>https://pentesthacks.ca/posts/postsec/</loc>
-            <lastmod>2025-04-26T09:30:14-04:00</lastmod>
-          </url>
-    
-  
-    
-  
-    
-      <url>
-            <loc>https://pentesthacks.ca/posts/</loc>
+            <loc>http://localhost:1313/posts/postsec/</loc>
             <lastmod>2025-04-26T09:30:14-04:00</lastmod>
           </url>
     
@@ -39,6 +30,15 @@
     
   
     
+      <url>
+            <loc>http://localhost:1313/posts/</loc>
+            <lastmod>2025-04-26T09:30:14-04:00</lastmod>
+          </url>
+    
+  
+    
+  
+    
   
     
   
@@ -46,7 +46,7 @@
   
     
       <url>
-            <loc>https://pentesthacks.ca/posts/postsec/maldev_review/</loc>
+            <loc>http://localhost:1313/posts/postsec/maldev_review/</loc>
             <lastmod>2024-12-04T00:01:14-04:00</lastmod>
           </url>
     
@@ -55,42 +55,42 @@
   
     
       <url>
-            <loc>https://pentesthacks.ca/posts/postsec/template_start_proc_suspended_debug/</loc>
+            <loc>http://localhost:1313/posts/postsec/template_start_proc_suspended_debug/</loc>
             <lastmod>2024-07-22T00:01:14-04:00</lastmod>
           </url>
     
   
     
       <url>
-            <loc>https://pentesthacks.ca/posts/postsec/fmt_string_challenge/</loc>
+            <loc>http://localhost:1313/posts/postsec/fmt_string_challenge/</loc>
             <lastmod>2024-07-20T00:01:14-04:00</lastmod>
           </url>
     
   
     
       <url>
-            <loc>https://pentesthacks.ca/posts/postsec/castripper_revereng01/</loc>
+            <loc>http://localhost:1313/posts/postsec/castripper_revereng01/</loc>
             <lastmod>2024-07-15T22:57:14-04:00</lastmod>
           </url>
     
   
     
       <url>
-            <loc>https://pentesthacks.ca/posts/postsec/windowspeaddressofnames/</loc>
+            <loc>http://localhost:1313/posts/postsec/windowspeaddressofnames/</loc>
             <lastmod>2024-07-07T13:57:14-04:00</lastmod>
           </url>
     
   
     
       <url>
-            <loc>https://pentesthacks.ca/posts/postsec/pe_data_directory/</loc>
+            <loc>http://localhost:1313/posts/postsec/pe_data_directory/</loc>
             <lastmod>2024-07-05T12:57:14-04:00</lastmod>
           </url>
     
   
     
       <url>
-            <loc>https://pentesthacks.ca/posts/postsec/pe_file_structure/</loc>
+            <loc>http://localhost:1313/posts/postsec/pe_file_structure/</loc>
             <lastmod>2024-07-05T10:57:14-04:00</lastmod>
           </url>
     
@@ -99,42 +99,42 @@
   
     
       <url>
-            <loc>https://pentesthacks.ca/posts/postsec/powershelll_rop_searcher/</loc>
+            <loc>http://localhost:1313/posts/postsec/powershelll_rop_searcher/</loc>
             <lastmod>2024-06-30T10:57:14-04:00</lastmod>
           </url>
     
   
     
       <url>
-            <loc>https://pentesthacks.ca/posts/postsec/shellcode_put_string_stack/</loc>
+            <loc>http://localhost:1313/posts/postsec/shellcode_put_string_stack/</loc>
             <lastmod>2024-06-22T10:57:14-04:00</lastmod>
           </url>
     
   
     
       <url>
-            <loc>https://pentesthacks.ca/posts/postsec/windbg_dllcharacteristics/</loc>
+            <loc>http://localhost:1313/posts/postsec/windbg_dllcharacteristics/</loc>
             <lastmod>2024-06-15T10:57:14-04:00</lastmod>
           </url>
     
   
     
       <url>
-            <loc>https://pentesthacks.ca/posts/postsec/win32_infoleak_expdev/</loc>
+            <loc>http://localhost:1313/posts/postsec/win32_infoleak_expdev/</loc>
             <lastmod>2024-06-15T09:57:14-04:00</lastmod>
           </url>
     
   
     
       <url>
-            <loc>https://pentesthacks.ca/posts/postsec/searching_assembly_gagets_powershell/</loc>
+            <loc>http://localhost:1313/posts/postsec/searching_assembly_gagets_powershell/</loc>
             <lastmod>2024-06-14T09:57:14-04:00</lastmod>
           </url>
     
   
     
       <url>
-            <loc>https://pentesthacks.ca/posts/postsec/goodstuff_offensiveknowledge/</loc>
+            <loc>http://localhost:1313/posts/postsec/goodstuff_offensiveknowledge/</loc>
             <lastmod>2024-06-13T09:57:14-04:00</lastmod>
           </url>
     
@@ -145,14 +145,14 @@
   
     
       <url>
-            <loc>https://pentesthacks.ca/posts/postsec/quotedb_reverseenginering/</loc>
+            <loc>http://localhost:1313/posts/postsec/quotedb_reverseenginering/</loc>
             <lastmod>2024-06-07T02:50:14-04:00</lastmod>
           </url>
     
   
     
       <url>
-            <loc>https://pentesthacks.ca/posts/postsec/vulnserver_dep/</loc>
+            <loc>http://localhost:1313/posts/postsec/vulnserver_dep/</loc>
             <lastmod>2024-06-01T23:50:14-04:00</lastmod>
           </url>
     
@@ -161,112 +161,112 @@
   
     
       <url>
-            <loc>https://pentesthacks.ca/posts/postsec/vulnserver_poc/</loc>
+            <loc>http://localhost:1313/posts/postsec/vulnserver_poc/</loc>
             <lastmod>2024-05-25T23:34:14-04:00</lastmod>
           </url>
     
   
     
       <url>
-            <loc>https://pentesthacks.ca/posts/postsec/egghunter_explained/</loc>
+            <loc>http://localhost:1313/posts/postsec/egghunter_explained/</loc>
             <lastmod>2024-05-25T22:34:14-04:00</lastmod>
           </url>
     
   
     
       <url>
-            <loc>https://pentesthacks.ca/posts/postsec/vulnserver_revereng01/</loc>
+            <loc>http://localhost:1313/posts/postsec/vulnserver_revereng01/</loc>
             <lastmod>2024-05-25T17:34:14-04:00</lastmod>
           </url>
     
   
     
       <url>
-            <loc>https://pentesthacks.ca/posts/postsec/nasm_shell_negativejmp/</loc>
+            <loc>http://localhost:1313/posts/postsec/nasm_shell_negativejmp/</loc>
             <lastmod>2024-05-21T23:30:13-05:00</lastmod>
           </url>
     
   
     
       <url>
-            <loc>https://pentesthacks.ca/posts/postsec/nasm_shell_shortjmp/</loc>
+            <loc>http://localhost:1313/posts/postsec/nasm_shell_shortjmp/</loc>
             <lastmod>2024-05-21T23:25:13-05:00</lastmod>
           </url>
     
   
     
       <url>
-            <loc>https://pentesthacks.ca/posts/postsec/signatus_poc/</loc>
+            <loc>http://localhost:1313/posts/postsec/signatus_poc/</loc>
             <lastmod>2024-05-17T22:57:14-04:00</lastmod>
           </url>
     
   
     
       <url>
-            <loc>https://pentesthacks.ca/posts/postsec/signatus_revereng02/</loc>
+            <loc>http://localhost:1313/posts/postsec/signatus_revereng02/</loc>
             <lastmod>2024-05-16T22:57:14-04:00</lastmod>
           </url>
     
   
     
       <url>
-            <loc>https://pentesthacks.ca/posts/postsec/signatus_revereng01/</loc>
+            <loc>http://localhost:1313/posts/postsec/signatus_revereng01/</loc>
             <lastmod>2024-05-15T22:57:14-04:00</lastmod>
           </url>
     
   
     
       <url>
-            <loc>https://pentesthacks.ca/posts/postsec/maldev_rsc/</loc>
+            <loc>http://localhost:1313/posts/postsec/maldev_rsc/</loc>
             <lastmod>2024-05-15T14:57:14-04:00</lastmod>
           </url>
     
   
     
       <url>
-            <loc>https://pentesthacks.ca/posts/postsec/ldr_struct/</loc>
+            <loc>http://localhost:1313/posts/postsec/ldr_struct/</loc>
             <lastmod>2024-05-12T22:41:14-04:00</lastmod>
           </url>
     
   
     
       <url>
-            <loc>https://pentesthacks.ca/posts/postsec/windows_native_api_ref/</loc>
+            <loc>http://localhost:1313/posts/postsec/windows_native_api_ref/</loc>
             <lastmod>2024-05-11T14:29:14-04:00</lastmod>
           </url>
     
   
     
       <url>
-            <loc>https://pentesthacks.ca/posts/postsec/windows-_kernel_struct/</loc>
+            <loc>http://localhost:1313/posts/postsec/windows-_kernel_struct/</loc>
             <lastmod>2024-05-11T14:15:14-04:00</lastmod>
           </url>
     
   
     
       <url>
-            <loc>https://pentesthacks.ca/posts/postsec/wind32apis_winstructure/</loc>
+            <loc>http://localhost:1313/posts/postsec/wind32apis_winstructure/</loc>
             <lastmod>2024-05-11T09:57:14-04:00</lastmod>
           </url>
     
   
     
       <url>
-            <loc>https://pentesthacks.ca/posts/postsec/load_plugin_windbg/</loc>
+            <loc>http://localhost:1313/posts/postsec/load_plugin_windbg/</loc>
             <lastmod>2024-05-11T09:12:14-04:00</lastmod>
           </url>
     
   
     
       <url>
-            <loc>https://pentesthacks.ca/posts/postsec/smalled_shellcode/</loc>
+            <loc>http://localhost:1313/posts/postsec/smalled_shellcode/</loc>
             <lastmod>2024-05-04T16:58:14-04:00</lastmod>
           </url>
     
   
     
       <url>
-            <loc>https://pentesthacks.ca/posts/postsec/detect_badchars/</loc>
+            <loc>http://localhost:1313/posts/postsec/detect_badchars/</loc>
             <lastmod>2024-05-04T16:13:14-04:00</lastmod>
           </url>
     
@@ -275,42 +275,42 @@
   
     
       <url>
-            <loc>https://pentesthacks.ca/posts/postsec/lowlevel_concept/</loc>
+            <loc>http://localhost:1313/posts/postsec/lowlevel_concept/</loc>
             <lastmod>2024-03-19T17:20:11-04:00</lastmod>
           </url>
     
   
     
       <url>
-            <loc>https://pentesthacks.ca/posts/postsec/windbg_mempermision_cmds/</loc>
+            <loc>http://localhost:1313/posts/postsec/windbg_mempermision_cmds/</loc>
             <lastmod>2024-03-19T16:51:25-04:00</lastmod>
           </url>
     
   
     
       <url>
-            <loc>https://pentesthacks.ca/posts/postsec/windbg_guardpage_cmds/</loc>
+            <loc>http://localhost:1313/posts/postsec/windbg_guardpage_cmds/</loc>
             <lastmod>2024-03-19T16:48:15-04:00</lastmod>
           </url>
     
   
     
       <url>
-            <loc>https://pentesthacks.ca/posts/postsec/windbg_usful_cmds/</loc>
+            <loc>http://localhost:1313/posts/postsec/windbg_usful_cmds/</loc>
             <lastmod>2024-03-19T15:58:14-04:00</lastmod>
           </url>
     
   
     
       <url>
-            <loc>https://pentesthacks.ca/posts/postsec/windbg_cdb_attach/</loc>
+            <loc>http://localhost:1313/posts/postsec/windbg_cdb_attach/</loc>
             <lastmod>2024-03-10T20:04:37-04:00</lastmod>
           </url>
     
   
     
       <url>
-            <loc>https://pentesthacks.ca/posts/postsec/windbg_iat/</loc>
+            <loc>http://localhost:1313/posts/postsec/windbg_iat/</loc>
             <lastmod>2024-03-10T19:33:20-04:00</lastmod>
           </url>
     
@@ -321,42 +321,42 @@
   
     
       <url>
-            <loc>https://pentesthacks.ca/posts/postsec/tty_shell/</loc>
+            <loc>http://localhost:1313/posts/postsec/tty_shell/</loc>
             <lastmod>2024-03-10T18:48:29-04:00</lastmod>
           </url>
     
   
     
       <url>
-            <loc>https://pentesthacks.ca/posts/postsec/narly_windbg/</loc>
+            <loc>http://localhost:1313/posts/postsec/narly_windbg/</loc>
             <lastmod>2024-03-09T21:13:16-05:00</lastmod>
           </url>
     
   
     
       <url>
-            <loc>https://pentesthacks.ca/posts/postsec/iat_win/</loc>
+            <loc>http://localhost:1313/posts/postsec/iat_win/</loc>
             <lastmod>2024-03-09T20:34:17-05:00</lastmod>
           </url>
     
   
     
       <url>
-            <loc>https://pentesthacks.ca/posts/postsec/rp_gadget/</loc>
+            <loc>http://localhost:1313/posts/postsec/rp_gadget/</loc>
             <lastmod>2024-03-09T19:46:31-05:00</lastmod>
           </url>
     
   
     
       <url>
-            <loc>https://pentesthacks.ca/posts/postsec/teb_struct/</loc>
+            <loc>http://localhost:1313/posts/postsec/teb_struct/</loc>
             <lastmod>2024-03-09T16:49:54-05:00</lastmod>
           </url>
     
   
     
       <url>
-            <loc>https://pentesthacks.ca/posts/postsec/peb/</loc>
+            <loc>http://localhost:1313/posts/postsec/peb/</loc>
             <lastmod>2024-03-09T16:15:03-05:00</lastmod>
           </url>
     
@@ -367,14 +367,14 @@
   
     
       <url>
-            <loc>https://pentesthacks.ca/posts/postsec/meterpreter_shell_timeout/</loc>
+            <loc>http://localhost:1313/posts/postsec/meterpreter_shell_timeout/</loc>
             <lastmod>2024-03-02T22:46:13-05:00</lastmod>
           </url>
     
   
     
       <url>
-            <loc>https://pentesthacks.ca/posts/postsec/powershellscan/</loc>
+            <loc>http://localhost:1313/posts/postsec/powershellscan/</loc>
             <lastmod>2024-03-02T22:46:13-05:00</lastmod>
           </url>
     

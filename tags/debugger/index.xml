@@ -2,109 +2,109 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Debugger on </title>
-    <link>https://pentesthacks.ca/tags/debugger/</link>
+    <link>http://localhost:1313/tags/debugger/</link>
     <description>Recent content in Debugger on </description>
     <generator>Hugo</generator>
     <language>en</language>
-    <copyright>@ 2025 All rigths reserved by mzdaemon</copyright>
+    <copyright>@ 2026 All rigths reserved by mzdaemon</copyright>
     <lastBuildDate>Wed, 04 Dec 2024 00:01:14 -0400</lastBuildDate>
-    <atom:link href="https://pentesthacks.ca/tags/debugger/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/debugger/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>My personal thoughts about Maldev Academy Course</title>
-      <link>https://pentesthacks.ca/posts/postsec/maldev_review/</link>
+      <link>http://localhost:1313/posts/postsec/maldev_review/</link>
       <pubDate>Wed, 04 Dec 2024 00:01:14 -0400</pubDate>
-      <guid>https://pentesthacks.ca/posts/postsec/maldev_review/</guid>
+      <guid>http://localhost:1313/posts/postsec/maldev_review/</guid>
       <description>I haven’t written on my blog for a while, but it has been for a good cause balancing my regular work and focusing on the Malware Development course.</description>
     </item>
     <item>
       <title>Python Code Start Process in Suspended Mode</title>
-      <link>https://pentesthacks.ca/posts/postsec/template_start_proc_suspended_debug/</link>
+      <link>http://localhost:1313/posts/postsec/template_start_proc_suspended_debug/</link>
       <pubDate>Mon, 22 Jul 2024 00:01:14 -0400</pubDate>
-      <guid>https://pentesthacks.ca/posts/postsec/template_start_proc_suspended_debug/</guid>
+      <guid>http://localhost:1313/posts/postsec/template_start_proc_suspended_debug/</guid>
       <description>I was working on a format string vulnerability challenge where the process would terminate quickly and was difficult to attach windbg for debugging.</description>
     </item>
     <item>
       <title>Windows PE NumberofNames, AddressOfNames,AddressOfFunctions &amp; AddressOfNameOrdinals (windbg)</title>
-      <link>https://pentesthacks.ca/posts/postsec/windowspeaddressofnames/</link>
+      <link>http://localhost:1313/posts/postsec/windowspeaddressofnames/</link>
       <pubDate>Sun, 07 Jul 2024 13:57:14 -0400</pubDate>
-      <guid>https://pentesthacks.ca/posts/postsec/windowspeaddressofnames/</guid>
+      <guid>http://localhost:1313/posts/postsec/windowspeaddressofnames/</guid>
       <description>A quick step by step tutorial to resolve function address through important fields in IMAGE EXPORT DIRECTORY.</description>
     </item>
     <item>
       <title>Windows PE Export Directory Table (windbg)</title>
-      <link>https://pentesthacks.ca/posts/postsec/pe_data_directory/</link>
+      <link>http://localhost:1313/posts/postsec/pe_data_directory/</link>
       <pubDate>Fri, 05 Jul 2024 12:57:14 -0400</pubDate>
-      <guid>https://pentesthacks.ca/posts/postsec/pe_data_directory/</guid>
+      <guid>http://localhost:1313/posts/postsec/pe_data_directory/</guid>
       <description>Steps to inspect IMAGE DATA DIRECTORY (EXPORT Directory TABLE) structure using windbg debugger.</description>
     </item>
     <item>
       <title>Windows PE File structure (windbg)</title>
-      <link>https://pentesthacks.ca/posts/postsec/pe_file_structure/</link>
+      <link>http://localhost:1313/posts/postsec/pe_file_structure/</link>
       <pubDate>Fri, 05 Jul 2024 10:57:14 -0400</pubDate>
-      <guid>https://pentesthacks.ca/posts/postsec/pe_file_structure/</guid>
+      <guid>http://localhost:1313/posts/postsec/pe_file_structure/</guid>
       <description>Step by step how to inspect the PE structure files using windbg debugger.</description>
     </item>
     <item>
       <title>Ldr field in PEB</title>
-      <link>https://pentesthacks.ca/posts/postsec/ldr_struct/</link>
+      <link>http://localhost:1313/posts/postsec/ldr_struct/</link>
       <pubDate>Sun, 12 May 2024 22:41:14 -0400</pubDate>
-      <guid>https://pentesthacks.ca/posts/postsec/ldr_struct/</guid>
+      <guid>http://localhost:1313/posts/postsec/ldr_struct/</guid>
       <description>The Ldr is one of the most important field in PEB, Ldr is a pointer to a PEB_LDR_DATA structure that contains information about the loaded modules for the process.</description>
     </item>
     <item>
       <title>How to load external plugin windbg?</title>
-      <link>https://pentesthacks.ca/posts/postsec/load_plugin_windbg/</link>
+      <link>http://localhost:1313/posts/postsec/load_plugin_windbg/</link>
       <pubDate>Sat, 11 May 2024 09:12:14 -0400</pubDate>
-      <guid>https://pentesthacks.ca/posts/postsec/load_plugin_windbg/</guid>
+      <guid>http://localhost:1313/posts/postsec/load_plugin_windbg/</guid>
       <description>We can load external plugins to help during reverse engineering/exploit development.</description>
     </item>
     <item>
       <title>How to generate smallest shellcode ? (msfvenom)</title>
-      <link>https://pentesthacks.ca/posts/postsec/smalled_shellcode/</link>
+      <link>http://localhost:1313/posts/postsec/smalled_shellcode/</link>
       <pubDate>Sat, 04 May 2024 16:58:14 -0400</pubDate>
-      <guid>https://pentesthacks.ca/posts/postsec/smalled_shellcode/</guid>
+      <guid>http://localhost:1313/posts/postsec/smalled_shellcode/</guid>
       <description>During exploit development sometimes we have a smaller buffer or part of buffer mangle the shellcode even when removing the bad characters.</description>
     </item>
     <item>
       <title>Detect Bad Chars Exploit Development</title>
-      <link>https://pentesthacks.ca/posts/postsec/detect_badchars/</link>
+      <link>http://localhost:1313/posts/postsec/detect_badchars/</link>
       <pubDate>Sat, 04 May 2024 16:13:14 -0400</pubDate>
-      <guid>https://pentesthacks.ca/posts/postsec/detect_badchars/</guid>
+      <guid>http://localhost:1313/posts/postsec/detect_badchars/</guid>
       <description>List of bad chars #Useful during exploit developement to detect bad chars.</description>
     </item>
     <item>
       <title>How to check Memory Permission in Windbg</title>
-      <link>https://pentesthacks.ca/posts/postsec/windbg_mempermision_cmds/</link>
+      <link>http://localhost:1313/posts/postsec/windbg_mempermision_cmds/</link>
       <pubDate>Tue, 19 Mar 2024 16:51:25 -0400</pubDate>
-      <guid>https://pentesthacks.ca/posts/postsec/windbg_mempermision_cmds/</guid>
+      <guid>http://localhost:1313/posts/postsec/windbg_mempermision_cmds/</guid>
       <description>Using windbg we can check memory permission under Protect field.</description>
     </item>
     <item>
       <title>How to disable access violation/guardpage in windbg</title>
-      <link>https://pentesthacks.ca/posts/postsec/windbg_guardpage_cmds/</link>
+      <link>http://localhost:1313/posts/postsec/windbg_guardpage_cmds/</link>
       <pubDate>Tue, 19 Mar 2024 16:48:15 -0400</pubDate>
-      <guid>https://pentesthacks.ca/posts/postsec/windbg_guardpage_cmds/</guid>
+      <guid>http://localhost:1313/posts/postsec/windbg_guardpage_cmds/</guid>
       <description>Command below disable access violation and guard pages in Windbg</description>
     </item>
     <item>
       <title>Windbg useful commands</title>
-      <link>https://pentesthacks.ca/posts/postsec/windbg_usful_cmds/</link>
+      <link>http://localhost:1313/posts/postsec/windbg_usful_cmds/</link>
       <pubDate>Tue, 19 Mar 2024 15:58:14 -0400</pubDate>
-      <guid>https://pentesthacks.ca/posts/postsec/windbg_usful_cmds/</guid>
+      <guid>http://localhost:1313/posts/postsec/windbg_usful_cmds/</guid>
       <description>All windbg commands here #Link to windgb manual</description>
     </item>
     <item>
       <title>Find IAT using Windbg</title>
-      <link>https://pentesthacks.ca/posts/postsec/windbg_iat/</link>
+      <link>http://localhost:1313/posts/postsec/windbg_iat/</link>
       <pubDate>Sun, 10 Mar 2024 19:33:20 -0400</pubDate>
-      <guid>https://pentesthacks.ca/posts/postsec/windbg_iat/</guid>
+      <guid>http://localhost:1313/posts/postsec/windbg_iat/</guid>
       <description>You can find the Import Address Table of an application and the list of imported functions by attaching Windbg to the process and following the steps below.</description>
     </item>
     <item>
       <title>Narly plugin for windbg</title>
-      <link>https://pentesthacks.ca/posts/postsec/narly_windbg/</link>
+      <link>http://localhost:1313/posts/postsec/narly_windbg/</link>
       <pubDate>Sat, 09 Mar 2024 21:13:16 -0500</pubDate>
-      <guid>https://pentesthacks.ca/posts/postsec/narly_windbg/</guid>
+      <guid>http://localhost:1313/posts/postsec/narly_windbg/</guid>
       <description>Narly is a plugin that parses the image and identifies the binary protections mechanisms enabled such as DEP, ASLR, SafeSEH and GS.</description>
     </item>
   </channel>

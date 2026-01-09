@@ -2,137 +2,137 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>ReverseEng on </title>
-    <link>https://pentesthacks.ca/tags/reverseeng/</link>
+    <link>http://localhost:1313/tags/reverseeng/</link>
     <description>Recent content in ReverseEng on </description>
     <generator>Hugo</generator>
     <language>en</language>
-    <copyright>@ 2025 All rigths reserved by mzdaemon</copyright>
+    <copyright>@ 2026 All rigths reserved by mzdaemon</copyright>
     <lastBuildDate>Sat, 26 Apr 2025 09:30:14 -0400</lastBuildDate>
-    <atom:link href="https://pentesthacks.ca/tags/reverseeng/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/reverseeng/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Malware Reverse Engineering and Why It’s Essential: My Experience with IMBT from InvokeRE</title>
-      <link>https://pentesthacks.ca/posts/postsec/imbt_malware_re/</link>
+      <link>http://localhost:1313/posts/postsec/imbt_malware_re/</link>
       <pubDate>Sat, 26 Apr 2025 09:30:14 -0400</pubDate>
-      <guid>https://pentesthacks.ca/posts/postsec/imbt_malware_re/</guid>
+      <guid>http://localhost:1313/posts/postsec/imbt_malware_re/</guid>
       <description>Hi everyone, I am continuing my journey and I completed the Introduction to Malware Binary Triage course from InvokeRE in February IDA Edition and March the Binary Ninja Edition.</description>
     </item>
     <item>
       <title>My personal thoughts about Maldev Academy Course</title>
-      <link>https://pentesthacks.ca/posts/postsec/maldev_review/</link>
+      <link>http://localhost:1313/posts/postsec/maldev_review/</link>
       <pubDate>Wed, 04 Dec 2024 00:01:14 -0400</pubDate>
-      <guid>https://pentesthacks.ca/posts/postsec/maldev_review/</guid>
+      <guid>http://localhost:1313/posts/postsec/maldev_review/</guid>
       <description>I haven’t written on my blog for a while, but it has been for a good cause balancing my regular work and focusing on the Malware Development course.</description>
     </item>
     <item>
       <title>Python Code Start Process in Suspended Mode</title>
-      <link>https://pentesthacks.ca/posts/postsec/template_start_proc_suspended_debug/</link>
+      <link>http://localhost:1313/posts/postsec/template_start_proc_suspended_debug/</link>
       <pubDate>Mon, 22 Jul 2024 00:01:14 -0400</pubDate>
-      <guid>https://pentesthacks.ca/posts/postsec/template_start_proc_suspended_debug/</guid>
+      <guid>http://localhost:1313/posts/postsec/template_start_proc_suspended_debug/</guid>
       <description>I was working on a format string vulnerability challenge where the process would terminate quickly and was difficult to attach windbg for debugging.</description>
     </item>
     <item>
       <title>Format String Vulnerability</title>
-      <link>https://pentesthacks.ca/posts/postsec/fmt_string_challenge/</link>
+      <link>http://localhost:1313/posts/postsec/fmt_string_challenge/</link>
       <pubDate>Sat, 20 Jul 2024 00:01:14 -0400</pubDate>
-      <guid>https://pentesthacks.ca/posts/postsec/fmt_string_challenge/</guid>
+      <guid>http://localhost:1313/posts/postsec/fmt_string_challenge/</guid>
       <description>I am continuing again training my skills for OSED certification and one of the vulnerability classes part of C or C++ language, the course covers format specifier vulnerability.</description>
     </item>
     <item>
       <title>Reverse Engineering CastRipper v2.9.6</title>
-      <link>https://pentesthacks.ca/posts/postsec/castripper_revereng01/</link>
+      <link>http://localhost:1313/posts/postsec/castripper_revereng01/</link>
       <pubDate>Mon, 15 Jul 2024 22:57:14 -0400</pubDate>
-      <guid>https://pentesthacks.ca/posts/postsec/castripper_revereng01/</guid>
+      <guid>http://localhost:1313/posts/postsec/castripper_revereng01/</guid>
       <description>I am continuing my study and taking a chance to practice more my reverse engineering skills and exploit development I found the available vulnerable application at Exploit-DB - CastRipper to explore.</description>
     </item>
     <item>
       <title>Good Stuff Offensive Security Resources</title>
-      <link>https://pentesthacks.ca/posts/postsec/goodstuff_offensiveknowledge/</link>
+      <link>http://localhost:1313/posts/postsec/goodstuff_offensiveknowledge/</link>
       <pubDate>Thu, 13 Jun 2024 09:57:14 -0400</pubDate>
-      <guid>https://pentesthacks.ca/posts/postsec/goodstuff_offensiveknowledge/</guid>
+      <guid>http://localhost:1313/posts/postsec/goodstuff_offensiveknowledge/</guid>
       <description>By Browsing the internet I found a really good github with plentful resources to study :smile:</description>
     </item>
     <item>
       <title>Reversing Engineering quotedb.exe (bmdyy) Bypass ASLR&#43;DEP</title>
-      <link>https://pentesthacks.ca/posts/postsec/quotedb_reverseenginering/</link>
+      <link>http://localhost:1313/posts/postsec/quotedb_reverseenginering/</link>
       <pubDate>Fri, 07 Jun 2024 02:50:14 -0400</pubDate>
-      <guid>https://pentesthacks.ca/posts/postsec/quotedb_reverseenginering/</guid>
+      <guid>http://localhost:1313/posts/postsec/quotedb_reverseenginering/</guid>
       <description>I&amp;rsquo;m continuing to study for my OSED Exam, I downloaded the quotedb.</description>
     </item>
     <item>
       <title>Reverse Engineering Vulnserver.exe</title>
-      <link>https://pentesthacks.ca/posts/postsec/vulnserver_revereng01/</link>
+      <link>http://localhost:1313/posts/postsec/vulnserver_revereng01/</link>
       <pubDate>Sat, 25 May 2024 17:34:14 -0400</pubDate>
-      <guid>https://pentesthacks.ca/posts/postsec/vulnserver_revereng01/</guid>
+      <guid>http://localhost:1313/posts/postsec/vulnserver_revereng01/</guid>
       <description>I choose one more vulnerable application to perform reverse engineering and discover vulnerablities if you want to follow along you can download here vulnserver App .</description>
     </item>
     <item>
       <title>Signatus.exe (bmdyy) - Exploit Dev POC</title>
-      <link>https://pentesthacks.ca/posts/postsec/signatus_poc/</link>
+      <link>http://localhost:1313/posts/postsec/signatus_poc/</link>
       <pubDate>Fri, 17 May 2024 22:57:14 -0400</pubDate>
-      <guid>https://pentesthacks.ca/posts/postsec/signatus_poc/</guid>
+      <guid>http://localhost:1313/posts/postsec/signatus_poc/</guid>
       <description>You can access my poc on signatus.</description>
     </item>
     <item>
       <title>Reverse Engineering Signatus.exe (bmdyy) - Part 2</title>
-      <link>https://pentesthacks.ca/posts/postsec/signatus_revereng02/</link>
+      <link>http://localhost:1313/posts/postsec/signatus_revereng02/</link>
       <pubDate>Thu, 16 May 2024 22:57:14 -0400</pubDate>
-      <guid>https://pentesthacks.ca/posts/postsec/signatus_revereng02/</guid>
+      <guid>http://localhost:1313/posts/postsec/signatus_revereng02/</guid>
       <description>Continuing the second part of my reverse engineering the signatus.</description>
     </item>
     <item>
       <title>Reverse Engineering Signatus.exe (bmdyy) - Part 1</title>
-      <link>https://pentesthacks.ca/posts/postsec/signatus_revereng01/</link>
+      <link>http://localhost:1313/posts/postsec/signatus_revereng01/</link>
       <pubDate>Wed, 15 May 2024 22:57:14 -0400</pubDate>
-      <guid>https://pentesthacks.ca/posts/postsec/signatus_revereng01/</guid>
+      <guid>http://localhost:1313/posts/postsec/signatus_revereng01/</guid>
       <description>I am currently enrolled on OSED Course, I am taking a chance to practice more my reverse engineering skills and exploit development and bmddy wrote a program called Signatus and I will do a write up of my approach on reverse engineering the program.</description>
     </item>
     <item>
       <title>Maldev Resources (Offensive Security)</title>
-      <link>https://pentesthacks.ca/posts/postsec/maldev_rsc/</link>
+      <link>http://localhost:1313/posts/postsec/maldev_rsc/</link>
       <pubDate>Wed, 15 May 2024 14:57:14 -0400</pubDate>
-      <guid>https://pentesthacks.ca/posts/postsec/maldev_rsc/</guid>
+      <guid>http://localhost:1313/posts/postsec/maldev_rsc/</guid>
       <description>Good resources to learn Malware Analysis/Dev</description>
     </item>
     <item>
       <title>Windows Native API Book Referece</title>
-      <link>https://pentesthacks.ca/posts/postsec/windows_native_api_ref/</link>
+      <link>http://localhost:1313/posts/postsec/windows_native_api_ref/</link>
       <pubDate>Sat, 11 May 2024 14:29:14 -0400</pubDate>
-      <guid>https://pentesthacks.ca/posts/postsec/windows_native_api_ref/</guid>
+      <guid>http://localhost:1313/posts/postsec/windows_native_api_ref/</guid>
       <description>A really good book as a reference when working with Windows Native API, the book is old, but still relevant.</description>
     </item>
     <item>
       <title>Windows Kernel Undocumented Structures (VERGILIUS&#39;s Project)</title>
-      <link>https://pentesthacks.ca/posts/postsec/windows-_kernel_struct/</link>
+      <link>http://localhost:1313/posts/postsec/windows-_kernel_struct/</link>
       <pubDate>Sat, 11 May 2024 14:15:14 -0400</pubDate>
-      <guid>https://pentesthacks.ca/posts/postsec/windows-_kernel_struct/</guid>
+      <guid>http://localhost:1313/posts/postsec/windows-_kernel_struct/</guid>
       <description>If you need to reverse engineer the windows kernel, the vergilius&amp;rsquo;s project is handy with thousands of undocumented structure covering several windows versions.</description>
     </item>
     <item>
       <title>Win32 Api (pinvoke) &amp; Windows Structures (ReactOS) &amp; Undocumented NT Internals</title>
-      <link>https://pentesthacks.ca/posts/postsec/wind32apis_winstructure/</link>
+      <link>http://localhost:1313/posts/postsec/wind32apis_winstructure/</link>
       <pubDate>Sat, 11 May 2024 09:57:14 -0400</pubDate>
-      <guid>https://pentesthacks.ca/posts/postsec/wind32apis_winstructure/</guid>
+      <guid>http://localhost:1313/posts/postsec/wind32apis_winstructure/</guid>
       <description>Two references websites if you need to understand how a particular windows api (InvokeAPI) or undocument structures (ReactOS) works on Windows.</description>
     </item>
     <item>
       <title>The IAT (Import Address Table)</title>
-      <link>https://pentesthacks.ca/posts/postsec/iat_win/</link>
+      <link>http://localhost:1313/posts/postsec/iat_win/</link>
       <pubDate>Sat, 09 Mar 2024 20:34:17 -0500</pubDate>
-      <guid>https://pentesthacks.ca/posts/postsec/iat_win/</guid>
+      <guid>http://localhost:1313/posts/postsec/iat_win/</guid>
       <description>The Import Address Table stores information about the loaded modules imported by the current running processs.</description>
     </item>
     <item>
       <title>The TEB Structure</title>
-      <link>https://pentesthacks.ca/posts/postsec/teb_struct/</link>
+      <link>http://localhost:1313/posts/postsec/teb_struct/</link>
       <pubDate>Sat, 09 Mar 2024 16:49:54 -0500</pubDate>
-      <guid>https://pentesthacks.ca/posts/postsec/teb_struct/</guid>
+      <guid>http://localhost:1313/posts/postsec/teb_struct/</guid>
       <description>The TEB (Thread Environment Block) #Just as PEB contains information about the processs, the TEB has information about the thread running in the processs.</description>
     </item>
     <item>
       <title>The PEB Structure</title>
-      <link>https://pentesthacks.ca/posts/postsec/peb/</link>
+      <link>http://localhost:1313/posts/postsec/peb/</link>
       <pubDate>Sat, 09 Mar 2024 16:15:03 -0500</pubDate>
-      <guid>https://pentesthacks.ca/posts/postsec/peb/</guid>
+      <guid>http://localhost:1313/posts/postsec/peb/</guid>
       <description>The PEB (Process Environment Block) #The PEB is a data structure that store information about the running process and can be accessed through intel x86 [FS] register at offset 0x30h.</description>
     </item>
   </channel>
