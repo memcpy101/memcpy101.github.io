@@ -1,1 +1,335 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Offensive Security Posts on</title><link>https://pentesthacks.ca/posts/postsec/</link><description>Recent content in Offensive Security Posts on</description><generator>Hugo</generator><language>en</language><copyright>© 2026 mzdaemon. All rights reserved.</copyright><lastBuildDate>Sat, 26 Apr 2025 09:30:14 -0400</lastBuildDate><atom:link href="https://pentesthacks.ca/posts/postsec/index.xml" rel="self" type="application/rss+xml"/><item><title>Malware Reverse Engineering and Why It’s Essential: My Experience with IMBT from InvokeRE</title><link>https://pentesthacks.ca/posts/postsec/imbt_malware_re/</link><pubDate>Sat, 26 Apr 2025 09:30:14 -0400</pubDate><guid>https://pentesthacks.ca/posts/postsec/imbt_malware_re/</guid><description/></item><item><title>My personal thoughts about Maldev Academy Course</title><link>https://pentesthacks.ca/posts/postsec/maldev_review/</link><pubDate>Wed, 04 Dec 2024 00:01:14 -0400</pubDate><guid>https://pentesthacks.ca/posts/postsec/maldev_review/</guid><description/></item><item><title>Python Code Start Process in Suspended Mode</title><link>https://pentesthacks.ca/posts/postsec/template_start_proc_suspended_debug/</link><pubDate>Mon, 22 Jul 2024 00:01:14 -0400</pubDate><guid>https://pentesthacks.ca/posts/postsec/template_start_proc_suspended_debug/</guid><description/></item><item><title>Format String Vulnerability</title><link>https://pentesthacks.ca/posts/postsec/fmt_string_challenge/</link><pubDate>Sat, 20 Jul 2024 00:01:14 -0400</pubDate><guid>https://pentesthacks.ca/posts/postsec/fmt_string_challenge/</guid><description/></item><item><title>Reverse Engineering CastRipper v2.9.6</title><link>https://pentesthacks.ca/posts/postsec/castripper_revereng01/</link><pubDate>Mon, 15 Jul 2024 22:57:14 -0400</pubDate><guid>https://pentesthacks.ca/posts/postsec/castripper_revereng01/</guid><description/></item><item><title>Windows PE NumberofNames, AddressOfNames,AddressOfFunctions &amp; AddressOfNameOrdinals (windbg)</title><link>https://pentesthacks.ca/posts/postsec/windowspeaddressofnames/</link><pubDate>Sun, 07 Jul 2024 13:57:14 -0400</pubDate><guid>https://pentesthacks.ca/posts/postsec/windowspeaddressofnames/</guid><description/></item><item><title>Windows PE Export Directory Table (windbg)</title><link>https://pentesthacks.ca/posts/postsec/pe_data_directory/</link><pubDate>Fri, 05 Jul 2024 12:57:14 -0400</pubDate><guid>https://pentesthacks.ca/posts/postsec/pe_data_directory/</guid><description/></item><item><title>Windows PE File structure (windbg)</title><link>https://pentesthacks.ca/posts/postsec/pe_file_structure/</link><pubDate>Fri, 05 Jul 2024 10:57:14 -0400</pubDate><guid>https://pentesthacks.ca/posts/postsec/pe_file_structure/</guid><description/></item><item><title>Powershell ROP Searcher wrapper rp++</title><link>https://pentesthacks.ca/posts/postsec/powershelll_rop_searcher/</link><pubDate>Sun, 30 Jun 2024 10:57:14 -0400</pubDate><guid>https://pentesthacks.ca/posts/postsec/powershelll_rop_searcher/</guid><description/></item><item><title>Python Script Generate ASCII String to push into Stack</title><link>https://pentesthacks.ca/posts/postsec/shellcode_put_string_stack/</link><pubDate>Sat, 22 Jun 2024 10:57:14 -0400</pubDate><guid>https://pentesthacks.ca/posts/postsec/shellcode_put_string_stack/</guid><description/></item><item><title>Check DllCharacteristics values with Windbg</title><link>https://pentesthacks.ca/posts/postsec/windbg_dllcharacteristics/</link><pubDate>Sat, 15 Jun 2024 10:57:14 -0400</pubDate><guid>https://pentesthacks.ca/posts/postsec/windbg_dllcharacteristics/</guid><description/></item><item><title>Info Leak using Win32 Apis for Exploit Dev</title><link>https://pentesthacks.ca/posts/postsec/win32_infoleak_expdev/</link><pubDate>Sat, 15 Jun 2024 09:57:14 -0400</pubDate><guid>https://pentesthacks.ca/posts/postsec/win32_infoleak_expdev/</guid><description/></item><item><title>Searching for ROP Gadgets with powershelll</title><link>https://pentesthacks.ca/posts/postsec/searching_assembly_gagets_powershell/</link><pubDate>Fri, 14 Jun 2024 09:57:14 -0400</pubDate><guid>https://pentesthacks.ca/posts/postsec/searching_assembly_gagets_powershell/</guid><description/></item><item><title>Good Stuff Offensive Security Resources</title><link>https://pentesthacks.ca/posts/postsec/goodstuff_offensiveknowledge/</link><pubDate>Thu, 13 Jun 2024 09:57:14 -0400</pubDate><guid>https://pentesthacks.ca/posts/postsec/goodstuff_offensiveknowledge/</guid><description/></item><item><title>Reversing Engineering quotedb.exe (bmdyy) Bypass ASLR+DEP</title><link>https://pentesthacks.ca/posts/postsec/quotedb_reverseenginering/</link><pubDate>Fri, 07 Jun 2024 02:50:14 -0400</pubDate><guid>https://pentesthacks.ca/posts/postsec/quotedb_reverseenginering/</guid><description/></item><item><title>Demystifying DEP (Data Execution Prevention)</title><link>https://pentesthacks.ca/posts/postsec/vulnserver_dep/</link><pubDate>Sat, 01 Jun 2024 23:50:14 -0400</pubDate><guid>https://pentesthacks.ca/posts/postsec/vulnserver_dep/</guid><description/></item><item><title>Exploit Dev POC vulnserver.exe</title><link>https://pentesthacks.ca/posts/postsec/vulnserver_poc/</link><pubDate>Sat, 25 May 2024 23:34:14 -0400</pubDate><guid>https://pentesthacks.ca/posts/postsec/vulnserver_poc/</guid><description/></item><item><title>EggHunter Explained</title><link>https://pentesthacks.ca/posts/postsec/egghunter_explained/</link><pubDate>Sat, 25 May 2024 22:34:14 -0400</pubDate><guid>https://pentesthacks.ca/posts/postsec/egghunter_explained/</guid><description/></item><item><title>Reverse Engineering Vulnserver.exe</title><link>https://pentesthacks.ca/posts/postsec/vulnserver_revereng01/</link><pubDate>Sat, 25 May 2024 17:34:14 -0400</pubDate><guid>https://pentesthacks.ca/posts/postsec/vulnserver_revereng01/</guid><description/></item><item><title>NASM Negative Jump (jump Backwards)</title><link>https://pentesthacks.ca/posts/postsec/nasm_shell_negativejmp/</link><pubDate>Tue, 21 May 2024 23:30:13 -0500</pubDate><guid>https://pentesthacks.ca/posts/postsec/nasm_shell_negativejmp/</guid><description/></item><item><title>NASM Short Jump</title><link>https://pentesthacks.ca/posts/postsec/nasm_shell_shortjmp/</link><pubDate>Tue, 21 May 2024 23:25:13 -0500</pubDate><guid>https://pentesthacks.ca/posts/postsec/nasm_shell_shortjmp/</guid><description/></item><item><title>Signatus.exe (bmdyy) - Exploit Dev POC</title><link>https://pentesthacks.ca/posts/postsec/signatus_poc/</link><pubDate>Fri, 17 May 2024 22:57:14 -0400</pubDate><guid>https://pentesthacks.ca/posts/postsec/signatus_poc/</guid><description/></item><item><title>Reverse Engineering Signatus.exe (bmdyy) - Part 2</title><link>https://pentesthacks.ca/posts/postsec/signatus_revereng02/</link><pubDate>Thu, 16 May 2024 22:57:14 -0400</pubDate><guid>https://pentesthacks.ca/posts/postsec/signatus_revereng02/</guid><description/></item><item><title>Reverse Engineering Signatus.exe (bmdyy) - Part 1</title><link>https://pentesthacks.ca/posts/postsec/signatus_revereng01/</link><pubDate>Wed, 15 May 2024 22:57:14 -0400</pubDate><guid>https://pentesthacks.ca/posts/postsec/signatus_revereng01/</guid><description/></item><item><title>Maldev Resources (Offensive Security)</title><link>https://pentesthacks.ca/posts/postsec/maldev_rsc/</link><pubDate>Wed, 15 May 2024 14:57:14 -0400</pubDate><guid>https://pentesthacks.ca/posts/postsec/maldev_rsc/</guid><description/></item><item><title>Ldr field in PEB</title><link>https://pentesthacks.ca/posts/postsec/ldr_struct/</link><pubDate>Sun, 12 May 2024 22:41:14 -0400</pubDate><guid>https://pentesthacks.ca/posts/postsec/ldr_struct/</guid><description/></item><item><title>Windows Native API Book Referece</title><link>https://pentesthacks.ca/posts/postsec/windows_native_api_ref/</link><pubDate>Sat, 11 May 2024 14:29:14 -0400</pubDate><guid>https://pentesthacks.ca/posts/postsec/windows_native_api_ref/</guid><description/></item><item><title>Windows Kernel Undocumented Structures (VERGILIUS's Project)</title><link>https://pentesthacks.ca/posts/postsec/windows-_kernel_struct/</link><pubDate>Sat, 11 May 2024 14:15:14 -0400</pubDate><guid>https://pentesthacks.ca/posts/postsec/windows-_kernel_struct/</guid><description/></item><item><title>Win32 Api (pinvoke) &amp; Windows Structures (ReactOS) &amp; Undocumented NT Internals</title><link>https://pentesthacks.ca/posts/postsec/wind32apis_winstructure/</link><pubDate>Sat, 11 May 2024 09:57:14 -0400</pubDate><guid>https://pentesthacks.ca/posts/postsec/wind32apis_winstructure/</guid><description/></item><item><title>How to load external plugin windbg?</title><link>https://pentesthacks.ca/posts/postsec/load_plugin_windbg/</link><pubDate>Sat, 11 May 2024 09:12:14 -0400</pubDate><guid>https://pentesthacks.ca/posts/postsec/load_plugin_windbg/</guid><description/></item><item><title>How to generate smallest shellcode ? (msfvenom)</title><link>https://pentesthacks.ca/posts/postsec/smalled_shellcode/</link><pubDate>Sat, 04 May 2024 16:58:14 -0400</pubDate><guid>https://pentesthacks.ca/posts/postsec/smalled_shellcode/</guid><description/></item><item><title>Detect Bad Chars Exploit Development</title><link>https://pentesthacks.ca/posts/postsec/detect_badchars/</link><pubDate>Sat, 04 May 2024 16:13:14 -0400</pubDate><guid>https://pentesthacks.ca/posts/postsec/detect_badchars/</guid><description/></item><item><title>Low level computer concept</title><link>https://pentesthacks.ca/posts/postsec/lowlevel_concept/</link><pubDate>Tue, 19 Mar 2024 17:20:11 -0400</pubDate><guid>https://pentesthacks.ca/posts/postsec/lowlevel_concept/</guid><description/></item><item><title>How to check Memory Permission in Windbg</title><link>https://pentesthacks.ca/posts/postsec/windbg_mempermision_cmds/</link><pubDate>Tue, 19 Mar 2024 16:51:25 -0400</pubDate><guid>https://pentesthacks.ca/posts/postsec/windbg_mempermision_cmds/</guid><description/></item><item><title>How to disable access violation/guardpage in windbg</title><link>https://pentesthacks.ca/posts/postsec/windbg_guardpage_cmds/</link><pubDate>Tue, 19 Mar 2024 16:48:15 -0400</pubDate><guid>https://pentesthacks.ca/posts/postsec/windbg_guardpage_cmds/</guid><description/></item><item><title>Windbg useful commands</title><link>https://pentesthacks.ca/posts/postsec/windbg_usful_cmds/</link><pubDate>Tue, 19 Mar 2024 15:58:14 -0400</pubDate><guid>https://pentesthacks.ca/posts/postsec/windbg_usful_cmds/</guid><description/></item><item><title>Windbg, the cdb.exe to attach to process</title><link>https://pentesthacks.ca/posts/postsec/windbg_cdb_attach/</link><pubDate>Sun, 10 Mar 2024 20:04:37 -0400</pubDate><guid>https://pentesthacks.ca/posts/postsec/windbg_cdb_attach/</guid><description/></item><item><title>Find IAT using Windbg</title><link>https://pentesthacks.ca/posts/postsec/windbg_iat/</link><pubDate>Sun, 10 Mar 2024 19:33:20 -0400</pubDate><guid>https://pentesthacks.ca/posts/postsec/windbg_iat/</guid><description/></item><item><title>TTY shells</title><link>https://pentesthacks.ca/posts/postsec/tty_shell/</link><pubDate>Sun, 10 Mar 2024 18:48:29 -0400</pubDate><guid>https://pentesthacks.ca/posts/postsec/tty_shell/</guid><description/></item><item><title>Narly plugin for windbg</title><link>https://pentesthacks.ca/posts/postsec/narly_windbg/</link><pubDate>Sat, 09 Mar 2024 21:13:16 -0500</pubDate><guid>https://pentesthacks.ca/posts/postsec/narly_windbg/</guid><description/></item><item><title>The IAT (Import Address Table)</title><link>https://pentesthacks.ca/posts/postsec/iat_win/</link><pubDate>Sat, 09 Mar 2024 20:34:17 -0500</pubDate><guid>https://pentesthacks.ca/posts/postsec/iat_win/</guid><description/></item><item><title>The RP++ ROP Finder</title><link>https://pentesthacks.ca/posts/postsec/rp_gadget/</link><pubDate>Sat, 09 Mar 2024 19:46:31 -0500</pubDate><guid>https://pentesthacks.ca/posts/postsec/rp_gadget/</guid><description/></item><item><title>The TEB Structure</title><link>https://pentesthacks.ca/posts/postsec/teb_struct/</link><pubDate>Sat, 09 Mar 2024 16:49:54 -0500</pubDate><guid>https://pentesthacks.ca/posts/postsec/teb_struct/</guid><description/></item><item><title>The PEB Structure</title><link>https://pentesthacks.ca/posts/postsec/peb/</link><pubDate>Sat, 09 Mar 2024 16:15:03 -0500</pubDate><guid>https://pentesthacks.ca/posts/postsec/peb/</guid><description/></item><item><title>Meterpreter Session Time out</title><link>https://pentesthacks.ca/posts/postsec/meterpreter_shell_timeout/</link><pubDate>Sat, 02 Mar 2024 22:46:13 -0500</pubDate><guid>https://pentesthacks.ca/posts/postsec/meterpreter_shell_timeout/</guid><description/></item><item><title>Powershell Port Scan</title><link>https://pentesthacks.ca/posts/postsec/powershellscan/</link><pubDate>Sat, 02 Mar 2024 22:46:13 -0500</pubDate><guid>https://pentesthacks.ca/posts/postsec/powershellscan/</guid><description/></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Offensive Security Posts on </title>
+    <link>http://localhost:1313/posts/postsec/</link>
+    <description>Recent content in Offensive Security Posts on </description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <copyright>© 2026 mzdaemon. All rights reserved.</copyright>
+    <lastBuildDate>Sat, 26 Apr 2025 09:30:14 -0400</lastBuildDate>
+    <atom:link href="http://localhost:1313/posts/postsec/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Malware Reverse Engineering and Why It’s Essential: My Experience with IMBT from InvokeRE</title>
+      <link>http://localhost:1313/posts/postsec/imbt_malware_re/</link>
+      <pubDate>Sat, 26 Apr 2025 09:30:14 -0400</pubDate>
+      <guid>http://localhost:1313/posts/postsec/imbt_malware_re/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>My personal thoughts about Maldev Academy Course</title>
+      <link>http://localhost:1313/posts/postsec/maldev_review/</link>
+      <pubDate>Wed, 04 Dec 2024 00:01:14 -0400</pubDate>
+      <guid>http://localhost:1313/posts/postsec/maldev_review/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Python Code Start Process in Suspended Mode</title>
+      <link>http://localhost:1313/posts/postsec/template_start_proc_suspended_debug/</link>
+      <pubDate>Mon, 22 Jul 2024 00:01:14 -0400</pubDate>
+      <guid>http://localhost:1313/posts/postsec/template_start_proc_suspended_debug/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Format String Vulnerability</title>
+      <link>http://localhost:1313/posts/postsec/fmt_string_challenge/</link>
+      <pubDate>Sat, 20 Jul 2024 00:01:14 -0400</pubDate>
+      <guid>http://localhost:1313/posts/postsec/fmt_string_challenge/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Reverse Engineering CastRipper v2.9.6</title>
+      <link>http://localhost:1313/posts/postsec/castripper_revereng01/</link>
+      <pubDate>Mon, 15 Jul 2024 22:57:14 -0400</pubDate>
+      <guid>http://localhost:1313/posts/postsec/castripper_revereng01/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Windows PE NumberofNames, AddressOfNames,AddressOfFunctions &amp; AddressOfNameOrdinals (windbg)</title>
+      <link>http://localhost:1313/posts/postsec/windowspeaddressofnames/</link>
+      <pubDate>Sun, 07 Jul 2024 13:57:14 -0400</pubDate>
+      <guid>http://localhost:1313/posts/postsec/windowspeaddressofnames/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Windows PE Export Directory Table (windbg)</title>
+      <link>http://localhost:1313/posts/postsec/pe_data_directory/</link>
+      <pubDate>Fri, 05 Jul 2024 12:57:14 -0400</pubDate>
+      <guid>http://localhost:1313/posts/postsec/pe_data_directory/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Windows PE File structure (windbg)</title>
+      <link>http://localhost:1313/posts/postsec/pe_file_structure/</link>
+      <pubDate>Fri, 05 Jul 2024 10:57:14 -0400</pubDate>
+      <guid>http://localhost:1313/posts/postsec/pe_file_structure/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Powershell ROP Searcher wrapper rp&#43;&#43;</title>
+      <link>http://localhost:1313/posts/postsec/powershelll_rop_searcher/</link>
+      <pubDate>Sun, 30 Jun 2024 10:57:14 -0400</pubDate>
+      <guid>http://localhost:1313/posts/postsec/powershelll_rop_searcher/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Python Script Generate ASCII String to push into Stack</title>
+      <link>http://localhost:1313/posts/postsec/shellcode_put_string_stack/</link>
+      <pubDate>Sat, 22 Jun 2024 10:57:14 -0400</pubDate>
+      <guid>http://localhost:1313/posts/postsec/shellcode_put_string_stack/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Check DllCharacteristics values with Windbg</title>
+      <link>http://localhost:1313/posts/postsec/windbg_dllcharacteristics/</link>
+      <pubDate>Sat, 15 Jun 2024 10:57:14 -0400</pubDate>
+      <guid>http://localhost:1313/posts/postsec/windbg_dllcharacteristics/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Info Leak using Win32 Apis for Exploit Dev</title>
+      <link>http://localhost:1313/posts/postsec/win32_infoleak_expdev/</link>
+      <pubDate>Sat, 15 Jun 2024 09:57:14 -0400</pubDate>
+      <guid>http://localhost:1313/posts/postsec/win32_infoleak_expdev/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Searching for ROP Gadgets with powershelll</title>
+      <link>http://localhost:1313/posts/postsec/searching_assembly_gagets_powershell/</link>
+      <pubDate>Fri, 14 Jun 2024 09:57:14 -0400</pubDate>
+      <guid>http://localhost:1313/posts/postsec/searching_assembly_gagets_powershell/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Good Stuff Offensive Security Resources</title>
+      <link>http://localhost:1313/posts/postsec/goodstuff_offensiveknowledge/</link>
+      <pubDate>Thu, 13 Jun 2024 09:57:14 -0400</pubDate>
+      <guid>http://localhost:1313/posts/postsec/goodstuff_offensiveknowledge/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Reversing Engineering quotedb.exe (bmdyy) Bypass ASLR&#43;DEP</title>
+      <link>http://localhost:1313/posts/postsec/quotedb_reverseenginering/</link>
+      <pubDate>Fri, 07 Jun 2024 02:50:14 -0400</pubDate>
+      <guid>http://localhost:1313/posts/postsec/quotedb_reverseenginering/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Demystifying DEP (Data Execution Prevention)</title>
+      <link>http://localhost:1313/posts/postsec/vulnserver_dep/</link>
+      <pubDate>Sat, 01 Jun 2024 23:50:14 -0400</pubDate>
+      <guid>http://localhost:1313/posts/postsec/vulnserver_dep/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Exploit Dev POC vulnserver.exe</title>
+      <link>http://localhost:1313/posts/postsec/vulnserver_poc/</link>
+      <pubDate>Sat, 25 May 2024 23:34:14 -0400</pubDate>
+      <guid>http://localhost:1313/posts/postsec/vulnserver_poc/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>EggHunter Explained</title>
+      <link>http://localhost:1313/posts/postsec/egghunter_explained/</link>
+      <pubDate>Sat, 25 May 2024 22:34:14 -0400</pubDate>
+      <guid>http://localhost:1313/posts/postsec/egghunter_explained/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Reverse Engineering Vulnserver.exe</title>
+      <link>http://localhost:1313/posts/postsec/vulnserver_revereng01/</link>
+      <pubDate>Sat, 25 May 2024 17:34:14 -0400</pubDate>
+      <guid>http://localhost:1313/posts/postsec/vulnserver_revereng01/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>NASM Negative Jump (jump Backwards)</title>
+      <link>http://localhost:1313/posts/postsec/nasm_shell_negativejmp/</link>
+      <pubDate>Tue, 21 May 2024 23:30:13 -0500</pubDate>
+      <guid>http://localhost:1313/posts/postsec/nasm_shell_negativejmp/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>NASM Short Jump</title>
+      <link>http://localhost:1313/posts/postsec/nasm_shell_shortjmp/</link>
+      <pubDate>Tue, 21 May 2024 23:25:13 -0500</pubDate>
+      <guid>http://localhost:1313/posts/postsec/nasm_shell_shortjmp/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Signatus.exe (bmdyy) - Exploit Dev POC</title>
+      <link>http://localhost:1313/posts/postsec/signatus_poc/</link>
+      <pubDate>Fri, 17 May 2024 22:57:14 -0400</pubDate>
+      <guid>http://localhost:1313/posts/postsec/signatus_poc/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Reverse Engineering Signatus.exe (bmdyy) - Part 2</title>
+      <link>http://localhost:1313/posts/postsec/signatus_revereng02/</link>
+      <pubDate>Thu, 16 May 2024 22:57:14 -0400</pubDate>
+      <guid>http://localhost:1313/posts/postsec/signatus_revereng02/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Reverse Engineering Signatus.exe (bmdyy) - Part 1</title>
+      <link>http://localhost:1313/posts/postsec/signatus_revereng01/</link>
+      <pubDate>Wed, 15 May 2024 22:57:14 -0400</pubDate>
+      <guid>http://localhost:1313/posts/postsec/signatus_revereng01/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Maldev Resources (Offensive Security)</title>
+      <link>http://localhost:1313/posts/postsec/maldev_rsc/</link>
+      <pubDate>Wed, 15 May 2024 14:57:14 -0400</pubDate>
+      <guid>http://localhost:1313/posts/postsec/maldev_rsc/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Ldr field in PEB</title>
+      <link>http://localhost:1313/posts/postsec/ldr_struct/</link>
+      <pubDate>Sun, 12 May 2024 22:41:14 -0400</pubDate>
+      <guid>http://localhost:1313/posts/postsec/ldr_struct/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Windows Native API Book Referece</title>
+      <link>http://localhost:1313/posts/postsec/windows_native_api_ref/</link>
+      <pubDate>Sat, 11 May 2024 14:29:14 -0400</pubDate>
+      <guid>http://localhost:1313/posts/postsec/windows_native_api_ref/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Windows Kernel Undocumented Structures (VERGILIUS&#39;s Project)</title>
+      <link>http://localhost:1313/posts/postsec/windows-_kernel_struct/</link>
+      <pubDate>Sat, 11 May 2024 14:15:14 -0400</pubDate>
+      <guid>http://localhost:1313/posts/postsec/windows-_kernel_struct/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Win32 Api (pinvoke) &amp; Windows Structures (ReactOS) &amp; Undocumented NT Internals</title>
+      <link>http://localhost:1313/posts/postsec/wind32apis_winstructure/</link>
+      <pubDate>Sat, 11 May 2024 09:57:14 -0400</pubDate>
+      <guid>http://localhost:1313/posts/postsec/wind32apis_winstructure/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>How to load external plugin windbg?</title>
+      <link>http://localhost:1313/posts/postsec/load_plugin_windbg/</link>
+      <pubDate>Sat, 11 May 2024 09:12:14 -0400</pubDate>
+      <guid>http://localhost:1313/posts/postsec/load_plugin_windbg/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>How to generate smallest shellcode ? (msfvenom)</title>
+      <link>http://localhost:1313/posts/postsec/smalled_shellcode/</link>
+      <pubDate>Sat, 04 May 2024 16:58:14 -0400</pubDate>
+      <guid>http://localhost:1313/posts/postsec/smalled_shellcode/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Detect Bad Chars Exploit Development</title>
+      <link>http://localhost:1313/posts/postsec/detect_badchars/</link>
+      <pubDate>Sat, 04 May 2024 16:13:14 -0400</pubDate>
+      <guid>http://localhost:1313/posts/postsec/detect_badchars/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Low level computer concept</title>
+      <link>http://localhost:1313/posts/postsec/lowlevel_concept/</link>
+      <pubDate>Tue, 19 Mar 2024 17:20:11 -0400</pubDate>
+      <guid>http://localhost:1313/posts/postsec/lowlevel_concept/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>How to check Memory Permission in Windbg</title>
+      <link>http://localhost:1313/posts/postsec/windbg_mempermision_cmds/</link>
+      <pubDate>Tue, 19 Mar 2024 16:51:25 -0400</pubDate>
+      <guid>http://localhost:1313/posts/postsec/windbg_mempermision_cmds/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>How to disable access violation/guardpage in windbg</title>
+      <link>http://localhost:1313/posts/postsec/windbg_guardpage_cmds/</link>
+      <pubDate>Tue, 19 Mar 2024 16:48:15 -0400</pubDate>
+      <guid>http://localhost:1313/posts/postsec/windbg_guardpage_cmds/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Windbg useful commands</title>
+      <link>http://localhost:1313/posts/postsec/windbg_usful_cmds/</link>
+      <pubDate>Tue, 19 Mar 2024 15:58:14 -0400</pubDate>
+      <guid>http://localhost:1313/posts/postsec/windbg_usful_cmds/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Windbg, the cdb.exe to attach to process  </title>
+      <link>http://localhost:1313/posts/postsec/windbg_cdb_attach/</link>
+      <pubDate>Sun, 10 Mar 2024 20:04:37 -0400</pubDate>
+      <guid>http://localhost:1313/posts/postsec/windbg_cdb_attach/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Find IAT using Windbg</title>
+      <link>http://localhost:1313/posts/postsec/windbg_iat/</link>
+      <pubDate>Sun, 10 Mar 2024 19:33:20 -0400</pubDate>
+      <guid>http://localhost:1313/posts/postsec/windbg_iat/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>TTY shells</title>
+      <link>http://localhost:1313/posts/postsec/tty_shell/</link>
+      <pubDate>Sun, 10 Mar 2024 18:48:29 -0400</pubDate>
+      <guid>http://localhost:1313/posts/postsec/tty_shell/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Narly plugin for windbg</title>
+      <link>http://localhost:1313/posts/postsec/narly_windbg/</link>
+      <pubDate>Sat, 09 Mar 2024 21:13:16 -0500</pubDate>
+      <guid>http://localhost:1313/posts/postsec/narly_windbg/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>The IAT (Import Address Table)</title>
+      <link>http://localhost:1313/posts/postsec/iat_win/</link>
+      <pubDate>Sat, 09 Mar 2024 20:34:17 -0500</pubDate>
+      <guid>http://localhost:1313/posts/postsec/iat_win/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>The RP&#43;&#43; ROP Finder</title>
+      <link>http://localhost:1313/posts/postsec/rp_gadget/</link>
+      <pubDate>Sat, 09 Mar 2024 19:46:31 -0500</pubDate>
+      <guid>http://localhost:1313/posts/postsec/rp_gadget/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>The TEB Structure</title>
+      <link>http://localhost:1313/posts/postsec/teb_struct/</link>
+      <pubDate>Sat, 09 Mar 2024 16:49:54 -0500</pubDate>
+      <guid>http://localhost:1313/posts/postsec/teb_struct/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>The PEB Structure</title>
+      <link>http://localhost:1313/posts/postsec/peb/</link>
+      <pubDate>Sat, 09 Mar 2024 16:15:03 -0500</pubDate>
+      <guid>http://localhost:1313/posts/postsec/peb/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Meterpreter Session Time out</title>
+      <link>http://localhost:1313/posts/postsec/meterpreter_shell_timeout/</link>
+      <pubDate>Sat, 02 Mar 2024 22:46:13 -0500</pubDate>
+      <guid>http://localhost:1313/posts/postsec/meterpreter_shell_timeout/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Powershell Port Scan</title>
+      <link>http://localhost:1313/posts/postsec/powershellscan/</link>
+      <pubDate>Sat, 02 Mar 2024 22:46:13 -0500</pubDate>
+      <guid>http://localhost:1313/posts/postsec/powershellscan/</guid>
+      <description></description>
+    </item>
+  </channel>
+</rss>
